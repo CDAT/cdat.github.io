@@ -2,7 +2,7 @@
 <ul class="nav">
 {% for menu_item in menu -%}
   {% if menu_item.url is not string %}
-    <li class="dropdown">
+    <li class="dropdown{% for dropdown_item in menu_item.url %}{% if "/" + dropdown_item.url == resource.url %} active{% endif %}{% endfor %}">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ menu_item.title }} <b class="caret"></b>
       </a>
       <ul class="dropdown-menu">
