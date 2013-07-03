@@ -43,8 +43,6 @@
     {% endblock basecss %}
     {% block css %}{% endblock %}
 
-
-
     {% block favicons %}
     {# Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references #}
     <link rel="shortcut icon" href="{{ media_url('img/favicon.ico') }}">
@@ -52,7 +50,7 @@
     <link rel="apple-touch-icon" sizes="72x72" href="{{ media_url('img/appleimgim-touch-icon-72x72.png') }}">
     <link rel="apple-touch-icon" sizes="114x114" href="{{ media_url('img/apple-touch-icon-114x114.png') }}">
     {% endblock favicons %}
-    
+
     {% block headjs %}
     {% endblock headjs %}
 
@@ -73,13 +71,13 @@
       <hr>
       <footer>
         {% block footer %}
-        <p>Created by <a href="{{ author.url }}">{{ author.name }}</a></p>
+        {# Enter any footer information you want here #}
         {% endblock footer %}
       </footer>
     </div> <!-- /container -->
 
     {% endblock body %}
-    
+
     {% block js %}
     {# Javascript at the bottom for fast page loading #}
     {% block jquery %}
@@ -104,13 +102,10 @@
     {% block scripts %}
     {% endblock scripts %}
 
-
     <!--[if lt IE 7 ]>
       <script src="{{ media_url('js/libs/dd_belatedpng.js') }}"></script>
       <script>DD_belatedPNG.fix('img, .png_bg'); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
     <![endif]-->
-
-
 
     {% endblock js %}
   </body>
