@@ -14,10 +14,10 @@ context:
         google_analytics_id: UA-XXXXX-YY
         home_url: index.html
         menu:
-            - title: Home
+            - title: Hero
               url: index.html
-            - title: Landing
-              url: landing.html
+            - title: Sidebar
+              url: sidebar.html
         sidebar:
             - title: One
               url: one.html
