@@ -1,7 +1,20 @@
 {% macro render_main_menu() -%}
 <ul class="nav">
 {% for menu_item in menu -%}
-  <li{% if "/" + menu_item.url == resource.url or menu_item.active %} class="active"{% endif %}><a href="{{ menu_item.url }}">{{ menu_item.title }}</a></li>
+  {% if menu_item.url is not string %}
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        {{ menu_item.title }}<b class="carat"></b>
+      </a>
+      <ul class="dropdown-menu">
+        {% for dropdown_item in menu_item.url -%}
+          <li><a href="{{ dropdown_item.url }}">{{ dropdown_item.title }}</a></li>
+        {%- endfor %}
+      </ul>
+    </li>
+  {% else %}
+    <li{% if "/" + menu_item.url == resource.url or menu_item.active %} class="active"{% endif %}><a href="{{ menu_item.url }}">{{ menu_item.title }}</a></li>
+  {% endif %}
 {%- endfor %}
 </ul>
 {%- endmacro %}
