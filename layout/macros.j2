@@ -3,8 +3,7 @@
 {% for menu_item in menu -%}
   {% if menu_item.url is not string %}
     <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-        {{ menu_item.title }}<b class="carat"></b>
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ menu_item.title }} <b class="caret"></b>
       </a>
       <ul class="dropdown-menu">
         {% for dropdown_item in menu_item.url -%}
