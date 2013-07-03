@@ -1,6 +1,5 @@
 mode: development # Use "hyde publish -c prod.yaml to have this automatically switch to production
-media_root: media # Relative path from content folder.
-media_url: /media # URL where the media files are served from.
+media_url: media # Relative path from content folder.
 plugins:
     - hyde.ext.plugins.meta.MetaPlugin
     - hyde.ext.plugins.auto_extend.AutoExtendPlugin
