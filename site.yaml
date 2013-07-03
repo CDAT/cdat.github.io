@@ -18,6 +18,8 @@ context:
               url: index.html
             - title: Sidebar
               url: sidebar.html
+            - title: Blank
+              url: blank.html
         sidebar:
             - title: One
               url: one.html

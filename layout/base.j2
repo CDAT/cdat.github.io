@@ -65,9 +65,11 @@
     {% block body %}
 
     <div class="container" id="top">
+      {% filter markdown -%}
       {% block container %}
 
       {% endblock container %}
+      {%- endfilter %}
       <hr>
       <footer>
         {% block footer %}
