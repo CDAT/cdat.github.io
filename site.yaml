@@ -22,12 +22,12 @@ context:
               url: blank.html
             - title: Dropdown
               url:
-                - title: Hero
-                  url: index.html
-                - title: Sidebar
-                  url: sidebar.html
-                - title: Blank
-                  url: blank.html
+                - title: Another hero
+                  url: another_index.html
+                - title: Another sidebar
+                  url: another_sidebar.html
+                - title: Another blank
+                  url: another_blank.html
         sidebar:
             - title: One
               url: one.html
