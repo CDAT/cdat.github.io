@@ -25,6 +25,27 @@ There are a variety of templates that you can subclass using
   * `hero.j2` places the bootstrap "hero" area on the page (good for a home
     page)
 
+### Bootstrap dropdown menus
+Generating Bootstrap's native dropdown menus programmatically is supported in
+`site.yaml`. To make a navigation link a dropdown menu, just put a list of links
+where you'd normally put a URL:
+
+    context:
+        data:
+            menu:
+                - title: Home
+                  url: index.html
+                - title: About
+                  url: about.html
+                - title: Related projects
+                  url:
+                    - title: Project Red
+                      url: project_red.html
+                    - title: Project Blue
+                      url: project_blue.html
+
+Currently this is not supported recursively.
+
 ### Custom Templates
 To make real use of this package, you will need to create your own templates.
 
