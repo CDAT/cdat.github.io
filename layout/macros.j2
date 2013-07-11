@@ -18,11 +18,26 @@
 </ul>
 {%- endmacro %}
 
-{% macro render_sidebar() -%}
+{% macro render_sidebar(name, home, items) -%}
+<div class="container-fluid">
+<div class="row-fluid">
+<div class="span3">
+<div class="well sidebar-nav">
 <ul class="nav nav-list">
-    <li class="nav-header">Sidebar</li>
-{% for sidebar_item in sidebar -%}
-  <li{% if sidebar_item.url == resource.url or sidebar_item.active %} class="active"{% endif %}><a href="{{ sidebar_item.url }}">{{ sidebar_item.title }}</a></li>
+  <a href="{{ home }}"><h4>{{ name }} home</h4></a>
+{% for sidebar_item in items -%}
+  {% if sidebar_item.url is not string %}
+    <li class="nav-header">{{ sidebar_item.title }}</li>
+    {% for sidebar_subitem in sidebar_item.url -%}
+      <li{% if "/" + sidebar_subitem.url == resource.url or sidebar_subitem.active %} class="active"{% endif %}><a href="{{ sidebar_subitem.url }}">{{ sidebar_subitem.title }}</a></li>
+    {% endfor %}
+  {% else %}
+    <li{% if "/" + sidebar_item.url == resource.url or sidebar_item.active %} class="active"{% endif %}><a href="{{ sidebar_item.url }}">{{ sidebar_item.title }}</a></li>
+  {% endif %}
 {%- endfor %}
 </ul>
+</div>
+</div>
+<div class="span9">
+<div class="row-fluid">
 {%- endmacro %}
