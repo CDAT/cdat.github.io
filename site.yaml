@@ -3,47 +3,47 @@ context:
     home_url: index.html
     menu:
       - title: UVC-DAT.org
-      url: index.html
-    - title: About
-      url:
-        - title: Mission
-          url: mission.html
-        - title: Governance
-          url: governance.html
-        - title: Committee
-          url: committee.html
-        - title: Acknowledgments
-          url: acknowledgments.html
-    - title: Documents
-      url:
-        - title: Publications
-          url: publications.html
-        - title: Conferences
-          url: conferences.html
-        - title: Presentations
-          url: presentations.html
-    - title: Build
-      url:
-        - title: Releases
-          url: releases.html
-        - title: Installation
-          url: installation.html
-    - title: Download
-      url: "http://sourceforge.net/projects/cdat/files/Releases/UV-CDAT/1.3"
-    - title: Contribute
-      url:
-        - title: Tutorials
-          url: tutorial.html
-        - title: Developer info
-          url: developers.html
-        - title: GitHub
-          url: "https://github.com/uv-cdat"
-        - title: Q&A Forum
-          url: "askbot.uv-cdat.org"
-        - title: Issues
-          url: "https://github.com/UV-CDAT/uvcdat/issues"
-        - title: Mailing list
-          url: mailing-list.html
+        url: index.html
+      - title: About
+        url:
+          - title: Mission
+            url: mission.html
+          - title: Governance
+            url: governance.html
+          - title: Committee
+            url: committee.html
+          - title: Acknowledgments
+            url: acknowledgments.html
+      - title: Documents
+        url:
+          - title: Publications
+            url: publications.html
+          - title: Conferences
+            url: conferences.html
+          - title: Presentations
+            url: presentations.html
+      - title: Build
+        url:
+          - title: Releases
+            url: releases.html
+          - title: Installation
+            url: installation.html
+      - title: Download
+        url: "http://sourceforge.net/projects/cdat/files/Releases/UV-CDAT/1.3"
+      - title: Contribute
+        url:
+          - title: Tutorials
+            url: tutorial.html
+          - title: Developer info
+            url: developers.html
+          - title: GitHub
+            url: "https://github.com/uv-cdat"
+          - title: Q&A Forum
+            url: "askbot.uv-cdat.org"
+          - title: Issues
+            url: "https://github.com/UV-CDAT/uvcdat/issues"
+          - title: Mailing list
+            url: mailing-list.html
     site_title: UV-CDAT.org
 media_url: media
 mode: development
