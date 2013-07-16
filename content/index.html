@@ -10,6 +10,22 @@ description: Test description
   body {
     padding-top: 60px;
   }
+  div.hero-unit {
+    position: relative;
+    z-index: 1;
+  }
+  div.hero-unit div.hero-bg {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: .15;
+    background: url(media/images/uv-cdat.png) center center no-repeat;
+    width: 100%;
+    height: 100%;
+  }
 </style>
 {% endblock css %}
 
@@ -19,6 +35,7 @@ description: Test description
     folder any more.
  #}
 {% block hero %}
+  <div class="hero-bg"></div>
   <h1>Ultrascale Visualization</h1>
   <h2>Climate Data Analysis Tools</h2>
   <p>UV-CDAT is a powerful and complete front-end to a rich set of visual-data exploration and analysis capabilities well suited for climate-data analysis problems.</p>
