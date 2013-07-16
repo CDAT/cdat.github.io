@@ -1,35 +1,33 @@
-mode: development # Use "hyde publish -c prod.yaml to have this automatically switch to production
-media_url: media # Relative path from content folder.
-plugins:
-    - hyde.ext.plugins.meta.MetaPlugin
-    - hyde.ext.plugins.auto_extend.AutoExtendPlugin
-    - hyde.ext.plugins.syntext.SyntextPlugin
-    - hyde.ext.plugins.textlinks.TextlinksPlugin
 context:
-    data:
-        site_title: Site Name
-        author:
-            name: Your Name Here
-            url: "http://example.com"
-        google_analytics_id: UA-XXXXX-YY
-        home_url: index.html
-        menu:
-            - title: Hero
-              url: index.html
-            - title: Sidebar
-              url: sidebar.html
-            - title: Blank
-              url: blank.html
-            - title: Dropdown
-              url:
-                - title: Another hero
-                  url: another_index.html
-                - title: Another sidebar
-                  url: another_sidebar.html
-                - title: Another blank
-                  url: another_blank.html
-        sidebar:
-            - title: One
-              url: one.html
-            - title: Two
-              url: two.html
+  data:
+    home_url: index.html
+    menu:
+    - title: UV-CDAT.org
+      url: index.html
+    - title: About
+      url:
+      - title: Mission
+        url: mission.html
+      - title: Publications
+        url: publications.html
+      - title: Presentations
+        url: presentations.html
+      - title: Governance
+        url: governance.html
+      - title: Acknowledgments
+        url: acknowledgments.html
+    - title: Download
+      url: download.html
+    - title: Contribute
+      url:
+      - title: Mailing list
+        url: mailing-list.html
+      - title: Developers
+        url: developers.html
+    - title: Progress
+      url: progress.html
+    site_title: UV-CDAT.org
+media_url: media
+mode: development
+plugins: [hyde.ext.plugins.meta.MetaPlugin, hyde.ext.plugins.auto_extend.AutoExtendPlugin,
+  hyde.ext.plugins.syntext.SyntextPlugin, hyde.ext.plugins.textlinks.TextlinksPlugin]
