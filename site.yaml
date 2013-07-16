@@ -38,10 +38,12 @@ context:
             url: developers.html
           - title: GitHub
             url: "https://github.com/uv-cdat"
-          - title: Q&A Forum
-            url: "askbot.uv-cdat.org"
           - title: Issues
             url: "https://github.com/UV-CDAT/uvcdat/issues"
+          - title: Q&A Forum
+            url: "askbot.uv-cdat.org"
+          - title: Contact
+            url: contact.html
           - title: Mailing list
             url: mailing-list.html
     site_title: UV-CDAT.org
