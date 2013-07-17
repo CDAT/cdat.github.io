@@ -2,7 +2,7 @@ context:
   data:
     home_url: index.html
     menu:
-      - title: UVC-DAT.org
+      - title: UV-CDAT.org
         url: index.html
       - title: About
         url:
