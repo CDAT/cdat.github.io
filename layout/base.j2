@@ -88,6 +88,9 @@
     <script>window.jQuery || document.write('<script src="{{ media_url('js/libs/jquery-1.10.1.min.js') }}">\x3C/script>')</script>
     {% endblock jquery %}
 
+    {# The following line makes external links open in new windows #}
+    <script src="{{ media_url('js/links.js') }}"></script>
+
     {% block bootstrap_scripts %}
     <script src="{{ media_url('js/libs/bootstrap.min.js') }}"></script>
     {# Uncomment any of these lines to enable that plugin on your site #}
