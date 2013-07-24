@@ -6,20 +6,31 @@ description: Social plug page
 
 {% extends "topbar.j2" %}
 
+{% block css %}
+<style type="text/css">
+
+  div.container > p > a > img {
+    height: 40px;
+  }
+
+</style>
+{% endblock css %}
+
 {% block container %}
 
 ## Contact
 
-* [Email][email]
-* [YouTube][youtube]
-* [Twitter][twitter]
-* [Google+][google+]
-* [Home Page][site]
+[![YouTube logo][]][YouTube]
+[![Twitter logo][]][Twitter]
+[![Google+ logo][]][Google+]
 
-[site]: http://uv-cdat.org
 [twitter]: https://twitter.com/uvcdat
 [youtube]: http://www.youtube.com/channel/UCi08s8xII45WKWrfl96eMWA
 [google+]: https://plus.google.com/u/0/118068023970804655670/posts
 [email]: mailto:uvcdat-support@llnl.gov
+
+[youtube logo]: media/images/youtube.png
+[twitter logo]: media/images/twitter.png
+[google+ logo]: media/images/google+.png
 
 {% endblock container %}

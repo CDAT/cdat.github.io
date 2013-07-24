@@ -44,8 +44,6 @@ context:
             url: http://askbot.uv-cdat.org/
           - title: Contact
             url: contact.html
-          - title: Mailing list
-            url: mailing-list.html
     site_title: UV-CDAT.org
 media_url: media
 mode: development
