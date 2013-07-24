@@ -14,10 +14,10 @@
     <![endif]-->
 
     {% block basecss %}
-    <link href="{{ media_url('css/bootstrap.css') }}" rel="stylesheet">
+    <link href="media/css/bootstrap.css" rel="stylesheet">
+    <link href="media/css/bootstrap-responsive.css" rel="stylesheet">
     <style type="text/css">
         body {
-            padding-top: 60px;
             padding-bottom: 40px;
         }
         .sidebar-nav {
@@ -39,7 +39,6 @@
             }
         }
     </style>
-    <link href="{{ media_url('css/bootstrap-responsive.css') }}" rel="stylesheet">
     {% endblock basecss %}
     {% block css %}{% endblock %}
 
@@ -64,7 +63,7 @@
 
     {% block body %}
 
-    <div class="container" id="top">
+    <div class="container" id="top" style="padding-top: 60px;">
       {% filter markdown -%}
       {% block container %}
 
@@ -93,22 +92,27 @@
     {% block js %}
     {# Javascript at the bottom for fast page loading #}
     {% block jquery %}
-    {# Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary #}
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="{{ media_url('js/libs/jquery-1.10.1.min.js') }}">\x3C/script>')</script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     {% endblock jquery %}
 
+    {# The following line makes external links open in new windows #}
+    <script src="media/js/links.js"></script>
+
     {% block bootstrap_scripts %}
-    <script src="{{ media_url('js/libs/bootstrap.min.js') }}"></script>
+    <script src="media/js/libs/bootstrap.js"></script>
+    <script src="media/js/libs/bootstrap-button.js"></script>
+    <script src="media/js/libs/bootstrap-collapse.js"></script>
+    <script src="media/js/libs/bootstrap-dropdown.js"></script>
+    <script src="media/js/libs/bootstrap-transition.js"></script>
+{#  <script src="media/js/libs/bootstrap-alert.js"></script>#}
+{#  <script src="media/js/libs/bootstrap-modal.js"></script>#}
+{#  <script src="media/js/libs/bootstrap-scrollspy.js"></script>#}
+{#  <script src="media/js/libs/bootstrap-tab.js"></script>#}
+{#  <script src="media/js/libs/bootstrap-tooltip.js"></script>#}
+{#  <script src="media/js/libs/bootstrap-popover.js"></script>#}
+{#  <script src="media/js/libs/bootstrap-carousel.js"></script>#}
+{#  <script src="media/js/libs/bootstrap-typeahead.js"></script>#}
     {# Uncomment any of these lines to enable that plugin on your site #}
-{#    <script src="{{ media_url('js/libs/bootstrap-alerts.js') }}"></script>#}
-{#    <script src="{{ media_url('js/libs/bootstrap-buttons.js') }}"></script>#}
-      <script src="{{ media_url('js/libs/bootstrap-dropdown.js') }}"></script>
-{#    <script src="{{ media_url('js/libs/bootstrap-modal.js') }}"></script>#}
-{#    <script src="{{ media_url('js/libs/bootstrap-popover.js') }}"></script>#}
-{#    <script src="{{ media_url('js/libs/bootstrap-scrollspy.js') }}"></script>#}
-{#    <script src="{{ media_url('js/libs/bootstrap-tabs.js') }}"></script>#}
-{#    <script src="{{ media_url('js/libs/bootstrap-twipsy.js') }}"></script>#}
     {% endblock bootstrap_scripts %}
 
     {% block scripts %}
