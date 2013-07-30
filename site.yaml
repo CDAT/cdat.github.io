@@ -2,7 +2,7 @@ context:
   data:
     home_url: index.html
     menu:
-      - title: UVCDAT 
+      - title: UV<img src="media/images/uvcdat.png" />CDAT
         url: index.html
       - title: About
         url:
