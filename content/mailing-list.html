@@ -1,0 +1,47 @@
+---
+title: Mailing list
+subtitle: Columns template
+description: Test description
+---
+
+{% extends "topbar.j2" %}
+
+{% block css %}
+
+<style type="text/css">
+  img.contact-logo {
+    height: 40px;
+  }
+</style>
+
+{% endblock css %}
+
+{% block container %}
+
+### UVCDAT Mailing List
+
+#### Subscribing to the mailing list
+To join the mailing list, send an email to [majordomo@lists.llnl.gov][majordomo] with the following in the body:
+
+    subscribe uvcdat-support
+
+#### Unsubscribing to the mailing list
+To leave the mailing list, send an email to [majordomo@lists.llnl.gov][majordomo] with the following in the body:
+
+    unsubscribe uvcdat-support
+
+####Remember
+the best place to ask and anwser any questions regarding UVCDAT (installing, downloading, usage, etc.) is our [question/answer forum][uvcadt-askbot]!
+
+---
+
+### Other forms of contact
+
+<a href="http://www.youtube.com/channel/UCi08s8xII45WKWrfl96eMWA"><img class="contact-logo" src="media/images/youtube.png" alt="YouTube logo"/></a>
+<a href="https://twitter.com/uvcdat"><img class="contact-logo" src="media/images/twitter.png" alt="Twitter logo"/></a>
+<a href="https://plus.google.com/u/0/118068023970804655670/posts"><img class="contact-logo" src="media/images/google+.png" alt="Google+ logo"/></a>
+
+[uvcdat-askbot]:     http://askbot-uvcdat.llnl.gov
+[majordomo]:       mailto:majordomo@lists.llnl.gov
+
+{% endblock container %}
