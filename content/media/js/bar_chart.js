@@ -23,7 +23,7 @@ var yAxis = d3.svg.axis()
     .orient("left")
     .tickFormat(formatPercent);
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select("#top").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
@@ -34,8 +34,8 @@ d3.json(json_url, function(error, data) {
 
   // We assume the data is contained inside one parent element with some
   // human-readable name. Here we jump inside that parent element.
-  data = data.domains;
-  // data = data[Object.keys(data)[0]]; // Generic version
+  //data = data.domains;
+  data = data[Object.keys(data)[0]]; // Generic version
 
   // Force all values to be positive
   data.forEach(function(d) {

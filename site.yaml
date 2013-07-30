@@ -18,8 +18,6 @@ context:
         url:
           - title: Publications
             url: publications.html
-          - title: Conferences
-            url: conferences.html
           - title: Presentations
             url: presentations.html
       - title: Build

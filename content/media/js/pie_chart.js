@@ -1,5 +1,5 @@
 // Where should the JSON for the chart come from?
-var json_url = "../get_json.php?type=country&days=1";
+var json_url = "get_json.php?type=country&days=1";
 
 // Set dimensions of the chart
 var width = 960,
@@ -18,7 +18,7 @@ var pie = d3.layout.pie()
     .sort(null)
     .value(function(d) { return d[1]; });
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select("#top").append("svg")
     .attr("width", width)
     .attr("height", height)
     .append("g")
