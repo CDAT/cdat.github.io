@@ -1,5 +1,5 @@
 // Where should the JSON for the chart come from?
-var json_url = "../get_json.php?type=country&days=1";
+var json_url = "get_json.php?type=country&days=1";
 
 // Set dimensions of the chart
 var width = 960,

@@ -1,5 +1,5 @@
 // Where should the JSON for the chart come from?
-var json_url = "../get_json.php?type=domain&days=1";
+var json_url = "get_json.php?type=domain&days=1";
 
 // Set dimensions of the chart
 var margin = {top: 20, right: 20, bottom: 30, left: 40},
