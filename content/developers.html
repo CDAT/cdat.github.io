@@ -8,8 +8,40 @@ description: Test description
 
 {% block container %}
 
-## Developer info
+### Developer info
 
-This page is under construction.
+[Github][github] is hosting our [repos][repos], issues[issues], and [wiki][wiki].
 
+**Updating this Website**
+
+1. Make a github account and copy your ssh public key see the [github help page][help]
+2. Fork this [website][site]
+3. Install [hyde][hyde]
+
+        $ pip install hyde
+
+4. Make your changes to content/updated.html
+5. Test your changes
+
+        $ hyde gen 
+
+6. Commit your changes
+
+        $ git commit -am "blabla I changed something"
+
+7. Push your changes
+
+        $ git push
+       
+8. Make a [pull request][pull]       
+9. We'll take it from here.
+
+[github]: http://www.github.com
+[repos]: https://github.com/UV-CDAT
+[issues]: https://github.com/UV-CDAT/uvcdat/issues
+[wiki]: https://github.com/UV-CDAT/uvcdat/wiki
+[help]: https://help.github.com/articles/set-up-git
+[site]: https://github.com/aims-group/uvcdat-site
+[hyde]: https://github.com/hyde/hyde/blob/master/README.rst
+[pull]: https://github.com/aims-group/uvcdat-site/pulls
 {% endblock container %}
