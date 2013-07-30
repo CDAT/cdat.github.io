@@ -2,7 +2,7 @@ context:
   data:
     home_url: index.html
     menu:
-      - title: UV-CDAT.org
+      - title: UVCDAT 
         url: index.html
       - title: About
         url:
@@ -48,7 +48,7 @@ context:
             url: http://askbot-uvcdat.llnl.gov
           - title: Mailing list
             url: mailing-list.html
-    site_title: UV-CDAT.org
+    site_title: UVCDAT
 media_url: media
 mode: development
 plugins: [hyde.ext.plugins.meta.MetaPlugin, hyde.ext.plugins.auto_extend.AutoExtendPlugin,
