@@ -20,9 +20,9 @@
  */
 
 /* Number of seconds to allow the use of cached data. Set to 0 to never create
- * cache files. (TODO: Setting to 0 breaks the graph.)
+ * cache files.
  */
-$cache_lifespan = 60 * 60;
+$cache_lifespan = 3600;
 
 $type = $_GET['type'];
 if ($type != 'country'  &&
@@ -37,18 +37,16 @@ if (is_numeric($_GET['days']))
 else
   $days = 0;
 
-$cache_file = "json/$type.$days-day.json";
+$cache_file = "$type.$days-day.json";
 
 // Refresh the cache file if it doesn't exist, or if the old one is expired
 if (!file_exists($cache_file) || time() - filemtime($cache_file) > $cache_lifespan) {
   $json = `curl http://uv-cdat.llnl.gov/UVCDATUsage/log/json/$type/?days=$days`;
   if ($cache_lifespan != 0) {
-    touch($cache_file);
     if (is_writable($cache_file))
       file_put_contents($cache_file, $json);
-    else
-      exit("<div class='error'>Error: Cache file <tt>$cache_file</tt> not writable.</div>");
   }
+  header("Content-type: application/json");
   print $json;
 } else {
   print file_get_contents($cache_file);

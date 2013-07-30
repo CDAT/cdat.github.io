@@ -1,5 +1,5 @@
 // Where should the JSON for the chart come from?
-var json_url = "get_json.php?type=domain&days=1";
+var json_url = "../get_json.php?type=domain&days=1";
 
 // Set dimensions of the chart
 var margin = {top: 20, right: 20, bottom: 30, left: 40},
@@ -34,8 +34,8 @@ d3.json(json_url, function(error, data) {
 
   // We assume the data is contained inside one parent element with some
   // human-readable name. Here we jump inside that parent element.
-  data = data.domains;
-  // data = data[Object.keys(data)[0]]; // Generic version
+  //data = data.domains;
+  data = data[Object.keys(data)[0]]; // Generic version
 
   // Force all values to be positive
   data.forEach(function(d) {

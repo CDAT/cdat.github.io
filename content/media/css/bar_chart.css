@@ -1,5 +1,4 @@
-.axis path,
-.axis line {
+.axis path, .axis line {
   fill: none;
   stroke: #000;
   shape-rendering: crispEdges;
@@ -9,6 +8,14 @@
   fill: steelblue;
 }
 
+.x .tick text {
+  -webkit-transform: translate(-25px, 25px) rotate(-45deg);
+}
+
 .x.axis path {
   display: none;
+}
+
+svg {
+  height: 550px;
 }
