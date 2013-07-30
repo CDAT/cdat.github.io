@@ -33,7 +33,7 @@ context:
       - title: Contribute
         url:
           - title: Developer info
-            url: developers.html
+            url: developer-info.html
           - title: GitHub
             url: https://github.com/uv-cdat
           - title: Issues
