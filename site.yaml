@@ -26,10 +26,6 @@ context:
             url: releases.html
           - title: Installation
             url: installation.html
-          - title: Usage
-            url: usage.html
-      - title: Download
-        url: http://sourceforge.net/projects/cdat/files/Releases/UV-CDAT/1.3
       - title: Contribute
         url:
           - title: Developer info
@@ -40,7 +36,7 @@ context:
             url: https://github.com/UV-CDAT/uvcdat/issues
       - title: Help
         url:
-          - title: Tutorials
+          - title: Tutorials / Videos
             url: http://www.youtube.com/channel/UCi08s8xII45WKWrfl96eMWA
           - title: Support forum
             url: http://askbot-uvcdat.llnl.gov
