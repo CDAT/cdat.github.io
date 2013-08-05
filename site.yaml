@@ -23,9 +23,11 @@ context:
       - title: Build
         url:
           - title: Releases
-            url: releases.html
-          - title: Installation
+            url: https://github.com/UV-CDAT/uvcdat/releases/tag/1.3.3          
+          - title: Source Installation
             url: installation.html
+          - title: Binaries Installation
+            url: binInstallation.html
       - title: Contribute
         url:
           - title: Developer info
