@@ -25,9 +25,9 @@ context:
           - title: Releases
             url: https://github.com/UV-CDAT/uvcdat/releases/tag/1.3.3
           - title: Source Installation
-            url: installation.html
+            url: installationSource.html
           - title: Binaries Installation
-            url: binInstallation.html
+            url: installationBinaries.html
       - title: Contribute
         url:
           - title: Developer info
