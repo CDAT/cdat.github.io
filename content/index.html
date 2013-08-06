@@ -23,6 +23,17 @@ description: Test description
     width: 100%;
     height: 100%;
   }
+  div.span4 {
+    border: 1px solid black;
+    margin-left: 0;
+    padding: 20px 20px 40px;
+  }
+  div.span12 {
+    margin: 20px 0 40px;
+  }
+  div.span12 > a > div.span4 > h3 {
+    color: black;
+  }
 </style>
 {% endblock css %}
 
@@ -65,21 +76,14 @@ an integrated environment.
 
 Within both paradigms, UV-CDAT will provide data-provenance capture and
 mechanisms to support data analysis via the VisTrails infrastructure.
-{#
-  <div class="span4">
-    <h2>Heading</h2>
-    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><a class="btn" href="#">View details &raquo;</a></p>
-  </div>
-  <div class="span4">
-    <h2>Heading</h2>
-    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><a class="btn" href="#">View details &raquo;</a></p>
- </div>
-  <div class="span4">
-    <h2>Heading</h2>
-    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-    <p><a class="btn" href="#">View details &raquo;</a></p>
-  </div>
-#}
+
+<div class="span12">
+  <a href="usage.html">
+    <div class="span4">
+      <h3>See UV-CDAT usage data</h3>
+      Check out the data behind who's using UV-CDAT &rarr;
+    </div>
+  </a>
+</div>
+
 {% endblock main %}
