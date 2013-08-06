@@ -34,8 +34,6 @@ context:
             url: developer-info.html
           - title: GitHub
             url: https://github.com/uv-cdat
-          - title: Issues
-            url: https://github.com/UV-CDAT/uvcdat/issues
       - title: Help
         url:
           - title: Tutorials / Videos
