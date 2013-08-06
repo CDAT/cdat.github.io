@@ -23,11 +23,11 @@ context:
       - title: Build
         url:
           - title: Releases
-            url: releases.html
-          - title: Installation
+            url: https://github.com/UV-CDAT/uvcdat/releases/tag/1.3.3
+          - title: Source Installation
             url: installation.html
-          - title: Usage
-            url: usage.html
+          - title: Binaries Installation
+            url: binInstallation.html
       - title: Contribute
         url:
           - title: Developer info
@@ -38,7 +38,7 @@ context:
             url: https://github.com/UV-CDAT/uvcdat/issues
       - title: Help
         url:
-          - title: Tutorials
+          - title: Tutorials / Videos
             url: http://www.youtube.com/channel/UCi08s8xII45WKWrfl96eMWA
           - title: Support forum
             url: http://askbot-uvcdat.llnl.gov
