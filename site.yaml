@@ -1,6 +1,7 @@
 context:
   data:
     home_url: index.html
+    nav_hover: yes
     menu:
       - title: UV<img src="media/images/uvcdat.png" style=margin-top:-7px />CDAT
         url: index.html
