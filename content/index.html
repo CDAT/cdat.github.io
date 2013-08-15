@@ -7,45 +7,53 @@ description: Test description
 
 {% block css %}
 <style type="text/css">
-  div.hero-unit {
-    position: relative;
-    z-index: 1;
-  }
-  div.hero-unit div.hero-bg {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    opacity: .15;
-    background: url(media/images/uv-cdat.png) center center no-repeat;
-    width: 100%;
-    height: 100%;
-  }
-  div.span4 {
-    border: 1px solid black;
-    margin-left: 0;
-    padding: 20px 20px 40px;
-  }
-  div.span12 {
-    margin: 20px 0 40px;
-  }
-  div.span12 > a > div.span4 > h3 {
-    color: black;
-  }
-  div.span6 > img {
-    max-height: 180px;
-  }
+div.hero-unit {
+  position: relative;
+  z-index: 1;
+}
+div.hero-unit div.hero-bg {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: .15;
+  background: url(media/images/uv-cdat.png) center center no-repeat;
+  width: 100%;
+  height: 100%;
+}
+div.span4 {
+  border: 1px solid black;
+  margin-left: 0;
+  padding: 20px 20px 40px;
+}
+div.span12 {
+  margin: 20px 0 40px;
+}
+div.span12 > a > div.span4 > h3 {
+  color: black;
+}
+div.span6 > img {
+  max-height: 180px;
+}
 </style>
 {% endblock css %}
 
+{% block headjs %}
+<script>
+$(document).ready(function(){
+    $('.carousel').carousel();
+    });
+</script>
+{% endblock headjs %}
+
 {% block hero %}
-  <div class="hero-bg"></div>
-  <h1>Ultrascale Visualization</h1>
-  <h2>Climate Data Analysis Tools</h2>
-  <p>UV-CDAT is a powerful and complete front-end to a rich set of visual-data exploration and analysis capabilities well suited for climate-data analysis problems.</p>
-  <p><a href="mission.html" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+<div class="hero-bg"></div>
+<h1>Ultrascale Visualization</h1>
+<h2>Climate Data Analysis Tools</h2>
+<p>UV-CDAT is a powerful and complete front-end to a rich set of visual-data exploration and analysis capabilities well suited for climate-data analysis problems.</p>
+<p><a href="mission.html" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
 {% endblock hero %}
 {% block main %}
 ## The UV-CDAT Project
@@ -170,6 +178,45 @@ mechanisms to support data analysis via the VisTrails infrastructure.
     </a>
   </div>
 </div>
+
+<div id="this-carousel-id" class="carousel slide"><!-- class of slide for animation -->
+  <div class="carousel-inner">
+    <div class="item active"><!-- class of active since it's the first item -->
+      <img src="media/images/gallery/GUI_and_Pipeline.png" class="thumbnail" />
+      <div class="carousel-caption">
+        <p>Caption text here</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="media/images/gallery/Celine's California Plot.png" />
+      <div class="carousel-caption">
+        <p>Caption text here</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="media/images/gallery/Figure 5.png" class="thumbnail" />
+      <div class="carousel-caption">
+        <p>Caption text here</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="media/images/gallery/Image-2-Composite.png" class="thumbnail" />
+      <div class="carousel-caption">
+        <p>Caption text here</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="media/images/gallery/Image2.png" class="thumbnail" />
+      <div class="carousel-caption">
+        <p>Caption text here</p>
+      </div>
+    </div>
+  </div><!-- /.carousel-inner -->
+  <!--  Next and Previous controls below
+                                                                                                                                                                        href values must reference the id for this carousel -->
+  <a class="carousel-control left" href="#this-carousel-id" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#this-carousel-id" data-slide="next">&rsaquo;</a>
+</div><!-- /.carousel -->
 
 <h3><a href="usage.html">Usage</a> <small>(beta)</small></h3>
 
