@@ -38,7 +38,7 @@ context:
       - title: Help
         url:
           - title: Tutorials / Videos
-            url: http://www.youtube.com/channel/UCi08s8xII45WKWrfl96eMWA
+            url: tutorials.html
           - title: Support forum
             url: http://askbot-uvcdat.llnl.gov
           - title: Mailing list
