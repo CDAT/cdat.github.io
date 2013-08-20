@@ -53,50 +53,46 @@ div.span6 > img {
 <p><a href="mission.html" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
 {% endblock hero %}
 {% block main %}
-## The UV-CDAT Project
-UV-CDAT builds on the following key technologies:
+  <h2>The UV-CDAT Project</h2>
+  <p>
+  UV-CDAT builds on the following key technologies:
+  <ol>
+    <li>The Climate Data Analysis Tools (CDAT) framework developed at LLNL for the analysis, visualization, and management of large-scale distributed climate data;</li>
+    <li>ParaView: an open-source, multi-platform, parallel-capable visualization tool with recently added capabilities to better support specific needs of the climate-science community;</li>
+    <li>VisTrails, an open-source scientific workflow and provenance management system that supports data exploration and visualization;</li>
+    <li>VisIt: an open-source, parallel-capable, visual-data exploration and analysis tool that is capable of running on a diverse set of platforms, ranging from laptops to the Department of Energy's largest supercomputers.</li>
+  </ol>
+  </p>
+  <p>
+  These combined tools, along with others such as the R open-source statistical
+  analysis and plotting software and custom packages (e.g. vtDV3D), form UV-CDAT
+  and provide a synergistic approach to climate modeling, allowing researchers to
+  advance scientific visualization of large-scale climate data sets. The UV-CDAT
+  framework couples powerful software infrastructures through two primary means:
 
-1. the Climate Data Analysis Tools (CDAT) framework developed at LLNL for the
-analysis, visualization, and management of large-scale distributed climate data;
-2. ParaView: an open-source, multi-platform, parallel-capable visualization tool
-with recently added capabilities to better support specific needs of the
-climate-science community;
-3. VisTrails, an open-source scientific workflow and provenance management
-system that supports data exploration and visualization; and
-4. VisIt: an open-source, parallel-capable, visual-data exploration and
-analysis tool that is capable of running on a diverse set of platforms, ranging
-from laptops to the Department of Energy's largest supercomputers.
-
-These combined tools, along with others such as the R open-source statistical
-analysis and plotting software and custom packages (e.g. vtDV3D), form UV-CDAT
-and provide a synergistic approach to climate modeling, allowing researchers to
-advance scientific visualization of large-scale climate data sets. The UV-CDAT
-framework couples powerful software infrastructures through two primary means:
-
-1. tightly coupled integration of the CDAT Core with the VTK/ParaView
-infrastructure to provide high-performance, parallel-streaming data analysis and
-visualization of massive climate-data sets (other tighly coupled tools include
-VCS, VisTrails, DV3D, and ESMF/ESMP); and
-2. loosely coupled integration to provide the flexibility of using tools quickly
-in the infrastructure such as ViSUS, VisIt, R, and MatLab for data analysis and
-visualization as well as to apply customized data analysis applications within
-an integrated environment.
-
-Within both paradigms, UV-CDAT will provide data-provenance capture and
-mechanisms to support data analysis via the VisTrails infrastructure.
-
-### U.S. Sponsors
-<div class="row">
-  <div class="span6">
-    <img src="media/images/doe.svg" class="thumbnail" />
+  <ol>
+    <li>Tightly coupled integration of the CDAT Core with the VTK/ParaView infrastructure to provide high-performance, parallel-streaming data analysis and visualization of massive climate-data sets (other tighly coupled tools include
+    VCS, VisTrails, DV3D, and ESMF/ESMP);</li>
+    <li>Loosely coupled integration to provide the flexibility of using tools quickly
+    in the infrastructure such as ViSUS, VisIt, R, and MatLab for data analysis and
+    visualization as well as to apply customized data analysis applications within
+    an integrated environment.</li>
+  </ol>
+  </p>
+  <p>
+  Within both paradigms, UV-CDAT will provide data-provenance capture and
+  mechanisms to support data analysis via the VisTrails infrastructure.
+  </p>
+  <h3>U.S. Sponsors</h3>
+  <div class="row">
+    <div class="span6">
+      <img src="media/images/doe.svg" class="thumbnail" />
+    </div>
+    <div class="span6">
+      <img src="media/images/nasa.svg" class="thumbnail" />
+    </div>
   </div>
-  <div class="span6">
-    <img src="media/images/nasa.svg" class="thumbnail" />
-  </div>
-</div>
+  {% include "carousel.j2" %}
 
-{% include "carousel.j2" %}
-
-<h3><a href="usage.html">Usage</a> <small>(beta)</small></h3>
-
+  <h3><a href="usage.html">Usage</a> <small>(beta)</small></h3>
 {% endblock main %}
