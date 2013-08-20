@@ -30,11 +30,7 @@ context:
           - title: Binaries Installation
             url: installationBinaries.html
       - title: Contribute
-        url:
-          - title: Developer info
-            url: developer-info.html
-          - title: GitHub
-            url: https://github.com/uv-cdat
+        url: developer-info.html
       - title: Help
         url:
           - title: Tutorials / Videos

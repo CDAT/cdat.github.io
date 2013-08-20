@@ -37,6 +37,11 @@ div.span12 > a > div.span4 > h3 {
 div.span6 > img {
   max-height: 180px;
 }
+.peopleCarouselImg img {
+  width: auto;
+  height: 225px;
+  max-height: 225px;
+}
 </style>
 {% endblock css %}
 
@@ -90,130 +95,8 @@ mechanisms to support data analysis via the VisTrails infrastructure.
   </div>
 </div>
 
-<div id="this-carousel-id" class="carousel slide"><!-- class of slide for animation -->
-  <div class="carousel-inner">
-    <div class="item active"><!-- class of active since it's the first item -->
-      <center>
-        <img src="media/images/gallery/CelinesCaliforniaPlot.png" class="thumbnail" />
-      </center>
-    </div>
-    <div class="item">
-      <center>
-        <img src="media/images/gallery/figure3b.png" class="thumbnail" />
-      </center>
-    </div>
-    <div class="item">
-      <center>
-        <img src="media/images/gallery/Figure5a.png" class="thumbnail" />
-      </center>
-    </div>
-    <div class="item">
-      <center>
-        <img src="media/images/gallery/Figure5c.png" class="thumbnail" />
-      </center>
-    </div>
-    <div class="item">
-      <center>
-        <img src="media/images/gallery/grid.png" class="thumbnail" />
-      </center>
-    </div>
-    <div class="item">
-      <center>
-        <img src="media/images/gallery/Image-2-CompositeB.png" class="thumbnail" />
-      </center>
-    </div>
-    <div class="item">
-      <center>
-        <img src="media/images/gallery/Image-2-CompositeC.png" class="thumbnail" />
-      </center>
-    </div>
-    <div class="item">
-      <center>
-        <img src="media/images/gallery/Image-2-CompositeD.png" class="thumbnail" />
-      </center>
-    </div>
-    <div class="item">
-      <center>
-        <img src="media/images/gallery/Image-2-CompositeF.png" class="thumbnail" />
-      </center>
-    </div>
-    <div class="item">
-      <center>
-        <img src="media/images/gallery/Image2.png" class="thumbnail" />
-      </center>
-    </div>
-    <div class="item">
-      <center>
-        <img src="media/images/gallery/matplotlib_clt.png" class="thumbnail" />
-      </center>
-    </div>
-    <div class="item">
-      <center>
-        <img src="media/images/gallery/portrait_plot.png" class="thumbnail" />
-      </center>
-    </div>
-    <div class="item">
-      <center>
-        <img src="media/images/gallery/ScreenShot-UVCDAT-finalA.png" class="thumbnail" />
-      </center>
-    </div>
-    <div class="item">
-      <center>
-        <img src="media/images/gallery/ScreenShot-UVCDAT-finalB.png" class="thumbnail" />
-      </center>
-    </div>
-    <div class="item">
-      <center>
-        <img src="media/images/gallery/ScreenShot-UVCDAT-finalC.png" class="thumbnail" />
-      </center>
-    </div>
-    <div class="item">
-      <center>
-        <img src="media/images/gallery/ScreenShot-UVCDAT-finalD.png" class="thumbnail" />
-      </center>
-    </div>
-    <div class="item">
-      <center>
-        <img src="media/images/gallery/StreamerSlicer.png" class="thumbnail" />
-      </center>
-    </div>
-    <div class="item">
-      <center>
-        <img src="media/images/gallery/Taylor_Diagram.png" class="thumbnail" />
-      </center>
-    </div>
-    <div class="item">
-      <center>
-        <img src="media/images/gallery/typhoon_3_norevert.png" class="thumbnail" />
-      </center>
-    </div>
-    <div class="item">
-      <center>
-        <img src="media/images/gallery/U-VR.png" class="thumbnail" />
-      </center>
-    </div>
-    <div class="item">
-      <center>
-        <img src="media/images/gallery/U-VRSlicer.png" class="thumbnail" />
-      </center>
-    </div>
-    <div class="item">
-      <center>
-        <img src="media/images/gallery/uv_NA.png" class="thumbnail" />
-      </center>
-    </div>
-  </div><!-- /.carousel-inner -->
-  <!--  Next and Previous controls below
-                                                                                                                                                                        href values must reference the id for this carousel -->
-  <a class="carousel-control left" href="#this-carousel-id" data-slide="prev">&lsaquo;</a>
-  <a class="carousel-control right" href="#this-carousel-id" data-slide="next">&rsaquo;</a>
-</div><!-- /.carousel -->
+{% include "carousel.j2" %}
 
-<!--
-      <div class="carousel-caption">
-        <p>Caption text here</p>
-      </div>
--->
 <h3><a href="usage.html">Usage</a> <small>(beta)</small></h3>
 
 {% endblock main %}
