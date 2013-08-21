@@ -41,7 +41,7 @@ context:
             url: mailing-list.html
     site_title: UVCDAT
     carousel:
-      - caption: Test caption
+      - caption: Test caption <a class="btn" onclick="javascript:flipit('1')" href="#">See Code</a>
         image: media/images/gallery/CelinesCaliforniaPlot.png
 media_url: media
 mode: development

@@ -45,12 +45,16 @@
 {% macro render_carousel_items(items) -%}
   {% for carousel_item in items -%}
     <div class="item peopleCarouselImg">
-      <center>
-        <img src="{{ carousel_item.image }}" class="thumbnail" />
-        <div class="carousel-caption">
-          <p>{{ carousel_item.caption }}</p>
+      <div class="flipbox-container box100">
+        <div id="flipbox1" class="flipbox">
+          <center>
+            <img src="{{ carousel_item.image }}" class="thumbnail" />
+            <div class="carousel-caption">
+              <p>{{ carousel_item.caption }}</p>
+            </div>
+          </center>
         </div>
-      </center>
+      </div>
     </div>
   {%- endfor %}
 {%- endmacro %}
