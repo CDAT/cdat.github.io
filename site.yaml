@@ -40,6 +40,9 @@ context:
           - title: Mailing list
             url: mailing-list.html
     site_title: UVCDAT
+    carousel:
+      - caption: Test caption
+        image: media/images/gallery/CelinesCaliforniaPlot.png
 media_url: media
 mode: development
 plugins: [hyde.ext.plugins.meta.MetaPlugin, hyde.ext.plugins.auto_extend.AutoExtendPlugin,

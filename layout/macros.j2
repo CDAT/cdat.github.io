@@ -41,3 +41,16 @@
 <div class="span9">
 <div class="row-fluid">
 {%- endmacro %}
+
+{% macro render_carousel_items(items) -%}
+  {% for carousel_item in items -%}
+    <div class="item peopleCarouselImg">
+      <center>
+        <img src="{{ carousel_item.image }}" class="thumbnail" />
+        <div class="carousel-caption">
+          <p>{{ carousel_item.caption }}</p>
+        </div>
+      </center>
+    </div>
+  {%- endfor %}
+{%- endmacro %}
