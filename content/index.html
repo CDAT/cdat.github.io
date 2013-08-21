@@ -37,20 +37,24 @@ div.span12 > a > div.span4 > h3 {
 div.span6 > img {
   max-height: 180px;
 }
+div.peopleCarouselImg {
+  padding: 60px;
+  height: 225px;
+  max-height: 225px;
+}
 .peopleCarouselImg img {
   width: auto;
   height: 225px;
   max-height: 225px;
 }
+div.hero-unit {
+  padding: 0;
+}
 </style>
 {% endblock css %}
 
 {% block hero %}
-<div class="hero-bg"></div>
-<h1>Ultrascale Visualization</h1>
-<h2>Climate Data Analysis Tools</h2>
-<p>UV-CDAT is a powerful and complete front-end to a rich set of visual-data exploration and analysis capabilities well suited for climate-data analysis problems.</p>
-<p><a href="mission.html" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+  {% include "carousel.j2" %}
 {% endblock hero %}
 {% block main %}
   <h2>The UV-CDAT Project</h2>
@@ -92,7 +96,6 @@ div.span6 > img {
       <img src="media/images/nasa.svg" class="thumbnail" />
     </div>
   </div>
-  {% include "carousel.j2" %}
 
   <h3><a href="usage.html">Usage</a> <small>(beta)</small></h3>
 {% endblock main %}
