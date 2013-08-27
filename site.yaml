@@ -41,8 +41,46 @@ context:
             url: mailing-list.html
     site_title: UVCDAT
     carousel:
-      - caption: Test caption <a class="btn" onclick="javascript:flipit('1')" href="#">See Code</a>
+      - caption: Sample output
         image: media/images/gallery/CelinesCaliforniaPlot.png
+      - caption: Sample output
+        image: media/images/gallery/figure3b.png
+      - caption: Sample output
+        image: media/images/gallery/Figure5a.png
+      - caption: Sample output
+        image: media/images/gallery/Figure5b.png
+      - caption: Sample output
+        image: media/images/gallery/Figure5c.png
+      - caption: Sample output
+        image: media/images/gallery/Figure5d.png
+      - caption: Sample output
+        image: media/images/gallery/GlyphVolume-1.jpg
+      - caption: Sample output
+        image: media/images/gallery/grid.png
+      - caption: Sample output
+        image: media/images/gallery/GUI_and_PipelineA.png
+      - caption: Sample output
+        image: media/images/gallery/GUI_and_PipelineB.png
+      - caption: Sample output
+        image: media/images/gallery/GUI_and_PipelineC.png
+      - caption: Sample output
+        image: media/images/gallery/GUI_and_PipelineD.png
+      - caption: Sample output
+        image: media/images/gallery/HR-RH-VR-Slicer-2.jpg
+      - caption: Sample output
+        image: media/images/gallery/Image-2-CompositeA.png
+      - caption: Sample output
+        image: media/images/gallery/Image-2-CompositeB.png
+      - caption: Sample output
+        image: media/images/gallery/Image-2-CompositeC.png
+      - caption: Sample output
+        image: media/images/gallery/Image-2-CompositeD.png
+      - caption: Sample output
+        image: media/images/gallery/Image-2-CompositeE.png
+      - caption: Sample output
+        image: media/images/gallery/Image-2-CompositeF.png
+      - caption: UVCDAT Power Wall
+        image: media/images/gallery/UVCDAT-Hyperwall.jpg
 media_url: media
 mode: development
 plugins: [hyde.ext.plugins.meta.MetaPlugin, hyde.ext.plugins.auto_extend.AutoExtendPlugin,
