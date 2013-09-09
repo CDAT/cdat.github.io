@@ -21,19 +21,19 @@ context:
             url: publications.html
           - title: Presentations
             url: presentations.html
-      - title: Build
+      - title: Obtaining
         url:
-          - title: Releases
-            url: https://github.com/UV-CDAT/uvcdat/releases
-          - title: Source Installation
-            url: installationSource.html
           - title: Binaries Installation
             url: installationBinaries.html
+          - title: Source Installation
+            url: installationSource.html
+          - title: Releases
+            url: https://github.com/UV-CDAT/uvcdat/releases
       - title: Contribute
-        url: developer-info.html
+        url: https://github.com/UV-CDAT/uvcdat/wiki
       - title: Help
         url:
-          - title: Tutorials / Videos
+          - title: Tutorials
             url: tutorials.html
           - title: Support forum
             url: http://askbot-uvcdat.llnl.gov
