@@ -21,6 +21,8 @@ context:
             url: publications.html
           - title: Presentations
             url: presentations.html
+          - title: Animations
+            url: animations.html
       - title: Obtaining
         url:
           - title: Binaries Installation
