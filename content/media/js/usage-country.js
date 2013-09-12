@@ -51,7 +51,16 @@ d3.json(json_url, function(error, data) {
 
   g.append("text")
       .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
-      .attr("dy", ".35em")
+      //.attr("dy", ".35em")
+      .attr("dy", function(d){
+        var c = arc.centroid(d);
+        var x = c[0];
+        var y = c[1];
+        var h = Math.sqrt(x*x + y*y);
+        var dy = y/h * obj.labelRadius; 
+        dy=dy*fontSizeParam*(.14/heightParam);
+        return (dy)+"em";
+      })
       .style("text-anchor", "middle")
       .text(function(d) { return d.data[0]; });
 
