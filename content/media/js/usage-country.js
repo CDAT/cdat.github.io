@@ -1,6 +1,6 @@
 // Where should the JSON for the chart come from?
 //var json_url = "get_json.php?type=country&days=0";
-var json_url = "http://uv-cdat.llnl.gov/UVCDATUsage/log/json/country/?days=0";
+var json_url = "http://uvcdat.llnl.gov/UVCDATUsage/log/json/country/?days=0";
 
 // Set dimensions of the chart
 var width = 960,
