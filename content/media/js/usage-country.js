@@ -3,7 +3,7 @@
 var json_url = "http://uvcdat.llnl.gov/UVCDATUsage/log/json/country/?days=0";
 
 // Set dimensions of the chart
-var margin = {top: 20, right: 20, bottom: 110, left: 50},
+var margin = {top: 20, right: 20, bottom: 50, left: 50},
     width  = 950 - margin.left - margin.right,
     height = 500 - margin.top  - margin.bottom;
 var totalCount = 0;
