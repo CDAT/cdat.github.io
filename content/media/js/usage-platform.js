@@ -1,6 +1,6 @@
 // Where should the JSON for the chart come from?
 //var json_url = "get_json.php?type=domain&days=1";
-var json_url = "http://uvcdat.llnl.gov/UVCDATUsage/log/json/domain/?days=0";
+var json_url = "http://uvcdat.llnl.gov/UVCDATUsage/log/json/platform/?days=0";
 
 // Set dimensions of the chart
 var margin = {top: 20, right: 20, bottom: 50, left: 50},
