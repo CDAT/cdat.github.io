@@ -6,6 +6,7 @@ var json_url = "http://uvcdat.llnl.gov/UVCDATUsage/log/json/country/?days=0";
 var margin = {top: 20, right: 20, bottom: 50, left: 50},
     width  = 950 - margin.left - margin.right,
     height = 500 - margin.top  - margin.bottom;
+var totalCount = 0;
 
 var formatPercent = d3.format(".0");
 
@@ -35,14 +36,16 @@ d3.json(json_url, function(error, data) {
 
   // We assume the data is contained inside one parent element with some
   // human-readable name. Here we jump inside that parent element.
-  //data = data.domains;
+  //data = data.countrys;
   data = data[Object.keys(data)[0]]; // Generic version
 
   // Force all values to be positive
   data.forEach(function(d) {
     d[1] = +d[1];
+    totalCount = totalCount + d[1];
   });
 
+  alert(totalCount);
   // Set domains
   x.domain(data.map(function(d) { return d[0]; }));
   y.domain([0, d3.max(data, function(d) { return d[1]; })]);
@@ -75,4 +78,6 @@ d3.json(json_url, function(error, data) {
       .attr("height", function(d) { return height - y(d[1]); });
 
 });
+
+$('#count').append("<p> The total number of unique IPs is " + totalCount + "</p>");
 

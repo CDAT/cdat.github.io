@@ -6,7 +6,7 @@ var json_url = "http://uvcdat.llnl.gov/UVCDATUsage/log/json/domain/?days=0";
 var margin = {top: 20, right: 20, bottom: 50, left: 50},
     width  = 950 - margin.left - margin.right,
     height = 500 - margin.top  - margin.bottom;
-
+var total = 0;
 var formatPercent = d3.format(".0");
 
 var x = d3.scale.ordinal()
@@ -41,6 +41,7 @@ d3.json(json_url, function(error, data) {
   // Force all values to be positive
   data.forEach(function(d) {
     d[1] = +d[1];
+    total = total + d[1];
   });
 
   // Set domains
@@ -76,3 +77,4 @@ d3.json(json_url, function(error, data) {
 
 });
 
+$('#count').append("<p>The total number of unique actions is " + total + "</p>");
