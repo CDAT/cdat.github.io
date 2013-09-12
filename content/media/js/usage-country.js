@@ -56,8 +56,8 @@ d3.json(json_url, function(error, data) {
     y = c[1],
     // pythagorean theorem for hypotenuse
     h = Math.sqrt(x*x + y*y);
-    return "translate(" + (x/h * labelr) +  ',' +
-      (y/h * labelr) +  ")"; 
+    return "translate(" + (x/h * radius) +  ',' +
+      (y/h * radius) +  ")"; 
   })
   .attr("text-anchor", function(d) {
     // are we past the center?
