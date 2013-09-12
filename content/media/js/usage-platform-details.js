@@ -3,9 +3,9 @@
 var json_url = "http://uvcdat.llnl.gov/UVCDATUsage/log/json/domain/?days=0";
 
 // Set dimensions of the chart
-var margin = {top: 20, right: 20, bottom: 100, left: 50},
-    width  = 1350 - margin.left - margin.right,
-    height = 600 - margin.top  - margin.bottom;
+var margin = {top: 20, right: 20, bottom: 50, left: 50},
+    width  = 950 - margin.left - margin.right,
+    height = 500 - margin.top  - margin.bottom;
 var total = 0;
 var formatPercent = d3.format(".0");
 
