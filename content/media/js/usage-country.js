@@ -45,7 +45,6 @@ d3.json(json_url, function(error, data) {
     totalCount = totalCount + d[1];
   });
 
-  alert(totalCount);
   // Set domains
   x.domain(data.map(function(d) { return d[0]; }));
   y.domain([0, d3.max(data, function(d) { return d[1]; })]);
