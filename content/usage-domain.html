@@ -1,0 +1,17 @@
+---
+title: Usage Domain
+subtitle: Columns template
+description: Test description
+---
+
+{% extends "topbar.j2" %}
+
+{% block container %}
+
+<link rel="stylesheet" type="text/css" href="media/css/usage-domain.css" />
+<h2>Number of unique Machines using that platform</h2> (<a href="usage.html">back</a>)
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="media/js/usage-domain.js"></script>
+<p>This data is pulled from <a href="http://uv-cdat.llnl.gov/UVCDATUsage/log/json/domain/?days=0">http://uv-cdat.llnl.gov/UVCDATUsage/log/json/domain/?days=0</a> with a 1-hour cache.</p>
+
+{% endblock container %}
