@@ -64,7 +64,7 @@ d3.json(json_url, function(error, data) {
       .attr("y", 6)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
-      .text("Program events logged");
+      .text("Unique IPs");
 
   // Draw bars
   svg.selectAll(".bar")
