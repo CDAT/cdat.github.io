@@ -76,7 +76,7 @@ d3.json(json_url, function(error, data) {
       .attr("y", function(d) { return y(d[1]); })
       .attr("height", function(d) { return height - y(d[1]); });
 
-  $('#count').append("<p><b>The total number of unique IPs is <i>" + totalCount + "</i></b></p>");
+  $('#count').append("<p><b>The total number of unique users is <i>" + totalCount + "</i></b></p>");
 });
 
 

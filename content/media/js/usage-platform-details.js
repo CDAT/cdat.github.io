@@ -36,17 +36,17 @@ d3.json(json_url, function(error, data) {
   // We assume the data is contained inside one parent element with some
   // human-readable name. Here we jump inside that parent element.
   //data = data.domains;
-  data = data[Object.keys(data)[0]]; // Generic version
+  data = data[Object.keys(data)[1]]; // Generic version
 
   // Force all values to be positive
   data.forEach(function(d) {
-    d[1] = +d[1];
-    total = total + d[1];
+    d[2] = +d[2];
+    total = total + d[2];
   });
 
   // Set domains
-  x.domain(data.map(function(d) { return d[0]; }));
-  y.domain([0, d3.max(data, function(d) { return d[1]; })]);
+  x.domain(data.map(function(d) { return d[1]; }));
+  y.domain([0, d3.max(data, function(d) { return d[2]; })]);
 
   // Draw x axis
   svg.append("g")
@@ -70,10 +70,10 @@ d3.json(json_url, function(error, data) {
       .data(data)
       .enter().append("rect")
       .attr("class", "bar")
-      .attr("x", function(d) { return x(d[0]); })
+      .attr("x", function(d) { return x(d[1]); })
       .attr("width", x.rangeBand())
-      .attr("y", function(d) { return y(d[1]); })
-      .attr("height", function(d) { return height - y(d[1]); });
+      .attr("y", function(d) { return y(d[2]); })
+      .attr("height", function(d) { return height - y(d[2]); });
 
   $('#count').append("<p><b>The total number of unique actions is <i>" + total + "</i></b></p>");
 });

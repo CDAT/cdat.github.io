@@ -75,6 +75,6 @@ d3.json(json_url, function(error, data) {
       .attr("y", function(d) { return y(d[1]); })
       .attr("height", function(d) { return height - y(d[1]); });
 
-  $('#count').append("<p><b>The total number of unique actions is <i>" + total + "</i></b></p>");
+  $('#count').append("<p><b>The total number of unique users is <i>" + total + "</i></b></p>");
 });
 
