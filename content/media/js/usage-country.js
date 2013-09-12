@@ -4,7 +4,7 @@ var json_url = "http://uvcdat.llnl.gov/UVCDATUsage/log/json/country/?days=0";
 
 // Set dimensions of the chart
 var width = 960,
-height = 500,
+height = 700,
 radius = Math.min(width, height) / 2;
 
 // Set colors to use for each slice
