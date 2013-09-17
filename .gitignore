@@ -3,3 +3,5 @@ deploy
 *.hyde_deps
 *.DS_Store
 *.swp
+originals/
+wiki/zHTML/
