@@ -23,6 +23,8 @@ context:
             url: presentations.html
           - title: Animations
             url: animations.html
+          - title: Use Cases
+            url: https://github.com/UV-CDAT/uvcdat/wiki/Use-Cases
       - title: Obtaining
         url:
           - title: Binaries Installation
@@ -41,6 +43,8 @@ context:
             url: http://askbot-uvcdat.llnl.gov
           - title: Mailing list
             url: mailing-list.html
+          - title: Wiki
+            url: https://github.com/UV-CDAT/uvcdat/wiki
     site_title: UVCDAT
     carousel:
       - caption: Sample output
