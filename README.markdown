@@ -17,11 +17,10 @@ earlier. Remove Hyde and install it using a Python 2.7 or higher pip.
 ### First run
 
     git clone https://github.com/aims-group/uvcdat-site.git
-        cd uvcdat-site
-            hyde gen
+    cd uvcdat-site
+    hyde gen
 
-            Then open `deploy/index.html` in a web browser. Alternatively, run `hyde serve`
-            from here to run a webserver with `deploy` as the root directory.
+Then open `deploy/index.html` in a web browser. Alternatively, run `hyde serve` from here to run a webserver with `deploy` as the root directory.
 
 ## Adding/editing content
 Content is stored in, where else, `content/`. Each page is an HTML file and can
