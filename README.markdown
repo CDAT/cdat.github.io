@@ -1,6 +1,6 @@
 # uvcdat-site
 
-This is the soon-to-be new [UV-CDAT website]. It was generated with
+This is the new [UV-CDAT website]. It was generated with
 [Webshooter][aims-group/webshooter] and runs on [Hyde][hyde/hyde]. It uses
 [hyde-bootstrap][aims-group/hyde-bootstrap] as a starting point.
 
