@@ -50,6 +50,21 @@ div.peopleCarouselImg {
 div.hero-unit {
   padding: 0;
 }
+div.announcement {
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  margin:  auto;
+  margin-bottom: 20px;
+  padding: 15px 30px;
+  width:   75%;
+}
+div.announcement h3 {
+  margin: 0;
+}
+div.announcement p {
+  line-height: 1.2;
+}
 </style>
 {% endblock css %}
 
@@ -57,6 +72,14 @@ div.hero-unit {
   {% include "carousel.j2" %}
 {% endblock hero %}
 {% block main %}
+
+<div class="hero-unit announcement">
+  <h3>Three Year Comprehensive Report</h3>
+  <p>
+    The UVCDAT three year comprehensive report is avaiable for viewing! <a target="_blank" href="media/pdf/three-year-comprehensive-report.pdf"> Check it out </a>
+  </p>
+</div>
+
   <h2>The UV-CDAT Project</h2>
   <p>
   UV-CDAT builds on the following key technologies:
