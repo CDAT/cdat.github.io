@@ -8,7 +8,7 @@ description: Test description
 
 {% block container %}
 
-##Installing UVCDAT from the Source
+##Installing UV-CDAT from the Source
 
 Building UV-CDAT with CMake is supported on Max OSX and Linux platforms. The only prerequisites are downloading and instaling CMake 2.8.8 or later. You can get CMake from [http://cmake.org/cmake/resources/software.html](http://cmake.org/cmake/resources/software.html).
 
@@ -27,7 +27,7 @@ If you do not install QT in a standard location, don't forget to setup the "QT_Q
 
 ####Getting Started
 
-Once you have CMake installed on your system you can begin configuring UVCDAT with CMake. To do this you first need to get the source using git by running the following:
+Once you have CMake installed on your system you can begin configuring UV-CDAT with CMake. To do this you first need to get the source using git by running the following:
 
 
     git clone git://github.com/UV-CDAT/uvcdat.git
@@ -80,7 +80,7 @@ During the ccmake step there are a few options you might want to tune for easier
 
 * **CDAT_BUILD_ESGF**: turning this ON will be a SUPER light weight version of UV-CDAT w/o GUI or Graphics, and almost no packages, it is the equivalent of the old --cdms-only, or the (independently maintained) CDATLite
 * **CDAT_BUILD_GRAPHICS**: turning this OFF will disable building anything graphics related (including GUI)
-* **CDAT_BUILD_GUI**: turning this off will turn off anything gui related (TKinter, Vistrails, UVCDAT GUI, Paraview, VisIT)
+* **CDAT_BUILD_GUI**: turning this off will turn off anything gui related (TKinter, Vistrails, UV-CDAT GUI, Paraview, VisIT)
 * **CDAT_BUILD_PARALLEL**: turning this off will disable openmpi/mpi4py features
 
 ####Testing matplotlib

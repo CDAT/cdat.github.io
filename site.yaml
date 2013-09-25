@@ -19,6 +19,8 @@ context:
         url:
           - title: Publications
             url: publications.html
+          - title: Reports
+            url: reports.html
           - title: Presentations
             url: presentations.html
           - title: Animations
@@ -45,7 +47,7 @@ context:
             url: mailing-list.html
           - title: Wiki
             url: https://github.com/UV-CDAT/uvcdat/wiki
-    site_title: UVCDAT
+    site_title: UV-CDAT
     carousel:
       - caption: Sample output
         image: media/images/gallery/CelinesCaliforniaPlot.png
@@ -85,7 +87,7 @@ context:
         image: media/images/gallery/Image-2-CompositeE.png
       - caption: Sample output
         image: media/images/gallery/Image-2-CompositeF.png
-      - caption: UVCDAT Power Wall
+      - caption: UV-CDAT Power Wall
         image: media/images/gallery/UVCDAT-Hyperwall.jpg
 media_url: media
 mode: development
