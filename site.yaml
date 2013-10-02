@@ -23,6 +23,8 @@ context:
             url: reports.html
           - title: Presentations
             url: presentations.html
+          - title: Design Documents
+            url: design.html
           - title: Animations
             url: animations.html
           - title: Use Cases
