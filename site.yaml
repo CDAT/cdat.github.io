@@ -30,13 +30,7 @@ context:
           - title: Use Cases
             url: https://github.com/UV-CDAT/uvcdat/wiki/Use-Cases
       - title: Obtaining
-        url:
-          - title: Install Binaries
-            url: https://github.com/UV-CDAT/uvcdat/wiki/Install-Binaries
-          - title: Building UV-CDAT
-            url: https://github.com/UV-CDAT/uvcdat/wiki/Building-UVCDAT
-          - title: Releases
-            url: https://github.com/UV-CDAT/uvcdat/releases
+        url: obtaining.html
       - title: Contribute
         url: https://github.com/UV-CDAT/uvcdat/wiki
       - title: Help
