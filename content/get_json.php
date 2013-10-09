@@ -41,7 +41,7 @@ $cache_file = "$type.$days-day.json";
 
 // Refresh the cache file if it doesn't exist, or if the old one is expired
 if (!file_exists($cache_file) || time() - filemtime($cache_file) > $cache_lifespan) {
-  $json = `curl http://uv-cdat.llnl.gov/UVCDATUsage/log/json/$type/?days=$days`;
+  $json = `curl http://uvcdat.llnl.gov/UVCDATUsage/log/json/$type/?days=$days`;
   if ($cache_lifespan != 0) {
     if (is_writable($cache_file))
       file_put_contents($cache_file, $json);
