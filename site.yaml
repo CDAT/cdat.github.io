@@ -31,10 +31,10 @@ context:
             url: https://github.com/UV-CDAT/uvcdat/wiki/Use-Cases
       - title: Obtaining
         url:
-          - title: Binaries Installation
-            url: installationBinaries.html
-          - title: Source Installation
-            url: installationSource.html
+          - title: Install Binaries
+            url: https://github.com/UV-CDAT/uvcdat/wiki/Install-Binaries
+          - title: Building UV-CDAT
+            url: https://github.com/UV-CDAT/uvcdat/wiki/Building-UVCDAT
           - title: Releases
             url: https://github.com/UV-CDAT/uvcdat/releases
       - title: Contribute
