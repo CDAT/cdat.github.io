@@ -29,8 +29,8 @@ context:
             url: animations.html
           - title: Use Cases
             url: https://github.com/UV-CDAT/uvcdat/wiki/Use-Cases
-      - title: Obtaining
-        url: obtaining.html
+      - title: Installing
+        url: installing.html
       - title: Contribute
         url: https://github.com/UV-CDAT/uvcdat/wiki
       - title: Help
