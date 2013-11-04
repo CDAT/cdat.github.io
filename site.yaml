@@ -37,7 +37,7 @@ context:
         url:
           - title: Tutorials
             url: tutorials.html
-          - title: Support forum
+          - title: Support Forum
             url: http://askbot-uvcdat.llnl.gov
           - title: Mailing list
             url: mailing-list.html
