@@ -68,3 +68,18 @@ people who are not familiar with git. The fact that 2 people who get
 uvcdat at slightly different times may get slightly different versions
 may be confusing
 
+* add a page about the dependencies! Note: you should probably add the link to the apropriate Qt download page and let people know what compilation options they should use for qt, on the' Building-UVCDAT' or 'System-Requirements' pages
+
+* on the building page, specify that the installed version of uv-cdat will be by default in the 'install' subdirectory of build (am I correct). You don't want them removing all (including 'install') the content of the build directory to make space
+
+* tell people what initialization script they should run, in order to use what was just compiled
+
+* What do I lose/gain if I turn the //ism off/on with
+
+        CDAT_BUILD_PARALLEL=OFF
+
+* For the rebuild part, you should specify that you have to be in the build directory
+
+Also, what's not very clear is how can you start the test suite of uv-cdat (independently of the dashboard. Aashish mentionned that you have to turn on an option in ccmake, right? Which one? And what do you have to type (and where) to start the tests after the build is finished?
+
+It could be useful to tell the users how much space everything is going to take, and which directories have to be kept (and NOT moved/renamed), and which ones can be erased (eg, keep the installation dir of Qt, but not the compilation dir, etc...)
