@@ -15,7 +15,7 @@ context:
             url: committee.html
           - title: Acknowledgments
             url: acknowledgments.html
-      - title: Documents
+      - title: Press 
         url:
           - title: Publications
             url: publications.html
@@ -29,6 +29,8 @@ context:
             url: animations.html
           - title: Use Cases
             url: https://github.com/UV-CDAT/uvcdat/wiki/Use-Cases
+          - title: Roadmap
+            url: https://github.com/UV-CDAT/uvcdat/wiki/Roadmap-to-Release
       - title: Installing
         url: installing.html
       - title: Contribute
