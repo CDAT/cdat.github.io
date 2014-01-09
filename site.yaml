@@ -29,7 +29,7 @@ context:
             url: animations.html
           - title: Use Cases
             url: https://github.com/UV-CDAT/uvcdat/wiki/Use-Cases
-          - title: Roadmap
+          - title: Releases
             url: https://github.com/UV-CDAT/uvcdat/wiki/Roadmap-to-Release
       - title: Installing
         url: installing.html
