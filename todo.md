@@ -2,8 +2,8 @@
 * http://uvcdat.llnl.gov/installing.html
   *  ~~Obtaning -> ObtaIning~~
   *  ~~what platforms is uvcdat available on?~~
-  * what packages are available in CDAT
-  * ~~some licensing information?~~ 
+  *  ~~what packages are available in CDAT~~
+  *  ~~some licensing information?~~ 
 * ~~rename 'Documents' to Press~~
 * ~~'Help->Tutorials' is not enough  rename Help to User Guides~~
 * mobile menu is not displaying correctly
