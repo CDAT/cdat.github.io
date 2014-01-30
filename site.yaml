@@ -35,7 +35,7 @@ context:
         url: installing.html
       - title: Contribute
         url: https://github.com/UV-CDAT/uvcdat/wiki
-      - title: Help
+      - title: User Guides
         url:
           - title: Tutorials
             url: tutorials.html
