@@ -7,7 +7,7 @@
 * ~~rename 'Documents' to Press~~
 * ~~'Help->Tutorials' is not enough  rename Help to User Guides~~
 * mobile menu is not displaying correctly
-* Should there be a 'sign' after the links that go to an external web page (ie, links to the cdat wiki?)
+* ~~Should there be a 'sign' after the links that go to an external web page (ie, links to the cdat wiki?)~~
 * ~~Maybe all the external links should open in the same window~~
   * ~~(with a target="uvcdat_out" directive) rather than opening plenty of new windows?~~
   * ~~**this is a browser setting tabs not windows**~~
