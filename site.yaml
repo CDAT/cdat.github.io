@@ -17,6 +17,8 @@ context:
             url: acknowledgments.html
       - title: Press 
         url:
+          - title: ACME Demos
+            url: demos.html
           - title: Publications
             url: publications.html
           - title: Reports
