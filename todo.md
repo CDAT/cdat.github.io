@@ -180,3 +180,16 @@ problems with a libz installed in uvcdat!
 What am I supposed to do here? Install libzip? Remove the libz.so.1 file
 from your Externals? Change the LD_LIBRARY_PATH your init script sets up?
 
+The way the installation page is designed (or maybe it is the way my
+mind works)
+
+	http://uvcdat.llnl.gov/installing.html
+
+I ended up reading the "X Window System" section first.
+
+This section is quite interesting (did not know about this nomachine
+stuff), BUT it has nothing to do with installation (it's "remote usage
+of something already installed") and should rather be in a yet to be
+created FAQ page, probably in the "User Guides" ("Users' Guides"? =>
+"Documentation") pull down menu
+
