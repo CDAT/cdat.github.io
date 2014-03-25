@@ -21,33 +21,5 @@ description: Test description
 * ####<a href="https://github.com/UV-CDAT/uvcdat/wiki/Roadmap-to-Release">Release Notes <img src="media/images/githubwiki.png"> </a>
 * ####<a href="https://github.com/UV-CDAT/uvcdat/releases">GitHub Releases <img src="media/images/githubwiki.png"></a>
 
-### X Window System from ORNL to Other Sites
-The UV-CDAT GUI makes extensive use of the X Window System.   Over long
-distances, a plain X WIndow System may encounter network latency issues
-which slow it down to the point of un-usability.   For serving UV-CDAT
-windows from Oak Ridge at Lawrence Livermore, we have seen NX almost
-eliminate this problem.  The following tips have been tested on only one
-machine, rhea.ccs.ornl.gov, but should work with other Oak Ridge
-machines, at least.    
-
-To install a Free NX client (also known as the NoMachine player) on your
-desktop computer, follow the instructions at    
-
-    https://www.olcf.ornl.gov/using-nx-on-home/.
-
-These instructions are a little outdated, but good enough so that it is
-easy to figure out what to do.  When you get the key with curl, add the
--k option.  That is,    
-
-    curl -k -o home.key https://users.nccs.gov/~csep99/home.key
-
-The NX client has lots of special keystroke commands.  Just remember
-Ctrl-Alt-0.  This will give you a menu which you can use to make the
-window adjustments you will probably need.    
-
-The NX client may become unresponsive if you run emacs in its own X
-window.  The solution is simple - run Emacs inside a terminal window by
-unsetting DISPLAY.  (There is no problem with running UV-CDAT in its own
-X window.)     
 
 {% endblock container %}
