@@ -193,3 +193,12 @@ of something already installed") and should rather be in a yet to be
 created FAQ page, probably in the "User Guides" ("Users' Guides"? =>
 "Documentation") pull down menu
 
+---
+
+Something else you or your intern can add later to the web site: how
+much disk space is required when installing uvcdat. See my notes about
+this 
+[here](https://wiki.lsce.ipsl.fr/pmip3/doku.php/other:uvcdat:installed?&#disk_space)
+Of course, "actual disk space required may vary", but the users should
+know beforehand that they are going to need some space (and time) :)
+
