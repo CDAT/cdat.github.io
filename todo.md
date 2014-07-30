@@ -27,8 +27,8 @@
   * ~~("Building UV-CDAT with CMake is supported" => "You need a recent version of CMake (2.8.8 or later) in order to install UV-CDAT")
   * Charles, you may want to add a note that when you do a clone, you get the latest stable version, and not the tagged version listed on the 'releases' page. It's one of the many things that are not obvious for people who are not familiar with git. The fact that 2 people who get uvcdat at slightly different times may get slightly different versions
 may be confusing
-* add a page about the dependencies! Note: you should probably add the link to the apropriate Qt download page and let people know what compilation options they should use for qt, on the' Building-UVCDAT' or 'System-Requirements' pages
-* on the building page, specify that the installed version of uv-cdat will be by default in the 'install' subdirectory of build (am I correct). You don't want them removing all (including 'install') the content of the build directory to make space
+* ~~(add a page about the dependencies! Note: you should probably add the link to the apropriate Qt download page and let people know what compilation options they should use for qt, on the' Building-UVCDAT' or 'System-Requirements' pages)
+* ~~(on the building page, specify that the installed version of uv-cdat will be by default in the 'install' subdirectory of build (am I correct). You don't want them removing all (including 'install') the content of the build directory to make space)
 * tell people what initialization script they should run, in order to use what was just compiled
 * What do I lose/gain if I turn the //ism off/on with
   * CDAT_BUILD_PARALLEL=OFF
