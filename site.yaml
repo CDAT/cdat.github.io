@@ -35,58 +35,23 @@ context:
             url: https://github.com/UV-CDAT/uvcdat/wiki/Roadmap-to-Release
       - title: Installing
         url: installing.html
+      - title: Gallery
+        url: gallery.html
       - title: Contribute
         url: https://github.com/UV-CDAT/uvcdat/wiki
       - title: User Guides
         url:
+          - title: CDAT
+            url: http://uv-cdat.github.io/cdat-site/
+          - title: Manuals
+            url: http://uv-cdat.github.io/cdat-site/manuals.html
           - title: Tutorials
             url: tutorials.html
           - title: Mailing list
             url: mailing-list.html
           - title: Wiki
             url: https://github.com/UV-CDAT/uvcdat/wiki
-    site_title: UV-CDAT
-    carousel:
-      - caption: Sample output
-        image: media/images/gallery/CelinesCaliforniaPlot.png
-      - caption: Sample output
-        image: media/images/gallery/figure3b.png
-      - caption: Sample output
-        image: media/images/gallery/Figure5a.png
-      - caption: Sample output
-        image: media/images/gallery/Figure5b.png
-      - caption: Sample output
-        image: media/images/gallery/Figure5c.png
-      - caption: Sample output
-        image: media/images/gallery/Figure5d.png
-      - caption: Sample output
-        image: media/images/gallery/GlyphVolume-1.jpg
-      - caption: Sample output
-        image: media/images/gallery/grid.png
-      - caption: Sample output
-        image: media/images/gallery/GUI_and_PipelineA.png
-      - caption: Sample output
-        image: media/images/gallery/GUI_and_PipelineB.png
-      - caption: Sample output
-        image: media/images/gallery/GUI_and_PipelineC.png
-      - caption: Sample output
-        image: media/images/gallery/GUI_and_PipelineD.png
-      - caption: Sample output
-        image: media/images/gallery/HR-RH-VR-Slicer-2.jpg
-      - caption: Sample output
-        image: media/images/gallery/Image-2-CompositeA.png
-      - caption: Sample output
-        image: media/images/gallery/Image-2-CompositeB.png
-      - caption: Sample output
-        image: media/images/gallery/Image-2-CompositeC.png
-      - caption: Sample output
-        image: media/images/gallery/Image-2-CompositeD.png
-      - caption: Sample output
-        image: media/images/gallery/Image-2-CompositeE.png
-      - caption: Sample output
-        image: media/images/gallery/Image-2-CompositeF.png
-      - caption: UV-CDAT Power Wall
-        image: media/images/gallery/UVCDAT-Hyperwall.jpg
+site_title: UV-CDAT
 media_url: media
 mode: development
 plugins: [hyde.ext.plugins.meta.MetaPlugin, hyde.ext.plugins.auto_extend.AutoExtendPlugin,

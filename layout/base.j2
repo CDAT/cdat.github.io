@@ -3,7 +3,7 @@
   <head>
     {% block starthead %}{% endblock starthead %}
     <meta charset="{{ resource.meta.charset }}">
-    <title>{% block title %}{{ resource.meta.title }}{% endblock %} | {{ site_title }}</title>
+    <title>{% block title %}{{ resource.meta.title }}{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ resource.meta.description }}">
     <meta name="author" content="{{ resource.meta.author }}">
@@ -79,7 +79,7 @@
         {% filter markdown -%}
         {% block footer %}
 
-[PCMDI] &bull; [CMIP5] &bull; [LLNL] &bull; [Privacy & Legal Notice][disclaimer] &bull; [LLNL-WEB-460691][llnl-web] &bull; [Site Issues][issues] &bull; ![githubwiki][] &rarr;  links to wiki
+[PCMDI] &bull; [CMIP5] &bull; [LLNL] &bull; [Privacy & Legal Notice][disclaimer] &bull; [LLNL-WEB-460691][llnl-web] &bull; [Site Issues][issues]
 
 [pcmdi]:      http://www-pcmdi.llnl.gov/
 [cmip5]:      http://cmip-pcmdi.llnl.gov/cmip5/
