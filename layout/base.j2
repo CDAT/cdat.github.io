@@ -76,6 +76,7 @@
       {%- endfilter %}
     </div> <!-- /container -->
     <hr>
+    <div id="footer" style="padding-left:300px;">
     <footer>
         {% filter markdown -%}
         {% block footer %}
@@ -91,7 +92,7 @@
         {% endblock footer %}
         {%- endfilter %}
       </footer>
-
+    </div>
     {% endblock body %}
 
     {% block js %}
