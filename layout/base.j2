@@ -74,13 +74,12 @@
 
       {% endblock container %}
       {%- endfilter %}
-      <hr>
-      <footer>
+    </div> <!-- /container -->
+    <hr>
+    <footer>
         {% filter markdown -%}
         {% block footer %}
-
-[PCMDI] &bull; [CMIP5] &bull; [LLNL] &bull; [Privacy & Legal Notice][disclaimer] &bull; [LLNL-WEB-460691][llnl-web] &bull; [Site Issues][issues]
-
+[PCMDI] &bull; [CMIP5] &bull; [LLNL] &bull; [Privacy &amp; Legal Notice][disclaimer] &bull; [LLNL-WEB-460691][llnl-web] &bull; [Site Issues][issues]
 [pcmdi]:      http://www-pcmdi.llnl.gov/
 [cmip5]:      http://cmip-pcmdi.llnl.gov/cmip5/
 [llnl]:       http://www.llnl.gov/
@@ -89,17 +88,14 @@
 [issues]:     https://github.com/aims-group/uvcdat-site/issues
 [githubwiki]: media/images/githubwiki.png
 [GitHub logo]: media/images/github.svg
-
         {% endblock footer %}
         {%- endfilter %}
       </footer>
-    </div> <!-- /container -->
 
     {% endblock body %}
 
     {% block js %}
     {# Javascript at the bottom for fast page loading #}
-   
     {# The following line makes external links open in new windows #}
     <script src="media/js/links.js"></script>
 
@@ -133,3 +129,4 @@
     {% endblock js %}
   </body>
 </html>
+
