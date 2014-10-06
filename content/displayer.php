@@ -1,3 +1,5 @@
+<?php include_once("cleanname.php") ?>
+
 <?php
 error_reporting(E_ERROR | E_PARSE);
 
@@ -19,7 +21,7 @@ else{
 }
 
 
-echo "<h2>" . $file_name . "</h2>";
+echo "<h2>" . cleanName($file_name) . "</h2>";
 echo "(";
 if($show) echo "<a href=\"" . $source_path . "\">Source code</a>, ";
 echo "<a href=\"" . $image_path . "\">png</a>)<br/>";

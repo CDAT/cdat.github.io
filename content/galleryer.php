@@ -1,3 +1,4 @@
+<?php include_once("cleanname.php") ?>
 <style>
 .example {
   float:left;
@@ -20,7 +21,7 @@ foreach (scandir($dir) as $file):
 <div class="example">
 	<a href="display.php?file=<?php print $name; ?>">
 	<img src="media/gallery/thumbnails/<?php print $file; ?>" />
-	<p><?php print $name; ?></p>
+	<p><?php print cleanName($name); ?></p>
 	</a>
 </div>
 
