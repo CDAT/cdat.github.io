@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ERROR | E_PARSE);
 
 isset($_REQUEST['file']) ? $file_name = $_REQUEST['file'] : $file_name = "default";
 
