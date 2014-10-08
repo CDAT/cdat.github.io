@@ -95,3 +95,7 @@ foreach ($files as $file):
 </div>
 
 <?php endforeach; ?>
+
+<?php if (count($files) == 0): ?>
+  <h4>No examples match selected filters</h4>
+<?php endif; ?>
