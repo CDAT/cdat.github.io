@@ -42,11 +42,11 @@ context:
       - title: Manuals
         url:
           - title: CDMS
-            url: cdms/cdms.html
+            url: http://uv-cdat.github.io/cdat-site/cdms/cdms.html
           - title: CDAT Utilities
-            url: utilities/cdat_utilites.html
+            url: http://uv-cdat.github.io/cdat-site/utilities/cdat_utilities.html
           - title: VCS
-            url: vcs/vcs.html
+            url: http://uv-cdat.github.io/cdat-site/vcs/vcs.html
       - title: User Guides
         url:
           - title: Manuals
