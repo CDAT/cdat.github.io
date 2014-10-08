@@ -2,7 +2,7 @@
 <style>
 .example {
   float:left;
-  height:250px;
+  height:275px;
   width:350px;
   word-break:normal;
   border:1px solid #CCC;
@@ -41,6 +41,8 @@
 }
 
 .example p {
+  padding-left:5px;
+  padding-right:5px;
   text-align:center;
 }
 
