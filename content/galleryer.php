@@ -54,7 +54,7 @@
 <?php
 
 function not_dotfile($filename) {
-  return strpos($file, ".") !== 0;
+  return strpos($filename, ".") !== 0;
 }
 
 if (isset($_REQUEST["projection"])) {
