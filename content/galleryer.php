@@ -53,17 +53,15 @@
 </style>
 <?php
 
-function not_dotfile($filename) {
-  return strpos($filename, ".") !== 0;
-}
-
-if (isset($_REQUEST["projection"])) {
+if (isset($_REQUEST["graphics_method"])) {
+  $files = get_graphics_methods($_REQUEST["graphics_method"]);
+  $classification = "Examples using the " . htmlentities($_REQUEST["graphics_method"]) . " graphics method";
+} elseif (isset($_REQUEST["projection"])) {
   $files = get_projections($_REQUEST["projection"]);
   $classification = "Examples using the " . htmlentities($_REQUEST["projection"]) . " projection";
 } else {
-  $dir = "media/gallery/thumbnails";
-  $files = array_filter(scandir($dir), "not_dotfile");
-  $classification = "All examples";
+  $classification = "All Examples";
+  $files = get_all();
 }
 
 ?>
