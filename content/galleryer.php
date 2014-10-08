@@ -51,14 +51,24 @@
 }
 
 </style>
+
+
 <?php
 
 if (isset($_REQUEST["graphics_method"])) {
+  
   $files = get_graphics_methods($_REQUEST["graphics_method"]);
   $classification = "Examples using the " . htmlentities($_REQUEST["graphics_method"]) . " graphics method";
+
+  $param_set = TRUE;
+
 } elseif (isset($_REQUEST["projection"])) {
+  
   $files = get_projections($_REQUEST["projection"]);
   $classification = "Examples using the " . htmlentities($_REQUEST["projection"]) . " projection";
+
+  $param_set = TRUE;
+
 } else {
   $classification = "All Examples";
   $files = get_all();
@@ -66,6 +76,9 @@ if (isset($_REQUEST["graphics_method"])) {
 
 ?>
 <h4><?php echo $classification; ?>:</h4>
+
+<!-- the filter bar -->
+<?php include "filters.php"; ?>
 
 <?php
 foreach ($files as $file):

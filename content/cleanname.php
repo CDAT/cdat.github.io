@@ -42,6 +42,14 @@ function cleanTestVCSBasic($filename) {
         if ($new == FALSE) {
           continue;
         }
+
+        if ($new == "Projection") {
+          $previous = array_pop($cleaned);
+          if ($previous !== NULL) {
+            $new = "$previous $new";
+          }
+        }
+
         $cleaned[] = $new;
       } else {
         $cleaned[] = ucfirst($part);
@@ -49,6 +57,7 @@ function cleanTestVCSBasic($filename) {
     }
 
     if ($cleaned) {
+
       $name .= "<br/>(" . implode(", ", $cleaned) . ")";
     }
 
