@@ -1,4 +1,7 @@
-<?php include_once("cleanname.php") ?>
+<?php 
+  include_once("cleanname.php");
+  include_once("classifier.php");
+?>
 <style>
 .example {
   float:left;
@@ -20,10 +23,11 @@
   text-align: center;
 
   margin-bottom:10px;
-
+  /* image centering magic */
   font: 0/0 a;
 }
 
+/* magic to veritcally center image */
 .img_wrapper:before {
   content: ' ';
   display:inline-block;
@@ -49,11 +53,24 @@
 </style>
 <?php
 
-$dir = "media/gallery/thumbnails";
-foreach (scandir($dir) as $file):
-  if (strpos($file, ".") === 0) {
-    continue;
-  }
+function not_dotfile($filename) {
+  return strpos($file, ".") !== 0;
+}
+
+if (isset($_REQUEST["projection"])) {
+  $files = get_projections($_REQUEST["projection"]);
+  $classification = "Examples using the " . htmlentities($_REQUEST["projection"]) . " projection";
+} else {
+  $dir = "media/gallery/thumbnails";
+  $files = array_filter(scandir($dir), "not_dotfile");
+  $classification = "All examples";
+}
+
+?>
+<h4><?php echo $classification; ?>:</h4>
+
+<?php
+foreach ($files as $file):
   $name = substr($file, 0 , -4);
 ?>
 
