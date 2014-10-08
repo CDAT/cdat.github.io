@@ -3,8 +3,45 @@
 .example {
   float:left;
   height:250px;
-  width:375px;
+  width:350px;
   word-break:normal;
+  border:1px solid #CCC;
+  
+  margin:10px;
+}
+
+.img_wrapper {
+  height: 190px;
+  width: 190px;
+  
+  margin-left:auto;
+  margin-right:auto;
+
+  text-align: center;
+
+  margin-bottom:10px;
+
+  font: 0/0 a;
+}
+
+.img_wrapper:before {
+  content: ' ';
+  display:inline-block;
+  vertical-align: middle;
+  height:100%;
+}
+
+.example img {
+  display:inline-block;
+  vertical-align: middle;
+}
+
+.example a {
+  display:block;
+}
+
+.example p {
+  text-align:center;
 }
 
 </style>
@@ -20,8 +57,10 @@ foreach (scandir($dir) as $file):
 
 <div class="example">
 	<a href="display.php?file=<?php print $name; ?>">
-	<img src="media/gallery/thumbnails/<?php print $file; ?>" />
-	<p><?php print cleanName($name); ?></p>
+    <div class="img_wrapper">
+        <img src="media/gallery/thumbnails/<?php print $file; ?>" />
+    </div>
+    <p><?php print cleanName($name); ?></p>
 	</a>
 </div>
 

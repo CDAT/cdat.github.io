@@ -5,8 +5,8 @@ function cleanName($filename){
     return cleanTestVCSBasic($filename);
   }
   
-  if( substr($filename, 0 , 5) === "test_" ) {
-    $filename = substr($filename, 5, strlen($filename));
+  if( strpos($filename, "test_") === 0 ) {
+    $filename = substr($filename, strlen("test_"), strlen($filename));
   }
 
   $cleanname = str_replace('_', ' ', $filename);
@@ -32,7 +32,7 @@ function cleanTestVCSBasic($filename) {
       "zero" => "Zeroed",
       "gm" => FALSE,
       "via" => "via GM",
-      "gmflip" => "GM&emdash;Flipped"
+      "gmflip" => "GM&mdash;Flipped"
     );
 
     $cleaned = array();
@@ -49,7 +49,7 @@ function cleanTestVCSBasic($filename) {
     }
 
     if ($cleaned) {
-      $name .= " (" . implode(", ", $cleaned) . ")";
+      $name .= "<br/>(" . implode(", ", $cleaned) . ")";
     }
 
     return $name;
