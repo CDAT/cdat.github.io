@@ -5,3 +5,4 @@ deploy
 *.swp
 originals/
 wiki/zHTML/
+content/media/gallery/thumbnail/*.png
