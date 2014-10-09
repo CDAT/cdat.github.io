@@ -1,8 +1,10 @@
 <?php
 
 function clean_gm($gm) {
+  $gm = strtolower($gm);
   $clean = array(
-    'oneD' => 'One Dimension',
+    "1d" => "One Dimension",
+    "oned" => "One Dimension",
     'xvsy' => 'X vs Y',
     'xyvsy' => 'XY vs Y',
     'yxvsx' => 'YX vs X',
@@ -36,7 +38,7 @@ function all_gms() {
     "outfill",
     "outline",
     "meshfill",
-    "oneD",
+    "1d",
     "scatter",
     "vector",
     "xvsy",
@@ -57,6 +59,9 @@ function has_gm($file, $method) {
     return FALSE;
   }
 
+  if ($method == "1d") {
+    $method = "1d|oneD";
+  }
   $gm_re = "/(get|create)$method/";
   // 0 or FALSE is a failure, so we can do single =
   return preg_match($gm_re, $file) != FALSE; 

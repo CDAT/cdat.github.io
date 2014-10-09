@@ -8,6 +8,22 @@
     margin:1%;
   }
 
+  .filter_body > ul > li {
+    list-style-type:none; 
+    margin-left:-25px;
+  }
+  .filter_body li  a:before {
+    content:'☐';
+    font-size:1.5em;
+    width:25px;
+    font-weight:bold;
+    display:inline-block;
+    text-align:center;
+  }
+  .filter_body li.active_filter > a:before {
+    content:"☑";
+  }
+
   .filter_body {
     margin:0;
   }
@@ -38,18 +54,43 @@
   }
 
 </style>
+<?php
+  function build_url($arg, $value) {
+    $our_args = array(
+      "graphics_method" => @$_REQUEST["graphics_method"],
+      "projection" => @$_REQUEST["projection"],
+    );
 
+    if ($our_args[$arg] == $value) {
+      unset($our_args[$arg]);
+    } else { 
+      $our_args[$arg] = $value;
+    }
+
+    return "gallery.php?" . http_build_query($our_args);
+  }
+  if (isset($_REQUEST["graphics_method"])) {
+    $gm = $_REQUEST["graphics_method"];
+  } else {
+    $gm = NULL;
+  }
+  if (isset($_REQUEST["projection"])) {
+    $proj = $_REQUEST["projection"];
+  } else {
+    $proj = NULL;
+  }
+?>
 <div class="filter" id="filter_grouper">
   <div class="filter_group">
     <div class='filter_header'>
       <a class="filter_toggle" data-toggle="collapse" data-parent="#filter_grouper" href="#collapse_filters">
         Filters
       </a>
-      <?php if (@$param_set): ?>
+      <?php if ($gm != NULL || $proj != NULL): ?>
         <small class="pull-right"><a href="gallery.php">(Remove Filters)</a></small>
       <?php endif; ?>
     </div>
-    <div class="filter_body collapse" id="collapse_filters">
+    <div class="filter_body collapse <?php if ($gm !== NULL || $proj !== NULL) { echo "in"; } ?>" id="collapse_filters">
       <div class="filters">
         <div class="filter" id="gm">
           <div class="filter_group">
@@ -58,11 +99,11 @@
                 Graphics Methods
               </a>
             </div>
-            <div class="filter_body collapse" id="collapse_gm">
+            <div class="filter_body collapse <?php if ($gm !== NULL) { echo "in"; } ?>" id="collapse_gm">
             <ul>
               <?php include_once("gm_classifier.php"); ?>
               <?php foreach (all_gms() as $method): ?>
-                <li><a href="gallery.php?graphics_method=<?php echo urlencode($method); ?>"><?php echo clean_gm($method); ?></a></li>
+                <li <?php if ($gm === $method) { echo "class='active_filter'"; } ?>><a href="<?php echo build_url("graphics_method", $method); ?>"><?php echo clean_gm($method); ?></a></li>
               <?php endforeach; ?>
             </ul>
           </div>
@@ -76,11 +117,11 @@
                 Projection
               </a>
             </div>
-            <div class="filter_body collapse" id="collapse_projection">
+            <div class="filter_body collapse <?php if ($proj !== NULL) { echo "in"; } ?>" id="collapse_projection">
               <ul>
                   <?php include_once("projection_classifier.php"); ?>
                   <?php foreach (all_projections() as $projection): ?>
-                    <li><a href="gallery.php?projection=<?php echo urlencode($projection); ?>"><?php echo clean_projection($projection); ?></a></li>
+                    <li <?php if ($proj === $projection) { echo "class='active_filter'"; } ?>><a  href="<?php echo build_url("projection", $projection); ?>"><?php echo clean_projection($projection); ?></a></li>
                   <?php endforeach; ?>
               </ul>
             </div>
@@ -89,3 +130,20 @@
       </div>
     </div>
 </div>
+  <script>
+  $("body").ready(function(){
+    // Add disclosure arrows to the filter accordion items
+    $(".filter_header>a").prepend($(document.createElement("i")).addClass("icon-chevron-right").addClass("toggle_arrow")).click(function(){
+      var arrow = $(this).find(".toggle_arrow");
+      arrow.toggleClass("icon-chevron-right").toggleClass("icon-chevron-down");
+    });
+
+    $(".toggle_arrow").each(function(ind, el) {
+      var $this = $(el);
+      var body = $this.parent().parent().parent().find(".filter_body");
+      if (body.hasClass("in")) {
+        $this.toggleClass("icon-chevron-right").toggleClass("icon-chevron-down");
+      } 
+    });
+  });
+  </script>

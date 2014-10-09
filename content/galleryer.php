@@ -49,48 +49,67 @@
   padding-right:5px;
   text-align:center;
 }
-
 </style>
 
 
 <?php
 
+$files = NULL;
+$classifications = array();
 if (isset($_REQUEST["graphics_method"])) {
   
-  $files = get_graphics_methods($_REQUEST["graphics_method"]);
-  $classification = "Examples using the " . htmlentities(clean_gm($_REQUEST["graphics_method"])) . " graphics method";
+  $files = get_graphics_methods($_REQUEST["graphics_method"], $files);
+  $classifications[] = htmlentities(clean_gm($_REQUEST["graphics_method"])) . " graphics method";
+} 
 
-  $param_set = TRUE;
-
-} elseif (isset($_REQUEST["projection"])) {
+if (isset($_REQUEST["projection"])) {
   
-  $files = get_projections($_REQUEST["projection"]);
-  $classification = "Examples using the " . htmlentities(clean_projection($_REQUEST["projection"])) . " projection";
+  $files = get_projections($_REQUEST["projection"], $files);
+  $classifications[] = htmlentities(clean_projection($_REQUEST["projection"])) . " projection";
+} 
 
-  $param_set = TRUE;
-
-} else {
+if ($files === NULL) {
   $classification = "All Examples";
   $files = get_all();
 }
 
 ?>
-<h4><?php echo $classification; ?>:</h4>
+  <h4>
+<?php
+if ($classifications) {
+  echo "Examples using the ";
+  while ($class = array_shift($classifications)) {
+    echo "$class";
+    switch (count($classifications)) {
+      case 0:
+        echo ":";
+        break;
+      case 1:
+        echo " and ";
+        break;
+      default:
+        echo ", ";
+    }
+  }
+} else {
+  echo "All Examples";
+}
+?>
+</h4>
 
 <!-- the filter bar -->
 <?php include "filters.php"; ?>
 
 <?php
 foreach ($files as $file):
-  $name = substr($file, 0 , -4);
 ?>
 
 <div class="example">
-	<a href="display.php?file=<?php print $name; ?>">
+	<a href="display.php?file=<?php print $file; ?>">
     <div class="img_wrapper">
-        <img src="media/gallery/thumbnails/<?php print $file; ?>" />
+        <img src="media/gallery/thumbnails/<?php print $file; ?>.png" />
     </div>
-    <p><?php print cleanName($name); ?></p>
+    <p><?php print cleanName($file); ?></p>
 	</a>
 </div>
 

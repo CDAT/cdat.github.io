@@ -37,6 +37,7 @@ function clean_projection($proj) {
     'wagner iv' => 'Wagner IV',
     'wagner vii' => 'Wagner VII',
     'oblated' => 'Oblated',
+    'aeqd' => "AEQD",
   );
 
   if (isset($cleaner[$proj])) {
@@ -82,6 +83,7 @@ function all_projections() {
 		28 => 'wagner iv',
 		29 => 'wagner vii',
 		30 => 'oblated',
+    "aeqd" => "aeqd",
 	);
 }
 
