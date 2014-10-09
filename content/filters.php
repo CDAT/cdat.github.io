@@ -12,16 +12,11 @@
     list-style-type:none; 
     margin-left:-25px;
   }
-  .filter_body li  a:before {
-    content:'☐';
-    font-size:1.5em;
+
+  .filter_sign  {
     width:25px;
-    font-weight:bold;
-    display:inline-block;
     text-align:center;
-  }
-  .filter_body li.active_filter > a:before {
-    content:"☑";
+    display:inline-block;
   }
 
   .filter_body {
@@ -103,7 +98,7 @@
             <ul>
               <?php include_once("gm_classifier.php"); ?>
               <?php foreach (all_gms() as $method): ?>
-                <li <?php if ($gm === $method) { echo "class='active_filter'"; } ?>><a href="<?php echo build_url("graphics_method", $method); ?>"><?php echo clean_gm($method); ?></a></li>
+                <li><div class='filter_sign'><i class='<?php if ($gm === $method) { echo 'icon-minus-sign'; } else { echo 'icon-plus-sign'; } ?>'></i></div><a href="<?php echo build_url("graphics_method", $method); ?>"><?php echo clean_gm($method); ?></a></li>
               <?php endforeach; ?>
             </ul>
           </div>
@@ -121,7 +116,7 @@
               <ul>
                   <?php include_once("projection_classifier.php"); ?>
                   <?php foreach (all_projections() as $projection): ?>
-                    <li <?php if ($proj === $projection) { echo "class='active_filter'"; } ?>><a  href="<?php echo build_url("projection", $projection); ?>"><?php echo clean_projection($projection); ?></a></li>
+                    <li><div class='filter_sign'><i class='<?php if ($proj === $projection) { echo 'icon-minus-sign'; } else { echo 'icon-plus-sign'; } ?>'></i></div><a  href="<?php echo build_url("projection", $projection); ?>"><?php echo clean_projection($projection); ?></a></li>
                   <?php endforeach; ?>
               </ul>
             </div>
