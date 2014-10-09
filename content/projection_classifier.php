@@ -1,19 +1,53 @@
 <?php
 
-function has_projection($file, $type) {
-	// Determined experimentally using python
-	/*
-		import vcs
-		a = vcs.createprojection()
-		for i in range(-100, 100):
-			try:
-				a.type = i
-			except:
-				pass
-			else:
-				print "%d => '%s',\n" % (i, a.type)
-	*/
-	$projections = array(
+function clean_projection($proj) {
+  
+  $cleaner = array(
+    'polar (non gctp)' => 'Polar (non-GCTP)',
+    'mollweide (non gctp)' => 'Mollweide (non-GCTP)',
+    'robinson (non gctp)' => 'Robinson (non-GCTP)',
+    'linear' => 'Linear',
+    'utm' => 'UTM',
+    'state plane' => 'State Plane',
+    'albers equal area' => 'Albers Equal Area',
+    'lambert' => 'Lambert',
+    'mercator' => 'Mercator',
+    'polar' => 'Polar',
+    'polyconic' => 'Polyconic',
+    'equid conic a' => 'Equid Conic A',
+    'transverse mercator' => 'Transverse Mercator',
+    'stereographic' => 'Stereographic',
+    'lambert azimuthal' => 'Lambert Azimuthal',
+    'azimuthal' => 'Azimuthal',
+    'gnomonic' => 'Gnomonic',
+    'orthographic' => 'Orthographic',
+    'gen. vert. near per' => 'Gen. Vert. Near Per',
+    'sinusoidal' => 'Sinusoidal',
+    'equirectangular' => 'Equirectangular',
+    'miller' => 'Miller',
+    'van der grinten' => 'Van der Grinten',
+    'hotin' => 'Hotin',
+    'robinson' => 'Robinson',
+    'space oblique' => 'Space Oblique',
+    'alaska' => 'Alaska',
+    'interrupted goode' => 'Interrupted Goode',
+    'mollweide' => 'Mollweide',
+    'interrupted mollweide' => 'Interrupted Mollweide',
+    'hammer' => 'Hammer',
+    'wagner iv' => 'Wagner IV',
+    'wagner vii' => 'Wagner VII',
+    'oblated' => 'Oblated',
+  );
+
+  if (isset($cleaner[$proj])) {
+    return $cleaner[$proj];
+  } else {
+    return ucfirst($proj);
+  }
+}
+
+function all_projections() {
+  return array(
 		-3 => 'polar (non gctp)',
 		-2 => 'mollweide (non gctp)',
 		-1 => 'robinson (non gctp)',
@@ -49,6 +83,22 @@ function has_projection($file, $type) {
 		29 => 'wagner vii',
 		30 => 'oblated',
 	);
+}
+
+function has_projection($file, $type) {
+	// Determined experimentally using python
+	/*
+		import vcs
+		a = vcs.createprojection()
+		for i in range(-100, 100):
+			try:
+				a.type = i
+			except:
+				pass
+			else:
+				print "%d => '%s',\n" % (i, a.type)
+	*/
+	$projections = all_projections();
 
 	// Should only return scripts that have any kind of projection.
 	$projection_re = "/projection ?= ?(.*)/";

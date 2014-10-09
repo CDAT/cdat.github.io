@@ -1,7 +1,23 @@
 <?php
 
-function has_gm($file, $method) {
-	$methods = array(
+function clean_gm($gm) {
+  $parts = explode("_", $gm);
+  $cleaned = array();
+  foreach ($parts as $part) {
+    if ($part == "3d") {
+      $part = "3D";
+    } else {
+      $part = ucfirst($part);
+    }
+    $cleaned[] = $part;
+  }
+
+  return implode(" ", $cleaned);
+}
+
+function all_gms() {
+
+	return array(
 		"boxfill",
 		"continents",
 		"isofill",
@@ -16,8 +32,14 @@ function has_gm($file, $method) {
 		"template",
     "3d_scalar",
     "3d_vector",
-	);
+    "text",
+    "marker",
+  );
+}
 
+function has_gm($file, $method) {
+
+  $methods = all_gms();
 	if (!in_array($method, $methods)) {
 		return FALSE;
 	}
