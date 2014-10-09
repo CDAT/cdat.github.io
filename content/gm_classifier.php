@@ -1,6 +1,17 @@
 <?php
 
 function clean_gm($gm) {
+  $clean = array(
+    'oneD' => 'One Dimension',
+    'xvsy' => 'X vs Y',
+    'xyvsy' => 'XY vs Y',
+    'yxvsx' => 'YX vs X',
+  );
+
+  if (isset($clean[$gm])) {
+    return $clean[$gm];
+  }
+
   $parts = explode("_", $gm);
   $cleaned = array();
   foreach ($parts as $part) {
@@ -17,19 +28,21 @@ function clean_gm($gm) {
 
 function all_gms() {
 
-	return array(
-		"boxfill",
-		"continents",
-		"isofill",
-		"isoline",
-		"outfill",
-		"outline",
-		"scatter",
-		"vector",
-		"xvsy",
-		"xyvsy",
-		"yxvsx",
-		"template",
+  return array(
+    "boxfill",
+    "continents",
+    "isofill",
+    "isoline",
+    "outfill",
+    "outline",
+    "meshfill",
+    "oneD",
+    "scatter",
+    "vector",
+    "xvsy",
+    "xyvsy",
+    "yxvsx",
+    "template",
     "3d_scalar",
     "3d_vector",
     "text",
@@ -40,10 +53,10 @@ function all_gms() {
 function has_gm($file, $method) {
 
   $methods = all_gms();
-	if (!in_array($method, $methods)) {
-		return FALSE;
-	}
-  
+  if (!in_array($method, $methods)) {
+    return FALSE;
+  }
+
   $gm_re = "/(get|create)$method/";
   // 0 or FALSE is a failure, so we can do single =
   return preg_match($gm_re, $file) != FALSE; 

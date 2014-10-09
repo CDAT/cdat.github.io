@@ -9,7 +9,7 @@
   width:350px;
   word-break:normal;
   border:1px solid #CCC;
-  
+  border-radius:3px;  
   margin:10px;
 }
 
