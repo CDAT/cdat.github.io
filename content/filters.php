@@ -72,6 +72,8 @@
               <li><a href="gallery.php?graphics_method=xyvsy">Xyvsy</a></li>
               <li><a href="gallery.php?graphics_method=yxvsx">Yxvsx</a></li>
               <li><a href="gallery.php?graphics_method=template">Template</a></li>
+              <li><a href="gallery.php?graphics_method=3d_scalar">3D Scalar</a></li>
+              <li><a href="gallery.php?graphics_method=3d_vector">3D Vector</a></li>
             </ul>
           </div>
           </div>

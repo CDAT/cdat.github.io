@@ -14,11 +14,15 @@ function has_gm($file, $method) {
 		"xyvsy",
 		"yxvsx",
 		"template",
+    "3d_scalar",
+    "3d_vector",
 	);
 
 	if (!in_array($method, $methods)) {
 		return FALSE;
 	}
-
-	return strpos($file, "create$method") !== FALSE;
+  
+  $gm_re = "/(get|create)$method/";
+  // 0 or FALSE is a failure, so we can do single =
+  return preg_match($gm_re, $file) != FALSE; 
 }
