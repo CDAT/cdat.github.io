@@ -5,17 +5,15 @@
 <style>
 .example {
   float:left;
-  height:275px;
+  height:350px;
   width:350px;
   word-break:normal;
-  border:1px solid #CCC;
-  border-radius:3px;  
   margin:10px;
 }
 
 .img_wrapper {
-  height: 190px;
-  width: 190px;
+  height: 250px;
+  width: 300px;
   
   margin-left:auto;
   margin-right:auto;
@@ -27,7 +25,7 @@
   font: 0/0 a;
 }
 
-/* magic to veritcally center image */
+/* magic to vertically center image */
 .img_wrapper:before {
   content: ' ';
   display:inline-block;
