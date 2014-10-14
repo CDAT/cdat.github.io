@@ -39,14 +39,14 @@ context:
         url: gallery.php
       - title: Contribute
         url: https://github.com/UV-CDAT/uvcdat/wiki
-      - title: Manuals
+      - title: Documentation
         url:
           - title: CDMS
-            url: http://uv-cdat.github.io/cdat-site/cdms/cdms.html
+            url: /documentation/cdms/cdms.html
           - title: CDAT Utilities
-            url: http://uv-cdat.github.io/cdat-site/utilities/cdat_utilities.html
+            url: /documentation/utilities/cdat_utilities.html
           - title: VCS
-            url: http://uv-cdat.github.io/cdat-site/vcs/vcs.html
+            url: /documentation/vcs/vcs.html
       - title: User Guides
         url:
           - title: Manuals
