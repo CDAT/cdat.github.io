@@ -60,7 +60,15 @@ context:
           - title: Wiki
             url: https://github.com/UV-CDAT/uvcdat/wiki
 site_title: UV-CDAT
-media_url: media
+media_url: /media
 mode: development
-plugins: [hyde.ext.plugins.meta.MetaPlugin, hyde.ext.plugins.auto_extend.AutoExtendPlugin,
-  hyde.ext.plugins.syntext.SyntextPlugin, hyde.ext.plugins.textlinks.TextlinksPlugin]
+plugins:
+  - hyde.ext.plugins.meta.MetaPlugin
+  - hyde.ext.plugins.auto_extend.AutoExtendPlugin
+  - hyde.ext.plugins.syntext.SyntextPlugin
+  - hyde.ext.plugins.textlinks.TextlinksPlugin
+  - plugins.custom_filters.CustomFilterPlugin
+gfm:
+  table_class: table
+  space_headers: false
+  code_fence: true
