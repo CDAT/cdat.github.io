@@ -4,39 +4,39 @@ context:
     nav_hover: yes
     menu:
       - title: UV<img src="media/images/uvcdat.png" style=margin-top:-7px />CDAT
-        url: index.html
+        url: /index.html
       - title: About
         url:
           - title: Mission
-            url: mission.html
+            url: /mission.html
           - title: Governance
-            url: governance.html
+            url: /governance.html
           - title: Committee
-            url: committee.html
+            url: /committee.html
           - title: Acknowledgments
-            url: acknowledgments.html
+            url: /acknowledgments.html
       - title: Press 
         url:
           - title: ACME Demos
-            url: demos.html
+            url: /demos.html
           - title: Publications
-            url: publications.html
+            url: /publications.html
           - title: Reports
-            url: reports.html
+            url: /reports.html
           - title: Presentations
-            url: presentations.html
+            url: /presentations.html
           - title: Design Documents
-            url: design.html
+            url: /design.html
           - title: Animations
-            url: animations.html
+            url: /animations.html
           - title: Use Cases
             url: https://github.com/UV-CDAT/uvcdat/wiki/Use-Cases
           - title: Releases
             url: https://github.com/UV-CDAT/uvcdat/wiki/Roadmap-to-Release
       - title: Installing
-        url: installing.html
+        url: /installing.html
       - title: Gallery
-        url: gallery.php
+        url: /gallery.php
       - title: Contribute
         url: https://github.com/UV-CDAT/uvcdat/wiki
       - title: Documentation
@@ -50,13 +50,13 @@ context:
       - title: User Guides
         url:
           - title: Manuals
-            url: manuals.html
+            url: /manuals.html
           - title: Tutorials
-            url: tutorials.html
+            url: /tutorials.html
           - title: CDAT Site
             url: http://uv-cdat.github.io/cdat-site/
-          - title: Mailing list
-            url: mailing-list.html
+          - title: /Mailing list
+            url: /mailing-list.html
           - title: Wiki
             url: https://github.com/UV-CDAT/uvcdat/wiki
 site_title: UV-CDAT
