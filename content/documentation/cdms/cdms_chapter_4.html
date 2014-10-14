@@ -241,7 +241,7 @@ makes the CDMS Regridder class available within a Python program. An instance of
 
 ###### Table 4.1 CDMS Regridder Constructor
 
-{:.table}
+
 | Constructor | Description
 | --- | --- |
 |regridFunction = Regridder(inputGrid, outputGrid) | Create a regridder function which interpolates a data array from input to output grid. [Table 4.3](#Table_4.3) on page 131 describes the calling sequence of this function. `inputGrid` and `outputGrid` are CDMS grid objects. **Note:** To set the mask associated with inputGrid or outputGrid, use the grid setMask function. |
@@ -397,7 +397,7 @@ In addition, a conservative regridder has the associated grid cell areas for sou
 
 ###### Table 4.4 SCRIP Regridder functions
 
-{:.table}
+
 |Return Type|Method|Description|
 |---|---|---|
 |Array or Transient-Variable|[conservative, bilinear, and distance-weighted regridders] `regridFunction(array)`|Interpolate a gridded data array to a new grid. The return value is the regridded data variable. `array` is a Variable, MaskedArray, or Numeric array. The rank of the array may be greater than the rank of the input grid, in which case the input grid shape must match a trailing portion of the array shape. For example, if the input grid is curvilinear with shape (64,128), the last two dimensions of the array must match. Similarly, if the input grid is generic with shape (2560,), the last dimension of the array must have that length.|
@@ -434,7 +434,7 @@ Regrid data to a uniform output grid.
 10  f.close()
 ```
  
-{:.table}
+
 |Line|Notes|
 |---|---|
 |4|Open a netCDF file for input.|
@@ -469,7 +469,7 @@ Get a mask from a separate file, and set as the input grid mask.
 17  h.close()
 ```
 
-{:.table}
+
 |Line|Notes|
 |---|---|
 |6|Get the input grid.|
@@ -492,7 +492,7 @@ Generate an array of zonal mean values.
 6  mean = regridFunc(rlsf)
 7  f.close()
 
-{:.table}
+
 |Line|Notes|
 |---|---|
 |3|Get the input grid. Return the area fraction of the source (input) grid cell that participates in the regridding. The array is 1-D, with length equal to the number of cells in the input grid.|
@@ -524,7 +524,7 @@ Regrid an array with missing data, and calculate the area-weighted mean of the r
 13  outmean = add.reduce(ravel(outmask*outweights*outsample)) / add.reduce(ravel(outmask*outweights))
 ```
 
-{:.table}
+
 |Line|Notes|
 |---|---|
 |2|Create a uniform target grid.|
