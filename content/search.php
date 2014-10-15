@@ -3,14 +3,12 @@ subtitle: Columns template
 description: Test description
 ---
 
-{% extends "base.j2" %}
+{% extends "php.j2" %}
 
 {% block container %}
-
 <h2> Search </h2>
-
-{% raw %}
-<?php include_once("searcher.php"); ?>
-{% endraw %}
-
 {% endblock container %}
+
+{% block post_content_php %}
+<?php include_once("searcher.php"); ?>
+{% endblock post_content_php %}
