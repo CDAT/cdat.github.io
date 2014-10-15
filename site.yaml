@@ -3,7 +3,7 @@ context:
     home_url: index.html
     nav_hover: yes
     menu:
-      - title: UV<img src="media/images/uvcdat.png" style=margin-top:-7px />CDAT
+      - title: UV<img src="/media/images/uvcdat.png" style=margin-top:-7px />CDAT
         url: /index.html
       - title: About
         url:
@@ -44,7 +44,7 @@ context:
           - title: CDMS
             url: /documentation/cdms/cdms.html
           - title: CDAT Utilities
-            url: /documentation/utilities/cdat_utilities.html
+            url: /documentation/utilities/utilities.html
           - title: VCS
             url: /documentation/vcs/vcs.html
       - title: User Guides
