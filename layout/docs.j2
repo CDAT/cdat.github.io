@@ -1,0 +1,10 @@
+{% extends "base.j2" %}
+
+{% block inside_container %}
+
+{% filter gfm %}
+{% block container %}
+{% endblock container %}
+{% endfilter %}
+
+{% endblock inside_container %}

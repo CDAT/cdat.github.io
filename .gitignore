@@ -3,6 +3,7 @@ deploy
 *.hyde_deps
 *.DS_Store
 *.swp
+*.pyc
 originals/
 wiki/zHTML/
 content/media/gallery/thumbnail/*.png

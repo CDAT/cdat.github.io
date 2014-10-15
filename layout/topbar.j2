@@ -1,8 +1,3 @@
-{# Adds in the topbar #}
-
-{% extends "base.j2" %}
-
-{% block body %}
 <div class="navbar navbar-inverse navbar-fixed-top">
   {% block topbar %}
   <div class="navbar-inner">
@@ -25,7 +20,3 @@
 </div>
 
 <div style="margin-bottom: 60px;"></div>
-
-{{ super() }} {# Use this to include the rest of the body block as it was originally defined #}
-
-{% endblock body %}

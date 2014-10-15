@@ -4,12 +4,8 @@ subtitle: Columns template
 description: Test description
 ---
 
-{% extends "topbar.j2" %}
+{% extends "php.j2" %}
 
-{% block container %}
-
-{% raw %}
+{% block post_content_php %}
 <?php include_once("displayer.php"); ?>
-{% endraw %}
-
-{% endblock container %}
+{% endblock post_content_php %}
