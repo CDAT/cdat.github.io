@@ -55,8 +55,8 @@ context:
             url: /tutorials.html
           - title: CDAT Site
             url: http://uv-cdat.github.io/cdat-site/
-          - title: /Mailing list
-            url: mailing-list.html
+          - title: Mailing list
+            url: /mailing-list.html
           - title: Wiki
             url: https://github.com/UV-CDAT/uvcdat/wiki
 site_title: UV-CDAT
