@@ -52,6 +52,7 @@
     {% endblock favicons %}
 
     {% block headjs %}
+    
     {% block jquery %}
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     {% endblock jquery %}
@@ -59,65 +60,40 @@
     {% endblock headjs %}
 
     {% block endhead %}{% endblock endhead %}
+
     {% block analytics %}
     {% include "analytics.j2" %}
     {% endblock analytics %}
+
   </head>
 
   <body class="{{ resource.meta.id if resource.meta.id else resource.slug }}">
+    {% include "topbar.j2" %}
 
     {% block body %}
 
     <div class="container" id="top">
-      {% filter gfm -%}
-      {% block container %}
+      {# Used to stick stuff in the container, but not interfere with the existing content #}
+      {% block inside_container %}
 
+      {% filter markdown -%}
+      {% block container %}
       {% endblock container %}
-      {%- endfilter %}
+      {% endfilter %}
+
+      {% endblock inside_container %}
     </div> <!-- /container -->
-    <hr>
-    <div id="footer" style="padding-left:300px;">
-    <footer>
-        {% filter gfm -%}
-        {% block footer %}
-[PCMDI] &bull; [CMIP5] &bull; [LLNL] &bull; [Privacy &amp; Legal Notice][disclaimer] &bull; [LLNL-WEB-460691][llnl-web] &bull; [Site Issues][issues]
-[pcmdi]:      http://www-pcmdi.llnl.gov/
-[cmip5]:      http://cmip-pcmdi.llnl.gov/cmip5/
-[llnl]:       http://www.llnl.gov/
-[disclaimer]: https://raw.github.com/UV-CDAT/uvcdat/master/docs/Legal.txt
-[llnl-web]:   https://www.llnl.gov/disclaimer.html
-[issues]:     https://github.com/aims-group/uvcdat-site/issues
-[githubwiki]: {{ media_url('images/githubwiki.png') }}
-[GitHub logo]: {{ media_url('images/github.svg') }}
-        {% endblock footer %}
-        {%- endfilter %}
-      </footer>
-    </div>
+
     {% endblock body %}
+
+    {% include "footer.j2" %}
 
     {% block js %}
     {# Javascript at the bottom for fast page loading #}
     {# The following line makes external links open in new windows #}
     <script src="{{ media_url('js/links.js') }}"></script>
-
-    {% block bootstrap_scripts %}
-    <script src="{{ media_url('js/libs/bootstrap.js') }}"></script>
-    <script src="{{ media_url('js/libs/bootstrap-button.js') }}"></script>
-    <script src="{{ media_url('js/libs/bootstrap-collapse.js') }}"></script>
-    <script src="{{ media_url('js/libs/bootstrap-dropdown.js') }}"></script>
-    <script src="{{ media_url('js/libs/bootstrap-transition.js') }}"></script>
-{#  <script src="{{ media_url('js/libs/bootstrap-alert.js') }}"></script>#}
-{#  <script src="{{ media_url('js/libs/bootstrap-modal.js') }}"></script>#}
-{#  <script src="{{ media_url('js/libs/bootstrap-scrollspy.js') }}"></script>#}
-{#  <script src="{{ media_url('js/libs/bootstrap-tab.js') }}"></script>#}
-{#  <script src="{{ media_url('js/libs/bootstrap-tooltip.js') }}"></script>#}
-{#  <script src="{{ media_url('js/libs/bootstrap-popover.js') }}"></script>#}
-    <script src="{{ media_url('js/libs/bootstrap-carousel.js') }}"></script>
-{#  <script src="{{ media_url('js/libs/bootstrap-typeahead.js') }}"></script>#}
-    <script src="{{ media_url('js/libs/jquery.flippy.min.js') }}"></script>
-    <script src="{{ media_url('js/flipper.js') }}"></script>
-    {# Uncomment any of these lines to enable that plugin on your site #}
-    {% endblock bootstrap_scripts %}
+    
+    {% include "bootstrap_scripts.j2" %}
 
     {% block scripts %}
     {% endblock scripts %}

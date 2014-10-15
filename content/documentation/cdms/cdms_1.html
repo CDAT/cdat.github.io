@@ -2,7 +2,7 @@
 title: CDAT CDMS Chapter 1
 ---
 
-{% extends "topbar.j2" %}
+{% extends "docs.j2" %}
 
 {% block container %}
 
@@ -192,7 +192,7 @@ When data is read from a file, the result variable is masked if the file variabl
 
 When a variable with masked values is written to a file, data values with a corresponding mask value of one are set to the value of the variables `missing_value` attribute. The data and `missing_value` attribute are then written to the file.
 
-Masking is covered in [Section 2.9](cdms_chapter_2.html#2.9). See also the documentation of the Python Numeric and MA modules, on which `cdms.MV` is based, at [http://numpy.sourceforge.net](http://numpy.sourceforge.net/).
+Masking is covered in [Section 2.9](cdms_2.html#2.9). See also the documentation of the Python Numeric and MA modules, on which `cdms.MV` is based, at [http://numpy.sourceforge.net](http://numpy.sourceforge.net/).
 
 
 <a name="1.7"></a>
@@ -531,7 +531,7 @@ remapf.close()
 popdat = regridf(dat)
 ```
 
-Regridding is discussed in [Chapter 4](cdms_chapter_4.md).
+Regridding is discussed in [Chapter 4](cdms_4.md).
 
 
 
@@ -630,7 +630,7 @@ Graphics method 'Boxfill' is currently set to Gfb_default.
 
 By default for rectangular grids, a boxfill plot of the lat-lon slice is produced. Since variable precip includes information on time, latitude, and longitude, the continental outlines and time information are also plotted. If the variable were on a non-rectangular grid, the plot would be a meshfill plot.
 
-The plot routine has a number of options for producing different types of plots, such as isofill and x-y plots. See [ Chapter 5 ](cdms_chapter_5.html) for details.
+The plot routine has a number of options for producing different types of plots, such as isofill and x-y plots. See [ Chapter 5 ](cdms_5.html) for details.
 
 
 <a name="1.13"></a>
@@ -655,8 +655,8 @@ Here is an example of accessing data via a database:
 'prc', 'ts', 'va']
 ```
 
-Databases are discussed further in [Section 2.7](cdms_chapter_2.html#2.7).
+Databases are discussed further in [Section 2.7](cdms_2.html#2.7).
 
-#### [Table of Contents](cdms.html) \| [Next Chapter](cdms_chapter_2.html)
+#### [Table of Contents](cdms.html) \| [Next Chapter](cdms_2.html)
 
 {% endblock container %}

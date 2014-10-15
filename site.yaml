@@ -67,7 +67,9 @@ plugins:
   - hyde.ext.plugins.auto_extend.AutoExtendPlugin
   - hyde.ext.plugins.syntext.SyntextPlugin
   - hyde.ext.plugins.textlinks.TextlinksPlugin
-  - plugins.custom_filters.CustomFilterPlugin
+jinja2:
+  filters:
+    gfm: plugins.gfm.gfm
 gfm:
   table_class: table
   space_headers: false

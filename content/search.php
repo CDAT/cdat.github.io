@@ -3,7 +3,7 @@ subtitle: Columns template
 description: Test description
 ---
 
-{% extends "topbar.j2" %}
+{% extends "base.j2" %}
 
 {% block container %}
 
