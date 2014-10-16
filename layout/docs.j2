@@ -11,39 +11,33 @@
 	
 	{% set current = resource.meta["index"]%}
 	{% set gather_previous = True %}
-
-	{% for r in node.resources %}
-		
-		{% if r.meta["index"] == current %}
-			{% set gather_previous = False %}
-			{% if previous and previous.meta["index"] == current - 1 -%}
-				<a href="{{ previous.full_url }}">Previous</a> |
-			{%- endif %}
-			{% set next = False %}
-		{% endif %}
-
-		{% if gather_previous %}
-			{% set previous = r %}			
-		{% endif %}
-
-		{% if next == False and r.meta["index"] not in [current, -1] %}
-			{% set next = r %}
-		{% endif %}
-
-		{% if r.meta["index"] == -1 and current != -1 %}
-			{% set toc = r %}
-		{% endif %}
-
-		{% if loop.last %}
-			{% if toc -%}
-				<a href="{{ toc.full_url }}">Table of Contents</a>
-			{%- endif %}
-			{% if next -%}
-				| <a href="{{ next.full_url }}">Next</a>
-			{%- endif %}
-		{% endif %}
-
+	
+	{% set pages = node.resources %}
+	{% set p = {} %}
+	
+	{% for ind in pages|map(attribute='meta')|map(attribute='index') %}
+		{# Create a lookup of page index in the node resources x page index in the documentation #}
+		{% do p.update( {ind: loop.index0} ) %}
 	{% endfor %}
+
+	{% set links = [] %}
+
+	{% if current > 1 and (current - 1) in p %}
+		{% set previous = "<a href=" ~ pages[p[current - 1]].full_url ~ ">Previous</a>" %}
+		{% do links.append(previous) %}
+	{% endif %}
+
+	{% if -1 in p and current != -1 %}
+		{% set toc = "<a href=" ~ pages[p[-1]].full_url ~ ">Table of Contents</a>" %}
+		{% do links.append(toc) %}
+	{% endif %}
+	
+	{% if (current + 1) in p %}
+		{% set next = "<a href=" ~ pages[p[current + 1]].full_url ~ ">Next</a>" %}
+		{% do links.append(next) %}
+	{% endif %}
+
+	{{ links|join(' | ') }}
 
 {% endblock nav_links %}
 
