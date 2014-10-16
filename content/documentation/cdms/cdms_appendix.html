@@ -1,5 +1,6 @@
 ---
-title: CDAT CDMS Appendix
+title: CDMS Appendix
+index: 8
 ---
 
 {% extends "docs.j2" %}
@@ -21,7 +22,7 @@ In general the concrete subclasses closely mirror the interface of the abstract 
 
 <a name="fig_1"></a>
 
-![]({{site.baseurl}}/media/images/cdms_classes.jpg)
+![]({{ media_url("/cdms_classes.jpg") }})
 
 ###### FIGURE 1. CDMS Classes
 
@@ -48,7 +49,7 @@ CDMS version 4.0 adds support for nonrectangular grids:
 
 CDMS version 3.0 is a significant enhancement of previous versions. The major changes were:
 
- - CDAT/CDMS was integrated with the Numerical Python masked array class MA.MaskedVariable. The MV submodule was added as a wrapper around MA.
+ - UV-CDAT/CDMS was integrated with the Numerical Python masked array class MA.MaskedVariable. The MV submodule was added as a wrapper around MA.
  - Methods that read data, such as subRegion, subSlice, and the slice operations, return instances of class TransientVariable. The plot and regrid modules were modified to handle masked array input. The specifiers time=..., latitude=..., etc. were added to the I/O routines.
  - The class TransientVariable was added.
  - A number of new functions were added, notably subRegion and subSlice, which return instances of TransientVariable.
@@ -135,7 +136,7 @@ CDMS version 3.0 is a significant enhancement of previous versions. The major ch
 
 ### `cu` Module
 
-The `cu` module is the original CDAT I/O interface. As of version 3 it is emulated in the `cdms` module. It is maintained for backward compatibility.
+The `cu` module is the original UV-CDAT I/O interface. As of version 3 it is emulated in the `cdms` module. It is maintained for backward compatibility.
 
 The `cu` classes are `Slab`, corresponding to `TransientVariable` in CDMS, and `cuDataset`, corresponding to `Dataset` in CDMS.
 
@@ -259,6 +260,5 @@ The `cu` classes are `Slab`, corresponding to `TransientVariable` in CDMS, and `
 </tr>
 </table>
 
-#### [Previous Chapter](cdms_7.html) \| [Table of Contents](cdms.html)
 
 {% endblock container %}

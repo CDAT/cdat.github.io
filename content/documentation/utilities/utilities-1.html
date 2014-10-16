@@ -1,12 +1,13 @@
 ---
-title: CDAT Utilities Chapter 1
+title: UV-CDAT Utilities Chapter 1
+index: 1
 ---
 
 {% extends "docs.j2" %}
 
 {% block container %}
 
-##  CDAT Utilities 3.3 - CHAPTER 1
+##  UV-CDAT Utilities 3.3 - CHAPTER 1
 
 ###  CHAPTER 1
 
@@ -174,7 +175,7 @@ The resultant `gen_weights` is in the same shape as the variable `x` and has the
 
 #####Defining precise domains: 
 
-For many applications data extraction needs to be precise and the ability to define the precise regions to extract is one of the strengths of CDAT. This is provided by the `cdutil` region selector for rectilinear grids (non-rectilinear grid support will be available in a future release). The general form of this region definition is illustrated best by the following example:
+For many applications data extraction needs to be precise and the ability to define the precise regions to extract is one of the strengths of UV-CDAT. This is provided by the `cdutil` region selector for rectilinear grids (non-rectilinear grid support will be available in a future release). The general form of this region definition is illustrated best by the following example:
 
 ``` python
 >>> import cdutil
@@ -313,7 +314,7 @@ So far we have the annual means calculated using various criteria. Now if we wis
 >>> annavg_clim = cdutil.YEAR.average(annavg_4,\ criteriaarg =[.6,.7])
 ```
 
-The tutorial file `times_tutorial.py` has detailed examples of time averaging in action. Further documentation is available on the cdat home page.
+The tutorial file `times_tutorial.py` has detailed examples of time averaging in action. Further documentation is available on the UV-CDAT home page.
 
 ### Preparing Datasets for Comparison (VariableConditioner and VariablesMatcher) 
 

@@ -1,12 +1,13 @@
 ---
-title: CDAT Utilities Chapter 3
+title: UV-CDAT Utilities Chapter 3
+index: 3
 ---
 
 {% extends "docs.j2" %}
 
 {% block container %}
 
-## CDAT Utilities 3.3 - CHAPTER 3
+## UV-CDAT Utilities 3.3 - CHAPTER 3
 
 ### CHAPTER 3
 
@@ -136,7 +137,7 @@ For documentation type:
 
 This package contains a Python interface to the subroutine library regridpack.
 
-See the [documentation](http://cdat.sourceforge.net). See also documentation for [Pyfort](http://pyfortran.sourceforge.net) for further details on argument conventions.
+See the [documentation](http://UV-CDAT.sourceforge.net). See also documentation for [Pyfort](http://pyfortran.sourceforge.net) for further details on argument conventions.
 
 ##### Using Spherepack (package sphere) 
 
@@ -150,7 +151,7 @@ For documentation type:
 
 to see list of functions.
 
-See the [documentation](http://cdat.sourceforge.net). See also documentation for [Pyfort](http://pyfortran.sourceforge.net) for further details on argument conventions.
+See the [documentation](http://UV-CDAT.sourceforge.net). See also documentation for [Pyfort](http://pyfortran.sourceforge.net) for further details on argument conventions.
 
 ##### Computing Trends (package trends) 
 
@@ -210,15 +211,15 @@ integer , intent(out):: nr
 The `grads` module supplies an interface to cdms that will be familiar to users
 of GrADS.
 
-See the CDAT website for documentation.
+See the UV-CDAT website for documentation.
 
 ##### Interface to the ngmath library. (package ngmath) 
 
 The `ngmath` library is a collection of interpolators and approximators for one-dimensional, two-dimensional and three-dimensional data. The packages, which were obtained from NCAR, are:
 
-* `natgrid` - a two-dimensional random data interpolation package based on Dave Watson's nngridr. NOT built by default in CDAT due to compile problems on some platforms. Works on linux. 
+* `natgrid` - a two-dimensional random data interpolation package based on Dave Watson's nngridr. NOT built by default in UV-CDAT due to compile problems on some platforms. Works on linux. 
 * `dsgrid` - a three-dimensional random data interpolator based on a simple inverse distance weighting algorithm. 
-* `fitgrid` - an interpolation package for one-dimensional and two-dimensional gridded data based on Alan Cline's Fitpack. Fitpack uses splines under tension to interpolate in one and two dimensions. NOT IN CDAT. 
+* `fitgrid` - an interpolation package for one-dimensional and two-dimensional gridded data based on Alan Cline's Fitpack. Fitpack uses splines under tension to interpolate in one and two dimensions. NOT IN UV-CDAT. 
 * `csagrid` - an approximation package for one-dimensional, two-dimensional and three-dimensional random data based on David Fulker's Splpack. csagrid uses cubic splines to calculate its approximation function. 
 
 * A
