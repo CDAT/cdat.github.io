@@ -1,5 +1,6 @@
 ---
-title: CDAT CDMS Chapter 6
+title: CDMS Chapter 6
+index: 6
 ---
 
 {% extends "docs.j2" %}
@@ -670,7 +671,7 @@ For an axis in a dataset, the .partition attribute describes how an axis is spli
 
 ###### FIGURE 4. Partitioned axis
 
-![]({{site.baseurl}}/media/images/timeLine.jpg)
+![]({{ media_url("/timeLine.jpg") }})
 
 For example, Figure 4 shows a time axis, representing the 36 months, January 1980 through December 1982, with December 1981 missing. The first partition interval is (0,12), the second is (12,23), and the third is (24,36), where the interval (i,j) represents all indices k such that i <= k < j. The .partition attribute for this axis would be the list:
 
@@ -916,7 +917,7 @@ Dataset "sample" has two variables, and six axes.
 	cdms_filemap="[[[u],[[0,1,-,-,u_2000.nc],[1,2,-,-,u_2001.nc],[2,3,-,-
 				  ,u_2002.nc] ] ],[[v],[[0,1,-,-,v_2000.nc],[1,2,-,-,v_2001.nc],[2,3,-,-
 				  ,v_2002.nc] ] ] ]"
-	history="[2002-1-7 18:21:41] /idoru/cdat/3.1/bin/cdscan -d sample -x sample.xml u_2000.nc u_2001.nc u_2002.nc v_2000.nc v_2001.nc v_2002.nc"
+	history="[2002-1-7 18:21:41] /idoru/UV-CDAT/3.1/bin/cdscan -d sample -x sample.xml u_2000.nc u_2001.nc u_2002.nc v_2000.nc v_2001.nc v_2002.nc"
 >
 	<axis
 		id ="latitude"
@@ -984,6 +985,5 @@ Dataset "sample" has two variables, and six axes.
 </dataset>
 ```
 
-#### [Previous Chapter](cdms_5.html) \| [Table of Contents](cdms.html) \| [Next Chapter](cdms_7.html)
 
 {% endblock container %}

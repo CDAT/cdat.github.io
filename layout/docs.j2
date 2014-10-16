@@ -7,4 +7,44 @@
 {% endblock container %}
 {% endfilter %}
 
+{% block nav_links %}
+	
+	{% set current = resource.meta["index"]%}
+	{% set gather_previous = True %}
+
+	{% for r in node.resources %}
+		
+		{% if r.meta["index"] == current %}
+			{% set gather_previous = False %}
+			{% if previous and previous.meta["index"] == current - 1 -%}
+				<a href="{{ previous.full_url }}">Previous</a> |
+			{%- endif %}
+			{% set next = False %}
+		{% endif %}
+
+		{% if gather_previous %}
+			{% set previous = r %}			
+		{% endif %}
+
+		{% if next == False and r.meta["index"] not in [current, -1] %}
+			{% set next = r %}
+		{% endif %}
+
+		{% if r.meta["index"] == -1 and current != -1 %}
+			{% set toc = r %}
+		{% endif %}
+
+		{% if loop.last %}
+			{% if toc -%}
+				<a href="{{ toc.full_url }}">Table of Contents</a>
+			{%- endif %}
+			{% if next -%}
+				| <a href="{{ next.full_url }}">Next</a>
+			{%- endif %}
+		{% endif %}
+
+	{% endfor %}
+
+{% endblock nav_links %}
+
 {% endblock inside_container %}

@@ -1,5 +1,6 @@
 ---
-title: CDAT CDMS Chapter 7
+title: CDMS Chapter 7
+index: 7
 ---
 
 {% extends "docs.j2" %}
@@ -321,8 +322,6 @@ A problem can occur if variables in different files are defined on different gri
 If a variable or axis has a CDMS ID which differs from its name in the file, it is said to have an alias. The actual name of the object in the file is stored in the attribute `name_in_file`. `cdscan` uses this mechanism (with the `-a` and `s` options) to resolve name conflicts; a new axis or variable ID is generated, and the `name_in_file` is set to the axis name in the file.
 
 Name aliases also can be used to enforce naming standards. For data received from an outside organization, variable names may not be recognized by existing applications. Often it is simpler and safer to add an alias to the metafile rather than rewrite the data
-
-#### [Previous Chapter](cdms_6.html) \| [Table of Contents](cdms.html) \| [Appendix](cdms_appendix.html)
 
 
 {% endblock container %}

@@ -1,5 +1,6 @@
 ---
-title: CDAT CDMS Chapter 5
+title: CDMS Chapter 5
+index: 5
 ---
 
 {% extends "docs.j2" %}
@@ -14,7 +15,7 @@ title: CDAT CDMS Chapter 5
 
 ### 5.1 Overview
 
-Data read via the CDMS Python interface can be plotted using the `vcs` module. This module, part of the Climate Data Analysis Tool (CDAT) is documented in the CDAT reference manual. The `vcs` module provides access to the functionality of the VCS visualization program.
+Data read via the CDMS Python interface can be plotted using the `vcs` module. This module, part of the Ultrascale Visualization Climate Data Analysis Tool (UV-UV-CDAT) is documented in the UV-UV-CDAT reference manual. The `vcs` module provides access to the functionality of the VCS visualization program.
 
 Examples of plotting data accessed from CDMS are given below, as well as documentation for the plot routine keywords.
 
@@ -104,7 +105,7 @@ Calling the variable `psl` as a function reads a subset of the variable. The res
 
 ### 5.3 `plot` method
 
-The `plot` method is documented in the CDAT Reference Manual. This section augments the documentation with a description of the optional keyword arguments. The general form of the plot command is:
+The `plot` method is documented in the UV-UV-CDAT Reference Manual. This section augments the documentation with a description of the optional keyword arguments. The general form of the plot command is:
 
 ``` python
 canvas.plot(array [, args] [,key=value [, key=value [, ...] ] ])
@@ -130,7 +131,7 @@ where:
 
     `graphics_name`: the name of the specific graphics method ('default')
 
-    See the CDAT Reference Manual and VCS Reference Manual for a detailed description of these arguments.
+    See the UV-UV-CDAT Reference Manual and VCS Reference Manual for a detailed description of these arguments.
 
 - `key=value`, ... are optional keyword/value pairs, listed in any order. These are defined in the table below.
 
@@ -330,6 +331,5 @@ where:
     </tr>
   </table>
 
-#### [Previous Chapter](cdms_4.html) \| [Table of Contents](cdms.html) \| [Next Chapter](cdms_6.html)
 
 {% endblock container %}
