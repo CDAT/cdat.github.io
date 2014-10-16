@@ -1160,36 +1160,27 @@ v = f['prc']</pre>
         </td>
       </tr>
 
-      <tr>
-        <td>CurveGrid or GenericGrid</td>
+    <tr>
+      <td>CurveGrid or GenericGrid</td>
 
-        <td><code>readScripGrid(self, whichGrid='destination', check-or
-        Generic-Grid=1)</code></td>
+      <td><code>readScripGrid(self, whichGrid='destination', check-or Generic-Grid=1)</code></td>
 
-        <td>
-          <p>Read a curvilinear or generic grid from a SCRIP dataset. The dataset can be
-          a SCRIP grid file or remapping file.</p>
+      <td>
+        <p>Read a curvilinear or generic grid from a SCRIP dataset. The dataset can be a SCRIP grid file or remapping file.</p>
 
-          <p>If a mapping file, <code>whichGrid</code> chooses the grid to read, either
-          <code>"source"</code> or <code>"destination"</code>.</p>
+        <p>If a mapping file, <code>whichGrid</code> chooses the grid to read, either <code>"source"</code> or <code>"destination"</code>.</p>
 
-          <p>If <code>checkGrid</code> is 1 (default), the grid cells are checked for
-          convexity, and 'repaired' if necessary. Grid cells may appear to be nonconvex
-          if they cross a <code>0 / 2pi</code> boundary. The repair consists of shifting
-          the cell vertices to the same side modulo 360 degrees.</p>
-        </td>
-      </tr>
+        <p>If <code>checkGrid</code> is 1 (default), the grid cells are checked for convexity, and 'repaired' if necessary. Grid cells may appear to be nonconvex if they cross a <code>0 / 2pi</code> boundary. The repair consists of shifting the cell vertices to the same side modulo 360 degrees.</p>
+      </td>
+    </tr>
 
-      <tr>
-        <td>None<br />
-        <br /></td>
-
-        <td><code>sync()</code></td>
-
-        <td>Write any pending changes to the dataset.</td>
-      </tr>
-    </tbody>
-  </table>
+    <tr>
+      <td>None<br /><br /></td>
+      <td><code>sync()</code></td>
+      <td>Write any pending changes to the dataset.</td>
+    </tr>
+  </tbody>
+</table>
 
 
 
@@ -1225,7 +1216,7 @@ Table 2.26 on page 75 lists the constructors in MV. All functions return a trans
 var.id = 'temperature'
 ```
 
-For completeness MV provides access to all the MA functions. The functions not listed in the following tables are identical to the corresponding MA function: allclose, allequal, common_fill_value, compress, create_mask, dot, e, fill_value, filled, get_print_limit, getmask, getmaskarray, identity, indices, innerproduct, isMA, isMaskedArray, is_mask, isarray, make_mask, make_mask_none, mask_or, masked, pi, put, putmask, rank, ravel, set_fill_value, set_print_limit, shape, size. See the documentation at http://numpy.sourceforge.net for a description of these functions.
+For completeness MV provides access to all the MA functions. The functions not listed in the following tables are identical to the corresponding MA function: `allclose`, `allequal`, `common_fill_value`, `compress`, `create_mask`, `dot`, `e`, `fill_value`, `filled`, `get_print_limit`, `getmask`, `getmaskarray`, `identity`, `indices`, `innerproduct`, `isMA`, `isMaskedArray`, `is_mask`, `isarray`, `make_mask`, `make_mask_none`, `mask_or`, `masked`, `pi`, `put`, `putmask`, `rank`, `ravel`, `set_fill_value`, `set_print_limit`, `shape`, `size`. See the documentation at http://numpy.sourceforge.net for a description of these functions.
 
 
 
@@ -1346,224 +1337,224 @@ Table 2.31 on page 82 describes the methods that apply to all types of Horizonta
 
 ###### Table 2.31 HorizontalGrid Methods  
 
-  <table class="table">
-    <tbody>
-      <tr>
-        <th>Type</th>
+<table class="table">
+  <tbody>
+    <tr>
+      <th>Type</th>
 
-        <th>Method</th>
+      <th>Method</th>
 
-        <th>Description</th>
-      </tr>
+      <th>Description</th>
+    </tr>
 
-      <tr>
-        <td>
-          <p><span>Horizontal-Grid</span></p>
-        </td>
+    <tr>
+      <td>
+        <p><span>Horizontal-Grid</span></p>
+      </td>
 
-        <td><code>clone()</code></td>
+      <td><code>clone()</code></td>
 
-        <td>
-          <p>Return a transient copy of the grid.</p>
-        </td>
-      </tr>
+      <td>
+        <p>Return a transient copy of the grid.</p>
+      </td>
+    </tr>
 
-      <tr>
-        <td>Axis</td>
+    <tr>
+      <td>Axis</td>
 
-        <td><code>getAxis(Integer n)</code></td>
+      <td><code>getAxis(Integer n)</code></td>
 
-        <td>
-          <p>Get the n-th axis.n is either 0 or 1.</p>
-        </td>
-      </tr>
+      <td>
+        <p>Get the n-th axis.n is either 0 or 1.</p>
+      </td>
+    </tr>
 
-      <tr>
-        <td>Tuple</td>
+    <tr>
+      <td>Tuple</td>
 
-        <td><code>getBounds()</code></td>
+      <td><code>getBounds()</code></td>
 
-        <td>
-          <p>Get the grid boundary arrays.</p>
+      <td>
+        <p>Get the grid boundary arrays.</p>
 
-          <p>Returns a tuple <code>(latitudeArray, longitudeArray)</code>, where
-          latitudeArray is a Numeric array of latitude bounds, and similarly for
-          longitudeArray.The shape of latitudeArray and longitudeArray depend on the type
-          of grid:</p>
+        <p>Returns a tuple <code>(latitudeArray, longitudeArray)</code>, where
+        latitudeArray is a Numeric array of latitude bounds, and similarly for
+        longitudeArray.The shape of latitudeArray and longitudeArray depend on the type
+        of grid:</p>
 
-          <ul>
-            <li>for rectangular grids with shape (nlat, nlon), the boundary arrays have
-            shape (nlat,2) and (nlon,2).</li>
+        <ul>
+          <li>for rectangular grids with shape (nlat, nlon), the boundary arrays have
+          shape (nlat,2) and (nlon,2).</li>
 
-            <li>for curvilinear grids with shape (nx, ny), the boundary arrays each have
-            shape (nx, ny, 4).</li>
+          <li>for curvilinear grids with shape (nx, ny), the boundary arrays each have
+          shape (nx, ny, 4).</li>
 
-            <li>for generic grids with shape (ncell,), the boundary arrays each have
-            shape (ncell, nvert) where nvert is the maximum number of vertices per
-            cell.</li>
-          </ul>
+          <li>for generic grids with shape (ncell,), the boundary arrays each have
+          shape (ncell, nvert) where nvert is the maximum number of vertices per
+          cell.</li>
+        </ul>
 
-          <p>For rectilinear grids: If no boundary arrays are explicitly defined (in the
-          file or dataset), the result depends on the auto- Bounds mode (see
-          <code>cdms.setAutoBounds</code>) and the grid classification mode (see
-          <code>cdms.setClassifyGrids</code>). By default, autoBounds mode is enabled, in
-          which case the boundary arrays are generated based on the type of grid. If
-          disabled, the return value is (None,None).For rectilinear grids: The grid
-          classification mode specifies how the grid type is to be determined. By
-          default, the grid type (Gaussian, uniform, etc.) is determined by calling
-          <span>grid.classifyInFamily</span>. If the mode is 'off'
-          <span>grid.getType</span> is used instead.</p>
-        </td>
-      </tr>
+        <p>For rectilinear grids: If no boundary arrays are explicitly defined (in the
+        file or dataset), the result depends on the auto- Bounds mode (see
+        <code>cdms.setAutoBounds</code>) and the grid classification mode (see
+        <code>cdms.setClassifyGrids</code>). By default, autoBounds mode is enabled, in
+        which case the boundary arrays are generated based on the type of grid. If
+        disabled, the return value is (None,None).For rectilinear grids: The grid
+        classification mode specifies how the grid type is to be determined. By
+        default, the grid type (Gaussian, uniform, etc.) is determined by calling
+        <span>grid.classifyInFamily</span>. If the mode is 'off'
+        <span>grid.getType</span> is used instead.</p>
+      </td>
+    </tr>
 
-      <tr>
-        <td>Axis</td>
+    <tr>
+      <td>Axis</td>
 
-        <td><code>getLatitude()</code></td>
+      <td><code>getLatitude()</code></td>
 
-        <td>
-          <p>Get the latitude axis of this grid.</p>
-        </td>
-      </tr>
+      <td>
+        <p>Get the latitude axis of this grid.</p>
+      </td>
+    </tr>
 
-      <tr>
-        <td>Axis</td>
+    <tr>
+      <td>Axis</td>
 
-        <td><code>getLongitude()</code></td>
+      <td><code>getLongitude()</code></td>
 
-        <td>
-          <p>Get the latitude axis of this grid.</p>
-        </td>
-      </tr>
+      <td>
+        <p>Get the latitude axis of this grid.</p>
+      </td>
+    </tr>
 
-      <tr>
-        <td>Axis</td>
+    <tr>
+      <td>Axis</td>
 
-        <td><code>getMask()</code></td>
+      <td><code>getMask()</code></td>
 
-        <td>
-          <p>Get the mask array of this grid, if any.Returns a 2-D Numeric array, having
-          the same shape as the grid. If the mask is not explicitly defined, the return
-          value is <code>None</code>.</p>
-        </td>
-      </tr>
+      <td>
+        <p>Get the mask array of this grid, if any.Returns a 2-D Numeric array, having
+        the same shape as the grid. If the mask is not explicitly defined, the return
+        value is <code>None</code>.</p>
+      </td>
+    </tr>
 
-      <tr>
-        <td>Axis</td>
+    <tr>
+      <td>Axis</td>
 
-        <td><code>getMesh(self, transpose=None)</code></td>
+      <td><code>getMesh(self, transpose=None)</code></td>
 
-        <td>
-          <p>Generate a mesh array for the meshfill graphics method.If transpose is
-          defined to a tuple, say (1,0), first transpose latbounds and lonbounds
-          according to the tuple, in this case (1,0,2).</p>
-        </td>
-      </tr>
+      <td>
+        <p>Generate a mesh array for the meshfill graphics method.If transpose is
+        defined to a tuple, say (1,0), first transpose latbounds and lonbounds
+        according to the tuple, in this case (1,0,2).</p>
+      </td>
+    </tr>
 
-      <tr>
-        <td>None</td>
+    <tr>
+      <td>None</td>
 
-        <td><code>setBounds(latBounds, lonBounds, persistent=0)</code></td>
+      <td><code>setBounds(latBounds, lonBounds, persistent=0)</code></td>
 
-        <td>
-          <p>Set the grid boundaries.<code>latBounds</code> is a NumPy array of shape
-          (n,2), such that the boundaries of the kth axis value are
-          <code>[latBounds[k,0],latBounds[k,1] ]</code>. <code>lonBounds</code> is
-          defined similarly for the longitude array. <b>Note:</b> By default, the
-          boundaries are not written to the file or dataset containing the grid (if any).
-          This allows bounds to be set on read-only files, for regridding. If the
-          optional argument <code>persistent</code> is set to 1, the boundary array is
-          written to the file.</p>
-        </td>
-      </tr>
+      <td>
+        <p>Set the grid boundaries.<code>latBounds</code> is a NumPy array of shape
+        (n,2), such that the boundaries of the kth axis value are
+        <code>[latBounds[k,0],latBounds[k,1] ]</code>. <code>lonBounds</code> is
+        defined similarly for the longitude array. <b>Note:</b> By default, the
+        boundaries are not written to the file or dataset containing the grid (if any).
+        This allows bounds to be set on read-only files, for regridding. If the
+        optional argument <code>persistent</code> is set to 1, the boundary array is
+        written to the file.</p>
+      </td>
+    </tr>
 
-      <tr>
-        <td>None</td>
+    <tr>
+      <td>None</td>
 
-        <td><code>setMask(mask, persistent=0)</code></td>
+      <td><code>setMask(mask, persistent=0)</code></td>
 
-        <td>
-          <p>Set the grid mask. If <code>persistent == 1</code>, the mask values are
-          written to the associated file, if any. Otherwise, the mask is associated with
-          the grid, but no I/O is generated. <code>mask</code> is a two-dimensional,
-          Boolean-valued Numeric array, having the same shape as the grid.</p>
-        </td>
-      </tr>
+      <td>
+        <p>Set the grid mask. If <code>persistent == 1</code>, the mask values are
+        written to the associated file, if any. Otherwise, the mask is associated with
+        the grid, but no I/O is generated. <code>mask</code> is a two-dimensional,
+        Boolean-valued Numeric array, having the same shape as the grid.</p>
+      </td>
+    </tr>
 
-      <tr>
-        <td>Horizontal-Grid</td>
+    <tr>
+      <td>Horizontal-Grid</td>
 
-        <td><code>subGridRegion(latInterval, lonInterval)</code></td>
+      <td><code>subGridRegion(latInterval, lonInterval)</code></td>
 
-        <td>
-          <p>Create a new grid corresponding to the coordinate region defined by
-          <code>latInterval, lonInterval.</code></p>
+      <td>
+        <p>Create a new grid corresponding to the coordinate region defined by
+        <code>latInterval, lonInterval.</code></p>
 
-          <p><code>latInterval</code> and <code>lonInterval</code> are the coordinate
-          intervals for latitude and longitude, respectively.</p>
+        <p><code>latInterval</code> and <code>lonInterval</code> are the coordinate
+        intervals for latitude and longitude, respectively.</p>
 
-          <p>Each interval is a tuple having one of the forms:</p>
+        <p>Each interval is a tuple having one of the forms:</p>
 
-          <ul>
-            <li><code>(x,y)</code></li>
+        <ul>
+          <li><code>(x,y)</code></li>
 
-            <li><code>(x,y,indicator)</code></li>
+          <li><code>(x,y,indicator)</code></li>
 
-            <li><code>(x,y,indicator,cycle)</code></li>
+          <li><code>(x,y,indicator,cycle)</code></li>
 
-            <li><code>None</code></li>
-          </ul>
+          <li><code>None</code></li>
+        </ul>
 
-          <p>where <code>x</code> and <code>y</code> are coordinates indicating the
-          interval <code>[x,y)</code>, and:</p>
+        <p>where <code>x</code> and <code>y</code> are coordinates indicating the
+        interval <code>[x,y)</code>, and:</p>
 
-          <p><code><span>indicator</span></code> is a two-character string, where the
-          first character is 'c' if the interval is closed on the left, 'o' if open, and
-          the second character has the same meaning for the right-hand point. (Default:
-          'co').</p>
+        <p><code><span>indicator</span></code> is a two-character string, where the
+        first character is 'c' if the interval is closed on the left, 'o' if open, and
+        the second character has the same meaning for the right-hand point. (Default:
+        'co').</p>
 
-          <p><span>If <code>cycle</code> is specified, the axis is treated as circular
-          with the given cycle value. By default, if <code>grid.isCircular()</code> is
-          true, the axis is treated as circular with a default value of 360.0.</span></p>
+        <p><span>If <code>cycle</code> is specified, the axis is treated as circular
+        with the given cycle value. By default, if <code>grid.isCircular()</code> is
+        true, the axis is treated as circular with a default value of 360.0.</span></p>
 
-          <p>An interval of <code>None</code> returns the full index interval of the
-          axis.</p>
+        <p>An interval of <code>None</code> returns the full index interval of the
+        axis.</p>
 
-          <p>If a mask is defined, the subgrid also has a mask corresponding to the index
-          ranges.Note: The result grid is not associated with any file or dataset.</p>
-        </td>
-      </tr>
+        <p>If a mask is defined, the subgrid also has a mask corresponding to the index
+        ranges.Note: The result grid is not associated with any file or dataset.</p>
+      </td>
+    </tr>
 
-      <tr>
-        <td>
-          <p>Transient-CurveGrid</p>
-        </td>
+    <tr>
+      <td>
+        <p>Transient-CurveGrid</p>
+      </td>
 
-        <td><code>toCurveGrid(gridid=None)</code></td>
+      <td><code>toCurveGrid(gridid=None)</code></td>
 
-        <td>
-          <p>Convert to a curvilinear grid. If the grid is already curvilinear, a copy of
-          the grid object is returned. <code>gridid</code> is the string identifier of
-          the resulting curvilinear grid object. If unspecified, the grid ID is copied.
-          <b>Note:</b> This method does not apply to generic grids.</p>
-        </td>
-      </tr>
+      <td>
+        <p>Convert to a curvilinear grid. If the grid is already curvilinear, a copy of
+        the grid object is returned. <code>gridid</code> is the string identifier of
+        the resulting curvilinear grid object. If unspecified, the grid ID is copied.
+        <b>Note:</b> This method does not apply to generic grids.</p>
+      </td>
+    </tr>
 
-      <tr>
-        <td>
-          <p>Transient-GenericGrid</p>
-        </td>
+    <tr>
+      <td>
+        <p>Transient-GenericGrid</p>
+      </td>
 
-        <td><code>toGenericGrid(gridid=None)</code></td>
+      <td><code>toGenericGrid(gridid=None)</code></td>
 
-        <td>
-          <p>Convert to a generic grid. If the grid is already generic, a copy of the
-          grid is returned. <code>gridid</code> is the string identifier of the resulting
-          curvilinear grid object. If unspecified, the grid ID is copied.</p>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+      <td>
+        <p>Convert to a generic grid. If the grid is already generic, a copy of the
+        grid is returned. <code>gridid</code> is the string identifier of the resulting
+        curvilinear grid object. If unspecified, the grid ID is copied.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
  
 
 
