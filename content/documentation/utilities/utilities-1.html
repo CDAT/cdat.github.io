@@ -27,14 +27,12 @@ result = averager( V, axis= axisoptions , weights= weightoptions , action= actio
 
 ##### Options:
 
- - `axisoptions`
-
+- `axisoptions`
     - **Default:** 0 (the first dimension in the data you pass to the function).
+        - Restrictions: `axisoptions` has to be a string. You can pass `axis='tyx'`, or `'123'`, or `'x (plev)'` etc. the same way as in `order=` options for variable operations EXCEPT that `'...'` (i.e Ellipses) are not allowed. If V is an array of type Numeric or MA, the `axisoptions` can only be of the form `'123'`.
 
-    Restrictions: `axisoptions` has to be a string. You can pass `axis='tyx'`, or `'123'`, or `'x (plev)'` etc. the same way as in `order=` options for variable operations EXCEPT that `'...'` (i.e Ellipses) are not allowed. If V is an array of type Numeric or MA, the `axisoptions` can only be of the form `'123'`. 
 
 - `weightoptions`: `'generate' | 'weighted' | 'equal' | 'unweighted' | array | Masked Variable`
-
     - **Default:**
         - `'weighted'` for Transient Variables (MVs)
         - `'unweighted'` for MA or Numeric arrays.
@@ -659,6 +657,7 @@ The order that operations are executed by the `get` method of the `VariablesMatc
 ###### A simple example 
 
 In this example we retrieve data for 2 different variables over the maximum common period, and put them both on a 10x10 degree grid.
+
 ```python
 >>> import cdutil
 # Reference
