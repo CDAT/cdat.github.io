@@ -12,6 +12,12 @@ function get_graphics_methods($method, $files = NULL) {
   return filter_files("has_gm", $method, $files);
 }
 
+function get_templates($templates, $files=NULL) {
+  include_once("template_classifier.php");
+  $template = strtolower($templates);
+  return filter_files("has_template", $template, $files);
+}
+
 function get_all() {
   return filter_files(TRUE, TRUE, NULL);
 }

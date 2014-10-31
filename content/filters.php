@@ -54,6 +54,7 @@
     $our_args = array(
       "graphics_method" => @$_REQUEST["graphics_method"],
       "projection" => @$_REQUEST["projection"],
+      "template" => @$_REQUEST["template"],
     );
 
     if ($our_args[$arg] == $value) {
@@ -64,6 +65,9 @@
 
     return "gallery.php?" . http_build_query($our_args);
   }
+
+
+
   if (isset($_REQUEST["graphics_method"])) {
     $gm = $_REQUEST["graphics_method"];
   } else {
@@ -74,56 +78,63 @@
   } else {
     $proj = NULL;
   }
+  if (isset($_REQUEST["template"])) {
+    $temp = $_REQUEST["template"];
+  } else {
+    $temp = NULL;
+  }
+
+  // Build a filter accordion
+  function make_filter($type, $label, $options, $value, $url_arg, $cleaner) {
+    ?>
+      <div class="filter" id="<?php echo $type; ?>">
+        <div class="filter_group">
+          <div class="filter_header">
+            <a class="filter_toggle" data-toggle="collapse" data-parent="#gm" href="#collapse_<?php echo $type; ?>">
+              <?php echo $label; ?>
+            </a>
+          </div>
+          <div class="filter_body collapse <?php if ($value !== NULL) { echo "in"; } ?>" id="collapse_<?php echo $type; ?>">
+            <ul>
+              <?php foreach ($options as $option): ?>
+                <li>
+                  <div class='filter_sign'>
+                    <i class='<?php if ($value === $option) { echo 'icon-minus-sign'; } else { echo 'icon-plus-sign'; } ?>'></i>
+                  </div>
+                  <a href="<?php echo build_url($url_arg, $option); ?>"><?php echo $cleaner($option); ?></a>
+                </li>
+              <?php endforeach; ?>
+            </ul>
+          </div>
+        </div>
+      </div>
+    <?php
+  }
 ?>
+<!-- all filters accordion -->
 <div class="filter" id="filter_grouper">
   <div class="filter_group">
     <div class='filter_header'>
       <a class="filter_toggle" data-toggle="collapse" data-parent="#filter_grouper" href="#collapse_filters">
         Filters
       </a>
-      <?php if ($gm != NULL || $proj != NULL): ?>
+      <?php if ($gm != NULL || $proj != NULL || $temp != NULL): ?>
         <small class="pull-right"><a href="gallery.php">(Remove Filters)</a></small>
       <?php endif; ?>
     </div>
-    <div class="filter_body collapse <?php if ($gm !== NULL || $proj !== NULL) { echo "in"; } ?>" id="collapse_filters">
-      <div class="filters">
-        <div class="filter" id="gm">
-          <div class="filter_group">
-            <div class="filter_header">
-              <a class="filter_toggle" data-toggle="collapse" data-parent="#gm" href="#collapse_gm">
-                Graphics Methods
-              </a>
-            </div>
-            <div class="filter_body collapse <?php if ($gm !== NULL) { echo "in"; } ?>" id="collapse_gm">
-            <ul>
-              <?php include_once("gm_classifier.php"); ?>
-              <?php foreach (all_gms() as $method): ?>
-                <li><div class='filter_sign'><i class='<?php if ($gm === $method) { echo 'icon-minus-sign'; } else { echo 'icon-plus-sign'; } ?>'></i></div><a href="<?php echo build_url("graphics_method", $method); ?>"><?php echo clean_gm($method); ?></a></li>
-              <?php endforeach; ?>
-            </ul>
-          </div>
-          </div>
-        </div>
-      </div>
-      <div class="filter" id="projection">
-          <div class="filter_group">
-            <div class="filter_header">
-              <a class="filter_toggle" data-toggle="collapse" data-parent="#projection" href="#collapse_projection">
-                Projection
-              </a>
-            </div>
-            <div class="filter_body collapse <?php if ($proj !== NULL) { echo "in"; } ?>" id="collapse_projection">
-              <ul>
-                  <?php include_once("projection_classifier.php"); ?>
-                  <?php foreach (all_projections() as $projection): ?>
-                    <li><div class='filter_sign'><i class='<?php if ($proj === $projection) { echo 'icon-minus-sign'; } else { echo 'icon-plus-sign'; } ?>'></i></div><a  href="<?php echo build_url("projection", $projection); ?>"><?php echo clean_projection($projection); ?></a></li>
-                  <?php endforeach; ?>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="filter_body collapse <?php if ($gm !== NULL || $proj !== NULL || $temp !== NULL) { echo "in"; } ?>" id="collapse_filters">
+      <?php
+        include_once("gm_classifier.php");
+        make_filter("gm", "Graphics Method", all_gms(), $gm, "graphics_method", "clean_gm");
+        
+        include_once("projection_classifier.php");
+        make_filter("projection", "Projection", all_projections(), $proj, "projection", "clean_projection");
+
+        include_once("template_classifier.php");
+        make_filter("template", "Template", all_templates(), $temp, "template", "clean_template");
+      ?>
     </div>
+  </div>
 </div>
   <script>
   $("body").ready(function(){

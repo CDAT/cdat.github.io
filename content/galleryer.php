@@ -64,7 +64,12 @@ if (isset($_REQUEST["projection"])) {
   
   $files = get_projections($_REQUEST["projection"], $files);
   $classifications[] = htmlentities(clean_projection($_REQUEST["projection"])) . " projection";
-} 
+}
+
+if (isset($_REQUEST["template"])) {
+  $files = get_templates($_REQUEST["template"], $files);
+  $classifications[] = htmlentities(clean_template($_REQUEST["template"])) . " template";
+}
 
 if ($files === NULL) {
   $classification = "All Examples";

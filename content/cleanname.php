@@ -24,6 +24,9 @@ function clean_common_parts($name) {
     "1d" => "1D",
     "3d" => "3D",
     "vcs3d" => "VCS 3D",
+    "eztemplate" => "EzTemplate",
+    "legd" => "Legend",
+    "glb" => "Global",
   );
 
   $clean = array();
