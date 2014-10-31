@@ -125,11 +125,11 @@
       <a class="filter_toggle" data-toggle="collapse" data-parent="#filter_grouper" href="#collapse_filters">
         Filters
       </a>
-      <?php if ($gm != NULL || $proj != NULL || $temp != NULL): ?>
+      <?php if ($gm != NULL || $proj != NULL || $temp != NULL || $prim != NULL): ?>
         <small class="pull-right"><a href="gallery.php">(Remove Filters)</a></small>
       <?php endif; ?>
     </div>
-    <div class="filter_body collapse <?php if ($gm !== NULL || $proj !== NULL || $temp !== NULL) { echo "in"; } ?>" id="collapse_filters">
+    <div class="filter_body collapse <?php if ($gm !== NULL || $proj !== NULL || $temp !== NULL || $prim !== NULL) { echo "in"; } ?>" id="collapse_filters">
       <?php
         include_once("gm_classifier.php");
         make_filter("gm", "Graphics Method", all_gms(), $gm, "graphics_method", "clean_gm");
