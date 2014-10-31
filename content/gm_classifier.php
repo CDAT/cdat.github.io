@@ -47,8 +47,6 @@ function all_gms() {
     "template",
     "3d_scalar",
     "3d_vector",
-    "text",
-    "marker",
   );
 }
 

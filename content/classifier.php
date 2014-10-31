@@ -12,10 +12,16 @@ function get_graphics_methods($method, $files = NULL) {
   return filter_files("has_gm", $method, $files);
 }
 
-function get_templates($templates, $files=NULL) {
+function get_templates($template, $files=NULL) {
   include_once("template_classifier.php");
-  $template = strtolower($templates);
+  $template = strtolower($template);
   return filter_files("has_template", $template, $files);
+}
+
+function get_primitives($prim, $files=NULL) {
+  include_once("primitive_classifier.php");
+  $prim = strtolower($prim);
+  return filter_files("has_primitive", $prim, $files);
 }
 
 function get_all() {

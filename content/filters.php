@@ -55,6 +55,7 @@
       "graphics_method" => @$_REQUEST["graphics_method"],
       "projection" => @$_REQUEST["projection"],
       "template" => @$_REQUEST["template"],
+      "primitive" => @$_REQUEST["primitive"],
     );
 
     if ($our_args[$arg] == $value) {
@@ -82,6 +83,12 @@
     $temp = $_REQUEST["template"];
   } else {
     $temp = NULL;
+  }
+
+  if (isset($_REQUEST["primitive"])) {
+    $prim = $_REQUEST["primitive"];
+  } else {
+    $prim = NULL;
   }
 
   // Build a filter accordion
@@ -132,6 +139,9 @@
 
         include_once("template_classifier.php");
         make_filter("template", "Template", all_templates(), $temp, "template", "clean_template");
+
+        include_once("primitive_classifier.php");
+        make_filter("primitive", "Primitive", all_primitives(), $prim, "primitive", "clean_primitive");
       ?>
     </div>
   </div>

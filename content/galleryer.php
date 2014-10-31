@@ -55,13 +55,16 @@
 $files = NULL;
 $classifications = array();
 if (isset($_REQUEST["graphics_method"])) {
-  
   $files = get_graphics_methods($_REQUEST["graphics_method"], $files);
   $classifications[] = htmlentities(clean_gm($_REQUEST["graphics_method"])) . " graphics method";
-} 
+}
+
+if (isset($_REQUEST["primitive"])) {
+  $files = get_primitives($_REQUEST["primitive"], $files);
+  $classifications[] = htmlentities(clean_primitive($_REQUEST["primitive"])) . " primitive";
+}
 
 if (isset($_REQUEST["projection"])) {
-  
   $files = get_projections($_REQUEST["projection"], $files);
   $classifications[] = htmlentities(clean_projection($_REQUEST["projection"])) . " projection";
 }
