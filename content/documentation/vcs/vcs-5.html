@@ -34,19 +34,14 @@ the function.
 <code><a name="init" id="init"></a>init</code>
 </td>
 <td>
-<p><br>
-        # Initialize, Construct a VCS Canvas Object</p>
-        <p>Description of
-        Function:</p>
-        <p> Construct the
-        VCS Canas object. There can only be at most 8 VCS Canvases open at any given
-        time.</p>
+<p><br> # Initialize, Construct a VCS Canvas Object</p>
+        <p>Description of Function:</p>
+        <p> Construct the VCS Canas object. There can only be at most 8 VCS Canvases open at any given time.</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs,cdms2
 
 file=cdms2.open(`filename.nc')
@@ -81,18 +76,14 @@ c.plot(isoline,slab,template)
 <code><a name="help" id="help"></a>help</code>
 </td>
 <td>
-<p><br>
-        # On-Line HELP!!!</p>
-        <p>Description of
-        Function:</p>
-        <p> Gives insight
-        to other VCS functions by providing a description and at least one example.</p>
+<p><br> # On-Line HELP!!!</p>
+        <p>Description of Function:</p>
+        <p> Gives insight to other VCS functions by providing a description and at least one example.</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 
 vcs.help()
@@ -104,18 +95,14 @@ vcs.help(`plot')
 </td>
 <td>
 <p>
-<br>
-        # Print out the object's doc string</p>
-        <p>Description of
-        Function:</p>
-        <p> Print out
-        information on VCS objects. See example on its use.</p>
+<br> # Print out the object's doc string</p>
+        <p>Description of Function:</p>
+        <p> Print out information on VCS objects. See example on its use.</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 ln=a.getline('red')
@@ -130,28 +117,18 @@ a.objecthelp(ln)
 <code><a name="mode" id="mode"></a>mode</code>
 </td>
 <td>
-<p><br>
-        # Update the VCS Canvas.</p>
-        <p>Description of
-        Function:</p>
-        <p> Updating of the
-        graphical displays on the VCS Canvas can be deferred until a later time. This is
-        helpful when generating templates or displaying numerous plots. If a series of
-        commands are given to VCS and the Canvas Mode is set to manual (i.e., 0), then no
-        updating of the VCS Canvas occurs until the 'update' function is executed.</p>
-        <p> Note, by
-        default the VCS Canvas Mode is set to `Automatic', which means VCS will update
-        the VCS Canvas as necessary without prompting from the user.</p>
+<p><br> # Update the VCS Canvas.</p>
+        <p>Description of Function:</p>
+        <p> Updating of the graphical displays on the VCS Canvas can be deferred until a later time. This is helpful when generating templates or displaying numerous plots. If a series of commands are given to VCS and the Canvas Mode is set to manual (i.e., 0), then no updating of the VCS Canvas occurs until the 'update' function is executed.</p>
+        <p> Note, by default the VCS Canvas Mode is set to `Automatic', which means VCS will update the VCS Canvas as necessary without prompting from the user.</p>
       </td>
         <td>
           <p>1|0</p>
-        <p>1 =
-        automatic</p>
+        <p>1 = automatic</p>
         <p>0=manual</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 ...
 a=vcs.init()
@@ -172,17 +149,13 @@ a.update()
 <code><a name="update" id="update"></a>update</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> If a series of
-        commands are given to VCS and the Canvas Mode is set to manual, then use this
-        function to update the VCS Canvas manually.</p>
+<p>Description of Function:</p>
+        <p> If a series of commands are given to VCS and the Canvas Mode is set to manual, then use this function to update the VCS Canvas manually.</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 ...
 a=vcs.init()
@@ -201,17 +174,13 @@ a.update()
 <code><a name="open" id="open"></a>open</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Open VCS Canvas
-        object. This routine really just manages the VCS canvas. It will popup the VCS
-        Canvas for viewing. It can be used to display the VCS Canvas.</p>
+<p>Description of Function:</p>
+        <p> Open VCS Canvas object. This routine really just manages the VCS canvas. It will popup the VCS Canvas for viewing. It can be used to display the VCS Canvas.</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.open()
@@ -220,17 +189,13 @@ a.open()
 <code><a name="close" id="close"></a>close</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Close the VCS
-        Canvas. It will remove the VCS Canvas object from the screen, but not deallocate
-        it.</p>
+<p>Description of Function:</p>
+        <p> Close the VCS Canvas. It will remove the VCS Canvas object from the screen, but not deallocate it.</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.plot(array,'default','isofill','quick')
@@ -240,16 +205,13 @@ a.close()
 <code><a name="portrait" id="portrait"></a>portrait</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Change the VCS
-        Canvas orientation to Portrait.</p>
+<p>Description of Function:</p>
+        <p> Change the VCS Canvas orientation to Portrait.</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">a=vcs.init()
 a.plot(array)
 a.portrait()
@@ -259,16 +221,13 @@ a.portrait()
 <code><a name="landscape" id="landscape"></a>landscape</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Change the VCS
-        Canvas orientation to Landscape.</p>
+<p>Description of Function:</p>
+        <p> Change the VCS Canvas orientation to Landscape.</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">a=vcs.init()
 a.plot(array)
 a.landscape()
@@ -278,19 +237,14 @@ a.landscape()
 <code><a name="page" id="page"></a>page</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Change the VCS
-        Canvas orientation to either 'portrait' or 'landscape'.</p>
-        <p> The orientation
-        of the VCS Canvas and of cgm and raster images is controlled by the PAGE command.
-        Only portrait (y &gt; x) or landscape (x &gt; y) orientations are permitted.</p>
+<p>Description of Function:</p>
+        <p> Change the VCS Canvas orientation to either 'portrait' or 'landscape'.</p>
+        <p> The orientation of the VCS Canvas and of cgm and raster images is controlled by the PAGE command. Only portrait (y &gt; x) or landscape (x &gt; y) orientations are permitted.</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">a=vcs.init()
 a.plot(array)
 a.page()
@@ -300,64 +254,42 @@ a.page()
 <code><a name="geometry" id="geometry"></a>geometry</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> The geometry
-        command is used to set the size and position of the VCS canvas.</p>
+<p>Description of Function:</p>
+        <p> The geometry command is used to set the size and position of the VCS canvas.</p>
       </td>
         <td>
-          <p>(w,h,x,y), where
-        w=width, h=height, x=x_position, y=y_position</p>
+          <p>(w,h,x,y), where w=width, h=height, x=x_position, y=y_position</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">a=vcs.init()
 a.plot(array,'default','isofill','quick')
 a.geometry(450, 337,100, 100)
 </pre></td>
 </tr><tr><th colspan="4">
-<p><a name="printing_and_saving_graphics" id="printing_and_saving_graphics"></a>Printing and
-        Saving Graphics</p>
+<p><a name="printing_and_saving_graphics" id="printing_and_saving_graphics"></a>Printing and Saving Graphics</p>
       </th>
       </tr><tr><td>
         <code><a name="printer" id="printer"></a>printer</code>
       </td>
         <td>
-          <p><br>
-        # Send plots to the printer</p>
-        <p>Description of
-        Function:</p>
-        <p> This function
-        creates a temporary cgm file and then sends it to the specified printer. Once the
-        printer received the information, then the temporary cgm file is deleted. The
-        temporary cgm file is created in the user's PCMDI_GRAPHICS directory.</p>
-        <p> The PRINTER
-        command is used to send the VCS Canvas plot(s) directly to the printer.</p>
-        <p> Note: VCS
-        graphical displays can be printed only if the user customizes a HARD_COPY file
-        (included with the VCS software) for the home system. The path to the HARD_COPY
-        file must be:</p>
-        <p>
-        /$HOME/PCMDI_GRAPHICS/HARD_COPY</p>
-        <p> where /$HOME
-        denotes the user's home directory.</p>
-        <p> For more
-        information on the HARD_COPY file, see URL:</p>
-        <p>
-        http://www-pcmdi.llnl.gov/software/vcs/vcs_guidetoc.html<br>
-        #1.Setup</p>
+          <p><br> # Send plots to the printer</p>
+        <p>Description of Function:</p>
+        <p> This function creates a temporary cgm file and then sends it to the specified printer. Once the printer received the information, then the temporary cgm file is deleted. The temporary cgm file is created in the user's PCMDI_GRAPHICS directory.</p>
+        <p> The PRINTER command is used to send the VCS Canvas plot(s) directly to the printer.</p>
+        <p> Note: VCS graphical displays can be printed only if the user customizes a HARD_COPY file (included with the VCS software) for the home system. The path to the HARD_COPY file must be:</p>
+        <p> /$HOME/PCMDI_GRAPHICS/HARD_COPY</p>
+        <p> where /$HOME denotes the user's home directory.</p>
+        <p> For more information on the HARD_COPY file, see URL:</p>
+        <p> http://www-pcmdi.llnl.gov/software/vcs/vcs_guidetoc.html<br> #1.Setup</p>
       </td>
         <td>
-          <p>printer's
-        name</p>
+          <p>printer's name</p>
         <p>l|p -</p>
-        <p>Orientation can
-        be either: 'l' = landscape, or 'p' = portrait.</p>
+        <p>Orientation can be either: 'l' = landscape, or 'p' = portrait.</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.plot(array)
@@ -370,49 +302,26 @@ a.printer(`printer_name','p')
 <code><a name="gif" id="gif"></a>gif</code>
 </td>
 <td>
-<p><br>
-        # Save plot(s) as gif image</p>
-        <p>Description of
-        Function:</p>
-        <p> In some cases,
-        the user may want to save the plot out as a gif image. This routine allows the
-        user to save the VCS canvas output as a gif file.</p>
-        <p> This file can
-        be converted to other gif formats with the aid of xv and other such imaging tools
-        found freely on the web.</p>
-        <p> If no path/file
-        name is given and no previously created gif file has been</p>
-        <p>designated, then
-        file</p>
-        <p>
-        /$HOME/PCMDI_GRAPHICS/default.gif</p>
-        <p> will be used
-        for storing gif images. However, if a previously created gif file is designated,
-        that file will be used for gif output.</p>
-        <p> By default, the
-        page orientation is in Landscape mode (l). To translate the page orientation to
-        portrait mode (p), enter 'p' as the second parameter.</p>
-        <p> The GIF command
-        is used to create or append to a gif file. There are two modes for saving a gif
-        file: `Append' mode (a) appends gif output to an existing gif file(i.e., making
-        it an animated gif); `Replace' (r) mode overwrites an existing gif file with new
-        gif output.</p>
+<p><br> # Save plot(s) as gif image</p>
+        <p>Description of Function:</p>
+        <p> In some cases, the user may want to save the plot out as a gif image. This routine allows the user to save the VCS canvas output as a gif file.</p>
+        <p> This file can be converted to other gif formats with the aid of xv and other such imaging tools found freely on the web.</p>
+        <p> If no path/file name is given and no previously created gif file has been</p>
+        <p>designated, then file</p>
+        <p> /$HOME/PCMDI_GRAPHICS/default.gif</p>
+        <p> will be used for storing gif images. However, if a previously created gif file is designated, that file will be used for gif output.</p>
+        <p> By default, the page orientation is in Landscape mode (l). To translate the page orientation to portrait mode (p), enter 'p' as the second parameter.</p>
+        <p> The GIF command is used to create or append to a gif file. There are two modes for saving a gif file: `Append' mode (a) appends gif output to an existing gif file(i.e., making it an animated gif); `Replace' (r) mode overwrites an existing gif file with new gif output.</p>
       </td>
         <td>
-          <p>gif file
-        name</p>
-        <p>`a'=will append
-        (or merge) image to an existing file, making it an animated gif</p>
-        <p>`r'=will replace
-        file with new image</p>
-        <p>`l'=landscape
-        mode</p>
-        <p>`p'=portrait
-        mode</p>
+          <p>gif file name</p>
+        <p>`a'=will append (or merge) image to an existing file, making it an animated gif</p>
+        <p>`r'=will replace file with new image</p>
+        <p>`l'=landscape mode</p>
+        <p>`p'=portrait mode</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.plot(array)
@@ -432,28 +341,17 @@ a.gif('example.gif','r','p')
 <code><a name="postscript" id="postscript"></a>postscript</code>
 </td>
 <td>
-<p><br>
-        # Save plot(s) to a postscript file</p>
-        <p>Description of
-        Function:</p>
-        <p> Postscript
-        output is another form of vector graphics. It is larger than its CGM output
-        counter part, because it is not stored out in ASCII format. To save out a
-        postscript file, VCS will first create a cgm file in the user's PCMDI_GRAPHICS
-        directory. Then it will use gplot to convert the cgm file to a postscript file in
-        the location the user has chosen.</p>
+<p><br> # Save plot(s) to a postscript file</p>
+        <p>Description of Function:</p>
+        <p> Postscript output is another form of vector graphics. It is larger than its CGM output counter part, because it is not stored out in ASCII format. To save out a postscript file, VCS will first create a cgm file in the user's PCMDI_GRAPHICS directory. Then it will use gplot to convert the cgm file to a postscript file in the location the user has chosen.</p>
       </td>
         <td>
-          <p>postscript file
-        name</p>
-        <p>`a'=will append
-        postscript to an existing file</p>
-        <p>`r'=will replace
-        postscript file with new apostscript file</p>
+          <p>postscript file name</p>
+        <p>`a'=will append postscript to an existing file</p>
+        <p>`r'=will replace postscript file with new apostscript file</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.plot(array)
@@ -466,29 +364,17 @@ a.postscript('example')
 <code><a name="cgm" id="cgm"></a>cgm</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> To save a
-        graphics plot in VCS the user can call CGM along with the name of the output.
-        This routine will save the displayed image on the VCS canvas as a binary vector
-        graphics that can be imported into MSWord or Framemaker. CGM files are in ISO
-        standards output format.</p>
-        <p> The CGM command
-        is used to create or append to a cgm file. There are two modes for saving a cgm
-        file: `Append' mode (a) appends cgm output to an existing cgm file; `Replace' (r)
-        mode overwrites an existing cgm file with new cgm output.</p>
+<p>Description of Function:</p>
+        <p> To save a graphics plot in VCS the user can call CGM along with the name of the output. This routine will save the displayed image on the VCS canvas as a binary vector graphics that can be imported into MSWord or Framemaker. CGM files are in ISO standards output format.</p>
+        <p> The CGM command is used to create or append to a cgm file. There are two modes for saving a cgm file: `Append' mode (a) appends cgm output to an existing cgm file; `Replace' (r) mode overwrites an existing cgm file with new cgm output.</p>
       </td>
         <td>
-          <p>cgm file
-        name</p>
-        <p>`a'=will append
-        cgm to an existing file</p>
-        <p>`r'=will replace
-        cgm file with a new cgm file</p>
+          <p>cgm file name</p>
+        <p>`a'=will append cgm to an existing file</p>
+        <p>`r'=will replace cgm file with a new cgm file</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">a=vcs.init()
 a.plot(array,'default','isofill','quick')
 # Note, if you don't specify the extension `.cgm' at the end of file name, then the extension `.cgm' will be put on for you.
@@ -504,34 +390,20 @@ a.cgm('example','r')
 <code><a name="raster" id="raster"></a>raster</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> In some cases,
-        the user may want to save the plot out as an raster image. This routine allows
-        the user to save the VCS canvas output as a SUN raster file.</p>
-        <p> This file can
-        be converted to other raster formats with the aid of xv and other such imaging
-        tools found freely on the web.</p>
-        <p> If no path/file
-        name is given and no previously created raster file has beendesignated, then
-        file</p>
-        <p>
-        /$HOME/PCMDI_GRAPHICS/default.ras</p>
-        <p> will be used
-        for storing raster images. However, if a previously created raster file is
-        designated, that file will be used for raster output.</p>
+<p>Description of Function:</p>
+        <p> In some cases, the user may want to save the plot out as an raster image. This routine allows the user to save the VCS canvas output as a SUN raster file.</p>
+        <p> This file can be converted to other raster formats with the aid of xv and other such imaging tools found freely on the web.</p>
+        <p> If no path/file name is given and no previously created raster file has beendesignated, then file</p>
+        <p> /$HOME/PCMDI_GRAPHICS/default.ras</p>
+        <p> will be used for storing raster images. However, if a previously created raster file is designated, that file will be used for raster output.</p>
       </td>
         <td>
-          <p>raster file
-        name</p>
-        <p>`a'=will append
-        raster image to an existing raster file</p>
-        <p>`r'=will replace
-        a raster file with a new raster file</p>
+          <p>raster file name</p>
+        <p>`a'=will append raster image to an existing raster file</p>
+        <p>`r'=will replace a raster file with a new raster file</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.plot(array)
@@ -545,20 +417,15 @@ a.raster('example','r')
 <code><a name="pstogif" id="pstogif"></a>pstogif</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> This function
-        allows the user to convert a postscript file to a gif file.</p>
+<p>Description of Function:</p>
+        <p> This function allows the user to convert a postscript file to a gif file.</p>
       </td>
         <td>
-          <p>postscript file
-        name</p>
-        <p>[`l'=landscape
-        `p'=portrait]</p>
+          <p>postscript file name</p>
+        <p>[`l'=landscape `p'=portrait]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.plot(array)
@@ -567,34 +434,22 @@ a.pstogif('filename.ps','l') # convert to landscape gif file
 a.pstogif('filename.ps','p') # convert to portrait gif file
 </pre></td>
 </tr><tr><th colspan="4">
-<p><a name="plot_and_clear_commands" id="plot_and_clear_commands"></a>Plot and
-        Clear Commands</p>
+<p><a name="plot_and_clear_commands" id="plot_and_clear_commands"></a>Plot and Clear Commands</p>
       </th>
       </tr><tr><td>
         <code><a name="plot" id="plot"></a>plot</code>
       </td>
         <td>
-          <p>Description of
-        Function:</p>
-        <p> Plot an
-        array(s) of data given a template and graphics method. The VCS template is used
-        to define where the data and variable attributes will be displayed on the VCS
-        Canvas. The VCS graphics method is used to define how the array(s) will be shown
-        on the VCS Canvas.</p>
+          <p>Description of Function:</p>
+        <p> Plot an array(s) of data given a template and graphics method. The VCS template is used to define where the data and variable attributes will be displayed on the VCS Canvas. The VCS graphics method is used to define how the array(s) will be shown on the VCS Canvas.</p>
       </td>
         <td>
-          <p>The form of the
-        call is:</p>
-        <p>
-        plot(array1=None, array2=None, template_name=None,
-        graphics_method=None,graphics_name=None, [key=value [, key=value [, ...]]]) where
-        array1 and array2 are NumPy arrays, such that 2&lt;=rank(ar)&lt;=5.</p>
-        <p>See section
-        4.5.1 for a detail listing of possible plot options.</p>
+          <p>The form of the call is:</p>
+        <p> plot(array1=None, array2=None, template_name=None, graphics_method=None,graphics_name=None, [key=value [, key=value [, ...]]]) where array1 and array2 are NumPy arrays, such that 2&lt;=rank(ar)&lt;=5.</p>
+        <p>See section 4.5.1 for a detail listing of possible plot options.</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">
 import vcs
 x=vcs.init()
@@ -620,23 +475,15 @@ x.plot(box,t,array)
 <code><a name="boxfill" id="boxfill"></a>boxfill</code>
 </td>
 <td>
-<p><br>
-        # Generate a boxfill plot</p>
-        <p>Description of
-        Function:</p>
-        <p> Generate a
-        boxfill plot given the data, boxfill graphics method, and template. If no boxfill
-        class object is given, then the 'default' boxfill graphics method is used.
-        Similarly, if no template class object is given, then the 'default' template is
-        used.</p>
+<p><br> # Generate a boxfill plot</p>
+        <p>Description of Function:</p>
+        <p> Generate a boxfill plot given the data, boxfill graphics method, and template. If no boxfill class object is given, then the 'default' boxfill graphics method is used. Similarly, if no template class object is given, then the 'default' template is used.</p>
       </td>
         <td>
-          <p>See plot command
-        for options.</p>
+          <p>See plot command for options.</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('boxfill')
@@ -668,23 +515,15 @@ a.boxfill('AMIP','quick',array)
 <code><a name="continents" id="continents"></a>continents</code>
 </td>
 <td>
-<p><br>
-        # Generate a continents plot</p>
-        <p>Description of
-        Function:</p>
-        <p> Generate a
-        continents plot given the continents graphics method, and template. If no
-        continents class object is given, then the 'default' continents graphics method
-        is used. Similarly, if no template class object is given, then the 'default'
-        template is used.</p>
+<p><br> # Generate a continents plot</p>
+        <p>Description of Function:</p>
+        <p> Generate a continents plot given the continents graphics method, and template. If no continents class object is given, then the 'default' continents graphics method is used. Similarly, if no template class object is given, then the 'default' template is used.</p>
       </td>
         <td>
-          <p>See plot command
-        for options.</p>
+          <p>See plot command for options.</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('continents')
@@ -702,23 +541,15 @@ a.continents(array,con,template)
 <code><a name="isofill" id="isofill"></a>isofill</code>
 </td>
 <td>
-<p><br>
-        # Generate an isofill plot</p>
-        <p>Description of
-        Function:</p>
-        <p> Generate a
-        isofill plot given the data, isofill graphics method, and template. If no isofill
-        class object is given, then the 'default' isofill graphics method is used.
-        Similarly, if no template class object is given, then the 'default' template is
-        used.</p>
+<p><br> # Generate an isofill plot</p>
+        <p>Description of Function:</p>
+        <p> Generate a isofill plot given the data, isofill graphics method, and template. If no isofill class object is given, then the 'default' isofill graphics method is used. Similarly, if no template class object is given, then the 'default' template is used.</p>
       </td>
         <td>
-          <p>See plot command
-        for options.</p>
+          <p>See plot command for options.</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('isofill')
@@ -736,23 +567,15 @@ a.isofill(array,iso,template)
 <code><a name="isoline" id="isoline"></a>isoline</code>
 </td>
 <td>
-<p><br>
-        # Generate an isoline plot</p>
-        <p>Description of
-        Function:</p>
-        <p> Generate a
-        isoline plot given the data, isoline graphics method, and template. If no isoline
-        class object is given, then the 'default' isoline graphics method is used.
-        Similarly, if no template class object is given, then the 'default' template is
-        used.</p>
+<p><br> # Generate an isoline plot</p>
+        <p>Description of Function:</p>
+        <p> Generate a isoline plot given the data, isoline graphics method, and template. If no isoline class object is given, then the 'default' isoline graphics method is used. Similarly, if no template class object is given, then the 'default' template is used.</p>
       </td>
         <td>
-          <p>See plot command
-        for options.</p>
+          <p>See plot command for options.</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">a=vcs.init()
 a.show('isoline')
 # Show all the existing isoline graphics methods
@@ -768,23 +591,15 @@ a.clear()
 <code><a name="outfill" id="outfill"></a>outfill</code>
 </td>
 <td>
-<p><br>
-        # Generate an outfill plot</p>
-        <p>Description of
-        Function:</p>
-        <p> Generate a
-        outfill plot given the data, outfill graphics method, and template. If no outfill
-        class object is given, then the 'default' outfill graphics method is used.
-        Similarly, if no template class object is given, then the 'default' template is
-        used.</p>
+<p><br> # Generate an outfill plot</p>
+        <p>Description of Function:</p>
+        <p> Generate a outfill plot given the data, outfill graphics method, and template. If no outfill class object is given, then the 'default' outfill graphics method is used. Similarly, if no template class object is given, then the 'default' template is used.</p>
       </td>
         <td>
-          <p>See plot command
-        for options.</p>
+          <p>See plot command for options.</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">a=vcs.init()
 a.show('outfill')
 # Show all the existing outfill graphics methods
@@ -801,23 +616,15 @@ a.outfill(array,out,template)
 <code><a name="outline" id="outline"></a>outline</code>
 </td>
 <td>
-<p><br>
-        # Generate an outline plot</p>
-        <p>Description of
-        Function:</p>
-        <p> Generate a
-        outline plot given the data, outline graphics method, and template. If no outline
-        class object is given, then the 'default' outline graphics method is used.
-        Similarly, if no template class object is given, then the 'default' template is
-        used.</p>
+<p><br> # Generate an outline plot</p>
+        <p>Description of Function:</p>
+        <p> Generate a outline plot given the data, outline graphics method, and template. If no outline class object is given, then the 'default' outline graphics method is used. Similarly, if no template class object is given, then the 'default' template is used.</p>
       </td>
         <td>
-          <p>See plot command
-        for options.</p>
+          <p>See plot command for options.</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('outline')
@@ -834,23 +641,15 @@ a.clear()
 <code><a name="scatter" id="scatter"></a>scatter</code>
 </td>
 <td>
-<p><br>
-        # Generate a scatter plot</p>
-        <p>Description of
-        Function:</p>
-        <p> Generate a
-        scatter plot given the data, scatter graphics method, and template. If no scatter
-        class object is given, then the 'default' scatter graphics method is used.
-        Similarly, if no template class object is given, then the 'default' template is
-        used.</p>
+<p><br> # Generate a scatter plot</p>
+        <p>Description of Function:</p>
+        <p> Generate a scatter plot given the data, scatter graphics method, and template. If no scatter class object is given, then the 'default' scatter graphics method is used. Similarly, if no template class object is given, then the 'default' template is used.</p>
       </td>
         <td>
-          <p>See plot command
-        for options.</p>
+          <p>See plot command for options.</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">a=vcs.init()
 a.show('scatter')
 # Show all the existing scatter graphics methods
@@ -867,23 +666,15 @@ a.scatter(array1,array2,sct,template)
 <code><a name="vector" id="vector"></a>vector</code>
 </td>
 <td>
-<p><br>
-        # Generate a vector plot</p>
-        <p>Description of
-        Function:</p>
-        <p> Generate a
-        vector plot given the data, vector graphics method, andtemplate. If no vector
-        class object is given, then the 'default' vectorgraphics method is used.
-        Similarly, if no template class object is given,then the 'default' template is
-        used.</p>
+<p><br> # Generate a vector plot</p>
+        <p>Description of Function:</p>
+        <p> Generate a vector plot given the data, vector graphics method, andtemplate. If no vector class object is given, then the 'default' vectorgraphics method is used. Similarly, if no template class object is given,then the 'default' template is used.</p>
       </td>
         <td>
-          <p>See plot command
-        for options.</p>
+          <p>See plot command for options.</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('vector')
@@ -901,22 +692,15 @@ a.vector(array1,array2,vec,template)
 <code><a name="xvsy" id="xvsy"></a>xvsy</code>
 </td>
 <td>
-<p><br>
-        # Generate a Xvsy plot</p>
-        <p>Description of
-        Function:</p>
-        <p> Generate a XvsY
-        plot given the data, XvsY graphics method, and template. If no XvsY class object
-        is given, then the 'default' XvsY graphics method is used. Similarly, if no
-        template class object is given, then the 'default' template is used.</p>
+<p><br> # Generate a Xvsy plot</p>
+        <p>Description of Function:</p>
+        <p> Generate a XvsY plot given the data, XvsY graphics method, and template. If no XvsY class object is given, then the 'default' XvsY graphics method is used. Similarly, if no template class object is given, then the 'default' template is used.</p>
       </td>
         <td>
-          <p>See plot command
-        for options.</p>
+          <p>See plot command for options.</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('xvsy')
@@ -934,22 +718,15 @@ a.xvsy(array1,array2,xy,template)
 <code><a name="xyvsy" id="xyvsy"></a>xyvsy</code>
 </td>
 <td>
-<p><br>
-        # Generate a Xyvsy plot</p>
-        <p>Description of
-        Function:</p>
-        <p> Generate a
-        Xyvsy plot given the data, Xyvsy graphics method, and template. If no Xyvsy class
-        object is given, then the 'default' Xyvsy graphics method is used. Simerly, if no
-        template class object is given, then the 'default' template is used.</p>
+<p><br> # Generate a Xyvsy plot</p>
+        <p>Description of Function:</p>
+        <p> Generate a Xyvsy plot given the data, Xyvsy graphics method, and template. If no Xyvsy class object is given, then the 'default' Xyvsy graphics method is used. Simerly, if no template class object is given, then the 'default' template is used.</p>
       </td>
         <td>
-          <p>See plot command
-        for options.</p>
+          <p>See plot command for options.</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('xyvsy')
@@ -968,22 +745,15 @@ a.xyvsy(array,xyy,template)
 <code><a name="yxvsx" id="yxvsx"></a>yxvsx</code>
 </td>
 <td>
-<p><br>
-        # Generate a Yxvsx plot</p>
-        <p>Description of
-        Function:</p>
-        <p> Generate a
-        Yxvsx plot given the data, Yxvsx graphics method, and template. If no Yxvsx class
-        object is given, then the 'default' Yxvsx graphics method is used. Simerly, if no
-        template class object is given, then the 'default' template is used.</p>
+<p><br> # Generate a Yxvsx plot</p>
+        <p>Description of Function:</p>
+        <p> Generate a Yxvsx plot given the data, Yxvsx graphics method, and template. If no Yxvsx class object is given, then the 'default' Yxvsx graphics method is used. Simerly, if no template class object is given, then the 'default' template is used.</p>
       </td>
         <td>
-          <p>See plot command
-        for options.</p>
+          <p>See plot command for options.</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('yxvsx')
@@ -1001,43 +771,33 @@ a.yxvsx(array,yxx,template)
 <code><a name="clear" id="clear"></a>clear</code>
 </td>
 <td>
-<p><br>
-        # Generate a Yxvsx plot</p>
-        <p>Description of
-        Function:</p>
-        <p> At some point
-        it will become necessary to clear all the plots from the VCS Canvas. This routine
-        will remove all plots on the VCS Canvas.</p>
+<p><br> # Generate a Yxvsx plot</p>
+        <p>Description of Function:</p>
+        <p> At some point it will become necessary to clear all the plots from the VCS Canvas. This routine will remove all plots on the VCS Canvas.</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.plot(array,'default','isofill','quick')
 a.clear()
 </pre></td>
 </tr><tr><th colspan="4">
-<p><a name="query_functions" id="query_functions"></a>Query
-        Functions</p>
+<p><a name="query_functions" id="query_functions"></a>Query Functions</p>
       </th>
       </tr><tr><td>
         <code><a name="graphicsmethodname" id="graphicsmethodname"></a>graphicsmethodname</code>
       </td>
         <td>
-          <p>Description of
-        Function:</p>
-        <p> Returns the
-        grapics method's type string: boxfill, isofill, isoline, outfill, outline,
-        continents, scatter, vector, xvsy, xyvsy, or yxvsx.</p>
+          <p>Description of Function:</p>
+        <p> Returns the grapics method's type string: boxfill, isofill, isoline, outfill, outline, continents, scatter, vector, xvsy, xyvsy, or yxvsx.</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 box=a.getboxfill() # Get an default boxfill
@@ -1055,16 +815,13 @@ print a.graphicsmethodname(ln) # Will return
 <code><a name="getcontinentstype" id="getcontinentstype"></a>getcontinentstype</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Return
-        continents type from VCS. Remember the value can only be between 0 and 11.</p>
+<p>Description of Function:</p>
+        <p> Return continents type from VCS. Remember the value can only be between 0 and 11.</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 cont_type = a.getcontinentstype() # Get the
@@ -1074,21 +831,15 @@ cont_type = a.getcontinentstype() # Get the
 <code><a name="isgraphicsmethod" id="isgraphicsmethod"></a>isgraphicsmethod</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Indicates if
-        the entered argument is one of the following graphics methods: boxfill, isofill,
-        isoline, outfill, outline, continents, scatter, vector, xvsy, xyvsy, yxvsx.</p>
-        <p> Returns a 1,
-        which indicates true, if the argment is one of the above.</p>
-        <p> Otherwise, it
-        will return a 0, indicating false.</p>
+<p>Description of Function:</p>
+        <p> Indicates if the entered argument is one of the following graphics methods: boxfill, isofill, isoline, outfill, outline, continents, scatter, vector, xvsy, xyvsy, yxvsx.</p>
+        <p> Returns a 1, which indicates true, if the argment is one of the above.</p>
+        <p> Otherwise, it will return a 0, indicating false.</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 box=a.getboxfill('quick')
@@ -1101,20 +852,15 @@ box.list()
 <code><a name="isboxfill" id="isboxfill"></a>isboxfill</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Check to see if
-        an object is a VCS primary boxfill graphics method object.</p>
-        <p> Returns a 1 if
-        the argment true.</p>
-        <p> Otherwise, it
-        will return a 0, indicating false.</p>
+<p>Description of Function:</p>
+        <p> Check to see if an object is a VCS primary boxfill graphics method object.</p>
+        <p> Returns a 1 if the argment true.</p>
+        <p> Otherwise, it will return a 0, indicating false.</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 box=a.getboxfill("quick")
@@ -1127,20 +873,15 @@ box.list()
 <code><a name="iscontinents" id="iscontinents"></a>iscontinents</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Check to see if
-        an object is a VCS primary continents graphics method.</p>
-        <p> Returns a 1 if
-        the argment true.</p>
-        <p> Otherwise, it
-        will return a 0, indicating false.</p>
+<p>Description of Function:</p>
+        <p> Check to see if an object is a VCS primary continents graphics method.</p>
+        <p> Returns a 1 if the argment true.</p>
+        <p> Otherwise, it will return a 0, indicating false.</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 con=a.getcontinents("quick")
@@ -1154,20 +895,15 @@ con.list()
 <code><a name="isisofill" id="isisofill"></a>isisofill</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Check to see if
-        an object is a VCS primary isofill graphics method.</p>
-        <p> Returns a 1 if
-        the argment true.</p>
-        <p> Otherwise, it
-        will return a 0, indicating false.</p>
+<p>Description of Function:</p>
+        <p> Check to see if an object is a VCS primary isofill graphics method.</p>
+        <p> Returns a 1 if the argment true.</p>
+        <p> Otherwise, it will return a 0, indicating false.</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 iso=a.getisofill("quick")
@@ -1180,20 +916,15 @@ iso.list()
 <code><a name="isisoline" id="isisoline"></a>isisoline</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Check to see if
-        an object is a VCS primary isoline graphics method.</p>
-        <p> Returns a 1 if
-        the argment true.</p>
-        <p> Otherwise, it
-        will return a 0, indicating false.</p>
+<p>Description of Function:</p>
+        <p> Check to see if an object is a VCS primary isoline graphics method.</p>
+        <p> Returns a 1 if the argment true.</p>
+        <p> Otherwise, it will return a 0, indicating false.</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 iso=a.getisoline("quick")
@@ -1206,20 +937,15 @@ iso.list()
 <code><a name="isoutfill" id="isoutfill"></a>isoutfill</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Check to see if
-        this object is a VCS primary outfill graphics method.</p>
-        <p> Returns a 1 if
-        the argment true.</p>
-        <p> Otherwise, it
-        will return a 0, indicating false.</p>
+<p>Description of Function:</p>
+        <p> Check to see if this object is a VCS primary outfill graphics method.</p>
+        <p> Returns a 1 if the argment true.</p>
+        <p> Otherwise, it will return a 0, indicating false.</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 out=a.getoutfill("quick")
@@ -1234,20 +960,15 @@ out.list()
 <code><a name="isoutline" id="isoutline"></a>isoutline</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Check to see if
-        an object is a VCS primary outline graphics method.</p>
-        <p> Returns a 1 if
-        the argment true.</p>
-        <p> Otherwise, it
-        will return a 0, indicating false.</p>
+<p>Description of Function:</p>
+        <p> Check to see if an object is a VCS primary outline graphics method.</p>
+        <p> Returns a 1 if the argment true.</p>
+        <p> Otherwise, it will return a 0, indicating false.</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 out=a.getoutline("quick")
@@ -1260,20 +981,15 @@ out.list()
 <code><a name="isvector" id="isvector"></a>isvector</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Check to see if
-        an object is a VCS primary vector graphics method.</p>
-        <p> Returns a 1 if
-        the argment true.</p>
-        <p> Otherwise, it
-        will return a 0, indicating false.</p>
+<p>Description of Function:</p>
+        <p> Check to see if an object is a VCS primary vector graphics method.</p>
+        <p> Returns a 1 if the argment true.</p>
+        <p> Otherwise, it will return a 0, indicating false.</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 vec=a.getvector("quick")
@@ -1286,20 +1002,15 @@ vec.list()
 <code><a name="isxvsy" id="isxvsy"></a>isxvsy</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Check to see if
-        an object is a VCS primary xvsy graphics method.</p>
-        <p> Returns a 1 if
-        the argment true.</p>
-        <p> Otherwise, it
-        will return a 0, indicating false.</p>
+<p>Description of Function:</p>
+        <p> Check to see if an object is a VCS primary xvsy graphics method.</p>
+        <p> Returns a 1 if the argment true.</p>
+        <p> Otherwise, it will return a 0, indicating false.</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 xy=a.getxvsy("quick")
@@ -1312,20 +1023,15 @@ xy.list()
 <code><a name="isxyvsy" id="isxyvsy"></a>isxyvsy</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Check to see if
-        an object is a VCS primary Xyvsy graphics method.</p>
-        <p> Returns a 1 if
-        the argment true.</p>
-        <p> Otherwise, it
-        will return a 0, indicating false.</p>
+<p>Description of Function:</p>
+        <p> Check to see if an object is a VCS primary Xyvsy graphics method.</p>
+        <p> Returns a 1 if the argment true.</p>
+        <p> Otherwise, it will return a 0, indicating false.</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 xyy=a.getxyvsy("quick")
@@ -1338,20 +1044,15 @@ xyy.list()
 <code><a name="isyxvsx" id="isyxvsx"></a>isyxvsx</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Check to see if
-        an object is a VCS primary yxvsx graphics method.</p>
-        <p> Returns a 1 if
-        the argment true.</p>
-        <p> Otherwise, it
-        will return a 0, indicating false.</p>
+<p>Description of Function:</p>
+        <p> Check to see if an object is a VCS primary yxvsx graphics method.</p>
+        <p> Returns a 1 if the argment true.</p>
+        <p> Otherwise, it will return a 0, indicating false.</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">a=vcs.init()
 yxx=a.getyxvsx("quick")
 # To Modify an existing yxvsx object
@@ -1363,20 +1064,15 @@ yxx.list()
 <code><a name="istemplate" id="istemplate"></a>istemplate</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Indicates if
-        the entered argument a template.</p>
-        <p> Returns a 1 if
-        the argment true.</p>
-        <p> Otherwise, it
-        will return a 0, indicating false.</p>
+<p>Description of Function:</p>
+        <p> Indicates if the entered argument a template.</p>
+        <p> Returns a 1 if the argment true.</p>
+        <p> Otherwise, it will return a 0, indicating false.</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">a=vcs.init()
 templt=a.gettemplate('quick')
 # Modify an existing template named 'quick'
@@ -1389,34 +1085,21 @@ templt.list()
 <code><a name="issecondaryobject" id="issecondaryobject"></a>issecondaryobject</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> In addition,
-        detailed specification of the primary elements' (or primary class elements'),
-        attributes is provided by eight secondary elements or (secondary class
-        elements):</p>
-        <p> 1.) colormap:
-        specification of combinations of 256 available colors</p>
-        <p> 2.) fill area:
-        style, style index, and color index</p>
-        <p> 3.) format:
-        specifications for converting numbers to display strings</p>
-        <p> 4.) line: line
-        type, width, and color index</p>
-        <p> 5.) list: a
-        sequence of pairs of numerical and character values</p>
-        <p> 6.) marker:
-        marker type, size, and color index</p>
-        <p> 7.) text table:
-        text font type, character spacing, expansion, and color index</p>
-        <p> 8.) text
-        orientation: character height, angle, path, and horizontal/vertical alignment</p>
+<p>Description of Function:</p>
+        <p> In addition, detailed specification of the primary elements' (or primary class elements'), attributes is provided by eight secondary elements or (secondary class elements):</p>
+        <p> 1.) colormap: specification of combinations of 256 available colors</p>
+        <p> 2.) fill area: style, style index, and color index</p>
+        <p> 3.) format: specifications for converting numbers to display strings</p>
+        <p> 4.) line: line type, width, and color index</p>
+        <p> 5.) list: a sequence of pairs of numerical and character values</p>
+        <p> 6.) marker: marker type, size, and color index</p>
+        <p> 7.) text table: text font type, character spacing, expansion, and color index</p>
+        <p> 8.) text orientation: character height, angle, path, and horizontal/vertical alignment</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">a=vcs.init()
 line=a.getline('red')
 # To Modify an existing line object
@@ -1428,16 +1111,13 @@ box.list()
 <code><a name="isfillarea" id="isfillarea"></a>isfillarea</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Check to see if
-        an object is a VCS secondary fillarea.</p>
+<p>Description of Function:</p>
+        <p> Check to see if an object is a VCS secondary fillarea.</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">a=vcs.init()
 fa=a.getfillarea("def37")
 # To Modify an existing fillarea object
@@ -1449,16 +1129,13 @@ fa.list()
 <code><a name="isline" id="isline"></a>isline</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Check to see if
-        this object is a VCS secondary line.</p>
+<p>Description of Function:</p>
+        <p> Check to see if this object is a VCS secondary line.</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">a=vcs.init()
 ln=a.getline("red")
 # To Modify an existing line object
@@ -1470,16 +1147,13 @@ ln.list()
 <code><a name="ismarker" id="ismarker"></a>ismarker</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Check to see if
-        an object is a VCS secondary marker.</p>
+<p>Description of Function:</p>
+        <p> Check to see if an object is a VCS secondary marker.</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">a=vcs.init()
 mk=a.getmarker("red")
 # To Modify an existing marker object
@@ -1491,16 +1165,13 @@ mk.list()
 <code><a name="istextcombined" id="istextcombined"></a>istextcombined</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Check to see if
-        an object is a VCS secondary text combined.</p>
+<p>Description of Function:</p>
+        <p> Check to see if an object is a VCS secondary text combined.</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">a=vcs.init()
 tc=a.gettextcombined("std", "7left")
 # To Modify existing text table and orientation objects
@@ -1516,16 +1187,13 @@ tc.list()
 <code><a name="istextorientation" id="istextorientation"></a>istextorientation</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Check to see if
-        an object is a VCS secondary text orientation.</p>
+<p>Description of Function:</p>
+        <p> Check to see if an object is a VCS secondary text orientation.</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">a=vcs.init()
 to=a.gettextorientation("7left")
 # To Modify an existing text orientation object
@@ -1537,16 +1205,13 @@ to.list()
 <code><a name="istexttable" id="istexttable"></a>istexttable</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Check to see if
-        an object is a VCS secondary text table.</p>
+<p>Description of Function:</p>
+        <p> Check to see if an object is a VCS secondary text table.</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">a=vcs.init()
 tt=a.gettexttable("std")
 # To Modify an existing text table object
@@ -1555,23 +1220,19 @@ if a.istexttable(tt):
 tt.list()
 </pre></td>
 </tr><tr><th colspan="4">
-<p><a name="list_elements" id="list_elements"></a>List
-        Available Templates, Graphics Methods and Secondary Objects</p>
+<p><a name="list_elements" id="list_elements"></a>List Available Templates, Graphics Methods and Secondary Objects</p>
       </th>
       </tr><tr><td>
         <code><a name="listelements" id="listelements"></a>listelements</code>
       </td>
         <td>
-          <p>Description of
-        Function:</p>
-        <p> Returns a
-        Python list of all the VCS class objects.</p>
+          <p>Description of Function:</p>
+        <p> Returns a Python list of all the VCS class objects.</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.listelements()
@@ -1580,16 +1241,13 @@ a.listelements()
 <code><a name="show" id="show"></a>show</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Show the list
-        of VCS primary and secondary class objects.</p>
+<p>Description of Function:</p>
+        <p> Show the list of VCS primary and secondary class objects.</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('boxfill')
@@ -1608,26 +1266,16 @@ a.show('marker')
         <code><a name="createboxfill" id="createboxfill"></a>createboxfill</code>
       </td>
         <td>
-          <p>Description of
-        Function:</p>
-        <p> Create a new
-        boxfill graphics method given the name and the existingboxfill graphics method to
-        copy the attributes from. If no existing boxfill graphics method name is given,
-        then the default boxfill graphics method will be used as the graphics method to
-        which the attributes will be copied from.</p>
-        <p> If the name
-        provided already exists, then a error will be returned. Graphics method names
-        must be unique.</p>
+          <p>Description of Function:</p>
+        <p> Create a new boxfill graphics method given the name and the existingboxfill graphics method to copy the attributes from. If no existing boxfill graphics method name is given, then the default boxfill graphics method will be used as the graphics method to which the attributes will be copied from.</p>
+        <p> If the name provided already exists, then a error will be returned. Graphics method names must be unique.</p>
       </td>
         <td>
-          <p>new boxfill
-        name</p>
-        <p>[name of boxfill
-        to copy attributes from]</p>
+          <p>new boxfill name</p>
+        <p>[name of boxfill to copy attributes from]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('boxfill')
@@ -1640,24 +1288,15 @@ a.show('boxfill')
 <code><a name="getboxfill" id="getboxfill"></a>getboxfill</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> VCS contains a
-        list of graphics methods. This function will create a boxfill class object from
-        an existing VCS boxfill graphics method. If no boxfill name is given, then
-        boxfill 'default' will be used.</p>
-        <p> Note, VCS does
-        not allow the modification of `default' attribute sets. However, a `default'
-        attribute set that has been copied under a different name can be modified. (See
-        the createboxfill function.)</p>
+<p>Description of Function:</p>
+        <p> VCS contains a list of graphics methods. This function will create a boxfill class object from an existing VCS boxfill graphics method. If no boxfill name is given, then boxfill 'default' will be used.</p>
+        <p> Note, VCS does not allow the modification of `default' attribute sets. However, a `default' attribute set that has been copied under a different name can be modified. (See the createboxfill function.)</p>
       </td>
         <td>
-          <p>[boxfill
-        name]</p>
+          <p>[boxfill name]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('boxfill')
@@ -1670,30 +1309,14 @@ box2=a.getboxfill('quick')
 </tr><tr><td>
 </td>
 <td>
-<p>Object:
-        boxfillobject</p>
-        <p>Description of
-        Function:</p>
-        <p> The boxfill
-        graphics method (Gfb) displays a two-dimensional data array by surrounding each
-        data value by a colored grid box.</p>
-        <p> This class is
-        used to define a boxfill table entry used in VCS, or it can be used to change
-        some or all of the attributes in an existing boxfill table entry. Other Useful
-        Functions:</p>
-        <p>
-        a=vcs.init()<br>
-        # Constructor a.show('boxfill')<br>
-        # Show predefined boxfill graphics methods</p>
-        <p>a.setcolormap("AMIP")<br>
-        # Change the VCS color map</p>
-        <p>a.boxfill(s,b,'default')<br>
-        # Plot data 's' with boxfill 'b' and 'default' template a.update()<br>
-        # Updates the VCS Canvas at user's request a.mode=1, or 0<br>
-        # If 1, then automatic update, else if 0, then use the update function to update
-        the VCS Canvas.</p>
-        <p> See Chapter 6
-        for additional information.</p>
+<p>Object: boxfillobject</p>
+        <p>Description of Function:</p>
+        <p> The boxfill graphics method (Gfb) displays a two-dimensional data array by surrounding each data value by a colored grid box.</p>
+        <p> This class is used to define a boxfill table entry used in VCS, or it can be used to change some or all of the attributes in an existing boxfill table entry. Other Useful Functions:</p>
+        <p> a=vcs.init()<br> # Constructor a.show('boxfill')<br> # Show predefined boxfill graphics methods</p>
+        <p>a.setcolormap("AMIP")<br> # Change the VCS color map</p>
+        <p>a.boxfill(s,b,'default')<br> # Plot data 's' with boxfill 'b' and 'default' template a.update()<br> # Updates the VCS Canvas at user's request a.mode=1, or 0<br> # If 1, then automatic update, else if 0, then use the update function to update the VCS Canvas.</p>
+        <p> See Chapter 6 for additional information.</p>
       </td>
         <td>
           <p>name</p>
@@ -1723,8 +1346,7 @@ box2=a.getboxfill('quick')
         <p>missing</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 
@@ -1779,26 +1401,16 @@ missing=241
 <code><a name="createcontinents" id="createcontinents"></a>createcontinents</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Create a new
-        continents graphics method given the name and the existing continents
-        graphics method to copy the attributes from. If no existing continents graphics
-        method name is given, then the default continents graphics method will be used as
-        the graphics method to which the attributes will be copied from.</p>
-        <p> If the name
-        provided already exists, then a error will be returned. Graphics method names
-        must be unique.</p>
+<p>Description of Function:</p>
+        <p> Create a new continents graphics method given the name and the existing continents graphics method to copy the attributes from. If no existing continents graphics method name is given, then the default continents graphics method will be used as the graphics method to which the attributes will be copied from.</p>
+        <p> If the name provided already exists, then a error will be returned. Graphics method names must be unique.</p>
       </td>
         <td>
-          <p>new continents
-        name</p>
-        <p>[name of
-        continents to copy attributes from]</p>
+          <p>new continents name</p>
+        <p>[name of continents to copy attributes from]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('continents')
@@ -1811,24 +1423,15 @@ a.show('continents')
 <code><a name="getcontinents" id="getcontinents"></a>getcontinents</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> VCS contains a
-        list of graphics methods. This function will create a continents class object
-        from an existing VCS continents graphics method. If no continents name is given,
-        then continents 'default' will be used.</p>
-        <p> Note, VCS does
-        not allow the modification of `default' attribute sets. However, a `default'
-        attribute set that has been copied under a different name can be modified. (See
-        the createcontinents function.)</p>
+<p>Description of Function:</p>
+        <p> VCS contains a list of graphics methods. This function will create a continents class object from an existing VCS continents graphics method. If no continents name is given, then continents 'default' will be used.</p>
+        <p> Note, VCS does not allow the modification of `default' attribute sets. However, a `default' attribute set that has been copied under a different name can be modified. (See the createcontinents function.)</p>
       </td>
         <td>
-          <p>[continents
-        name]</p>
+          <p>[continents name]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('continents')
@@ -1841,35 +1444,18 @@ con2=a.getcontinents('quick')
 </tr><tr><td>
 </td>
 <td>
-<p>Object:
-        continentsobject</p>
-        <p>Description of
-        Function:</p>
-        <p> The Continents
-        graphics method draws a predefined, generic set of continental outlines in a
-        longitude by latitude space. (To draw continental outlines, no external data set
-        is required.)</p>
-        <p> This class is
-        used to define an continents table entry used in VCS, or it can be used to change
-        some or all of the continents attributes in an existing continents table
-        entry.</p>
-        <p> Other Useful
-        Functions:</p>
-        <p>a=vcs.init()<br>
-        # Constructor</p>
-        <p>a.show('continents')<br>
-        # Show predefined boxfill graphics methods</p>
-        <p>a.show('line')<br>
-        # Show predefined line class objects</p>
-        <p>a.setcolormap("AMIP")<br>
-        # Change the VCS color map</p>
-        <p>a.continents(c,'default')<br>
-        # Plot continents, where 'c' is the defined continents object</p>
-        <p>a.update()<br>
-        # Updates the VCS Canvas at user's request a.mode=1, or 0. If 1, then automatic
-        update, else if 0, then use update function to update the VCS Canvas.</p>
-        <p>See Chapter 6
-        for additional information.</p>
+<p>Object: continentsobject</p>
+        <p>Description of Function:</p>
+        <p> The Continents graphics method draws a predefined, generic set of continental outlines in a longitude by latitude space. (To draw continental outlines, no external data set is required.)</p>
+        <p> This class is used to define an continents table entry used in VCS, or it can be used to change some or all of the continents attributes in an existing continents table entry.</p>
+        <p> Other Useful Functions:</p>
+        <p>a=vcs.init()<br> # Constructor</p>
+        <p>a.show('continents')<br> # Show predefined boxfill graphics methods</p>
+        <p>a.show('line')<br> # Show predefined line class objects</p>
+        <p>a.setcolormap("AMIP")<br> # Change the VCS color map</p>
+        <p>a.continents(c,'default')<br> # Plot continents, where 'c' is the defined continents object</p>
+        <p>a.update()<br> # Updates the VCS Canvas at user's request a.mode=1, or 0. If 1, then automatic update, else if 0, then use update function to update the VCS Canvas.</p>
+        <p>See Chapter 6 for additional information.</p>
       </td>
         <td>
           <p>name</p>
@@ -1891,8 +1477,7 @@ con2=a.getcontinents('quick')
         <p>type</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 
@@ -1949,26 +1534,16 @@ con.linecolor=None # Turns off the line color index, defaults to Black
 <code><a name="createisofill" id="createisofill"></a>createisofill</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Create a new
-        isofill graphics method given the name and the existing isofill graphics
-        method to copy the attributes from. If no existing isofill graphics method name
-        is given, then the default isofill graphics method will be used as the graphics
-        method to which the attributes will be copied from.</p>
-        <p> If the name
-        provided already exists, then a error will be returned. Graphics method names
-        must be unique.</p>
+<p>Description of Function:</p>
+        <p> Create a new isofill graphics method given the name and the existing isofill graphics method to copy the attributes from. If no existing isofill graphics method name is given, then the default isofill graphics method will be used as the graphics method to which the attributes will be copied from.</p>
+        <p> If the name provided already exists, then a error will be returned. Graphics method names must be unique.</p>
       </td>
         <td>
-          <p>new isofill
-        name</p>
-        <p>[name of isofill
-        to copy attributes from]</p>
+          <p>new isofill name</p>
+        <p>[name of isofill to copy attributes from]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('isofill')
@@ -1981,24 +1556,15 @@ a.show('isofill')
 <code><a name="getisofill" id="getisofill"></a>getisofill</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> VCS contains a
-        list of graphics methods. This function will create a isofill class object from
-        an existing VCS isofill graphics method. If no isofill name is given, then
-        isofill 'default' will be used.</p>
-        <p> Note, VCS does
-        not allow the modification of `default' attribute sets. However, a `default'
-        attribute set that has been copied under a different name can be modified. (See
-        the createisofill function.)</p>
+<p>Description of Function:</p>
+        <p> VCS contains a list of graphics methods. This function will create a isofill class object from an existing VCS isofill graphics method. If no isofill name is given, then isofill 'default' will be used.</p>
+        <p> Note, VCS does not allow the modification of `default' attribute sets. However, a `default' attribute set that has been copied under a different name can be modified. (See the createisofill function.)</p>
       </td>
         <td>
-          <p>[continents
-        name]</p>
+          <p>[continents name]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('isofill')
@@ -2011,44 +1577,24 @@ iso2=a.getisofill('quick')
 </tr><tr><td>
 </td>
 <td>
-<p>Object:
-        isofillobject</p>
-        <p>Description of
-        Function:</p>
-        <p> The Isofill
-        graphics method fills the area between selected isolevels (levels of constant
-        value) of a two-dimensional array with a user-specified color. The example below
-        shows how to display an isofill plot on the VCS Canvas and how to create and
-        remove isofill isolevels.</p>
-        <p> This class is
-        used to define an isofill table entry used in VCS, or it can be used to change
-        some or all of the isofill attributes in anexisting isofill table entry.</p>
-        <p> Other Useful
-        Functions:</p>
-        <p>a=vcs.init()<br>
-        # Constructor</p>
-        <p>a.show('isofill')<br>
-        # Show predefined isofill graphics methods</p>
-        <p>a.show('fillarea')<br>
-        # Show predefined fillarea objects</p>
-        <p>a.show('template')<br>
-        # Show predefined fillarea objects</p>
-        <p>a.setcolormap("AMIP")<br>
-        # Change the VCS color map</p>
-        <p>a.createtemplate('test')<br>
-        # Create a template</p>
+<p>Object: isofillobject</p>
+        <p>Description of Function:</p>
+        <p> The Isofill graphics method fills the area between selected isolevels (levels of constant value) of a two-dimensional array with a user-specified color. The example below shows how to display an isofill plot on the VCS Canvas and how to create and remove isofill isolevels.</p>
+        <p> This class is used to define an isofill table entry used in VCS, or it can be used to change some or all of the isofill attributes in anexisting isofill table entry.</p>
+        <p> Other Useful Functions:</p>
+        <p>a=vcs.init()<br> # Constructor</p>
+        <p>a.show('isofill')<br> # Show predefined isofill graphics methods</p>
+        <p>a.show('fillarea')<br> # Show predefined fillarea objects</p>
+        <p>a.show('template')<br> # Show predefined fillarea objects</p>
+        <p>a.setcolormap("AMIP")<br> # Change the VCS color map</p>
+        <p>a.createtemplate('test')<br> # Create a template</p>
         <p>a.createfillarea('fill') # Create a fillarea</p>
         <p>a.gettemplate('AMIP') # Get an existing template</p>
         <p>a.getfillarea('def37') # Get an existing fillarea</p>
-        <p>a.isofill(s,i,t)
-        # Plot array 's' with isofill 'i' and template 't'</p>
-        <p>a.update() #
-        Updates the VCS Canvas at user's request a.mode=1, or 0. If 1, then automatic
-        update,</p>
-        <p>else if 0, then
-        use update function to update the VCS Canvas.</p>
-        <p> See Chapter 6
-        for additional information.</p>
+        <p>a.isofill(s,i,t) # Plot array 's' with isofill 'i' and template 't'</p>
+        <p>a.update() # Updates the VCS Canvas at user's request a.mode=1, or 0. If 1, then automatic update,</p>
+        <p>else if 0, then use update function to update the VCS Canvas.</p>
+        <p> See Chapter 6 for additional information.</p>
       </td>
         <td>
           <p>name</p>
@@ -2076,8 +1622,7 @@ iso2=a.getisofill('quick')
         <p>levels</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 
@@ -2169,26 +1714,16 @@ fill=a.getisofill('def37')
 <code><a name="createisoline" id="createisoline"></a>createisoline</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Create a new
-        isoline graphics method given the name and the existing isoline graphics
-        method to copy the attributes from. If no existing isoline graphics method name
-        is given, then the default isoline graphics method will be used as the graphics
-        method to which the attributes will be copied from.</p>
-        <p> If the name
-        provided already exists, then a error will be returned. Graphicsmethod names must
-        be unique.</p>
+<p>Description of Function:</p>
+        <p> Create a new isoline graphics method given the name and the existing isoline graphics method to copy the attributes from. If no existing isoline graphics method name is given, then the default isoline graphics method will be used as the graphics method to which the attributes will be copied from.</p>
+        <p> If the name provided already exists, then a error will be returned. Graphicsmethod names must be unique.</p>
       </td>
         <td>
-          <p>new isoline
-        name</p>
-        <p>[name of isoline
-        to copy attributes from]</p>
+          <p>new isoline name</p>
+        <p>[name of isoline to copy attributes from]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('isoline')
@@ -2201,24 +1736,15 @@ a.show('isoline')
 <code><a name="getisoline" id="getisoline"></a>getisoline</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> VCS contains a
-        list of graphics methods. This function will create a isoline class object from
-        an existing VCS isoline graphics method. If no isoline name is given, then
-        isoline 'default' will be used.</p>
-        <p> Note, VCS does
-        not allow the modification of `default' attribute sets. However, a `default'
-        attribute set that has been copied under a different name can be modified. (See
-        the createisoline function.)</p>
+<p>Description of Function:</p>
+        <p> VCS contains a list of graphics methods. This function will create a isoline class object from an existing VCS isoline graphics method. If no isoline name is given, then isoline 'default' will be used.</p>
+        <p> Note, VCS does not allow the modification of `default' attribute sets. However, a `default' attribute set that has been copied under a different name can be modified. (See the createisoline function.)</p>
       </td>
         <td>
-          <p>[isoline
-        name]</p>
+          <p>[isoline name]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('isoline')
@@ -2231,40 +1757,20 @@ iso2=a.getisoline('quick')
 </tr><tr><td>
 </td>
 <td>
-<p>Object:
-        isolineobject</p>
-        <p>Description of
-        Function:</p>
-        <p> The Isoline
-        graphics method draws lines of constant value at specified levels in order to
-        graphically represent a two-dimensional array. It also labels the values of these
-        isolines on the VCS Canvas. The example below shows how to plot isolines of
-        different types at specified levels and how to create isoline labels having
-        user-specified text and line type and color.</p>
-        <p> This class is
-        used to define an isoline table entry used in VCS, or it can be used to change
-        some or all of the isoline attributes in an existing isoline table entry.</p>
-        <p> Other Useful
-        Functions:</p>
-        <p>a=vcs.init()<br>
-        # Constructor</p>
-        <p>a.show('isoline')<br>
-        # Show predefined isoline graphics methods</p>
-        <p>a.show('line')<br>
-        # Show predefined VCS line objects</p>
-        <p>a.update()<br>
-        # Updates the VCS Canvas at user's request</p>
-        <p>a.mode=1, or
-        0<br>
-        # If 1, then automatic update, else if 0, then use update function.</p>
-        <p>a.setcolormap("AMIP")<br>
-        # Change the VCS color map</p>
-        <p>a.isoline(s,a,'default')<br>
-        # Plot data 's' with isoline 'i' and 'default' template</p>
-        <p>tion to update
-        the VCS Canvas.</p>
-        <p> See Chapter 6
-        for additional information.</p>
+<p>Object: isolineobject</p>
+        <p>Description of Function:</p>
+        <p> The Isoline graphics method draws lines of constant value at specified levels in order to graphically represent a two-dimensional array. It also labels the values of these isolines on the VCS Canvas. The example below shows how to plot isolines of different types at specified levels and how to create isoline labels having user-specified text and line type and color.</p>
+        <p> This class is used to define an isoline table entry used in VCS, or it can be used to change some or all of the isoline attributes in an existing isoline table entry.</p>
+        <p> Other Useful Functions:</p>
+        <p>a=vcs.init()<br> # Constructor</p>
+        <p>a.show('isoline')<br> # Show predefined isoline graphics methods</p>
+        <p>a.show('line')<br> # Show predefined VCS line objects</p>
+        <p>a.update()<br> # Updates the VCS Canvas at user's request</p>
+        <p>a.mode=1, or 0<br> # If 1, then automatic update, else if 0, then use update function.</p>
+        <p>a.setcolormap("AMIP")<br> # Change the VCS color map</p>
+        <p>a.isoline(s,a,'default')<br> # Plot data 's' with isoline 'i' and 'default' template</p>
+        <p>tion to update the VCS Canvas.</p>
+        <p> See Chapter 6 for additional information.</p>
       </td>
         <td>
           <p>name</p>
@@ -2291,8 +1797,7 @@ iso2=a.getisoline('quick')
         <p>level</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 
@@ -2373,26 +1878,16 @@ iso.textcolors=None # Turns off the text color index
 <code><a name="createoutfill" id="createoutfill"></a>createoutfill</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Create a new
-        outfill graphics method given the name and the existing outfill graphics
-        method to copy the attributes from. If no existing outfill graphics method name
-        is given, then the default outfill graphics method will be used as the graphics
-        method to which the attributes will be copied from.</p>
-        <p> If the name
-        provided already exists, then a error will be returned. Graphics method names
-        must be unique.</p>
+<p>Description of Function:</p>
+        <p> Create a new outfill graphics method given the name and the existing outfill graphics method to copy the attributes from. If no existing outfill graphics method name is given, then the default outfill graphics method will be used as the graphics method to which the attributes will be copied from.</p>
+        <p> If the name provided already exists, then a error will be returned. Graphics method names must be unique.</p>
       </td>
         <td>
-          <p>new outfill
-        name</p>
-        <p>[name of outfill
-        to copy attributes from]</p>
+          <p>new outfill name</p>
+        <p>[name of outfill to copy attributes from]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('outfill')
@@ -2405,24 +1900,15 @@ a.show('outfill')
 <code><a name="getoutfill" id="getoutfill"></a>getoutfill</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> VCS contains a
-        list of graphics methods. This function will create a outfill class object from
-        an existing VCS outfill graphics method. If no outfill name is given, then
-        outfill 'default' will be used.</p>
-        <p> Note, VCS does
-        not allow the modification of `default' attribute sets. However, a `default'
-        attribute set that has been copied under a different name can be modified. (See
-        the createoutfill function.)</p>
+<p>Description of Function:</p>
+        <p> VCS contains a list of graphics methods. This function will create a outfill class object from an existing VCS outfill graphics method. If no outfill name is given, then outfill 'default' will be used.</p>
+        <p> Note, VCS does not allow the modification of `default' attribute sets. However, a `default' attribute set that has been copied under a different name can be modified. (See the createoutfill function.)</p>
       </td>
         <td>
-          <p>[outfill
-        name]</p>
+          <p>[outfill name]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('outfill')
@@ -2435,31 +1921,17 @@ out2=a.getoutfill('quick')
 </tr><tr><td>
 </td>
 <td>
-<p>Object:
-        outfillobject</p>
-        <p>Description of
-        Function:</p>
-        <p> The outfill
-        graphics method fills a set of integer values in any data array.</p>
-        <p> Its primary
-        purpose is to display continents by filling their area as defined by a surface
-        type array that indicates land, ocean, and sea-ice points. The example below
-        shows how to apply the outfill graphics method and how to modify</p>
-        <p> Fillarea and
-        outfill attributes. Other Useful Functions:</p>
-        <p>a=vcs.init()<br>
-        # Constructor</p>
-        <p>a.show('outfill')<br>
-        # Show predefined outfill graphics methods</p>
-        <p>a.show('line')<br>
-        # Show predefined VCS line objects</p>
-        <p>a.setcolormap("AMIP")<br>
-        # Change the VCS color map</p>
-        <p>a.outfill(s,o,'default')<br>
-        # Plot data 's' with outfill 'o' and 'default' template</p>
-        <p>a.update()<br>
-        # Updates the VCS Canvas at user's request a.mode=1, or 0 . If 1, then automatic
-        update, else if 0, then use update function to update the VCS Canvas.</p>
+<p>Object: outfillobject</p>
+        <p>Description of Function:</p>
+        <p> The outfill graphics method fills a set of integer values in any data array.</p>
+        <p> Its primary purpose is to display continents by filling their area as defined by a surface type array that indicates land, ocean, and sea-ice points. The example below shows how to apply the outfill graphics method and how to modify</p>
+        <p> Fillarea and outfill attributes. Other Useful Functions:</p>
+        <p>a=vcs.init()<br> # Constructor</p>
+        <p>a.show('outfill')<br> # Show predefined outfill graphics methods</p>
+        <p>a.show('line')<br> # Show predefined VCS line objects</p>
+        <p>a.setcolormap("AMIP")<br> # Change the VCS color map</p>
+        <p>a.outfill(s,o,'default')<br> # Plot data 's' with outfill 'o' and 'default' template</p>
+        <p>a.update()<br> # Updates the VCS Canvas at user's request a.mode=1, or 0 . If 1, then automatic update, else if 0, then use update function to update the VCS Canvas.</p>
         <p>See Chapter 6 for additional information.</p>
       </td>
         <td>
@@ -2485,8 +1957,7 @@ out2=a.getoutfill('quick')
         <p>outfill</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 
@@ -2540,26 +2011,16 @@ out.fillareacolor=None # Turns off the color index
 <code><a name="createoutline" id="createoutline"></a>createoutline</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Create a new
-        outline graphics method given the name and the existing outline graphics
-        method to copy the attributes from. If no existing outline graphics method name
-        is given, then the default outline graphics method will be used as the graphics
-        method to which the attributes will be copied from.</p>
-        <p> If the name
-        provided already exists, then a error will be returned. Graphics method names
-        must be unique.</p>
+<p>Description of Function:</p>
+        <p> Create a new outline graphics method given the name and the existing outline graphics method to copy the attributes from. If no existing outline graphics method name is given, then the default outline graphics method will be used as the graphics method to which the attributes will be copied from.</p>
+        <p> If the name provided already exists, then a error will be returned. Graphics method names must be unique.</p>
       </td>
         <td>
-          <p>new outline
-        name</p>
-        <p>[name of outline
-        to copy attributes from]</p>
+          <p>new outline name</p>
+        <p>[name of outline to copy attributes from]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('outline')
@@ -2572,24 +2033,15 @@ a.show('outline')
 <code><a name="getoutline" id="getoutline"></a>getoutline</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> VCS contains a
-        list of graphics methods. This function will create a outline class object from
-        an existing VCS outline graphics method. If no outline name is given, then
-        outline 'default' will be used.</p>
-        <p> Note, VCS does
-        not allow the modification of `default' attribute sets. However, a `default'
-        attribute set that has been copied under a different name can be modified. (See
-        the createoutline function.)</p>
+<p>Description of Function:</p>
+        <p> VCS contains a list of graphics methods. This function will create a outline class object from an existing VCS outline graphics method. If no outline name is given, then outline 'default' will be used.</p>
+        <p> Note, VCS does not allow the modification of `default' attribute sets. However, a `default' attribute set that has been copied under a different name can be modified. (See the createoutline function.)</p>
       </td>
         <td>
-          <p>[outline
-        name]</p>
+          <p>[outline name]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('outline')
@@ -2602,37 +2054,21 @@ out2=a.getoutline('quick')
 </tr><tr><td>
 </td>
 <td>
-<p>Object:
-        outlineobject</p>
-        <p>Description of
-        Function:</p>
-        <p> The Outline
-        graphics method outlines a set of integer values in any data array.</p>
-        <p> Its primary
-        purpose is to display continental outlines as defined by a surface</p>
-        <p> type array that
-        indicates land, ocean, and sea-ice points. The example below</p>
-        <p> shows how to
-        change such an outline by modifying its attributes.</p>
-        <p> Other Useful
-        Functions:</p>
-        <p>
-        a=vcs.init()<br>
-        # Constructor</p>
-        <p>a.show('outline')<br>
-        # Show predefined outline graphics methods</p>
-        <p>a.show('line')<br>
-        # Show predefined VCS line objects</p>
-        <p>a.setcolormap("AMIP")<br>
-        # Change the VCS color map</p>
-        <p>a.outline(s,o,'default')<br>
-        # Plot data 's' with outline 'o' and 'default' template</p>
+<p>Object: outlineobject</p>
+        <p>Description of Function:</p>
+        <p> The Outline graphics method outlines a set of integer values in any data array.</p>
+        <p> Its primary purpose is to display continental outlines as defined by a surface</p>
+        <p> type array that indicates land, ocean, and sea-ice points. The example below</p>
+        <p> shows how to change such an outline by modifying its attributes.</p>
+        <p> Other Useful Functions:</p>
+        <p> a=vcs.init()<br> # Constructor</p>
+        <p>a.show('outline')<br> # Show predefined outline graphics methods</p>
+        <p>a.show('line')<br> # Show predefined VCS line objects</p>
+        <p>a.setcolormap("AMIP")<br> # Change the VCS color map</p>
+        <p>a.outline(s,o,'default')<br> # Plot data 's' with outline 'o' and 'default' template</p>
         <p> a.update()</p>
-        <p># Updates the
-        VCS Canvas at user's request a.mode=1, or 0 # If 1, then automatic update, else
-        if 0, then use u pdate function to update the VCS Canvas.</p>
-        <p> See Chapter 6
-        for additional information.</p>
+        <p># Updates the VCS Canvas at user's request a.mode=1, or 0 # If 1, then automatic update, else if 0, then use u pdate function to update the VCS Canvas.</p>
+        <p> See Chapter 6 for additional information.</p>
       </td>
         <td>
           <p>name</p>
@@ -2656,8 +2092,7 @@ out2=a.getoutline('quick')
         <p>outline</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 
@@ -2723,26 +2158,16 @@ out.linecolor=None # Turns off the color index
 <code><a name="createscatter" id="createscatter"></a>createscatter</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Create a new
-        scatter graphics method given the name and the existing mscatter graphics
-        method to copy the attributes from. If no existing scatter graphics method name
-        is given, then the default scatter graphics method will be used as the graphics
-        method to which the attributes will be copied from.</p>
-        <p> If the name
-        provided already exists, then a error will be returned. Graphics method names
-        must be unique</p>
+<p>Description of Function:</p>
+        <p> Create a new scatter graphics method given the name and the existing mscatter graphics method to copy the attributes from. If no existing scatter graphics method name is given, then the default scatter graphics method will be used as the graphics method to which the attributes will be copied from.</p>
+        <p> If the name provided already exists, then a error will be returned. Graphics method names must be unique</p>
       </td>
         <td>
-          <p>new scatter
-        name</p>
-        <p>[name of scatter
-        to copy attributes from]</p>
+          <p>new scatter name</p>
+        <p>[name of scatter to copy attributes from]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('scatter')
@@ -2755,24 +2180,15 @@ a.show('scatter')
 <code><a name="getscatter" id="getscatter"></a>getscatter</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> VCS contains a
-        list of graphics methods. This function will create a scatter class object from
-        an existing VCS scatter graphics method. If no scatter name is given, then
-        scatter 'default' will be used.</p>
-        <p> Note, VCS does
-        not allow the modification of `default' attribute sets. However, a `default'
-        attribute set that has been copied under a different name can be modified. (See
-        the createscatter function.)</p>
+<p>Description of Function:</p>
+        <p> VCS contains a list of graphics methods. This function will create a scatter class object from an existing VCS scatter graphics method. If no scatter name is given, then scatter 'default' will be used.</p>
+        <p> Note, VCS does not allow the modification of `default' attribute sets. However, a `default' attribute set that has been copied under a different name can be modified. (See the createscatter function.)</p>
       </td>
         <td>
-          <p>[scatter
-        name]</p>
+          <p>[scatter name]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('scatter')
@@ -2786,35 +2202,18 @@ sct2=a.getscatter('quick')
 </tr><tr><td>
 </td>
 <td>
-<p>Object:
-        scatterobject</p>
-        <p>Description of
-        Function:</p>
-        <p> The Scatter
-        graphics method displays a scatter plot of two 4-dimensional data arrays, e.g.
-        A(x,y,z,t) and B(x,y,z,t). The example below shows how to change the marker
-        attributes of a scatter plot.</p>
-        <p> This class is
-        used to define an scatter table entry used in VCS, or it can be used to change
-        some or all of the scatter attributes in an existing scatter table entry.</p>
-        <p> Other Useful
-        Functions:</p>
-        <p>a=vcs.init()<br>
-        # Constructor</p>
-        <p>a.show('scatter')<br>
-        # Show predefined scatter graphics methods</p>
-        <p>a.show('marker')<br>
-        # Show predefined marker objects</p>
-        <p>a.setcolormap("AMIP")<br>
-        # Change the VCS color map</p>
-        <p>a.scatter(s1,
-        s2, s,'default')<br>
-        # Plot data 's1' and 's2' with scatter 's' and 'default' template</p>
-        <p>a.update()<br>
-        # Updates the VCS Canvas at user's request a.mode=1, or 0. If 1, then automatic
-        update, else if 0, then use update function to update the VCS Canvas.</p>
-        <p>See Chapter 6
-        for additional information.</p>
+<p>Object: scatterobject</p>
+        <p>Description of Function:</p>
+        <p> The Scatter graphics method displays a scatter plot of two 4-dimensional data arrays, e.g. A(x,y,z,t) and B(x,y,z,t). The example below shows how to change the marker attributes of a scatter plot.</p>
+        <p> This class is used to define an scatter table entry used in VCS, or it can be used to change some or all of the scatter attributes in an existing scatter table entry.</p>
+        <p> Other Useful Functions:</p>
+        <p>a=vcs.init()<br> # Constructor</p>
+        <p>a.show('scatter')<br> # Show predefined scatter graphics methods</p>
+        <p>a.show('marker')<br> # Show predefined marker objects</p>
+        <p>a.setcolormap("AMIP")<br> # Change the VCS color map</p>
+        <p>a.scatter(s1, s2, s,'default')<br> # Plot data 's1' and 's2' with scatter 's' and 'default' template</p>
+        <p>a.update()<br> # Updates the VCS Canvas at user's request a.mode=1, or 0. If 1, then automatic update, else if 0, then use update function to update the VCS Canvas.</p>
+        <p>See Chapter 6 for additional information.</p>
       </td>
         <td>
           <p>name</p>
@@ -2838,8 +2237,7 @@ sct2=a.getscatter('quick')
         <p>markersize</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 
@@ -2919,26 +2317,16 @@ sr.markersize=None
 <code><a name="createvector" id="createvector"></a>createvector</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Create a new
-        vector graphics method given the name and the existing vector graphics method
-        to copy the attributes from. If no existing vector graphics method name is given,
-        then the default vector graphics method will be used as the graphics method to
-        which the attributes will be copied from.</p>
-        <p> If the name
-        provided already exists, then a error will be returned. Graphics method names
-        must be unique.</p>
+<p>Description of Function:</p>
+        <p> Create a new vector graphics method given the name and the existing vector graphics method to copy the attributes from. If no existing vector graphics method name is given, then the default vector graphics method will be used as the graphics method to which the attributes will be copied from.</p>
+        <p> If the name provided already exists, then a error will be returned. Graphics method names must be unique.</p>
       </td>
         <td>
-          <p>new vector
-        name</p>
-        <p>[name of vector
-        to copy attributes from]</p>
+          <p>new vector name</p>
+        <p>[name of vector to copy attributes from]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('vector')
@@ -2951,24 +2339,15 @@ a.show('vector')
 <code><a name="getvector" id="getvector"></a>getvector</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> VCS contains a
-        list of graphics methods. This function will create a vector class object from an
-        existing VCS vector graphics method. If no vector name is given, then vector
-        'default' will be used.</p>
-        <p> Note, VCS does
-        not allow the modification of `default' attribute sets. However, a `default'
-        attribute set that has been copied under a different name can be modified. (See
-        the createvector function.)</p>
+<p>Description of Function:</p>
+        <p> VCS contains a list of graphics methods. This function will create a vector class object from an existing VCS vector graphics method. If no vector name is given, then vector 'default' will be used.</p>
+        <p> Note, VCS does not allow the modification of `default' attribute sets. However, a `default' attribute set that has been copied under a different name can be modified. (See the createvector function.)</p>
       </td>
         <td>
-          <p>[vector
-        name]</p>
+          <p>[vector name]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('vector')
@@ -2981,38 +2360,19 @@ vec2=a.getvector('quick')
 </tr><tr><td>
 </td>
 <td>
-<p>Object:
-        vectorobject</p>
-        <p>Description of
-        Function:</p>
-        <p> The vector
-        graphics method displays a vector plot of a 2D vector field. Vectors</p>
-        <p> are located at
-        the coordinate locations and point in the direction of the data vector field.
-        Vector magnitudes are the product of data vector field lengths and a scaling
-        factor. The example below shows how to modify the vector's line, scale,
-        alignment, type, and reference.</p>
-        <p> This class is
-        used to define an vector table entry used in VCS, or it can be used to change
-        some or all of the vector attributes in an existing vector table entry.</p>
-        <p> Other Useful
-        Functions:</p>
-        <p>a=vcs.init()<br>
-        # Constructor</p>
-        <p>a.show('vector')<br>
-        # Show predefined vector graphics methods</p>
-        <p>a.show('line')<br>
-        # Show predefined VCS line objects</p>
-        <p>a.setcolormap("AMIP")<br>
-        # Change the VCS color Map</p>
-        <p>a.vector(s1, s2,
-        v,'default')<br>
-        # Plot data 's1', and 's2' with vector 'v' and 'default' template</p>
-        <p>a.update() #
-        Updates the VCS Canvas at user's request a.mode=1, or 0. If 1, then automatic
-        update, else if 0, then use update function to update the VCS Canvas.</p>
-        <p> See Chapter 6
-        for additional information.</p>
+<p>Object: vectorobject</p>
+        <p>Description of Function:</p>
+        <p> The vector graphics method displays a vector plot of a 2D vector field. Vectors</p>
+        <p> are located at the coordinate locations and point in the direction of the data vector field. Vector magnitudes are the product of data vector field lengths and a scaling factor. The example below shows how to modify the vector's line, scale, alignment, type, and reference.</p>
+        <p> This class is used to define an vector table entry used in VCS, or it can be used to change some or all of the vector attributes in an existing vector table entry.</p>
+        <p> Other Useful Functions:</p>
+        <p>a=vcs.init()<br> # Constructor</p>
+        <p>a.show('vector')<br> # Show predefined vector graphics methods</p>
+        <p>a.show('line')<br> # Show predefined VCS line objects</p>
+        <p>a.setcolormap("AMIP")<br> # Change the VCS color Map</p>
+        <p>a.vector(s1, s2, v,'default')<br> # Plot data 's1', and 's2' with vector 'v' and 'default' template</p>
+        <p>a.update() # Updates the VCS Canvas at user's request a.mode=1, or 0. If 1, then automatic update, else if 0, then use update function to update the VCS Canvas.</p>
+        <p> See Chapter 6 for additional information.</p>
       </td>
         <td>
           <p>name</p>
@@ -3039,8 +2399,7 @@ vec2=a.getvector('quick')
         <p>reference</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 
@@ -3112,26 +2471,16 @@ vc.reference=4 # Can be an integer or float
 <code><a name="createxvsy" id="createxvsy"></a>createxvsy</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Create a new
-        XvsY graphics method given the name and the existing XvsY graphics method to
-        copy the attributes from. If no existing XvsY graphics method name is given, then
-        the default XvsY graphics method will be used as the graphics method to which the
-        attributes will be copied from.</p>
-        <p> If the name
-        provided already exists, then a error will be returned. Graphics method names
-        must be unique.</p>
+<p>Description of Function:</p>
+        <p> Create a new XvsY graphics method given the name and the existing XvsY graphics method to copy the attributes from. If no existing XvsY graphics method name is given, then the default XvsY graphics method will be used as the graphics method to which the attributes will be copied from.</p>
+        <p> If the name provided already exists, then a error will be returned. Graphics method names must be unique.</p>
       </td>
         <td>
-          <p>new xvsy
-        name</p>
-        <p>[name of xvsy to
-        copy attributes from]</p>
+          <p>new xvsy name</p>
+        <p>[name of xvsy to copy attributes from]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('xvsy')
@@ -3144,23 +2493,15 @@ a.show('xvsy')
 <code><a name="getxvsy" id="getxvsy"></a>getxvsy</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> VCS contains a
-        list of graphics methods. This function will create a XvsY class object from an
-        existing VCS XvsY graphics method. If no XvsY name is given, then XvsY 'default'
-        will be used.</p>
-        <p> Note, VCS does
-        not allow the modification of `default' attribute sets. However, a `default'
-        attribute set that has been copied under a different name can be modified. (See
-        the createxvsy function.)</p>
+<p>Description of Function:</p>
+        <p> VCS contains a list of graphics methods. This function will create a XvsY class object from an existing VCS XvsY graphics method. If no XvsY name is given, then XvsY 'default' will be used.</p>
+        <p> Note, VCS does not allow the modification of `default' attribute sets. However, a `default' attribute set that has been copied under a different name can be modified. (See the createxvsy function.)</p>
       </td>
         <td>
           <p>[xvsy name]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('xvsy')
@@ -3172,38 +2513,19 @@ xy2=a.getxvsy('quick')
 </tr><tr><td>
 </td>
 <td>
-<p>Object:
-        xvsyobject</p>
-        <p>Description of
-        Function:</p>
-        <p> The XvsY
-        graphics method displays a line plot from two 1D data arrays, that is X(t) and
-        Y(t), where t represents the 1D coordinate values. The example below shows how to
-        change line and marker attributes for the XvsY graphics method.</p>
-        <p> This class is
-        used to define an XvsY table entry used in VCS, or it can be used to change some
-        or all of the XvsY attributes in an existing XvsY table entry.</p>
-        <p> Other Useful
-        Functions:</p>
-        <p>a=vcs.init()<br>
-        # Constructor</p>
-        <p>a.show('xvsy')<br>
-        # Show predefined XvsY graphics methonds</p>
-        <p>
-        a.show('line')<br>
-        # Show predefined VCS line objects</p>
-        <p>a.show('marker')<br>
-        # Show predefined VCS marker objects</p>
-        <p>a.setcolormap("AMIP")<br>
-        # Change the VCS color map</p>
-        <p>a.xvsy(s1, s2,
-        ,x,'default')<br>
-        # Plot data 's1' and 's2' with XvsY 'x' and 'default' template</p>
-        <p>a.update() #
-        Updates the VCS Canvas at user's request a.mode=1, or 0. If 1, then automatic
-        update, else if 0, then use update function to Update the VCS Canvas.</p>
-        <p> See Chapter 6
-        for additional information.</p>
+<p>Object: xvsyobject</p>
+        <p>Description of Function:</p>
+        <p> The XvsY graphics method displays a line plot from two 1D data arrays, that is X(t) and Y(t), where t represents the 1D coordinate values. The example below shows how to change line and marker attributes for the XvsY graphics method.</p>
+        <p> This class is used to define an XvsY table entry used in VCS, or it can be used to change some or all of the XvsY attributes in an existing XvsY table entry.</p>
+        <p> Other Useful Functions:</p>
+        <p>a=vcs.init()<br> # Constructor</p>
+        <p>a.show('xvsy')<br> # Show predefined XvsY graphics methonds</p>
+        <p> a.show('line')<br> # Show predefined VCS line objects</p>
+        <p>a.show('marker')<br> # Show predefined VCS marker objects</p>
+        <p>a.setcolormap("AMIP")<br> # Change the VCS color map</p>
+        <p>a.xvsy(s1, s2, ,x,'default')<br> # Plot data 's1' and 's2' with XvsY 'x' and 'default' template</p>
+        <p>a.update() # Updates the VCS Canvas at user's request a.mode=1, or 0. If 1, then automatic update, else if 0, then use update function to Update the VCS Canvas.</p>
+        <p> See Chapter 6 for additional information.</p>
       </td>
         <td>
           <p>name</p>
@@ -3229,8 +2551,7 @@ xy2=a.getxvsy('quick')
         <p>markersize</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 
@@ -3320,26 +2641,16 @@ xy.markersize=None
 <code><a name="createxyvsy" id="createxyvsy"></a>createxyvsy</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Create a new
-        Xyvsy graphics method given the name and the existing Xyvsy graphics method
-        to copy the attributes from. If no existing Xyvsy graphics method name is given,
-        then the default Xyvsy graphics method will be used as the graphics method to
-        which the attributes will be copied from.</p>
-        <p> If the name
-        provided already exists, then a error will be returned. Graphics method names
-        must be unique.</p>
+<p>Description of Function:</p>
+        <p> Create a new Xyvsy graphics method given the name and the existing Xyvsy graphics method to copy the attributes from. If no existing Xyvsy graphics method name is given, then the default Xyvsy graphics method will be used as the graphics method to which the attributes will be copied from.</p>
+        <p> If the name provided already exists, then a error will be returned. Graphics method names must be unique.</p>
       </td>
         <td>
-          <p>new xyvsy
-        name</p>
-        <p>[name of xyvsy
-        to copy attributes from]</p>
+          <p>new xyvsy name</p>
+        <p>[name of xyvsy to copy attributes from]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('xyvsy')
@@ -3352,23 +2663,15 @@ a.show('xyvsy')
 <code><a name="getxyvsy" id="getxyvsy"></a>getxyvsy</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> VCS contains a
-        list of graphics methods. This function will create a Xyvsy class object from an
-        existing VCS Xyvsy graphics method. If no Xyvsy name is given, then Xyvsy
-        'default' will be used.</p>
-        <p> Note, VCS does
-        not allow the modification of `default' attribute sets. However, a `default'
-        attribute set that has been copied under a different name can be modified. (See
-        the createxyvsy function.)</p>
+<p>Description of Function:</p>
+        <p> VCS contains a list of graphics methods. This function will create a Xyvsy class object from an existing VCS Xyvsy graphics method. If no Xyvsy name is given, then Xyvsy 'default' will be used.</p>
+        <p> Note, VCS does not allow the modification of `default' attribute sets. However, a `default' attribute set that has been copied under a different name can be modified. (See the createxyvsy function.)</p>
       </td>
         <td>
           <p>[xyvsy name]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('xyvsy')
@@ -3381,36 +2684,18 @@ xyy2=a.getxyvsy('quick')
 </tr><tr><td>
 </td>
 <td>
-<p>Object:
-        xyvsyobject</p>
-        <p>Description of
-        Function:</p>
-        <p> The Xyvsy
-        graphics method displays a line plot from a 1D data array (i.e. a plot of X(y),
-        where y represents the 1D coordinate values). The example below ributes for the
-        Xyvsy graphics method.</p>
-        <p> This class is
-        used to define an Xyvsy table entry used in VCS, or it can be used to change some
-        or all of the Xyvsy attributes in an existing Xyvsy table entry.</p>
-        <p> Other Useful
-        Functions:</p>
-        <p>a=vcs.init()<br>
-        # Constructor</p>
-        <p>a.show('xyvsy')<br>
-        # Show predefined Xyvsy graphics methonds</p>
-        <p>a.show('line')<br>
-        # Show predefined VCS line objects</p>
-        <p>a.show('marker')<br>
-        # Show predefined VCS marker objects</p>
-        <p>a.setcolormap("AMIP")<br>
-        # Change the VCS color map</p>
-        <p>a.xyvsy(s, x,
-        'default')<br>
-        # Plot data 's' with Xyvsy 'x' and 'default' template</p>
-        <p>a.update()<br>
-        # Updates the VCS Canvas at user's request a.mode=1, or 0 . If 1, then automatic
-        update, else if 0, then use update function.</p><p> See Chapter 6
-        for additional information.</p>
+<p>Object: xyvsyobject</p>
+        <p>Description of Function:</p>
+        <p> The Xyvsy graphics method displays a line plot from a 1D data array (i.e. a plot of X(y), where y represents the 1D coordinate values). The example below ributes for the Xyvsy graphics method.</p>
+        <p> This class is used to define an Xyvsy table entry used in VCS, or it can be used to change some or all of the Xyvsy attributes in an existing Xyvsy table entry.</p>
+        <p> Other Useful Functions:</p>
+        <p>a=vcs.init()<br> # Constructor</p>
+        <p>a.show('xyvsy')<br> # Show predefined Xyvsy graphics methonds</p>
+        <p>a.show('line')<br> # Show predefined VCS line objects</p>
+        <p>a.show('marker')<br> # Show predefined VCS marker objects</p>
+        <p>a.setcolormap("AMIP")<br> # Change the VCS color map</p>
+        <p>a.xyvsy(s, x, 'default')<br> # Plot data 's' with Xyvsy 'x' and 'default' template</p>
+        <p>a.update()<br> # Updates the VCS Canvas at user's request a.mode=1, or 0 . If 1, then automatic update, else if 0, then use update function.</p><p> See Chapter 6 for additional information.</p>
       </td>
         <td>
           <p>name</p>
@@ -3435,8 +2720,7 @@ xyy2=a.getxyvsy('quick')
         <p>markersize</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 
@@ -3531,26 +2815,16 @@ xyy.markersize=None
 <code><a name="createyxvsx" id="createyxvsx"></a>createyxvsx</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Create a new
-        Yxvsx graphics method given the name and the existing Yxvsx graphics method
-        to copy the attributes from. If no existing Yxvsx graphics method name is given,
-        then the default Yxvsx graphics method will be used as the graphics method to
-        which the attributes will be copied from.</p>
-        <p> If the name
-        provided already exists, then a error will be returned. Graphics method names
-        must be unique</p>
+<p>Description of Function:</p>
+        <p> Create a new Yxvsx graphics method given the name and the existing Yxvsx graphics method to copy the attributes from. If no existing Yxvsx graphics method name is given, then the default Yxvsx graphics method will be used as the graphics method to which the attributes will be copied from.</p>
+        <p> If the name provided already exists, then a error will be returned. Graphics method names must be unique</p>
       </td>
         <td>
-          <p>new yxvsx
-        name</p>
-        <p>[name of yxvsx
-        to copy attributes from]</p>
+          <p>new yxvsx name</p>
+        <p>[name of yxvsx to copy attributes from]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('yxvsx')
@@ -3563,23 +2837,15 @@ a.show('yxvsx')
 <code><a name="getyxvsx" id="getyxvsx"></a>getyxvsx</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> VCS contains a
-        list of graphics methods. This function will create a Yxvsx class object from an
-        existing VCS Yxvsx graphics method. If no Yxvsx name is given, then Yxvsx
-        'default' will be used.</p>
-        <p> Note, VCS does
-        not allow the modification of `default' attribute sets. However, a `default'
-        attribute set that has been copied under a different name can be modified. (See
-        the createyxvsx function.)</p>
+<p>Description of Function:</p>
+        <p> VCS contains a list of graphics methods. This function will create a Yxvsx class object from an existing VCS Yxvsx graphics method. If no Yxvsx name is given, then Yxvsx 'default' will be used.</p>
+        <p> Note, VCS does not allow the modification of `default' attribute sets. However, a `default' attribute set that has been copied under a different name can be modified. (See the createyxvsx function.)</p>
       </td>
         <td>
           <p>[yxvsx name]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('yxvsx')
@@ -3589,39 +2855,21 @@ yxx=a.getyxvsx()
 yxx2=a.getyxvsx('quick')
 # yxx2 instance of existing 'quick' Yxvsx graphics method
 </pre></td>
-</tr><tr><td>
+</tr><tr><td><p>Object: <code>yxvsxobject</code></p>
 </td>
 <td>
-<p>Object:
-        yxvsxobject</p>
-        <p>Description of
-        Function:</p>
-        <p> The Yxvsx
-        graphics method displays a line plot from a 1D data array (i.e. aplot of Y(x),
-        where y represents the 1D coordinate values). The example belowshows how to
-        change line and marker attributes for the Yxvsx graphics method.</p>
-        <p> This class is
-        used to define an Yxvsx table entry used in VCS, or it can beused to change some
-        or all of the Yxvsx attributes in an existing Yxvsx table entry.</p>
-        <p> Other Useful
-        Functions:</p>
-        <p>a=vcs.init()<br>
-        # Constructor</p>
-        <p>a.show('yxvsx')<br>
-        # Show predefined Yxvsx graphics methonds</p>
-        <p>a.show('line')<br>
-        # Show predefined VCS line objects</p>
-        <p>a.show('marker')<br>
-        # Show predefined VCS marker objects</p>
-        <p>a.setcolormap("AMIP")<br>
-        # Change the VCS color map</p>
-        <p>a.yxvsx(s, x,
-        'default')<br>
-        # Plot data 's' with Yxvsx 'x' and 'default' template</p>
-        <p>a.update()<br>
-        # Updates the VCS Canvas at user's request</p>
-        <p>a.mode=1, or 0
-        If 1, then automatic update, else if 0, then use update function.</p>
+        <p>Description of Function:</p>
+        <p> The Yxvsx graphics method displays a line plot from a 1D data array (i.e. aplot of Y(x), where y represents the 1D coordinate values). The example belowshows how to change line and marker attributes for the Yxvsx graphics method.</p>
+        <p> This class is used to define an Yxvsx table entry used in VCS, or it can beused to change some or all of the Yxvsx attributes in an existing Yxvsx table entry.</p>
+        <p> Other Useful Functions:</p>
+        <p>a=vcs.init()<br> # Constructor</p>
+        <p>a.show('yxvsx')<br> # Show predefined Yxvsx graphics methonds</p>
+        <p>a.show('line')<br> # Show predefined VCS line objects</p>
+        <p>a.show('marker')<br> # Show predefined VCS marker objects</p>
+        <p>a.setcolormap("AMIP")<br> # Change the VCS color map</p>
+        <p>a.yxvsx(s, x, 'default')<br> # Plot data 's' with Yxvsx 'x' and 'default' template</p>
+        <p>a.update()<br> # Updates the VCS Canvas at user's request</p>
+        <p>a.mode=1, or 0 If 1, then automatic update, else if 0, then use update function.</p>
         <p>See Chapter 6 for additional information.</p>
       </td>
         <td>
@@ -3647,8 +2895,7 @@ yxx2=a.getyxvsx('quick')
         <p>markersize</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 
@@ -3725,33 +2972,203 @@ yxx.markersize=100
 yxx.markersize=300
 yxx.markersize=None
 </pre></td>
-</tr><tr><th colspan="4">
-<p><a name="picture_template" id="picture_template"></a>Picture
-        Template</p>
+</tr>
+<tr>
+    <th colspan="4">
+        <p><a name="3d_methods"></a>3D Graphics Methods</p>
+    </th>
+</tr>
+<tr>
+    <td><a name="3d_scalar"></a><code>Object: 3d_scalar</code></td>
+    <td>
+<p>Description of Function:</p>
+<p>The 3d_scalar graphics method displays a 3D Scalar plot.</p>
+<p>Useful Attributes:</p>
+
+<p><code>ToggleVolumePlot</code></p>
+<p><strong>Use:</strong> Toggles the visibility of the Volume (volume render) plot constituent.</p>
+<p><strong>Expected Value:</strong> <code>vcs.on</code> or <code>vcs.off</code></p>
+<hr/>
+<p><code>ToggleSurfacePlot</code></p>
+<p><strong>Use:</strong> Toggles the visibility of the Surface (isosurface) plot constituent.</p>
+<p><strong>Expected Value:</strong> <code>vcs.on</code> or <code>vcs.off</code></p>
+<hr/>
+<p><code>XSlider</code></p>
+<p><strong>Use:</strong> Sets the initial position and visibility of the Z slice plane. The position is in model coordinates.</p>
+<p><strong>Expected Value:</strong> ( <code>float</code>, <code>vcs.on</code> or <code>vcs.off</code> )</p>
+<hr/>
+<p><code>YSlider</code></p>
+<p><strong>Use:</strong> Sets the initial position and visibility of the Z slice plane. The position is in model coordinates.</p>
+<p><strong>Expected Value:</strong> ( <code>float</code>, <code>vcs.on</code> or <code>vcs.off</code> )</p>
+<hr/>
+<p><code>ZSlider</code></p>
+<p><strong>Use:</strong> Sets the initial position and visibility of the Z slice plane. The position is in model coordinates.</p>
+<p><strong>Expected Value:</strong> ( <code>float</code>, <code>vcs.on</code> or <code>vcs.off</code> )</p>
+<hr/>
+<p><code>VerticalScaling</code></p>
+<p><strong>Use:</strong> Scales the vertical dimension of the plot.</p>
+<p><strong>Expected Value:</strong> <code>float</code> <code>0.1 – 10.0</code></p>
+<hr/>
+<p><code>ScaleColormap</code></p>
+<p><strong>Use:</strong> Sets the value range of the current colormap.</p>
+<p><strong>Expected Value:</strong> <code>floats</code>: <code>[ max, min ]</code>. Initialized to the max (full) value range of the data.</p>
+<hr/>
+<p><code>ScaleTransferFunction</code></p>
+<p><strong>Use:</strong> Sets the value range of the volume rendering, which maps this range of variable values to opacity.</p>
+<p><strong>Expected Value:</strong> <code>floats</code>: <code>[ max, min ]</code>. Initialized to the max (full) value range of the data.</p>
+<hr/>
+<p><code>IsosurfaceValue</code></p>
+<p><strong>Use:</strong> Sets the variable value that defines the isosurface.</p>
+<p><strong>Expected Value:</strong> <code>float</code> between the variable max and min values.</p>
+<hr/>
+<p><code>ScaleOpacity</code></p>
+<p><strong>Use:</strong> Sets the opacity range of the volume rendering, which maps the selected range of variable values to this opacity range.</p>
+<p><strong>Expected Value:</strong> <code>floats</code>: <code>[ max, min ]</code>. Initialized to <code>[1,1]</code>.</p>
+<hr/>
+<p><code>BasemapOpacity</code></p>
+<p><strong>Use:</strong> Sets the opacity of the underlying earth map.</p>
+<p><strong>Expected Value:</strong> <code>float</code> between <code>0.0</code> and <code>1.0</code>.</p>
+<hr/>
+<p><code>Camera</code></p>
+<p><strong>Use:</strong> Sets the initial position and orientation of the camera.</p>
+<p><strong>Expected Value:</strong> Dictionary with three keys: <code>Position</code>, <code>ViewUp</code>, and <code>FocalPoint</code>. The values of <code>Position</code> and <code>FocalPoint</code> are positions in model coordinates, and <code>ViewUp</code> is a unit vector.</p>
+</td>
+</td>
+<td><!-- this is where the "options" info goes --></td>
+<td>
+    <p>Example of use:</p>
+    <pre style="word-break:normal;">
+import vcs, cdms2, sys
+x = vcs.init()
+f = cdms2.open( sys.prefix+"/sample_data/geos5-sample.nc" )
+v = f["uwnd"]
+dv3d = vcs.get3d_scalar()
+dv3d.ToggleClipping = ( 40, 360, -28, 90 )
+dv3d.YSlider = ( 0.0, vcs.off)
+dv3d.XSlider = ( 180.0, vcs.on )
+dv3d.ZSlider = ( 0.0, vcs.on )
+dv3d.ToggleVolumePlot = vcs.on
+dv3d.ToggleSurfacePlot = vcs.on
+dv3d.IsosurfaceValue = 31.0
+dv3d.ScaleOpacity = [0.0, 1.0]
+dv3d.BasemapOpacity = 0.5
+dv3d.Camera = {
+    'Position': (-161, -171, 279),
+    'ViewUp': (.29, 0.67, 0.68),
+    'FocalPoint': (146.7, 8.5, -28.6)
+}
+dv3d.VerticalScaling = 5.0
+dv3d.ScaleColormap = ( -46.0, 48.0 )
+dv3d.ScaleTransferFunction = ( 12.0, 77.0 )
+x.plot(v, dv3d)
+x.interact()
+</pre>
+</td>
+</tr>
+<tr>
+    <td><a name="3d_vector"></a><code>Object: 3d_vector</code></td>
+    <td>
+<p>Description of Function:</p>
+<p>The 3d_vector graphics method displays a 3D Vector plot.</p>
+<p>Useful Attributes:</p>
+
+<p><code>ToggleVolumePlot</code></p>
+<p><strong>Use:</strong> Toggles the visibility of the Volume (volume render) plot constituent.</p>
+<p><strong>Expected Value:</strong> <code>vcs.on</code> or <code>vcs.off</code></p>
+<hr/>
+<p><code>ToggleSurfacePlot</code></p>
+<p><strong>Use:</strong> Toggles the visibility of the Surface (isosurface) plot constituent.</p>
+<p><strong>Expected Value:</strong> <code>vcs.on</code> or <code>vcs.off</code></p>
+<hr/>
+<p><code>XSlider</code></p>
+<p><strong>Use:</strong> Sets the initial position and visibility of the Z slice plane. The position is in model coordinates.</p>
+<p><strong>Expected Value:</strong> ( <code>float</code>, <code>vcs.on</code> or <code>vcs.off</code> )</p>
+<hr/>
+<p><code>YSlider</code></p>
+<p><strong>Use:</strong> Sets the initial position and visibility of the Z slice plane. The position is in model coordinates.</p>
+<p><strong>Expected Value:</strong> ( <code>float</code>, <code>vcs.on</code> or <code>vcs.off</code> )</p>
+<hr/>
+<p><code>ZSlider</code></p>
+<p><strong>Use:</strong> Sets the initial position and visibility of the Z slice plane. The position is in model coordinates.</p>
+<p><strong>Expected Value:</strong> ( <code>float</code>, <code>vcs.on</code> or <code>vcs.off</code> )</p>
+<hr/>
+<p><code>VerticalScaling</code></p>
+<p><strong>Use:</strong> Scales the vertical dimension of the plot.</p>
+<p><strong>Expected Value:</strong> <code>float</code> <code>0.1 – 10.0</code></p>
+<hr/>
+<p><code>ScaleColormap</code></p>
+<p><strong>Use:</strong> Sets the value range of the current colormap.</p>
+<p><strong>Expected Value:</strong> <code>floats</code>: <code>[ max, min ]</code>. Initialized to the max (full) value range of the data.</p>
+<hr/>
+<p><code>ScaleTransferFunction</code></p>
+<p><strong>Use:</strong> Sets the value range of the volume rendering, which maps this range of variable values to opacity.</p>
+<p><strong>Expected Value:</strong> <code>floats</code>: <code>[ max, min ]</code>. Initialized to the max (full) value range of the data.</p>
+<hr/>
+<p><code>IsosurfaceValue</code></p>
+<p><strong>Use:</strong> Sets the variable value that defines the isosurface.</p>
+<p><strong>Expected Value:</strong> <code>float</code> between the variable max and min values.</p>
+<hr/>
+<p><code>ScaleOpacity</code></p>
+<p><strong>Use:</strong> Sets the opacity range of the volume rendering, which maps the selected range of variable values to this opacity range.</p>
+<p><strong>Expected Value:</strong> <code>floats</code>: <code>[ max, min ]</code>. Initialized to <code>[1,1]</code>.</p>
+<hr/>
+<p><code>BasemapOpacity</code></p>
+<p><strong>Use:</strong> Sets the opacity of the underlying earth map.</p>
+<p><strong>Expected Value:</strong> <code>float</code> between <code>0.0</code> and <code>1.0</code>.</p>
+<hr/>
+<p><code>Camera</code></p>
+<p><strong>Use:</strong> Sets the initial position and orientation of the camera.</p>
+<p><strong>Expected Value:</strong> Dictionary with three keys: <code>Position</code>, <code>ViewUp</code>, and <code>FocalPoint</code>. The values of <code>Position</code> and <code>FocalPoint</code> are positions in model coordinates, and <code>ViewUp</code> is a unit vector.</p>
+</td>
+</td>
+<td><!-- this is where the "options" info goes --></td>
+<td>
+    <p>Example of use:</p>
+    <pre style="word-break:normal;">
+import vcs, cdms2, sys
+x = vcs.init()
+f = cdms2.open( sys.prefix+"/sample_data/geos5-sample.nc" )
+v = f["uwnd"]
+dv3d = vcs.get3d_scalar()
+dv3d.ToggleClipping = ( 40, 360, -28, 90 )
+dv3d.YSlider = ( 0.0, vcs.off)
+dv3d.XSlider = ( 180.0, vcs.on )
+dv3d.ZSlider = ( 0.0, vcs.on )
+dv3d.ToggleVolumePlot = vcs.on
+dv3d.ToggleSurfacePlot = vcs.on
+dv3d.IsosurfaceValue = 31.0
+dv3d.ScaleOpacity = [0.0, 1.0]
+dv3d.BasemapOpacity = 0.5
+dv3d.Camera = {
+    'Position': (-161, -171, 279),
+    'ViewUp': (.29, 0.67, 0.68),
+    'FocalPoint': (146.7, 8.5, -28.6)
+}
+dv3d.VerticalScaling = 5.0
+dv3d.ScaleColormap = ( -46.0, 48.0 )
+dv3d.ScaleTransferFunction = ( 12.0, 77.0 )
+x.plot(v, dv3d)
+x.interact()
+</pre>
+</td>
+</tr>
+<tr><th colspan="4">
+<p><a name="picture_template" id="picture_template"></a>Picture Template</p>
       </th>
       </tr><tr><td>
         <code><a name="createtemplate" id="createtemplate"></a>createtemplate</code>
       </td>
         <td>
-          <p>Description of
-        Function:</p>
-        <p> Create a new
-        template given the name and the existing template to copy the attributes
-        from. If no existing template name is given, then the default template will be
-        used as the template to which the attributes will be copied from.</p>
-        <p> If the name
-        provided already exists, then a error will be returned. Template names must be
-        unique.</p>
+          <p>Description of Function:</p>
+        <p> Create a new template given the name and the existing template to copy the attributes from. If no existing template name is given, then the default template will be used as the template to which the attributes will be copied from.</p>
+        <p> If the name provided already exists, then a error will be returned. Template names must be unique.</p>
       </td>
         <td>
-          <p>new template
-        name</p>
-        <p>[name of
-        template to copy attributes from]</p>
+          <p>new template name</p>
+        <p>[name of template to copy attributes from]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('template')
@@ -3769,24 +3186,15 @@ a.listelements('template')
 <code><a name="gettemplate" id="gettemplate"></a>gettemplate</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> VCS contains a
-        list of predefined templates. This function will create a template class object
-        from an existing VCS template. If no template name is given, then template
-        'default' will be used.</p>
-        <p> Note, VCS does
-        not allow the modification of `default' attribute sets. However, a `default'
-        attribute set that has been copied under a different name can be modified. (See
-        the createtemplate function.)</p>
+<p>Description of Function:</p>
+        <p> VCS contains a list of predefined templates. This function will create a template class object from an existing VCS template. If no template name is given, then template 'default' will be used.</p>
+        <p> Note, VCS does not allow the modification of `default' attribute sets. However, a `default' attribute set that has been copied under a different name can be modified. (See the createtemplate function.)</p>
       </td>
         <td>
-          <p>[template
-        name]</p>
+          <p>[template name]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('template')
@@ -3799,36 +3207,22 @@ templt2=a.gettemplate('quick')
 </tr><tr><td>
 </td>
 <td>
-<p>Object:
-        templateobject</p>
-        <p>Description of
-        Function:</p>
-        <p> The template
-        primary method (P) determines the location of each picture segment, the space to
-        be allocated to it, and related properties relevant to its display.</p>
-        <p>Other Useful
-        Functions:</p>
-        <p>a.show('template')<br>
-        # Show predefined templates</p>
-        <p>a.show('texttable')<br>
-        # Show predefined text table methods</p>
-        <p>a.show('textorientation')<br>
-        # Show predefined text orientation methods</p>
-        <p>a.show('line')<br>
-        # Show predefined line methods</p>
-        <p>a.listelements('template')<br>
-        # Show templates as a Python list</p>
-        <p>a.update()<br>
-        # Updates the VCS Canvas at user's request a.mode=1, or 0. If 1, then automatic
-        update, else if 0, then use the update function toupdate the VCS Canvas.</p>
+<p>Object: templateobject</p>
+        <p>Description of Function:</p>
+        <p> The template primary method (P) determines the location of each picture segment, the space to be allocated to it, and related properties relevant to its display.</p>
+        <p>Other Useful Functions:</p>
+        <p>a.show('template')<br> # Show predefined templates</p>
+        <p>a.show('texttable')<br> # Show predefined text table methods</p>
+        <p>a.show('textorientation')<br> # Show predefined text orientation methods</p>
+        <p>a.show('line')<br> # Show predefined line methods</p>
+        <p>a.listelements('template')<br> # Show templates as a Python list</p>
+        <p>a.update()<br> # Updates the VCS Canvas at user's request a.mode=1, or 0. If 1, then automatic update, else if 0, then use the update function toupdate the VCS Canvas.</p>
       </td>
         <td>
-          <p>See Chapter 6
-        for the long list of options.</p>
+          <p>See Chapter 6 for the long list of options.</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 
@@ -3851,29 +3245,23 @@ tpl=a.createtemplate('new')
 tpl=a.gettemplate('AMIP')
 </pre></td>
 </tr><tr><th colspan="4">
-<p><a name="secondary_objects" id="secondary_objects"></a>Secondary
-        Objects</p>
+<p><a name="secondary_objects" id="secondary_objects"></a>Secondary Objects</p>
       </th>
       </tr><tr><th colspan="4">
-        <p><a name="colormap_commands" id="colormap_commands"></a>Colormap
-        Commands</p>
+        <p><a name="colormap_commands" id="colormap_commands"></a>Colormap Commands</p>
       </th>
       </tr><tr><td>
         <code><a name="setcolormap" id="setcolormap"></a>setcolormap</code>
       </td>
         <td>
-          <p>Description of
-        Function:</p>
-        <p> It is necessary
-        to change the colormap. This routine will change the VCS color map.</p>
-        <p> If the visul display is 16-bit, 24-bit, or 32-bit TrueColor, then a redrawing of the VCS
-        Canvas is made evertime the colormap is changed.</p>
+          <p>Description of Function:</p>
+        <p> It is necessary to change the colormap. This routine will change the VCS color map.</p>
+        <p> If the visul display is 16-bit, 24-bit, or 32-bit TrueColor, then a redrawing of the VCS Canvas is made evertime the colormap is changed.</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.plot(array,'default','isofill','quick')
@@ -3883,31 +3271,19 @@ a.setcolormap("AMIP")
 <code><a name="setcolorcell" id="setcolorcell"></a>setcolorcell</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Set a
-        individual color cell in the active colormap. If default is the active colormap,
-        then return an error string.</p>
-        <p> If the visul display is 16-bit, 24-bit, or 32-bit TrueColor, then a redrawing of the VCS
-        Canvas is made evertime the color cell is changed.</p>
-        <p> Note, the user
-        can only change color cells 0 through 239 and R,G,Bvalue must range from 0 to
-        100. Where 0 represents no color intensity and 100 is the greatest color
-        intensity.</p>
+<p>Description of Function:</p>
+        <p> Set a individual color cell in the active colormap. If default is the active colormap, then return an error string.</p>
+        <p> If the visul display is 16-bit, 24-bit, or 32-bit TrueColor, then a redrawing of the VCS Canvas is made evertime the color cell is changed.</p>
+        <p> Note, the user can only change color cells 0 through 239 and R,G,Bvalue must range from 0 to 100. Where 0 represents no color intensity and 100 is the greatest color intensity.</p>
       </td>
         <td>
-          <p>colormap index:
-        0 to 239</p>
-        <p>R - Red
-        intensity value: 0 to 100</p>
-        <p>G - Green
-        intensity value: 0 to 100</p>
-        <p>B - Blue
-        intensity value: 0 to 100</p>
+          <p>colormap index: 0 to 239</p>
+        <p>R - Red intensity value: 0 to 100</p>
+        <p>G - Green intensity value: 0 to 100</p>
+        <p>B - Blue intensity value: 0 to 100</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.plot(array,'default','isofill','quick')
@@ -3923,22 +3299,16 @@ a.setcolorcell(61,70,70,70)
 <code><a name="colormapgui" id="colormapgui"></a>colormapgui</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Run the VCS
-        colormap interface.</p>
-        <p> The colormapgui
-        command is used to bring up the VCS colormap interface. The interface is used to
-        select, create, change, or remove colormaps.</p>
+<p>Description of Function:</p>
+        <p> Run the VCS colormap interface.</p>
+        <p> The colormapgui command is used to bring up the VCS colormap interface. The interface is used to select, create, change, or remove colormaps.</p>
         <p> Note:</p>
-        <p> The colormapgui
-        GUI will only work for 8-bit 'Pseudo Color'.</p>
+        <p> The colormapgui GUI will only work for 8-bit 'Pseudo Color'.</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.colormapgui()
@@ -3950,26 +3320,16 @@ a.colormapgui()
 <code><a name="createfillarea" id="createfillarea"></a>createfillarea</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Create a new
-        fillarea secondary method given the name and the existing fillarea secondary
-        method to copy the attributes from. If no existing fillarea secondary method name
-        is given, then the default fillarea secondary method will be used as the
-        secondary method to which the attributes will be copied from.</p>
-        <p> If the name
-        provided already exists, then a error will be returned. Secondary method names
-        must be unique.</p>
+<p>Description of Function:</p>
+        <p> Create a new fillarea secondary method given the name and the existing fillarea secondary method to copy the attributes from. If no existing fillarea secondary method name is given, then the default fillarea secondary method will be used as the secondary method to which the attributes will be copied from.</p>
+        <p> If the name provided already exists, then a error will be returned. Secondary method names must be unique.</p>
       </td>
         <td>
-          <p>new fillarea
-        name</p>
-        <p>[name of
-        fillarea to copy attributes from]</p>
+          <p>new fillarea name</p>
+        <p>[name of fillarea to copy attributes from]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('fillarea')
@@ -3982,24 +3342,15 @@ a.show('fillarea')
 <code><a name="getfillarea" id="getfillarea"></a>getfillarea</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> VCS contains a
-        list of secondary methods. This function will create a fillarea class object from
-        an existing VCS fillarea secondary method. If no fillarea name is given, then
-        fillarea 'default' will be used.</p>
-        <p> Note, VCS does
-        not allow the modification of `default' attribute sets. However, a `default'
-        attribute set that has been copied under a different name can be modified. (See
-        the createfillarea function.)</p>
+<p>Description of Function:</p>
+        <p> VCS contains a list of secondary methods. This function will create a fillarea class object from an existing VCS fillarea secondary method. If no fillarea name is given, then fillarea 'default' will be used.</p>
+        <p> Note, VCS does not allow the modification of `default' attribute sets. However, a `default' attribute set that has been copied under a different name can be modified. (See the createfillarea function.)</p>
       </td>
         <td>
-          <p>[fillarea
-        name]</p>
+          <p>[fillarea name]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('fillarea')
@@ -4012,27 +3363,15 @@ fa2=a.getfillarea('quick')
 </tr><tr><td>
 </td>
 <td>
-<p>Object:
-        fillareaobject</p>
-        <p>Description of
-        Function:</p>
-        <p> The Fillarea
-        class object allows the user to edit fillarea attributes, including</p>
-        <p> fillarea
-        interior style, style index, and color index.</p>
-        <p> This class is
-        used to define an fillarea table entry used in VCS, or itcan be used to change
-        some or all of the fillarea attributes in an existing fillarea table entry.</p>
-        <p> Other Useful
-        Functions:</p>
-        <p>a=vcs.init()<br>
-        # Constructor</p>
-        <p>a.show('fillarea')<br>
-        # Show predefined fillarea objects</p>
-        <p>a.update()<br>
-        # Updates the VCS Canvas at user's request a.mode=1, or 0<br>
-        # If 1, then automatic update, else if 0, then use update function to update the
-        VCS Canvas.</p>
+<p>Object: fillareaobject</p>
+        <p>Description of Function:</p>
+        <p> The Fillarea class object allows the user to edit fillarea attributes, including</p>
+        <p> fillarea interior style, style index, and color index.</p>
+        <p> This class is used to define an fillarea table entry used in VCS, or itcan be used to change some or all of the fillarea attributes in an existing fillarea table entry.</p>
+        <p> Other Useful Functions:</p>
+        <p>a=vcs.init()<br> # Constructor</p>
+        <p>a.show('fillarea')<br> # Show predefined fillarea objects</p>
+        <p>a.update()<br> # Updates the VCS Canvas at user's request a.mode=1, or 0<br> # If 1, then automatic update, else if 0, then use update function to update the VCS Canvas.</p>
       </td>
         <td>
           <p>name</p>
@@ -4041,8 +3380,7 @@ fa2=a.getfillarea('quick')
         <p>color</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 
@@ -4096,26 +3434,16 @@ fa.index=20
 <code><a name="createline" id="createline"></a>createline</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Create a new
-        line secondary method given the name and the existing line secondary method
-        to copy the attributes from. If no existing line secondary method name is given,
-        then the default line secondary method will be used as the secondary method to
-        which the attributes will be copied from.</p>
-        <p> If the name
-        provided already exists, then a error will be returned. Secondary method names
-        must be unique</p>
+<p>Description of Function:</p>
+        <p> Create a new line secondary method given the name and the existing line secondary method to copy the attributes from. If no existing line secondary method name is given, then the default line secondary method will be used as the secondary method to which the attributes will be copied from.</p>
+        <p> If the name provided already exists, then a error will be returned. Secondary method names must be unique</p>
       </td>
         <td>
-          <p>new line
-        name</p>
-        <p>[name of line to
-        copy attributes from]</p>
+          <p>new line name</p>
+        <p>[name of line to copy attributes from]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('line')
@@ -4128,24 +3456,16 @@ a.show('line')
 <code><a name="getline" id="getline"></a>getline</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> VCS contains a
-        list of secondary methods. This function will create a line class object from an
-        existing VCS line secondary method. If no line name is given, then line 'default'
-        will be used.</p>
-        <p> Note, VCS does
-        not allow the modification of `default' attribute sets.</p>
-        <p> However, a
-        `default' attribute set that has been copied under a different name can be
-        modified. (See the createline function.)</p>
+<p>Description of Function:</p>
+        <p> VCS contains a list of secondary methods. This function will create a line class object from an existing VCS line secondary method. If no line name is given, then line 'default' will be used.</p>
+        <p> Note, VCS does not allow the modification of `default' attribute sets.</p>
+        <p> However, a `default' attribute set that has been copied under a different name can be modified. (See the createline function.)</p>
       </td>
         <td>
           <p>[line name]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('line')
@@ -4158,25 +3478,14 @@ ln2=a.getline('quick')
 </tr><tr><td>
 </td>
 <td>
-<p>Object:
-        lineobject</p>
-        <p>Description of
-        Function:</p>
-        <p> The Line object
-        allows the manipulation of line type, width, and color index.</p>
-        <p> This class is
-        used to define an line table entry used in VCS, or itcan be used to change some
-        or all of the line attributes in an existing line table entry.</p>
-        <p> Other Useful
-        Functions:</p>
-        <p>a=vcs.init()<br>
-        # Constructor</p>
-        <p>a.show('line')<br>
-        # Show predefined line objects</p>
-        <p>a.update()<br>
-        # Updates the VCS Canvas at user's request a.mode=1, or 0<br>
-        # If 1, then automatic update, else if 0, then use update function to update the
-        VCS Canvas.</p>
+<p>Object: lineobject</p>
+        <p>Description of Function:</p>
+        <p> The Line object allows the manipulation of line type, width, and color index.</p>
+        <p> This class is used to define an line table entry used in VCS, or itcan be used to change some or all of the line attributes in an existing line table entry.</p>
+        <p> Other Useful Functions:</p>
+        <p>a=vcs.init()<br> # Constructor</p>
+        <p>a.show('line')<br> # Show predefined line objects</p>
+        <p>a.update()<br> # Updates the VCS Canvas at user's request a.mode=1, or 0<br> # If 1, then automatic update, else if 0, then use update function to update the VCS Canvas.</p>
       </td>
         <td>
           <p>name</p>
@@ -4185,8 +3494,7 @@ ln2=a.getline('quick')
         <p>color</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 
@@ -4225,27 +3533,17 @@ ln.type='long-dash'
 <code><a name="createmarker" id="createmarker"></a>createmarker</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Create a new
-        marker secondary method given the name and the existing marker secondary
-        method to copy the attributes from. If no existing marker secondary method name
-        is given, then the default marker secondary method will be used as the secondary
-        method to which the attributes will be copied from.</p>
-        <p> If the name
-        provided already exists, then a error will be returned.</p>
-        <p> Secondary
-        method names must be unique.</p>
+<p>Description of Function:</p>
+        <p> Create a new marker secondary method given the name and the existing marker secondary method to copy the attributes from. If no existing marker secondary method name is given, then the default marker secondary method will be used as the secondary method to which the attributes will be copied from.</p>
+        <p> If the name provided already exists, then a error will be returned.</p>
+        <p> Secondary method names must be unique.</p>
       </td>
         <td>
-          <p>new marker
-        name</p>
-        <p>[name of marker
-        to copy attributes from]</p>
+          <p>new marker name</p>
+        <p>[name of marker to copy attributes from]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('marker')
@@ -4258,25 +3556,16 @@ a.show('boxfill')
 <code><a name="getmarker" id="getmarker"></a>getmarker</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> VCS contains a
-        list of secondary methods. This function will create a marker class object from
-        an existing VCS marker secondary method. If no marker name is given, then marker
-        'default' will be used.</p>
-        <p> Note, VCS does
-        not allow the modification of `default' attribute sets.</p>
-        <p> However, a
-        `default' attribute set that has been copied under a different name can be
-        modified. (See the createmarker function.)</p>
+<p>Description of Function:</p>
+        <p> VCS contains a list of secondary methods. This function will create a marker class object from an existing VCS marker secondary method. If no marker name is given, then marker 'default' will be used.</p>
+        <p> Note, VCS does not allow the modification of `default' attribute sets.</p>
+        <p> However, a `default' attribute set that has been copied under a different name can be modified. (See the createmarker function.)</p>
       </td>
         <td>
-          <p>[marker
-        name]</p>
+          <p>[marker name]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('marker')
@@ -4289,24 +3578,14 @@ mrk2=a.getmarker('quick')
 </tr><tr><td>
 </td>
 <td>
-<p>Object:
-        markerobject</p>
-        <p>Description of
-        Function:</p>
-        <p> The Marker
-        object allows the manipulation of marker type, size, and color index.</p>
-        <p> This class is
-        used to define an marker table entry used in VCS, or it can be used to change
-        some or all of the marker attributes in an existing marker table entry.</p>
-        <p> Other Useful
-        Functions:</p>
-        <p>a=vcs.init()<br>
-        # Constructor</p>
-        <p>a.show('marker')<br>
-        # Show predefined marker objects</p>
-        <p>a.update()<br>
-        # Updates the VCS Canvas at user's request a.mode=1, or 0. If 1, then automatic
-        update, else if 0, then use update function to update the VCS Canvas.</p>
+<p>Object: markerobject</p>
+        <p>Description of Function:</p>
+        <p> The Marker object allows the manipulation of marker type, size, and color index.</p>
+        <p> This class is used to define an marker table entry used in VCS, or it can be used to change some or all of the marker attributes in an existing marker table entry.</p>
+        <p> Other Useful Functions:</p>
+        <p>a=vcs.init()<br> # Constructor</p>
+        <p>a.show('marker')<br> # Show predefined marker objects</p>
+        <p>a.update()<br> # Updates the VCS Canvas at user's request a.mode=1, or 0. If 1, then automatic update, else if 0, then use update function to update the VCS Canvas.</p>
       </td>
         <td>
           <p>name</p>
@@ -4315,8 +3594,7 @@ mrk2=a.getmarker('quick')
         <p>color</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 
@@ -4371,28 +3649,17 @@ mk.type='square_fill' # Same as mk.type=17
 <code><a name="createtextcombined" id="createtextcombined"></a>createtextcombined</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Create a new
-        textcombined secondary method given the names and the existing texttable and
-        textorientation secondary methods to copy the attributes from. If no existing
-        texttable and textorientation secondary method names are given, then the default
-        texttable and textorientation secondary methods will be used as the secondary
-        method to which the attributes will be copied from.</p>
-        <p> If the name
-        provided already exists, then a error will be returned.</p>
-        <p> Secondary
-        method names must be unique.</p>
+<p>Description of Function:</p>
+        <p> Create a new textcombined secondary method given the names and the existing texttable and textorientation secondary methods to copy the attributes from. If no existing texttable and textorientation secondary method names are given, then the default texttable and textorientation secondary methods will be used as the secondary method to which the attributes will be copied from.</p>
+        <p> If the name provided already exists, then a error will be returned.</p>
+        <p> Secondary method names must be unique.</p>
       </td>
         <td>
-          <p>new textcombined
-        name</p>
-        <p>[name of
-        textcombined to copy attributes from]</p>
+          <p>new textcombined name</p>
+        <p>[name of textcombined to copy attributes from]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('texttable')
@@ -4405,26 +3672,16 @@ a.show('textorientation')
 <code><a name="gettextcombined" id="gettextcombined"></a>gettextcombined</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> VCS contains a
-        list of secondary methods. This function will create a textcombined class object
-        from an existing VCS texttable secondary method and an existing VCS
-        textorientation secondary method. If no texttable or textorientation names are
-        given, then the 'default' names will be used in both cases.</p>
-        <p> Note, VCS does
-        not allow the modification of `default' attribute sets.</p>
-        <p> However, a
-        `default' attribute set that has been copied under a different name can be
-        modified. (See the createtextcombined function.)</p>
+<p>Description of Function:</p>
+        <p> VCS contains a list of secondary methods. This function will create a textcombined class object from an existing VCS texttable secondary method and an existing VCS textorientation secondary method. If no texttable or textorientation names are given, then the 'default' names will be used in both cases.</p>
+        <p> Note, VCS does not allow the modification of `default' attribute sets.</p>
+        <p> However, a `default' attribute set that has been copied under a different name can be modified. (See the createtextcombined function.)</p>
       </td>
         <td>
-          <p>[textcombined
-        name]</p>
+          <p>[textcombined name]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('texttable')
@@ -4443,19 +3700,11 @@ tc.list()
 </tr><tr><td>
 </td>
 <td>
-<p>Object:
-        textcombinedobject</p>
-        <p>Description of
-        Function:</p>
-        <p> The (Tc) Text
-        Combined class will combine a text table class and a text orientation class
-        together. From combining the two classess, the user will be able to set
-        attributes for both classes (i.e., define the font, spacing, expansion, color
-        index, height, angle, path, vertical alignment, and horizontal alignment).</p>
-        <p> This class is
-        used to define and list a combined text table and text orientation</p>
-        <p> entry used in
-        VCS.</p>
+<p>Object: textcombinedobject</p>
+        <p>Description of Function:</p>
+        <p> The (Tc) Text Combined class will combine a text table class and a text orientation class together. From combining the two classess, the user will be able to set attributes for both classes (i.e., define the font, spacing, expansion, color index, height, angle, path, vertical alignment, and horizontal alignment).</p>
+        <p> This class is used to define and list a combined text table and text orientation</p>
+        <p> entry used in VCS.</p>
       </td>
         <td>
           <p>name</p>
@@ -4471,8 +3720,7 @@ tc.list()
         <p>valign</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 
@@ -4527,28 +3775,17 @@ tc.valign='bottom' # Same as tcvalign=4
 <code><a name="createtextorientation" id="createtextorientation"></a>createtextorientation</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Create a new
-        textorientation secondary method given the name and he existing
-        textorientation secondary method to copy the attributes from. If no existing
-        textorientation secondary method name is given, then the default textorientation
-        secondary method will be used as the secondary method to which the attributes
-        will be copied from.</p>
-        <p> If the name
-        provided already exists, then a error will be returned.</p>
-        <p> Secondary
-        method names must be unique.</p>
+<p>Description of Function:</p>
+        <p> Create a new textorientation secondary method given the name and he existing textorientation secondary method to copy the attributes from. If no existing textorientation secondary method name is given, then the default textorientation secondary method will be used as the secondary method to which the attributes will be copied from.</p>
+        <p> If the name provided already exists, then a error will be returned.</p>
+        <p> Secondary method names must be unique.</p>
       </td>
         <td>
-          <p>new
-        textorientation name</p>
-        <p>[name of
-        textorientation to copy attributes from]</p>
+          <p>new textorientation name</p>
+        <p>[name of textorientation to copy attributes from]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('textorientation')
@@ -4561,25 +3798,16 @@ a.show('textorientation')
 <code><a name="gettextorientation" id="gettextorientation"></a>gettextorientation</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> VCS contains a
-        list of secondary methods. This function will create a textorientation class
-        object from an existing VCS textorientation secondary method. If no
-        textorientation name is given, then textorientation 'default' will be used.</p>
-        <p> Note, VCS does
-        not allow the modification of `default' attribute sets.</p>
-        <p> However, a
-        `default' attribute set that has been copied under a different name can be
-        modified. (See the createtextorientation function.)</p>
+<p>Description of Function:</p>
+        <p> VCS contains a list of secondary methods. This function will create a textorientation class object from an existing VCS textorientation secondary method. If no textorientation name is given, then textorientation 'default' will be used.</p>
+        <p> Note, VCS does not allow the modification of `default' attribute sets.</p>
+        <p> However, a `default' attribute set that has been copied under a different name can be modified. (See the createtextorientation function.)</p>
       </td>
         <td>
-          <p>[textorientation
-        name]</p>
+          <p>[textorientation name]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('textorientation')
@@ -4592,26 +3820,14 @@ to2=a.gettextorientation('quick')
 </tr><tr><td>
 </td>
 <td>
-<p>Object:
-        textorientationobject</p>
-        <p>Description of
-        Function:</p>
-        <p> The (To) Text
-        Orientation lists text attribute set names that define the font, spacing,
-        expansion, and color index.</p>
-        <p> This class is
-        used to define an text orientation table entry used in VCS, or it can be used to
-        change some or all of the text orientation attributes in an existing text
-        orientation table entry.</p>
-        <p> Other Useful
-        Functions:</p>
-        <p>a=vcs.init()<br>
-        # Constructor</p>
-        <p>a.show('textorientation')<br>
-        # Show predefined text orientation objects</p>
-        <p>a.update()<br>
-        # Updates the VCS Canvas at user's request a.mode=1, or 0. If 1, then automatic
-        update, else if 0, then use update function to update the VCS Canvas.</p>
+<p>Object: textorientationobject</p>
+        <p>Description of Function:</p>
+        <p> The (To) Text Orientation lists text attribute set names that define the font, spacing, expansion, and color index.</p>
+        <p> This class is used to define an text orientation table entry used in VCS, or it can be used to change some or all of the text orientation attributes in an existing text orientation table entry.</p>
+        <p> Other Useful Functions:</p>
+        <p>a=vcs.init()<br> # Constructor</p>
+        <p>a.show('textorientation')<br> # Show predefined text orientation objects</p>
+        <p>a.update()<br> # Updates the VCS Canvas at user's request a.mode=1, or 0. If 1, then automatic update, else if 0, then use update function to update the VCS Canvas.</p>
       </td>
         <td>
           <p>name</p>
@@ -4622,8 +3838,7 @@ to2=a.gettextorientation('quick')
         <p>valign</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 
@@ -4676,27 +3891,17 @@ to.valign='bottom'
 <code><a name="createtexttable" id="createtexttable"></a>createtexttable</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Create a new
-        texttable secondary method given the name and the existing texttable
-        secondary method to copy the attributes from. If no existing texttable secondary
-        method name is given, then the default texttable secondary method will be used as
-        the secondary method to which the attributes will be copied from.</p>
-        <p> If the name
-        provided already exists, then a error will be returned.</p>
-        <p> Secondary
-        method names must be unique.</p>
+<p>Description of Function:</p>
+        <p> Create a new texttable secondary method given the name and the existing texttable secondary method to copy the attributes from. If no existing texttable secondary method name is given, then the default texttable secondary method will be used as the secondary method to which the attributes will be copied from.</p>
+        <p> If the name provided already exists, then a error will be returned.</p>
+        <p> Secondary method names must be unique.</p>
       </td>
         <td>
-          <p>new texttable
-        name</p>
-        <p>[name of
-        texttable to copy attributes from]</p>
+          <p>new texttable name</p>
+        <p>[name of texttable to copy attributes from]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('texttable')
@@ -4709,25 +3914,16 @@ a.show('texttable')
 <code><a name="gettexttable" id="gettexttable"></a>gettexttable</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> VCS contains a
-        list of secondary methods. This function will create a texttable class object
-        from an existing VCS texttable secondary method. If no texttable name is given,
-        then texttable 'default' will be used.</p>
-        <p> Note, VCS does
-        not allow the modification of `default' attribute sets.</p>
-        <p> However, a
-        `default' attribute set that has been copied under a different name can be
-        modified. (See the createtexttable function.)</p>
+<p>Description of Function:</p>
+        <p> VCS contains a list of secondary methods. This function will create a texttable class object from an existing VCS texttable secondary method. If no texttable name is given, then texttable 'default' will be used.</p>
+        <p> Note, VCS does not allow the modification of `default' attribute sets.</p>
+        <p> However, a `default' attribute set that has been copied under a different name can be modified. (See the createtexttable function.)</p>
       </td>
         <td>
-          <p>[texttable
-        name]</p>
+          <p>[texttable name]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.show('texttable')
@@ -4740,26 +3936,14 @@ tt2=a.gettexttable('quick')
 </tr><tr><td>
 </td>
 <td>
-<p>Object:
-        texttableobject</p>
-        <p>Description of
-        Function:</p>
-        <p> The (Tt) Text
-        Table lists text attribute set names that define the font, spacing, expansion,
-        and color index.</p>
-        <p> This class is
-        used to define an text table table entry used in VCS, or it can be used to change
-        some or all of the text table attributes in an existing text table table
-        entry.</p>
-        <p> Other Useful
-        Functions:</p>
-        <p>a=vcs.init()<br>
-        # Constructor</p>
-        <p>a.show('texttable')<br>
-        # Show predefined text table objects</p>
-        <p>a.update()<br>
-        # Updates the VCS Canvas at user's request a.mode=1, or 0. If 1, then automatic
-        update, else if 0, then use update function to update the VCS Canvas.</p>
+<p>Object: texttableobject</p>
+        <p>Description of Function:</p>
+        <p> The (Tt) Text Table lists text attribute set names that define the font, spacing, expansion, and color index.</p>
+        <p> This class is used to define an text table table entry used in VCS, or it can be used to change some or all of the text table attributes in an existing text table table entry.</p>
+        <p> Other Useful Functions:</p>
+        <p>a=vcs.init()<br> # Constructor</p>
+        <p>a.show('texttable')<br> # Show predefined text table objects</p>
+        <p>a.update()<br> # Updates the VCS Canvas at user's request a.mode=1, or 0. If 1, then automatic update, else if 0, then use update function to update the VCS Canvas.</p>
       </td>
         <td>
           <p>name</p>
@@ -4769,8 +3953,7 @@ tt2=a.gettexttable('quick')
         <p>color</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 
@@ -4802,29 +3985,22 @@ tt.color=241
 # The text color attribute value must be in the range 1 to 257
 </pre></td>
 </tr><tr><th colspan="4">
-<p><a name="remove_objects" id="remove_objects"></a>Remove
-        Objects</p>
+<p><a name="remove_objects" id="remove_objects"></a>Remove Objects</p>
       </th>
       </tr><tr><td>
         <code><a name="removeobject" id="removeobject"></a>removeobject</code>
       </td>
         <td>
-          <p>Description of
-        Function:</p>
-        <p> The user has
-        the ability to create primary and secondary class objects. This function allows
-        the user to remove these objects from the appropriate class list.</p>
-        <p> Note, To remove
-        the object completely from Python, remember to use the "del" function.</p>
-        <p> Also note, The
-        user is not allowed to remove a "default" class object.</p>
+          <p>Description of Function:</p>
+        <p> The user has the ability to create primary and secondary class objects. This function allows the user to remove these objects from the appropriate class list.</p>
+        <p> Note, To remove the object completely from Python, remember to use the "del" function.</p>
+        <p> Also note, The user is not allowed to remove a "default" class object.</p>
       </td>
         <td>
           <p>object</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 line=a.getline('red')
@@ -4842,46 +4018,29 @@ del iso
 # Destroy instance "iso", garbage collection
 </pre></td>
 </tr><tr><th colspan="4">
-<p><a name="set_continents_type" id="set_continents_type"></a>Set
-        Continents Type</p>
+<p><a name="set_continents_type" id="set_continents_type"></a>Set Continents Type</p>
       </th>
       </tr><tr><td>
         <code><a name="setcontinentstype" id="setcontinentstype"></a>setcontinentstype</code>
       </td>
         <td>
-          <p>Description of
-        Function:</p>
-        <p> One has the
-        option of using continental maps that are predefined or that are user-defined.
-        Predefined continental maps are either internal to VCS or are specified by
-        external files. User-defined continental maps are specified by additional
-        external files that must be read as input.</p>
-        <p> The
-        continents-type values are integers ranging from 0 to 11, where:</p>
-        <p> 0 signifies "No
-        Continents"</p>
-        <p> 1 signifies
-        "Fine Continents"</p>
-        <p> 2 signifies
-        "Coarse Continents"</p>
-        <p> 3 signifies
-        "United States" (with "Fine Continents")</p>
-        <p> 4 signifies
-        "Political Borders" (with "Fine Continents")</p>
-        <p> 5 signifies
-        "Rivers" (with "Fine Continents")</p>
-        <p> Values 6
-        through 11 signify the line type defined by the files</p>
-        <p>
-        data_continent_other7 through data_continent_other12.</p>
+          <p>Description of Function:</p>
+        <p> One has the option of using continental maps that are predefined or that are user-defined. Predefined continental maps are either internal to VCS or are specified by external files. User-defined continental maps are specified by additional external files that must be read as input.</p>
+        <p> The continents-type values are integers ranging from 0 to 11, where:</p>
+        <p> 0 signifies "No Continents"</p>
+        <p> 1 signifies "Fine Continents"</p>
+        <p> 2 signifies "Coarse Continents"</p>
+        <p> 3 signifies "United States" (with "Fine Continents")</p>
+        <p> 4 signifies "Political Borders" (with "Fine Continents")</p>
+        <p> 5 signifies "Rivers" (with "Fine Continents")</p>
+        <p> Values 6 through 11 signify the line type defined by the files</p>
+        <p> data_continent_other7 through data_continent_other12.</p>
       </td>
         <td>
-          <p>continents type
-        number, ranging from 0 to 11</p>
+          <p>continents type number, ranging from 0 to 11</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 # Set continents to "United States"
@@ -4889,31 +4048,22 @@ a.setcontinentstype(3)
 a.plot(array,'default','isofill','quick'
 </pre></td>
 </tr><tr><th colspan="4">
-<p><a name="set_default_methods" id="set_default_methods"></a>Set Default
-        Picture Template and Graphics Methods</p>
+<p><a name="set_default_methods" id="set_default_methods"></a>Set Default Picture Template and Graphics Methods</p>
       </th>
       </tr><tr><td>
         <code><a name="set" id="set"></a>set</code>
       </td>
         <td>
-          <p>Description of
-        Function:</p>
-        <p> Set the default
-        VCS primary class objects: template and graphics methods.</p>
-        <p> Keep in mind
-        the template, determines the appearance of each graphics segment; the graphic
-        method specifies the display technique; and the data defines what is to be
-        displayed. Note, the data cannot be set with this function.</p>
+          <p>Description of Function:</p>
+        <p> Set the default VCS primary class objects: template and graphics methods.</p>
+        <p> Keep in mind the template, determines the appearance of each graphics segment; the graphic method specifies the display technique; and the data defines what is to be displayed. Note, the data cannot be set with this function.</p>
       </td>
         <td>
-          <p>template or
-        graphics methods type,</p>
-        <p>[template name
-        or graphics method name]</p>
+          <p>template or graphics methods type,</p>
+        <p>[template name or graphics method name]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.set('isofill','quick')
@@ -4927,24 +4077,17 @@ a.plot(array)
 <code><a name="animate" id="animate"></a>animate</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Animate the
-        contents of the VCS Canvas. Currently, only one display can be shown in the VCS
-        Canvas for the animation to work. This function pops up the animation GUI.</p>
+<p>Description of Function:</p>
+        <p> Animate the contents of the VCS Canvas. Currently, only one display can be shown in the VCS Canvas for the animation to work. This function pops up the animation GUI.</p>
         <p> Note:</p>
-        <p> The animation
-        GUI will only work for 8-bit 'Pseudo Color'.</p>
-        <p> See the
-        animation GUI documenation located at URL:</p>
-        <p>
-        http://www-pcmdi.llnl.gov/software/vcs</p>
+        <p> The animation GUI will only work for 8-bit 'Pseudo Color'.</p>
+        <p> See the animation GUI documenation located at URL:</p>
+        <p> http://www-pcmdi.llnl.gov/software/vcs</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.plot(array,'default','isofill','quick')
@@ -4957,16 +4100,13 @@ a.animate()
 <code><a name="flush" id="flush"></a>flush</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> The flush
-        command executes all buffered X events in the que.</p>
+<p>Description of Function:</p>
+        <p> The flush command executes all buffered X events in the que.</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.plot(array,'default','isofill','quick')
@@ -4979,21 +4119,14 @@ a.flush()
 <code><a name="grid" id="grid"></a>grid</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Set the default
-        plotting region for variables that have more dimension values than the graphics
-        method. This will also be used for animating plots over the third and fourth
-        dimensions.</p>
+<p>Description of Function:</p>
+        <p> Set the default plotting region for variables that have more dimension values than the graphics method. This will also be used for animating plots over the third and fourth dimensions.</p>
       </td>
         <td>
-          <p>([first dim's
-        1st value, first dim's last value] ,..., [last dim's 1st value, last dim's last
-        value]</p>
+          <p>([first dim's 1st value, first dim's last value] ,..., [last dim's 1st value, last dim's last value]</p>
       </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a=vcs.init()
@@ -5004,17 +4137,13 @@ a.plot(array,'default','isofill','quick')
 <code><a name="resetgrid" id="resetgrid"></a>resetgrid</code>
 </td>
 <td>
-<p>Description of
-        Function:</p>
-        <p> Set the
-        plotting region to default values. That is, let the variable's dimension values
-        determine the grid</p>
+<p>Description of Function:</p>
+        <p> Set the plotting region to default values. That is, let the variable's dimension values determine the grid</p>
       </td>
         <td>
         </td>
         <td>
-          <p>Example of
-        Use:</p>
+          <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a=vcs.init()
