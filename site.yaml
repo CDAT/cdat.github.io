@@ -49,8 +49,6 @@ context:
             url: /documentation/vcs/vcs.html
       - title: User Guides
         url:
-          - title: Manuals
-            url: /manuals.html
           - title: Tutorials
             url: /tutorials.html
           - title: Mailing list
