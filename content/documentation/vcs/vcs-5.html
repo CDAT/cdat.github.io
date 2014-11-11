@@ -118,9 +118,14 @@ a.objecthelp(ln)
         <p> Note, by default the VCS Canvas Mode is set to 'Automatic', which means VCS will update the VCS Canvas as necessary without prompting from the user.</p>
       </td>
         <td>
-          <p>1|0</p>
-        <p>1 = automatic</p>
-        <p>0=manual</p>
+          <ul>
+            <li>1|0
+              <ul>
+                <li>1 = automatic</li>
+                <li>0 = manual</li>
+              </ul>
+            </li>
+          </ul>
       </td>
         <td>
           <p>Example of Use:</p>
@@ -254,7 +259,12 @@ a.page()
         <p> The geometry command is used to set the size and position of the VCS canvas.</p>
       </td>
         <td>
-          <p>(w,h,x,y), where w=width, h=height, x=x_position, y=y_position</p>
+          <ul>
+            <li>width</li>
+            <li>height</li>
+            <li>x position</li>
+            <li>y position</li>
+          </ul>
       </td>
         <td>
           <p>Example of Use:</p>
@@ -282,9 +292,16 @@ a.geometry(450, 337,100, 100)
         <p><a href="vcs-2.html#hard_copy">More information on the HARD_COPY file</a></p>
       </td>
         <td>
-          <p>printer's name</p>
-          <p>l|p -</p>
-          <p>Orientation can be either: 'l' = landscape, or 'p' = portrait.</p>
+          <ul>
+            <li>printer's name</li>
+            <li><p>[orientation]</p>
+                <p>Options:</p>
+                <ul>
+                  <li> l = landscape </li>
+                  <li> p = portrait </li>
+                </ul>
+            </li>
+          </ul>
       </td>
         <td>
           <p>Example of Use:</p>
@@ -313,28 +330,43 @@ a.printer('printer_name','p')
         <p> The GIF command is used to create or append to a gif file. There are two modes for saving a gif file: 'Append' mode (a) appends gif output to an existing gif file(i.e., making it an animated gif); 'Replace' (r) mode overwrites an existing gif file with new gif output.</p>
       </td>
         <td>
-          <p>gif file name</p>
-        <p>'a'=will append (or merge) image to an existing file, making it an animated gif</p>
-        <p>'r'=will replace file with new image</p>
-        <p>'l'=landscape mode</p>
-        <p>'p'=portrait mode</p>
+          <ul>
+            <li>Filename to save</li>
+            <li>
+              <p>[merge]</p>
+              <p>Options:</p>
+              <ul>
+                <li> a = append (or merge) image to an existing file </li>
+                <li> r = replace file with new image </li>
+              </ul>
+            </li>
+            <li>[orientation (l|p)]
+              <ul>
+                <li>l = landscape</li>
+                <li>p = portrait</li>
+              </ul>
+            </li>
+            <li>[geometry (<code>width</code>x<code>height</code>)]</li>
+          </ul>
       </td>
         <td>
           <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.plot(array)
-# Note, if you don't specify the extension `.gif' at the end of file name, then the extension `.gif' will be put on for you.
+a.gif(filename='example.gif', merge='a', orientation='l', geometry='800x600')
+# overwrite existing gif file (default is merge='r')
 a.gif('example')
+# overwrite existing gif file
+a.gif('example',merge='r')
 # merge gif image into existing gif file
-a.gif('example','r')
-# over write existing gif file
-a.gif('example','a')
-# merge gif image into existing gif file
-a.gif('example','a','p')
+a.gif('example',merge='a')
+# merge gif image into existing gif file with landscape orientation
+a.gif('example',orientation='l')
 # merge gif image into existing gif file with portrait orientation
-a.gif('example.gif','r','p')
-# over write gif image file with new portrait orientation gif
+a.gif('example',orientation='p')
+# merge gif image into existing gif file and set the gif geometry
+a.gif('example',geometry='600x500')
 </pre></td>
 </tr>
 <tr><td>
@@ -343,36 +375,71 @@ a.gif('example.gif','r','p')
 <td>
 <p>Save plot(s) to a postscript file</p>
         <p>Description of Function:</p>
-        <p> Postscript output is another form of vector graphics. It is larger than its CGM output counter part, because it is not stored out in ASCII format. To save out a postscript file, VCS will first create a cgm file in the user's PCMDI_GRAPHICS directory. Then it will use gplot to convert the cgm file to a postscript file in the location the user has chosen.</p>
+        <p>Postscript output is another form of vector graphics. It is larger than its CGM output counter part, because it is stored out in ASCII format.</p>
+        <p>There are two modes for saving a postscript file: `Append' (a) mode appends postscript output to an existing postscript file; and `Replace' (r) mode overwrites an existing postscript file with new postscript output. The default mode is to overwrite an existing postscript file (i.e. mode (r)).</p>
       </td>
         <td>
-          <p>postscript file name</p>
-        <p>'a'=will append postscript to an existing file</p>
-        <p>'r'=will replace postscript file with new apostscript file</p>
+          <ul>
+            <li>filename</li>
+            <li>
+              <p>[mode]</p>
+              <p>Options:</p>
+              <ul>
+                <li> a = append (or merge) image to an existing file </li>
+                <li> r = replace file with new image </li>
+              </ul>
+            </li>
+            <li>[width of image]</li>
+            <li>[height of image]</li>
+            <li>
+              <p>[units of width/height]</p>
+              <p>Options:</p>
+              <ul>
+                <li>'in' or 'inches' &mdash; default</li>
+                <li>'cm'</li>
+                <li>'mm'</li>
+                <li>'dot' or 'dots'</li>
+              </ul>
+            </li>
+            <li>[left_margin]</li>
+            <li>[right_margin]</li>
+            <li>[top_margin]</li>
+            <li>[bottom_margin]</li>
+          </ul>
       </td>
         <td>
           <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
 a=vcs.init()
 a.plot(array)
-# Note, if you don't specify the extension `.ps' at the end of file name, then the extension `.ps' will be put on for you.
+# Overwrite a postscript file
 a.postscript('example')
-# Creates a landscape postscript file a.postscript('example','p')
-# Creates a portrait postscript file
+# Append postscript to an existing file
+a.postscript('example', 'a')
+# Overwrite an existing file
+a.postscript('example', 'r')
+# Append postscript to an existing file
+a.postscript('example', mode='a')
+# US Legal (default)
+a.postscript('example', width=11.5, height= 8.5)
+# A4
+a.postscript('example', width=21, height=29.7, units='cm')
+# US Legal output and control of margins (for printer friendly output), default units 'inches'
+a.postscript('example', right_margin=.2,left_margin=.2,top_margin=.2,bottom_margin=.2)
 </pre></td>
 </tr>
 <tr><td>
 <code><a name="cgm" id="cgm"></a>cgm</code>
 </td>
-<td>
-<p>Description of Function:</p>
+      <td>
+        <p>Description of Function:</p>
         <p> To save a graphics plot in VCS the user can call CGM along with the name of the output. This routine will save the displayed image on the VCS canvas as a binary vector graphics that can be imported into MSWord or Framemaker. CGM files are in ISO standards output format.</p>
-        <p> The CGM command is used to create or append to a cgm file. There are two modes for saving a cgm file: 'Append' mode (a) appends cgm output to an existing cgm file; 'Replace' (r) mode overwrites an existing cgm file with new cgm output.</p>
+        <p> The CGM command is used to create or append to a cgm file.</p>
       </td>
-        <td>
-          <p>cgm file name</p>
-        <p>'a'=will append cgm to an existing file</p>
-        <p>'r'=will replace cgm file with a new cgm file</p>
+      <td>
+          <ul>
+            <li><p>cgm file name</p></li>
+          </ul>
       </td>
         <td>
           <p>Example of Use:</p>
@@ -395,14 +462,19 @@ a.cgm('example','r')
 <p>Description of Function:</p>
         <p> In some cases, the user may want to save the plot out as an raster image. This routine allows the user to save the VCS canvas output as a SUN raster file.</p>
         <p> This file can be converted to other raster formats with the aid of xv and other such imaging tools found freely on the web.</p>
-        <p> If no path/file name is given and no previously created raster file has beendesignated, then file</p>
-        <p>/$HOME/PCMDI_GRAPHICS/default.ras</p>
+        <p> If no path/file name is given and no previously created raster file has been designated, then file</p>
+        <pre>/$HOME/PCMDI_GRAPHICS/default.ras</pre>
         <p> will be used for storing raster images. However, if a previously created raster file is designated, that file will be used for raster output.</p>
       </td>
         <td>
-          <p>raster file name</p>
-        <p>'a'=will append raster image to an existing raster file</p>
-        <p>'r'=will replace a raster file with a new raster file</p>
+          <ul>
+            <li><p>raster file name</p></li>
+            <li><p>[mode]</p>
+              <ul>
+                <li> <p>'a'=will append raster image to an existing raster file</p></li>
+                <li> <p>'r'=will replace a raster file with a new raster file</p></li>
+              </ul>
+            </li>
       </td>
         <td>
           <p>Example of Use:</p>
@@ -424,9 +496,11 @@ a.raster('example','r')
         <p> This function allows the user to convert a postscript file to a gif file.</p>
       </td>
         <td>
-          <p>postscript file name</p>
-        <p>['l'=landscape 'p'=portrait]</p>
-      </td>
+          <ul>
+            <li><p>postscript file name</p></li>
+            <li><p>['l'=landscape 'p'=portrait]</p></li>
+          </ul>
+        </td>
         <td>
           <p>Example of Use:</p>
         <pre style="word-break:normal;">import vcs
@@ -437,14 +511,15 @@ a.pstogif('filename.ps','l') # convert to landscape gif file
 a.pstogif('filename.ps','p') # convert to portrait gif file
 </pre></td>
 </tr>
-<tr><th colspan="4">
-<p><a name="plot_and_clear_commands" id="plot_and_clear_commands"></a>Plot and
-        Clear Commands</p>
-      </th>
-      </tr>
-      <tr><td>
-        <code><a name="plot" id="plot"></a>plot</code>
-      </td>
+<tr>
+  <th colspan="4">
+    <p><a name="plot_and_clear_commands" id="plot_and_clear_commands"></a>Plot and Clear Commands</p>
+  </th>
+</tr>
+<tr>
+  <td>
+    <code><a name="plot" id="plot"></a>plot</code>
+  </td>
         <td>
           <p>Description of Function:</p>
         <p> Plot an array(s) of data given a template and graphics method. The VCS template is used to define where the data and variable attributes will be displayed on the VCS Canvas. The VCS graphics method is used to define how the array(s) will be shown on the VCS Canvas.</p>
