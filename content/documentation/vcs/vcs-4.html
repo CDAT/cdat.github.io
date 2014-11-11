@@ -9,11 +9,15 @@ index: 4
 
 ##  CHAPTER 4 Overview
 
+<a name="4.1"></a>
+
 ### VCS Model Overview
 
 The VCS model is defined by a trio of named attribute sets, designated the "Primary Objects" (also known as "Primary Elements"). These include: the data, which specifies what is to be displayed and are obtained from the `cdms2` or Numeric modules; the graphics method, which specifies the display technique; and the picture template, which determines the appearance of each segment of the display.
 
-####VCS Primary Objects (or Primary Elements)
+<a name="4.2"></a>
+
+### VCS Primary Objects (or Primary Elements)
 
 A description of each primary object is warranted before showing their use and usefulness in VCS. See descriptions below.
 
@@ -44,9 +48,11 @@ A picture template determines the location of each picture segment, the space to
 
 #####  Data Objects
 
-Array data attribute sets and their associated dimensions are to be modified outside of VCS. See the CDMS, CU, and Numeric module documentation for data extraction, creation and manipulation.
+Array data attribute sets and their associated dimensions are to be modified outside of VCS. See the [CDMS2](../cdms/cdms.html) and Numeric module documentation for data extraction, creation and manipulation.
 
-###VCS Secondary Objects (or Secondary Elements)
+<a name="4.3"></a>
+
+### VCS Secondary Objects (or Secondary Elements)
 
 A description of each secondary object is warranted before showing their use and usefulness in VCS. It is these secondary objects that defines the detailed specification of the primary objects' attributes. Currently, there are five secondary objects with more to follow.
 
@@ -85,8 +91,10 @@ Graphical displays often contain textual inscriptions, which provide further inf
   * `texttableobject` - The text-table attributes set names that define the font, spacing, expansion, and color index. Its class symbol or alias is "Tt".
 
 
+<a name="4.4"></a>
 
-###Initializing VCS
+### Initializing VCS
+
 
 ######  Importing VCS
 
@@ -116,11 +124,17 @@ There can only be at most 8 VCS Canvas objects initialized at any given time.
 When a VCS Canvas object is initialized, the current template and graphics
 method will be displayed. For example:
 
-"Template' is currently set to P_default.
+```
+Template is currently set to P_default.
 
-Graphics method 'Boxfill' is currently set to Gfb_default.'"
+Graphics method 'Boxfill' is currently set to Gfb_default.
+```
 
-###VCS Functions
+<a name="4.5"></a>
+
+### VCS Functions
+
+<a name="4.5.1"></a>
 
 ####  Plotting in VCS
 
@@ -129,6 +143,8 @@ basic way is to use the plot() function. The simple plot() function command:
 plot(array1,[array2], [template object], [graphics_method object]). The
 examples below are showing how to plot a simple array using default values for
 everything else.
+
+<a name="4.5.2"></a>
 
 #####  Plotting a CDMS Persistent Array
 
@@ -157,11 +173,13 @@ v.plot(data, variable=psl) # call "plot" function to display the CDMS
 # Persistent Array on the VCS Canvas using default settings
 ```
 
-#####  Plotting a CU Slab Array
+<a name="4.5.3"></a>
+
+#####  Plotting a CDMS2 Slab Array
 
 ```python
 import vcs # import the VCS module
-import cdms2 # import CU for ingesting data
+import cdms2 # import CDMS2 for ingesting data
 
 f=cdms2.open('example.nc') # open file via the cdms2 module
 
@@ -171,10 +189,12 @@ v=vcs.init() # "v" is an instance of the VCS
 
 # class object (constructor)
 
-v.plot(s) # call "plot" function to display the CU "slab"
+v.plot(s) # call "plot" function to display the CDMS2 "slab"
 
 # array on the VCS Canvas using default settings
 ```
+
+<a name="4.5.4"></a>
 
 #####  Plotting a Numeric Array
 
@@ -195,6 +215,7 @@ v.plot(a) # call "plot" function to display the Numeric
 # "array" data on the VCS Canvas using default settings
 ```
 
+<a name="4.5.5"></a>
 
 #####  Plotting Using Keyword Arguments
 
@@ -210,9 +231,9 @@ plot(array1, [array2 [, template [, graphics method [,key=value [, key=value
 [, ...]]]]]]),
 ```
 
-where `array1` and `array2` are Numeric arrays or CU slabs; `template` represents a template object; `graphics method` represents a graphics method object (such as, `boxfill` or `isofill`); and `key=value` represents one variable attributes used to display textual information or to modify the plot's output. If no template is specified, then the default template will be used. If no graphics method is specified, then the default boxfill graphics method is used.
+where `array1` and `array2` are Numeric arrays or CDMS2 slabs; `template` represents a template object; `graphics method` represents a graphics method object (such as, `boxfill` or `isofill`); and `key=value` represents one variable attributes used to display textual information or to modify the plot's output. If no template is specified, then the default template will be used. If no graphics method is specified, then the default boxfill graphics method is used.
 
-######Variable attribute keys are:
+###### Variable attribute keys are:
 
 ```python
 comment1 = string # Comment plotted above file_comment
@@ -320,7 +341,7 @@ t = x.createtemplate('new') # create a new template from the default template
 
 iso = x.createisofill(`new') # create a new isofill graphics method from the default isofill
 
-x.plot(s, t, iso, continents=0) # call "plot" function to display the CU slab "s" using
+x.plot(s, t, iso, continents=0) # call "plot" function to display the CDMS2 slab "s" using
 # newly created template "t" and isofill graphics method "iso" and turn continents off.
 
 x.clear() # clear the VCS Canvas of all plots
