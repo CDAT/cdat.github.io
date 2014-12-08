@@ -4,7 +4,11 @@ $('a').each(function() {
     $(this).click(function(event) {
       event.preventDefault();
       event.stopPropagation();
-      window.open(this.href, '_blank');
+      if (this.target == "_self") {
+        window.open(this.href, "_self");
+      } else {
+        window.open(this.href, '_blank');
+      }
     });
   }
 });

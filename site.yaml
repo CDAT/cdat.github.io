@@ -15,6 +15,8 @@ context:
             url: /committee.html
           - title: Acknowledgments
             url: /acknowledgments.html
+          - title: Contact
+            url: /contact.html
       - title: Press 
         url:
           - title: ACME Demos
@@ -51,8 +53,6 @@ context:
         url:
           - title: Tutorials
             url: /tutorials.html
-          - title: Mailing list
-            url: /mailing-list.html
           - title: Wiki
             url: https://github.com/UV-CDAT/uvcdat/wiki
 site_title: UV-CDAT
