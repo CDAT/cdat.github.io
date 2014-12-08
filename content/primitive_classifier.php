@@ -18,6 +18,7 @@ function all_primitives() {
     return array(
       "text",
       "marker",
+      "fillarea",
     );
 }
 
