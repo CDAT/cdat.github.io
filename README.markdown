@@ -16,7 +16,7 @@ earlier. Remove Hyde and install it using a Python 2.7 or higher pip.
 
 ### First run
 
-    git clone https://github.com/aims-group/uvcdat-site.git
+    git clone https://github.com/UV-CDAT/uvcdat-site.git
     cd uvcdat-site
     hyde gen
 
