@@ -5,16 +5,19 @@
       {% if brand %}
       <a class="brand" href="{{ brand["url"] }}">{{ brand["title"] }}</a>
       {% endif %}
+      <form class="navbar-search form-search pull-right" action="{{ full_url('/search.php') }}" method="post">
+	<input name="searchwhat" type="hidden" value="site">
+        <div class="input-append">
+		<input type="search" name="googleseachTerm" class="search-query input-small" placeholder="search site...">
+		<button type="submit" class="btn btn-inverse"><i class="icon-search icon-white"></i></button>
+	</div>
+      </form>
       <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <form class="navbar-search pull-right" action="{{ full_url('/search.php') }}" method="post">
-	<input name="searchwhat" type="hidden" value="site">
-	<input type="search" name="googleseachTerm" class="search-query" placeholder="search site...">
-      </form>
-      <div class="nav-collapse collapse pull-right">
+      <div class="nav-collapse collapse pull-left">
         {% from "macros.j2" import render_main_menu with context %}
         {{ render_main_menu() }}
       </div>
