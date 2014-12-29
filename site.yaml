@@ -50,8 +50,6 @@ context:
             url: /documentation/utilities/utilities.html
           - title: VCS
             url: /documentation/vcs/vcs.html
-      - title: User Guides
-        url:
           - title: Tutorials
             url: /tutorials.html
           - title: Wiki
