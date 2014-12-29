@@ -2,9 +2,10 @@ context:
   data:
     home_url: index.html
     nav_hover: yes
+    brand:
+     title: UV<img src="/media/images/uvcdat.png" style="margin-top:-7px" />CDAT
+     url: /index.html
     menu:
-      - title: UV<img src="/media/images/uvcdat.png" style=margin-top:-7px />CDAT
-        url: /index.html
       - title: About
         url:
           - title: Mission

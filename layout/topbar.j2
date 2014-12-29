@@ -2,11 +2,14 @@
   {% block topbar %}
   <div class="navbar-inner">
     <div class="container">
-      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+      {% if brand %}
+      <a class="brand" href="{{ brand["url"] }}">{{ brand["title"] }}</a>
+      {% endif %}
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-      </button>
+      </a>
       <div class="nav-collapse">
         {% from "macros.j2" import render_main_menu with context %}
         {{ render_main_menu() }}
