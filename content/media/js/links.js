@@ -4,7 +4,7 @@ $('a').each(function() {
     $(this).click(function(event) {
       event.preventDefault();
       event.stopPropagation();
-      if (this.target == "_self") {
+      if (this.target == "_self" || /^mailto:/.test(this.href))  {
         window.open(this.href, "_self");
       } else {
         window.open(this.href, '_blank');
