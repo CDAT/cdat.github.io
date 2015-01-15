@@ -31,6 +31,9 @@ function get_all() {
 function filter_files($filter, $type, $sourcefiles) {
   if ($sourcefiles === NULL) {
     $sourcefiles = scandir("media/gallery/source");
+    sort($sourcefiles);
+    // Tom/Dean want the VCS3D examples to be more visible. They come at the end of the alphabet. Thusly, this is now sorted in reverse.
+    $sourcefiles = array_reverse($sourcefiles);
   }
 
   // print "$type: <pre>" . var_export($sourcefiles, TRUE) . "</pre>";
