@@ -2,9 +2,10 @@ context:
   data:
     home_url: index.html
     nav_hover: yes
+    brand:
+     title: UV<img src="/media/images/uvcdat.png" style="margin-top:-7px" />CDAT
+     url: /index.html
     menu:
-      - title: UV<img src="/media/images/uvcdat.png" style=margin-top:-7px />CDAT
-        url: /index.html
       - title: About
         url:
           - title: Mission
@@ -15,6 +16,8 @@ context:
             url: /committee.html
           - title: Acknowledgments
             url: /acknowledgments.html
+          - title: Contact
+            url: /contact.html
       - title: Press 
         url:
           - title: ACME Demos
@@ -47,12 +50,8 @@ context:
             url: /documentation/utilities/utilities.html
           - title: VCS
             url: /documentation/vcs/vcs.html
-      - title: User Guides
-        url:
           - title: Tutorials
             url: /tutorials.html
-          - title: Mailing list
-            url: /mailing-list.html
           - title: Wiki
             url: https://github.com/UV-CDAT/uvcdat/wiki
 site_title: UV-CDAT
