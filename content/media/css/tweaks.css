@@ -1,0 +1,7 @@
+/* fix for anchor links */
+*[id], *[name] {
+  padding-top: 45px;
+  margin-top: -45px;
+  -webkit-backgorund-clip: content-box;
+  background-clip: content-box;
+}

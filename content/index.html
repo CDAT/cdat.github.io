@@ -11,7 +11,6 @@ div.hero-unit {
   position: relative;
   z-index: 1;
 }
-
 div.jumbotron {
   position: relative;
   background-color: rgba(225, 225, 225, .85);
@@ -84,6 +83,17 @@ div.announcement h3 {
 div.announcement p {
   line-height: 1.2;
 }
+
+ul.local_nav {
+  font-size:25pt;
+  clear:both;
+}
+ul.local_nav > li {
+  float: left;
+  width:50%;
+  line-height:normal;
+  list-style-type:none;
+}
 </style>
 {% endblock css %}
 
@@ -102,7 +112,26 @@ div.announcement p {
   <p>The UV-CDAT team is pleased to announce the release of UV-CDAT version 2.1.0 (v2.1). Thanks to users and testers, this is a major bug fix release and therefore we strongly recommend users upgrade their UV-CDAT executable to v2.1. Currently for this release, we are providing binary distributions for RedHat6/CentOS6, Ubuntu 14.XX, Mac OS X 10.8 and up, and the installation source code. Additional binaries may become available later. Visit <a href="installing.html">Installing</a> for directions on how to get UVCDAT 2.1.</p>
 </div>
 
-<h2>The UV-CDAT Project</h2>
+<ul class="local_nav clearfix">
+  <li><a href="#new">New user?</a></li>
+  <li><a href="#help">Looking for help?</a></li>
+  <li><a href="#contribute">Interested in contributing?</a></li>
+  <li><a href="#info">Want to know more?</a></li>
+</ul>
+
+<h2 id="new">Welcome to UV-CDAT!</h2>
+
+New here? Don't worry! We'll help you get started. If you're interested in what you can do with UV-CDAT, you can take a look at our [gallery]. If you're interested in anything you see there, you can look into getting our application [installed][install].
+
+<h2 id="help">We'll give you a hand.</h2>
+
+Having trouble with something? We've got a great community of people who can give you a hand on our [support] email list.
+
+<h2 id="contribute">We're on GitHub!</h2>
+
+If you want to get to know us, you can come chat with us on our [developer mail list][dev]. If you want to get up to speed with the project, our [wiki] is kept up-to-date with what you need to get going.
+
+<h2 id="info">The UV-CDAT Project</h2>
 <p>
 UV-CDAT builds on the following key technologies:
 <ol>
@@ -141,6 +170,12 @@ mechanisms to support data analysis via the VisTrails infrastructure.
     <img src="media/images/nasa.svg" class="thumbnail" />
   </div>
 </div>
+
+[gallery]: /gallery.php
+[install]: /installing.html
+[support]: mailto:majordomo@lists.llnl.gov?body=subscribe%20uvcdat-support&amp;subject=Subscribe
+[dev]: mailto:majordomo@lists.llnl.gov?body=subscribe%20uvcdat-devel&amp;subject=Subscribe
+[wiki]: https://github.com/UV-CDAT/uvcdat/wiki
 
 <!--  <h3><a href="usage.html">Usage</a> <small>(beta)</small></h3> -->
 {% endblock main %}
