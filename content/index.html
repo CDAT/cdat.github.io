@@ -3,7 +3,7 @@ title: Home
 description: UV-CDAT Home Page
 ---
 
-{% extends "hero.j2" %}
+{% extends "jumbotron.j2" %}
 
 {% block css %}
 <style type="text/css">
@@ -11,15 +11,34 @@ div.hero-unit {
   position: relative;
   z-index: 1;
 }
-div.hero-unit div.hero-bg {
+
+div.jumbotron {
+  position: relative;
+  background-color: rgba(225, 225, 225, .85);
+  overflow:hidden;
+  font-weight: 200;
+  font-size:18px;
+}
+
+div.jumbotron h1 {
+  font-size: 60px;
+}
+div.jumbotron h2 {
+  font-size: 31.5px;
+}
+
+div.jumbotron > div.container {
+  padding: 60px 0;
+}
+
+div.hero-bg {
   position: absolute;
-  z-index: -1;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: .15;
-  background: url(media/images/uv-cdat.png) center center no-repeat;
+  left: 40px;
+  z-index:-1;
+  background-image: url(media/images/uv-cdat.png);
+  background-position: 0 -100px;
+  background-repeat:no-repeat;
+  background-size:750px auto;
   width: 100%;
   height: 100%;
 }
@@ -68,9 +87,14 @@ div.announcement p {
 </style>
 {% endblock css %}
 
-{% block hero %}
-{% include "carousel.j2" %}
-{% endblock hero %}
+
+{% block jumbo_header %}Ultrascale Visualization{% endblock jumbo_header %}
+{% block jumbo_subheader %}Climate Data Analysis Tools{% endblock jumbo_subheader %}
+{% block jumbo_body %}
+<p>UV-CDAT is a powerful and complete front-end to a rich set of visual-data exploration and analysis capabilities well suited for climate-data analysis problems.</p>
+<p><a href="mission.html" style="z-index:2;"class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+
+{% endblock jumbo_body %}
 {% block main %}
 
 <div class="hero-unit announcement">
