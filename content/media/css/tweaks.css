@@ -1,5 +1,5 @@
 /* fix for anchor links */
-*[id], *[name] {
+*[id], *[name]:not(input) {
   padding-top: 45px;
   margin-top: -45px;
   -webkit-backgorund-clip: content-box;
