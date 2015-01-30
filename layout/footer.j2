@@ -1,6 +1,7 @@
-<hr>
-<div id="footer" style="padding-left:300px;">
 <footer>
+<div class="container">
+<div class='row'>
+<div class='span8 offset2'>
     {% filter markdown -%}
     {% block footer %}
 [PCMDI] &bull; [CMIP5] &bull; [LLNL] &bull; [Privacy &amp; Legal Notice][disclaimer] &bull; [LLNL-WEB-460691][llnl-web] &bull; [Site Issues][issues] &bull; [Contact][contact]
@@ -15,6 +16,31 @@
 [contact]: /contact.html
     {% endblock footer %}
     {%- endfilter %}
-  </footer>
-
 </div>
+</div>
+<div class="row">
+	<div class="span2 offset2">
+		<h5>Project Information</h5>
+		<ul class="nav">
+			<li><a href="/mission.html">Mission</a></li>
+			<li><a href="/governance.html">Governance</a></li>
+			<!--<li><a href="/committee.html">Committee</a></li>-->
+			<li><a href="/acknowledgements.html">Acknowledgements</a></li>
+		</ul>
+	</div>
+	<div class="span2">
+		<h5>Press</h5>
+		<ul class="nav">
+			<li><a href="/demos.html">ACME Demos</a></li>
+			<li><a href="/publications.html">Publications</a></li>
+			<li><a href="/reports.html">Reports</a></li>
+			<li><a href="/presentations.html">Presentations</a></li>
+			<li><a href="/design.html">Design Documents</a></li>
+			<li><a href="/animations.html">Animations</a></li>
+			<li><a href="https://github.com/UV-CDAT/uvcdat/wiki/Use-Cases">Use Cases</a></li>
+			<li><a href="https://github.com/UV-CDAT/uvcdat/wiki/Roadmap-to-Release">Releases</a></li>
+		</ul>
+	</div>
+</div>
+</div>
+</footer>

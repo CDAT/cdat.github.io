@@ -6,54 +6,26 @@ context:
      title: UV<img src="/media/images/uvcdat.png" style="margin-top:-7px" />CDAT
      url: /index.html
     menu:
-      - title: About
-        url:
-          - title: Mission
-            url: /mission.html
-          - title: Governance
-            url: /governance.html
-          - title: Committee
-            url: /committee.html
-          - title: Acknowledgments
-            url: /acknowledgments.html
-          - title: Contact
-            url: /contact.html
-      - title: Press 
-        url:
-          - title: ACME Demos
-            url: /demos.html
-          - title: Publications
-            url: /publications.html
-          - title: Reports
-            url: /reports.html
-          - title: Presentations
-            url: /presentations.html
-          - title: Design Documents
-            url: /design.html
-          - title: Animations
-            url: /animations.html
-          - title: Use Cases
-            url: https://github.com/UV-CDAT/uvcdat/wiki/Use-Cases
-          - title: Releases
-            url: https://github.com/UV-CDAT/uvcdat/wiki/Roadmap-to-Release
-      - title: Installing
-        url: /installing.html
-      - title: Gallery
-        url: /gallery.php
-      - title: Contribute
-        url: https://github.com/UV-CDAT/uvcdat/wiki
-      - title: Documentation
-        url:
-          - title: CDMS
-            url: /documentation/cdms/cdms.html
-          - title: CDAT Utilities
-            url: /documentation/utilities/utilities.html
-          - title: VCS
-            url: /documentation/vcs/vcs.html
-          - title: Tutorials
-            url: /tutorials.html
-          - title: Wiki
-            url: https://github.com/UV-CDAT/uvcdat/wiki
+        - title: Gallery
+          url: /gallery.php
+        - title: Installing
+          url: /installing.html
+        - title: Documentation
+          url:
+            - title: CDMS
+              url: /documentation/cdms/cdms.html
+            - title: CDAT Utilities
+              url: /documentation/utilities/utilities.html
+            - title: VCS
+              url: /documentation/vcs/vcs.html
+            - title: Tutorials
+              url: /tutorials.html
+            - title: Wiki
+              url: https://github.com/UV-CDAT/uvcdat/wiki
+        - title: Contribute
+          url: https://github.com/UV-CDAT/uvcdat/wiki
+        - title: Contact
+          url: /contact.html
 site_title: UV-CDAT
 media_url: /media
 mode: development

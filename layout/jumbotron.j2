@@ -1,0 +1,43 @@
+{% extends "base.j2" %}
+
+{% block body %}
+    
+<div class="jumbotron subhead">
+	<div class="hero-bg"></div>
+	<div class="container">
+		<div class="row">
+			<div class="span10 offset1">
+				<h1> {% block jumbo_header %} {% endblock jumbo_header %} </h1>
+			</div>
+		</div>
+		<div class="row">
+		<div class="span10 offset1">
+		<h2> {% block jumbo_subheader %} {% endblock jumbo_subheader %} </h2>
+		</div>
+		</div>
+		<div class="row">
+		<div class="span10 offset1">
+		{% block jumbo_body %}
+		{% filter markdown -%}
+		{%- endfilter %}
+		{% endblock jumbo_body %}
+		</div>
+		</div>
+	</div>
+</div>
+
+<div class="container" id="top">
+  {# Used to stick stuff in the container, but not interfere with the existing content #}
+  {% block inside_container %}
+<div class="row">
+<div class="span12">
+  {% filter markdown -%}
+  {% block main %}{% endblock %}
+  {%- endfilter %}
+</div>
+</div>
+
+  {% endblock inside_container %}
+</div> <!-- /container -->
+
+{% endblock body %}
