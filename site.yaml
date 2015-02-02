@@ -22,8 +22,6 @@ context:
               url: /tutorials.html
             - title: Wiki
               url: https://github.com/UV-CDAT/uvcdat/wiki
-        - title: Contribute
-          url: https://github.com/UV-CDAT/uvcdat/wiki
         - title: Contact
           url: /contact.html
 site_title: UV-CDAT
