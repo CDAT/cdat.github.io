@@ -1,3 +1,4 @@
+---
 title: Search
 subtitle: Columns template
 description: Test description
