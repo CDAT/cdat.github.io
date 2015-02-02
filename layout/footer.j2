@@ -1,23 +1,5 @@
 <footer>
 <div class="container">
-<div class='row'>
-<div class='span8 offset2'>
-    {% filter markdown -%}
-    {% block footer %}
-[PCMDI] &bull; [CMIP5] &bull; [LLNL] &bull; [Privacy &amp; Legal Notice][disclaimer] &bull; [LLNL-WEB-460691][llnl-web] &bull; [Site Issues][issues] &bull; [Contact][contact]
-[pcmdi]:      http://www-pcmdi.llnl.gov/
-[cmip5]:      http://cmip-pcmdi.llnl.gov/cmip5/
-[llnl]:       http://www.llnl.gov/
-[disclaimer]: https://raw.github.com/UV-CDAT/uvcdat/master/docs/Legal.txt
-[llnl-web]:   https://www.llnl.gov/disclaimer.html
-[issues]:     https://github.com/aims-group/uvcdat-site/issues
-[githubwiki]: {{ media_url('images/githubwiki.png') }}
-[GitHub logo]: {{ media_url('images/github.svg') }}
-[contact]: /contact.html
-    {% endblock footer %}
-    {%- endfilter %}
-</div>
-</div>
 <div class="row">
 	<div class="span2 offset2">
 		<h5>Project Information</h5>
@@ -41,6 +23,32 @@
 			<li><a href="https://github.com/UV-CDAT/uvcdat/wiki/Roadmap-to-Release">Releases</a></li>
 		</ul>
 	</div>
+	<div class="span2">
+		<h5>Contribute</h5>
+		<ul class="nav">
+		  <li><a href="https://github.com/UV-CDAT/uvcdat">GitHub Project Page</a></li>
+          <li><a href="https://github.com/UV-CDAT/uvcdat/wiki">Wiki</a></li>
+          <li><a href="https://github.com/UV-CDAT/uvcdat/issues/new">Report a Bug</a></li>
+		</ul>
+	</div>
+</div>
+<div class='row'>
+<div class='span8 offset2'>
+    {% filter markdown -%}
+    {% block footer %}
+[PCMDI] &bull; [CMIP5] &bull; [LLNL] &bull; [Privacy &amp; Legal Notice][disclaimer] &bull; [LLNL-WEB-460691][llnl-web] &bull; [Site Issues][issues] &bull; [Contact][contact]
+[pcmdi]:      http://www-pcmdi.llnl.gov/
+[cmip5]:      http://cmip-pcmdi.llnl.gov/cmip5/
+[llnl]:       http://www.llnl.gov/
+[disclaimer]: https://raw.github.com/UV-CDAT/uvcdat/master/docs/Legal.txt
+[llnl-web]:   https://www.llnl.gov/disclaimer.html
+[issues]:     https://github.com/aims-group/uvcdat-site/issues
+[githubwiki]: {{ media_url('images/githubwiki.png') }}
+[GitHub logo]: {{ media_url('images/github.svg') }}
+[contact]: /contact.html
+    {% endblock footer %}
+    {%- endfilter %}
+</div>
 </div>
 </div>
 </footer>
