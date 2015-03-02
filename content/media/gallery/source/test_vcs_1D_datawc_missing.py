@@ -1,8 +1,4 @@
-import vcs,numpy,cdms2,MV2,os,sys
-src=sys.argv[1]
-pth = os.path.join(os.path.dirname(src),"..")
-sys.path.append(pth)
-import checkimage
+import vcs, numpy, MV2
 
 x=vcs.init()
 x.setbgoutputdimensions(1200,1091,units="pixels")
@@ -39,16 +35,7 @@ data = """
 """.split()
 data = numpy.array(data,dtype=numpy.float)
 data = MV2.masked_less(data,-900)
-#yx.datawc_x1 = 0
-#yx.datawc_x2 = 80
-##yx.datawc_y1 =-12 
-#yx.datawc_y2 = 12 
-
 
 x.plot(data,yx,bg=1)
 fnm = "test_vcs_1D_datawc_missing.png"
 x.png(fnm)
-print "fnm:",fnm
-print "src:",src
-ret = checkimage.check_result_image(fnm,src,checkimage.defaultThreshold)
-sys.exit(ret)

@@ -1,9 +1,7 @@
-import vcs,numpy,cdms2,MV2,os,sys
-src=sys.argv[1]
-pth = os.path.join(os.path.dirname(src),"..")
-sys.path.append(pth)
-import checkimage
+import vcs,cdms2,sys
+
 f=cdms2.open(sys.prefix+"/sample_data/clt.nc")
+
 s=f("clt",time=slice(0,1),squeeze=1)
 x=vcs.init()
 x.setbgoutputdimensions(1200,1091,units="pixels")
@@ -15,8 +13,3 @@ iso.fillareindices= [4,5,6,7,8,9,10,11,12,13,14,15]
 x.plot(s,iso,bg=1)
 fnm = "test_vcs_patterns.png"
 x.png(fnm)
-
-print "fnm:",fnm
-print "src:",src
-ret = checkimage.check_result_image(fnm,src,checkimage.defaultThreshold)
-sys.exit(ret)

@@ -13,7 +13,7 @@ x.setcolormap("rainbow")
 gm = vcs.createboxfill()
 
 p = vcs.createprojection()
-try:
+
 ptype = int('-3')
 p.type = ptype
 gm.projection = p
