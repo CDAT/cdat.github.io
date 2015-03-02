@@ -1,8 +1,5 @@
-import cdms2,sys,vcs,sys,os
-src=sys.argv[1]
-pth = os.path.join(os.path.dirname(src),"..")
-sys.path.append(pth)
-import checkimage
+import cdms2, sys, vcs
+
 x=vcs.init()
 x.setbgoutputdimensions(1200,1091,units="pixels")
 f=cdms2.open(sys.prefix+"/sample_data/ta_ncep_87-6-88-4.nc")
@@ -16,10 +13,3 @@ x.plot(s,b,bg=1)
 fnm= "test_boxfill_lev1_lev2_ta_missing.png"
 
 x.png(fnm)
-
-print "fnm:",fnm
-print "src:",src
-ret = checkimage.check_result_image(fnm,src,checkimage.defaultThreshold)
-sys.exit(ret)
-raw_input()
-

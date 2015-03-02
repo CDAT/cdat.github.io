@@ -1,8 +1,5 @@
-import vcs,numpy,cdms2,MV2,os,sys
-src=sys.argv[1]
-pth = os.path.join(os.path.dirname(src),"..")
-sys.path.append(pth)
-import checkimage
+import vcs,cdms2,os,sys
+
 x=vcs.init()
 
 x.setbgoutputdimensions(1200,1091,units="pixels")
@@ -15,9 +12,3 @@ s=f(vr,slice(0,1),longitude=slice(90,91),squeeze=1,latitude=(90,-90),level=(0,10
 x.plot(s,bg=1)
 fnm = "test_vcs_flipX.png"
 x.png(fnm)
-print "fnm:",fnm
-print "src:",src
-ret = checkimage.check_result_image(fnm,src,checkimage.defaultThreshold)
-sys.exit(ret)
-
-

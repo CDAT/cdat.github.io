@@ -1,8 +1,4 @@
-import vcs,numpy,os,sys
-src=sys.argv[1]
-pth = os.path.join(os.path.dirname(src),"..")
-sys.path.append(pth)
-import checkimage
+import vcs,numpy
 
 x=vcs.init()
 x.setbgoutputdimensions(1200,1091,units="pixels")
@@ -18,11 +14,3 @@ x.plot(d,one,bg=1)
 
 fnm = "test_1D_with_manyDs.png"
 x.png(fnm)
-
-print "fnm:",fnm
-print "src:",src
-ret = checkimage.check_result_image(fnm,src,checkimage.defaultThreshold)
-sys.exit(ret)
-
-
-
