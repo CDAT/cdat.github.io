@@ -1,5 +1,4 @@
-# uvcdat-site
-
+## uvcdat-site
 This is the new [UV-CDAT website]. It was generated with
 [Webshooter][aims-group/webshooter] and runs on [Hyde][hyde/hyde]. It uses
 [hyde-bootstrap][aims-group/hyde-bootstrap] as a starting point.
@@ -7,7 +6,6 @@ This is the new [UV-CDAT website]. It was generated with
 ## Usage
 
 ### Dependencies
-
 * [Hyde][hyde/hyde] (`pip install hyde` with Python >= 2.7)
 
 If you're getting errors when running even `hyde --version`, and you installed
