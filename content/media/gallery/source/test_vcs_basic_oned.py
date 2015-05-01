@@ -10,8 +10,8 @@ bg = not False
 x=vcs.init()
 x.setbgoutputdimensions(1200,1091,units="pixels")
 x.setcolormap("rainbow")
-gm_type="oneD"
-gm = vcs.createoneD()
+
+gm = vcs.create1d()
 
 
 xtra = {}
