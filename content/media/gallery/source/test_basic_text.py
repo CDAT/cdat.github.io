@@ -9,6 +9,6 @@ txt.string = ["SAMPLE TEXT A","SAMPLE TEXT B","SAMPLE TEXT C","SAMPLE TEXT D","S
 txt.halign = "center"
 txt.valign="base"
 txt.angle=45
-x.plot(txt,bg=1)
+x.plot(txt)
 fnm = "test_basic_text.png"
 x.png(fnm)

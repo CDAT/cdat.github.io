@@ -8,7 +8,7 @@ b.level_1=20
 b.level_2=80
 b.ext_1="y"
 b.ext_2="y"
-x.plot(s,b,bg=1)
+x.plot(s,b)
 
 fnm= "test_boxfill_lev1_lev2_ext1_ext2.png"
 

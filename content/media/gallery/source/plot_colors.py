@@ -61,7 +61,7 @@ lines.levels = levs
 x.plot(s, lines)
 
 # Plot the labels we defined
-x.plot(txt, bg = 1)
-x.plot(txt2, bg = 1)
+x.plot(txt)
+x.plot(txt2)
 
 x.png("plot_colors.png")

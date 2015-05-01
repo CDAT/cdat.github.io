@@ -27,6 +27,6 @@ yx.datawc_y1 =-12
 yx.datawc_y2 = 12 
 
 
-x.plot(data,yx,bg=1)
+x.plot(data,yx)
 fnm = "test_vcs_1D_datawc.png"
 x.png(fnm)

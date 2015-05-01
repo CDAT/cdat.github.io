@@ -6,7 +6,7 @@ s=f("clt",slice(0,1),squeeze=1)
 b=x.createboxfill()
 b.level_1=20
 b.level_2=80
-x.plot(s,b,bg=1)
+x.plot(s,b)
 
 fnm = "test_boxfill_lev1_lev2.png"
 
