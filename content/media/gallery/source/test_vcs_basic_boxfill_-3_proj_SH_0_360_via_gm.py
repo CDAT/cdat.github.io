@@ -8,7 +8,7 @@ import os
 import MV2
 bg = not False
 x=vcs.init()
-x.setbgoutputdimensions(1200,1091,units="pixels")
+
 x.setcolormap("rainbow")
 gm = vcs.createboxfill()
 
@@ -28,7 +28,7 @@ gm.datawc_x2=360.0
 xtra["longitude"] = (0.0,360.0)
 
 
-f=cdms2.open(os.path.join(sys.prefix,'sample_data','clt.nc'))
+f=cdms2.open(os.path.join(vcs.prefix,'sample_data','clt.nc'))
 s=f("clt",**xtra)
 x.plot(s,gm,bg=bg)
 

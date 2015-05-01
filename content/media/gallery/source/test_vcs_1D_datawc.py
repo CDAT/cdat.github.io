@@ -2,7 +2,7 @@ import vcs, numpy, MV2, sys
 
 x=vcs.init()
 
-x.setbgoutputdimensions(1200,1091,units="pixels")
+
 yx =x.createyxvsx()
 
 data = """-11.14902417  -9.17390922  -7.29515002  
@@ -27,6 +27,6 @@ yx.datawc_y1 =-12
 yx.datawc_y2 = 12 
 
 
-x.plot(data,yx,bg=1)
+x.plot(data,yx)
 fnm = "test_vcs_1D_datawc.png"
 x.png(fnm)

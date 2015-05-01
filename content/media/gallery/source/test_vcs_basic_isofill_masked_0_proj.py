@@ -8,7 +8,7 @@ import os
 import MV2
 bg = not False
 x=vcs.init()
-x.setbgoutputdimensions(1200,1091,units="pixels")
+
 x.setcolormap("rainbow")
 gm = vcs.createisofill()
 
@@ -18,7 +18,7 @@ p.type = ptype
 gm.projection = p
 
 xtra = {}
-f=cdms2.open(os.path.join(sys.prefix,'sample_data','clt.nc'))
+f=cdms2.open(os.path.join(vcs.prefix,'sample_data','clt.nc'))
 s=f("clt",**xtra)
 s=MV2.masked_greater(s,78.)
 x.plot(s,gm,bg=bg)

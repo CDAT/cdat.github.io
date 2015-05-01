@@ -1,7 +1,7 @@
 import vcs, numpy, MV2
 
 x=vcs.init()
-x.setbgoutputdimensions(1200,1091,units="pixels")
+
 
 yx =x.createyxvsx()
 
@@ -36,6 +36,6 @@ data = """
 data = numpy.array(data,dtype=numpy.float)
 data = MV2.masked_less(data,-900)
 
-x.plot(data,yx,bg=1)
+x.plot(data,yx)
 fnm = "test_vcs_1D_datawc_missing.png"
 x.png(fnm)
