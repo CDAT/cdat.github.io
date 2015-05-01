@@ -34,11 +34,19 @@ if ($source === FALSE) {
   <p>
     (<a href="<?php echo $image_path; ?>">png</a>)
     <?php foreach ($others as $extension=>$filepath): ?>
-    (<a href="<?php echo $filepath; ?>"><?php echo $extension; ?></a>)
+    (<a href="<?php echo $filepath; ?>"><?php
+      $has_datafile = $extension == "nc";
+      echo $extension;
+    ?></a>)
     <?php endforeach; ?>
     <?php if ($show): ?>
     <a href="<?php echo $source_path; ?>">Source</a>
     <?php endif; ?>
   </p>
   <p><img src="<?php echo $image_path; ?>" /></p>
+  <?php if ($has_datafile): ?>
+  <div class="alert alert-warning">
+    This script requires this <a href="<?php echo $others["nc"]; ?>">data set</a> in order to run.
+  </div>
+  <?php endif; ?>
   <pre><?php echo $source; ?></pre>
