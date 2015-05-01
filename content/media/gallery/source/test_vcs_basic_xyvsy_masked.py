@@ -14,7 +14,7 @@ gm = vcs.createxyvsy()
 
 
 xtra = {}
-f=cdms2.open(os.path.join(sys.prefix,'sample_data','clt.nc'))
+f=cdms2.open(os.path.join(vcs.prefix,'sample_data','clt.nc'))
 s=f("clt",**xtra)
 s=MV2.masked_greater(s,78.)
 s = s(latitude=(20,20,"cob"),longitude=(112,112,"cob"),squeeze=1)

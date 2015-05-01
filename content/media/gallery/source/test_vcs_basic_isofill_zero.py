@@ -14,7 +14,7 @@ gm = vcs.createisofill()
 
 
 xtra = {}
-f=cdms2.open(os.path.join(sys.prefix,'sample_data','clt.nc'))
+f=cdms2.open(os.path.join(vcs.prefix,'sample_data','clt.nc'))
 s=f("clt",**xtra)
 s-=s
 x.plot(s,gm,bg=bg)

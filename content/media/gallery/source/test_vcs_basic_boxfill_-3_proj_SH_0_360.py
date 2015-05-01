@@ -23,7 +23,7 @@ xtra["latitude"] = (-90.0,0.0)
 
 xtra["longitude"] = (0.0,360.0)
 
-f=cdms2.open(os.path.join(sys.prefix,'sample_data','clt.nc'))
+f=cdms2.open(os.path.join(vcs.prefix,'sample_data','clt.nc'))
 s=f("clt",**xtra)
 x.plot(s,gm,bg=bg)
 

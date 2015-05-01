@@ -1,6 +1,6 @@
 import vcs, cdms2, sys
 x = vcs.init()
-f = cdms2.open( sys.prefix+"/sample_data/geos5-sample.nc" ) 
+f = cdms2.open( vcs.prefix+"/sample_data/geos5-sample.nc" ) 
 v = f["uwnd"]
 dv3d = vcs.get3d_scalar()    
 dv3d.ToggleClipping = ( 40, 360, -28, 90 )

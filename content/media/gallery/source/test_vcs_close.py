@@ -1,6 +1,6 @@
 import sys, vcs, cdms2
 
-cdmsfile = cdms2.open(sys.prefix+"/sample_data/clt.nc")
+cdmsfile = cdms2.open(vcs.prefix+"/sample_data/clt.nc")
 data = cdmsfile('clt')
 x = vcs.init()
 x.plot(data)

@@ -28,7 +28,7 @@ gm.datawc_x2=180.0
 xtra["longitude"] = (-180.0,180.0)
 
 
-f=cdms2.open(os.path.join(sys.prefix,'sample_data','clt.nc'))
+f=cdms2.open(os.path.join(vcs.prefix,'sample_data','clt.nc'))
 s=f("clt",**xtra)
 x.plot(s,gm,bg=bg)
 

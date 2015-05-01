@@ -1,7 +1,7 @@
 import cdms2,sys,vcs
 
 x=vcs.init()
-f=cdms2.open(sys.prefix+"/sample_data/clt.nc")
+f=cdms2.open(vcs.prefix+"/sample_data/clt.nc")
 s=f("clt",slice(0,1),squeeze=1)
 b=x.createboxfill()
 b.level_1=20

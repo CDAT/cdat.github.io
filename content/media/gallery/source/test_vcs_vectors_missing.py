@@ -11,7 +11,7 @@ gm.scale = 1.
 nm_xtra=""
 xtra = {}
 
-f=cdms2.open(os.path.join(sys.prefix,"sample_data","clt.nc"))
+f=cdms2.open(os.path.join(vcs.prefix,"sample_data","clt.nc"))
 u=f("u")
 v=f("v")
 u=MV2.masked_greater(u,35.)

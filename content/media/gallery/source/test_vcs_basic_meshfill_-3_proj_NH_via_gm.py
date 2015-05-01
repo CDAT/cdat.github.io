@@ -24,7 +24,7 @@ gm.datawc_y2=0.0
 xtra["latitude"] = (90.0,0.0)
 
 
-f=cdms2.open(os.path.join(sys.prefix,'sample_data','sampleCurveGrid4.nc'))
+f=cdms2.open(os.path.join(vcs.prefix,'sample_data','sampleCurveGrid4.nc'))
 s=f("sample",**xtra)
 gm.mesh=True
 x.plot(s,gm,bg=bg)

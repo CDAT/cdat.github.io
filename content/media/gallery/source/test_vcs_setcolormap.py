@@ -3,7 +3,7 @@ import os
 import sys
 import vcs
 
-cdmsfile = cdms2.open(os.path.join(sys.prefix,"sample_data","clt.nc"))
+cdmsfile = cdms2.open(os.path.join(vcs.prefix,"sample_data","clt.nc"))
 data = cdmsfile('clt')
 
 x=vcs.init()

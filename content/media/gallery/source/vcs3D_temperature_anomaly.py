@@ -7,7 +7,7 @@ Created on Jun 18, 2014
 import vcs, cdms2, cdutil, genutil, sys
 
 x = vcs.init()
-f = cdms2.open( sys.prefix+"/sample_data/geos5-sample.nc" )  
+f = cdms2.open( vcs.prefix+"/sample_data/geos5-sample.nc" )  
 dv3d = vcs.get3d_scalar()    
 dv3d.ToggleVolumePlot = vcs.on
 dv3d.ScaleColormap = [-15.0, 15.0, 1] 
