@@ -13,7 +13,7 @@ s = s(lat = (25., 75.6), lon = (25., 85.))
 # Initialize a canvas
 x = vcs.init()
 # Set canvas resolution
-x.setbgoutputdimensions(1000, 800, units = "pixels")
+
 # Set canvas colormap
 x.setcolormap("bl_to_darkred")
 

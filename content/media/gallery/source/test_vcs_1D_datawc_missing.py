@@ -1,7 +1,7 @@
 import vcs, numpy, MV2
 
 x=vcs.init()
-x.setbgoutputdimensions(1200,1091,units="pixels")
+
 
 yx =x.createyxvsx()
 

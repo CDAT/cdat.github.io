@@ -4,7 +4,7 @@ import cdms2
 import MV2
 
 x=vcs.init()
-x.setbgoutputdimensions(1200,1091,units="pixels")
+
 x.setcolormap("rainbow")
 gm=vcs.createvector()
 gm.scale = 1.

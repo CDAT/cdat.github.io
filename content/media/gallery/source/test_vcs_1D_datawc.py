@@ -2,7 +2,7 @@ import vcs, numpy, MV2, sys
 
 x=vcs.init()
 
-x.setbgoutputdimensions(1200,1091,units="pixels")
+
 yx =x.createyxvsx()
 
 data = """-11.14902417  -9.17390922  -7.29515002  

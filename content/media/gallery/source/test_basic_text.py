@@ -1,7 +1,7 @@
 import vcs
 
 x=vcs.init()
-x.setbgoutputdimensions(1200,1091,units="pixels")
+
 txt=x.createtext()
 txt.x = [.0000005,.00000005,.5,.99999,.999999]
 txt.y=[0.05,.9,.5,.9,0.05]

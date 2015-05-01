@@ -1,7 +1,7 @@
 import vcs,numpy,os,sys
 
 x=vcs.init()
-x.setbgoutputdimensions(1200,1091,units="pixels")
+
 
 d = numpy.sin(numpy.arange(100))
 

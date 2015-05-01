@@ -7,7 +7,7 @@ cdmsfile = cdms2.open(os.path.join(sys.prefix,"sample_data","clt.nc"))
 data = cdmsfile('clt')
 
 x=vcs.init()
-x.setbgoutputdimensions(1200,1091,units="pixels")
+
 
 t=x.gettemplate('default')
 x.plot(data, t, bg=True)

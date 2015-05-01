@@ -14,7 +14,7 @@ s = s(latitude = (0, 90.))
 x = vcs.init()
 
 # Set the size of the canvas
-x.setbgoutputdimensions(1000, 500, units = "pixels")
+
 
 # Change the colormap
 x.setcolormap("bl_to_darkred")

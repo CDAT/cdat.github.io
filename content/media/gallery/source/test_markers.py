@@ -1,7 +1,7 @@
 import vcs
 
 x=vcs.init()
-x.setbgoutputdimensions(1200,1091,units="pixels")
+
 
 m = x.createmarker()
 m.x=[[0.,],[5,],[10.,],[15.]]
