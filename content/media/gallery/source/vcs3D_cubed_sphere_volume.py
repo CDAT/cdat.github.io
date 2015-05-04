@@ -1,7 +1,7 @@
 import vcs, cdms2, sys
 
 x = vcs.init()
-f = cdms2.open( "f1850c5_t2_ANN_climo-native.nc" )   
+f = cdms2.open( "vcs3d_cubed_sphere_volume.nc" )   
 v = f["RELHUM"] 
 dv3d = vcs.get3d_scalar()
 dv3d.ScaleTransferFunction = [ 78.7, 132.0 ]
