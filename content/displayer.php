@@ -14,9 +14,9 @@ $other_path     = "media/gallery/other";
 $others = array();
 
 foreach (scandir($other_path) as $other) {
-  $file_info = pathinfo($other);
-  if ($file_info["filename"] === $file_name) {
-    $others[$file_info["extension"]] = $other_path . "/$other";
+  if (strpos($other, $file_name) === 0) {
+    // Create a list of associated files
+    $others[] = $other_path . "/" . $other;
   }
 }
 
@@ -33,10 +33,14 @@ if ($source === FALSE) {
   <h2><?php echo cleanName($file_name); ?></h2>
   <p>
     (<a href="<?php echo $image_path; ?>">png</a>)
-    <?php foreach ($others as $extension=>$filepath): ?>
+    <?php foreach ($others as $filepath): ?>
     (<a href="<?php echo $filepath; ?>"><?php
-      $has_datafile = $extension == "nc";
-      echo $extension;
+      $parts = explode(".", $filepath);
+      $last_part = array_pop($parts);
+      echo $last_part;
+      if ($last_part == "nc") {
+        $has_datafile = TRUE;
+      }
     ?></a>)
     <?php endforeach; ?>
     <?php if ($show): ?>
@@ -46,7 +50,7 @@ if ($source === FALSE) {
   <p><img src="<?php echo $image_path; ?>" /></p>
   <?php if ($has_datafile): ?>
   <div class="alert alert-warning">
-    This script requires this <a href="<?php echo $others["nc"]; ?>">data set</a> in order to run.
+    This script requires data sets linked above (<b>nc</b> files) in order to run.
   </div>
   <?php endif; ?>
   <pre><?php echo $source; ?></pre>
