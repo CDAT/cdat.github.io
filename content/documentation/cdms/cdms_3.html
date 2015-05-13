@@ -62,96 +62,96 @@ The following table describes the methods for creating time types.
 
 ###### Table 3.1 Time Constructors
 
- <table class="table">
-    <tr>
-      <th>Type</th>
+<table class="table">
+  <tr>
+    <th>Type</th>
 
-      <th>Constructor</th>
+    <th>Constructor</th>
 
-      <th>Definition</th>
-    </tr>
+    <th>Definition</th>
+  </tr>
 
-    <tr>
-      <td>Reltime</td>
+  <tr>
+    <td>Reltime</td>
 
-      <td><code>cdtime.reltime(value, relunits)</code></td>
+    <td><code>cdtime.reltime(value, relunits)</code></td>
 
-      <td>
-        <p>Create a relative time type.</p>
+    <td>
+      <p>Create a relative time type.</p>
 
-        <p><code>value</code> is an integer or floating point value.</p>
+      <p><code>value</code> is an integer or floating point value.</p>
 
-        <p><code>relunits</code> is a string of the form "<i>unit(</i>s) [since
-        <i>basetime</i>]" where</p>
+      <p><code>relunits</code> is a string of the form "<i>unit(</i>s) [since
+      <i>basetime</i>]" where</p>
 
-        <p><code>unit = [second | minute | hour | day | week | month | season |
-        year]</code></p>
+      <p><code>unit = [second | minute | hour | day | week | month | season |
+      year]</code></p>
 
-        <p><code>basetime</code> has the form <code>yyyy-mm-dd hh:mi:ss</code>. The
-        default basetime is 1979-1-1, if no <code>since</code> clause is specified.</p>
+      <p><code>basetime</code> has the form <code>yyyy-mm-dd hh:mi:ss</code>. The
+      default basetime is 1979-1-1, if no <code>since</code> clause is specified.</p>
 
-        <p><strong>Example:</strong></p>
+      <p><strong>Example:</strong></p>
 
-        <p><code>r = cdtime.reltime(28, "days since 1996-1-1")</code></p>
-      </td>
-    </tr>
+      <p><code>r = cdtime.reltime(28, "days since 1996-1-1")</code></p>
+    </td>
+  </tr>
 
-    <tr>
-      <td>Comptime</td>
+  <tr>
+    <td>Comptime</td>
 
-      <td><code>cdtime.comptime(year, month=1, day=1, hour=0, minute=0,
-      second=0.0)</code></td>
+    <td><code>cdtime.comptime(year, month=1, day=1, hour=0, minute=0,
+    second=0.0)</code></td>
 
-      <td>
-        <p>Create a component time type.</p>
+    <td>
+      <p>Create a component time type.</p>
 
-        <p><code>year</code> is an integer.</p>
+      <p><code>year</code> is an integer.</p>
 
-        <p><code>month</code> is an integer in the range 1 .. 12</p>
+      <p><code>month</code> is an integer in the range 1 .. 12</p>
 
-        <p><code>day</code> is an integer in the range 1 .. 31</p>
+      <p><code>day</code> is an integer in the range 1 .. 31</p>
 
-        <p><code>hour</code> is an integer in the range 0 .. 23</p>
+      <p><code>hour</code> is an integer in the range 0 .. 23</p>
 
-        <p><code>minute</code> is an integer in the range 0 .. 59</p>
+      <p><code>minute</code> is an integer in the range 0 .. 59</p>
 
-        <p><code>second</code> is a floating point number in the range 0.0 ,, 60.0</p>
+      <p><code>second</code> is a floating point number in the range 0.0 ,, 60.0</p>
 
-        <p><strong>Example:</strong></p>
+      <p><strong>Example:</strong></p>
 
-        <p><code>c = cdtime.comptime(1996, 2, 28)</code></p>
-      </td>
-    </tr>
+      <p><code>c = cdtime.comptime(1996, 2, 28)</code></p>
+    </td>
+  </tr>
 
-    <tr>
-      <td>Comptime</td>
+  <tr>
+    <td>Comptime</td>
 
-      <td>
-        <p><strong>[Deprecated]</strong> <code>cdtime.abstime(absvalue,
-        absunits)</code></p>
-      </td>
+    <td>
+      <p><strong>[Deprecated]</strong> <code>cdtime.abstime(absvalue,
+      absunits)</code></p>
+    </td>
 
-      <td>
-        <p>Create a component time from an absolute time representation.</p>
+    <td>
+      <p>Create a component time from an absolute time representation.</p>
 
-        <p><code>absvalue</code> is a floating-point encoding of an absolute time.</p>
+      <p><code>absvalue</code> is a floating-point encoding of an absolute time.</p>
 
-        <p><code>absunits</code> is the units template, a string of the form <span>"unit
-        as</span> <span>format"</span>, where unit is one of <span>second, minute, hour,
-        day,</span> <span>calendar_month,</span> or <span>calendar_year.</span> format is
-        a string ofthe form <span>"%x[%x[...] ][.%f]"</span>, where <span>'x'</span> is
-        one of the formatletters <span>'Y'</span> (year, including century),
-        <span>'m'</span> (two digit month,01=January), <span>'d'</span> (two-digit day
-        within month), <span>'H'</span> (hourssince midnight), <span>'M'</span>
-        (minutes), or <span>'S'</span> (seconds ). The optional <span>'.%f'</span>
-        denotes a floating-point fraction of the unit.</p>
+      <p><code>absunits</code> is the units template, a string of the form <span>"unit
+      as</span> <span>format"</span>, where unit is one of <span>second, minute, hour,
+      day,</span> <span>calendar_month,</span> or <span>calendar_year.</span> format is
+      a string ofthe form <span>"%x[%x[...] ][.%f]"</span>, where <span>'x'</span> is
+      one of the formatletters <span>'Y'</span> (year, including century),
+      <span>'m'</span> (two digit month,01=January), <span>'d'</span> (two-digit day
+      within month), <span>'H'</span> (hourssince midnight), <span>'M'</span>
+      (minutes), or <span>'S'</span> (seconds ). The optional <span>'.%f'</span>
+      denotes a floating-point fraction of the unit.</p>
 
-        <p><strong>Example:</strong></p>
+      <p><strong>Example:</strong></p>
 
-        <p><code>c = cdtime.abstime(19960228.0, "day as %Y%m%d.%f")</code></p>
-      </td>
-    </tr>
-  </table>
+      <p><code>c = cdtime.abstime(19960228.0, "day as %Y%m%d.%f")</code></p>
+    </td>
+  </tr>
+</table>
 
 
 <a name="3.4"></a>
