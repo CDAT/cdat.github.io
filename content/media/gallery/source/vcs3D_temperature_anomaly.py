@@ -20,4 +20,4 @@ va = cdutil.averager( v0, axis='x' )
 v01,va1=genutil.grower(v0,va)
 v = v01 - va1
 x.plot( v, dv3d )
-x.interact()
+x.png('temp_anomaly.png')

@@ -17,4 +17,4 @@ dv3d.Camera={'Position': (-161, -171, 279), 'ViewUp': (.29, 0.67, 0.68), 'FocalP
 dv3d_v = vcs.get3d_vector()    
 v = f["uwnd"] 
 x.plot( v, dv3d )
-x.interact()
+x.png("slice.png")
