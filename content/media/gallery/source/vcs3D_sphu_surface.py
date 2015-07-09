@@ -14,4 +14,4 @@ dv3d_v = vcs.get3d_scalar()
 v = f["uwnd"] 
 dv3d.VerticalScaling = 7.0 
 x.plot( v, dv3d )
-x.interact()
+x.png("sphu_surface.png")

@@ -16,4 +16,4 @@ dv3d.VerticalScaling = 7.0
 dv3d.ScaleColormap = [.00129, 0.0055, 1] 
 dv3d.ScaleTransferFunction =  [0.0015, 0.0088, 1]
 x.plot( v, dv3d )
-x.interact()
+x.png("sphu_volume.png")

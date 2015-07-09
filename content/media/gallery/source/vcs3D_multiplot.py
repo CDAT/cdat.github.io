@@ -20,4 +20,4 @@ dv3d.ScaleColormap = [ -46.0, 48.0 ]
 dv3d.ScaleTransferFunction =  [ 12.0, 77.0 ]
 
 x.plot( v, dv3d )
-x.interact()
+x.png("multiplot.png")

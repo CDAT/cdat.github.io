@@ -16,8 +16,4 @@ dv3d.VerticalScaling = 4.0
 dv3d.ScaleColormap = [-46.0, 46.0, 1] 
 dv3d.ScaleTransferFunction =  [10.0, 77.0, 1]   
 x.plot( v, dv3d )
-x.interact()
-
-
-
-
+x.png("uwnd_volume.png")
