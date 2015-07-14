@@ -7,7 +7,8 @@ isset($_REQUEST['file']) ? $file_name = $_REQUEST['file'] : $file_name = "defaul
 
 $image_path     = "media/gallery/fullsize/" . $file_name . ".png";
 $thumbnail_path = "media/gallery/thumbnail/" . $file_name . ".png";
-$source_path    = "media/gallery/source/" . $file_name . ".py";
+$source_path    = "media/gallery/source/";
+// . $file_name . ".py";
 
 $other_path     = "media/gallery/other";
 
@@ -20,7 +21,14 @@ foreach (scandir($other_path) as $other) {
   }
 }
 
-$source = file_get_contents($source_path);
+$source = FALSE;
+
+// Scan source directory for matching script
+foreach (scandir($source_path) as $source_file) {
+    if ($source_file === $file_name + ".py") {
+        $source = file_get_contents($source_path + "/" + $source_file);
+    }
+}
 
 if ($source === FALSE) {
   $source = "No Source File Available";
