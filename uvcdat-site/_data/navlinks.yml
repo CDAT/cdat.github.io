@@ -1,0 +1,18 @@
+- title: Gallery
+  url: /gallery.html
+- title: Installing
+  url: /installing.html
+- title: Documentation
+  dropdown:
+    - title: CDMS
+      url: /documentation/cdms/cdms.html
+    - title: CDAT Utilities
+      url: /documentation/utilities/utilities.html
+    - title: VCS
+      url: /documentation/vcs/vcs.html
+    - title: Tutorials
+      url: /tutorials.html
+    - title: Wiki
+      url: https://github.com/UV-CDAT/uvcdat/wiki
+- title: Contact
+  url: /contact.html

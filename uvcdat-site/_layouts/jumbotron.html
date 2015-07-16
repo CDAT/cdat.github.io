@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <div class="jumbotron no-overflow">
+      <div class="hero-bg"></div>
+      <div class="container">
+        <h1>{{ page.jumbo_title }}</h1>
+        <h2>{{ page.jumbo_subtitle }}</h2>
+        <p>{{ page.jumbo_text }}</p>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+        {{ content }}
+    </div>
+    
+    {% include footer.html %}
+
+  </body>
+
+</html>

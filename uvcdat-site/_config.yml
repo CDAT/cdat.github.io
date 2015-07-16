@@ -1,0 +1,11 @@
+# Site settings
+title: UV-CDAT
+baseurl: "/" # the subpath of your site, e.g. /blog/
+url: "http://uvcdat.llnl.gov" # the base hostname & protocol for your site
+logo: "/images/uvcdat.png"
+# Build settings
+markdown: kramdown
+collections:
+  examples:
+    output: true
+highlighter: pygments

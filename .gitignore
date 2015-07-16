@@ -8,4 +8,5 @@ originals/
 wiki/zHTML/
 content/media/gallery/thumbnail/*.png
 *.pyc
+_site
 
