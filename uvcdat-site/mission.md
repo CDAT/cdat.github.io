@@ -1,12 +1,12 @@
 ---
 title: Mission
-subtitle: Columns template
-description: Test description
+layout: default
+
 ---
 
-{% extends "base.j2" %}
 
-{% block container %}
+
+
 
 ## Mission
 Building a large distributed system to disseminate and manage large-scale
@@ -53,4 +53,4 @@ script captures the entire process for reproducibility and knowledge sharing.
 
 [uv-cdat concept]: media/images/uv-cdat-concept.png
 
-{% endblock container %}
+

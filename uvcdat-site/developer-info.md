@@ -1,12 +1,12 @@
 ---
 title: Developer info
-subtitle: Columns template
-description: Test description
+layout: default
+
 ---
 
-{% extends "base.j2" %}
 
-{% block css %}
+
+
 <style type="text/css">
   div.span4 {
     border: 1px solid black;
@@ -19,9 +19,9 @@ description: Test description
     color: black;
   }
 </style>
-{% endblock css %}
 
-{% block container %}
+
+
 
 ## Developer info
 
@@ -50,4 +50,4 @@ If you're ready to go, pick which project you'd like to contribute to:
   </div>
 </div>
 
-{% endblock container %}
+

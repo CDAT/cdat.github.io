@@ -1,12 +1,12 @@
 ---
 title: Demos
-subtitle: Columns template
-description: Test description
+layout: default
+
 ---
 
-{% extends "base.j2" %}
 
-{% block container %}
+
+
 
 ## ACME Demos
 <p>
@@ -20,4 +20,4 @@ description: Test description
 </ul>
 </p>
 <hr>
-{% endblock container %}
+

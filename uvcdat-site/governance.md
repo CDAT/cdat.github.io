@@ -1,12 +1,12 @@
 ---
 title: Governance
-subtitle: Columns template
-description: Test description
+layout: default
+
 ---
 
-{% extends "base.j2" %}
 
-{% block container %}
+
+
 
 ## Governance
 
@@ -74,4 +74,4 @@ The URB member mailing list:
 [individual agreement]: media/pdf/uv-cdat-individual-contributor-agreement.pdf
 [corporate agreement]:  media/pdf/uv-cdat-corporate-contributor-agreement.pdf
 
-{% endblock container %}
+

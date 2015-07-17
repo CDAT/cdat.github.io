@@ -1,12 +1,7 @@
 ---
-title: Acknowledgments
-subtitle: Columns template
-description: Test description
+title: Acknowledgements
+layout: default
 ---
-
-{% extends "base.j2" %}
-
-{% block container %}
 
 ## Acknowledgments
 
@@ -39,5 +34,3 @@ institutions (e.g., NOAA, NNSA, NSF, DOD, and others) to help define and
 implement new technologies into the open framework. These relationships and
 interactions offer a unique opportunity to leverage major programs across
 agencies in the service of DOE science priorities.
-
-{% endblock container %}

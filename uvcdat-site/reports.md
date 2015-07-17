@@ -1,12 +1,12 @@
 ---
 title: Reports
-subtitle: Columns template
-description: Test description
+layout: default
+
 ---
 
-{% extends "base.j2" %}
 
-{% block container %}
+
+
 
 ## Reports
 
@@ -28,4 +28,4 @@ UV-CDAT framework addresses challenges in analysis and visualization and incorpo
 including parallelism for better efficiency, higher speed, and more accurate scientific inferences. Today, it
 provides more than 600 users access to more analysis and visualization products than any other single source.
 
-{% endblock container %}
+

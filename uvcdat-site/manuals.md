@@ -1,12 +1,12 @@
 ---
 title: Manuals
-subtitle: Columns template
-description: Test description
+layout: default
+
 ---
 
-{% extends "base.j2" %}
 
-{% block container %}
+
+
 
 ###Manuals
 
@@ -14,4 +14,4 @@ description: Test description
 * [Utilities](http://uvcdat.llnl.gov/documentation/utilities/utilities.html)
 * [VCS](http://uvcdat.llnl.gov/documentation/vcs/vcs.html)
 
-{% endblock container %}
+

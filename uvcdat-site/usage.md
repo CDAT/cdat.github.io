@@ -1,12 +1,12 @@
 ---
 title: Usage
-subtitle: Columns template
-description: Test description
+layout: default
+
 ---
 
-{% extends "base.j2" %}
 
-{% block container %}
+
+
 ## Usage Stats
 
 #### [Number of unique users per country][country]
@@ -17,4 +17,4 @@ description: Test description
 [country]: usage-country.html
 [platform]: usage-platform.html
 [platform-detail]: usage-platform-details.html
-{% endblock container %}
+

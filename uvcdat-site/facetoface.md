@@ -1,12 +1,12 @@
 ---
 title: F2F 2014
-subtitle: Columns template
+layout: default
 description: Face To Face Presentations from F2F 2014
 ---
 
-{% extends "base.j2" %}
 
-{% block container %}
+
+
 
 ## Presentations from the ESGF/UV-CDAT Face To Face Meeting, 2014
 
@@ -159,4 +159,4 @@ description: Face To Face Presentations from F2F 2014
 [bionode]: http://aims-group.github.io/pdf/f2f2014/esgf_bionode.pdf
 [jasmin]: http://aims-group.github.io/pdf/f2f2014/jasmin_cloud.pdf
 
-{% endblock container %}
+

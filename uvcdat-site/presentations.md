@@ -1,12 +1,12 @@
 ---
 title: Presentations
-subtitle: Columns template
-description: Test description
+layout: default
+
 ---
 
-{% extends "base.j2" %}
 
-{% block container %}
+
+
 ## Presentations
 
 ### 2013
@@ -105,4 +105,4 @@ description: Test description
 
 * Supercomputing, Seattle, Washington, 12 - 18 November 2011, <a href="media/pdf/IMG_1477.JPG" target="_blank" >"Ultrascale Climate Data Visualization and Analysis"</a>
 
-{% endblock container %}
+

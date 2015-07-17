@@ -1,12 +1,12 @@
 ---
 title: Design Documents
-subtitle: Columns template
-description: Test description
+layout: default
+
 ---
 
-{% extends "base.j2" %}
 
-{% block container %}
+
+
 
 ## Design Documents
 
@@ -18,5 +18,5 @@ description: Test description
 #### <a target="_blank" href="https://docs.google.com/file/d/0B7wntV0jIObsYU0weUEwclg1eVk/edit?usp=sharing&pli=1">UV-CDAT web pdf <img src="media/images/icon_external_site.gif"></a>
 
 
-{% endblock container %}
+
 

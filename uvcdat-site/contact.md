@@ -1,12 +1,9 @@
 ---
 title: Contact
-subtitle: Columns template
-description: Test description
+layout: default
+
 ---
 
-{% extends "base.j2" %}
-
-{% block css %}
 
 <style type="text/css">
   img.contact-logo {
@@ -14,9 +11,7 @@ description: Test description
   }
 </style>
 
-{% endblock css %}
 
-{% block container %}
 
 ### Contact Us
 
@@ -74,4 +69,4 @@ To leave the mailing list, send an email to [majordomo@lists.llnl.gov][devunsub]
 [subscribe]:       mailto:majordomo@lists.llnl.gov?body=subscribe%20uvcdat-support&amp;subject=Subscribe
 [unsubscribe]:     mailto:majordomo@lists.llnl.gov?body=unsubscribe%20uvcdat-support&amp;subject=Unsubscribe
 
-{% endblock container %}
+

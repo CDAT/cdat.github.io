@@ -1,11 +1,10 @@
 ---
 title: Animations
-subtitle: Columns template
-description: Test description
+layout: default
+
 ---
 
-{% extends "base.j2" %}
-{% block container %}
+
 
 ## Animations 
 
@@ -24,4 +23,4 @@ animation on increases in upper-ocean temperatures. Several studies have used we
 are consistent with model responses to anthropogenic forcing and inconsistent with model-based estimates of natural variability, June 2011. 
 ---
 
-{% endblock container %}
+

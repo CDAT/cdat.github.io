@@ -1,12 +1,12 @@
 ---
 title: Installing 
-subtitle: Columns template
-description: Test description
+layout: default
+
 ---
 
-{% extends "base.j2" %}
 
-{% block container %}
+
+
 ### Quick Facts
 * The UV-CDAT application is currently available for Linux and Mac
 * Though UV-CDAT will build (and has been built on) many Linux distros we currently only support Ubuntu and RedHat/CentOS
@@ -23,5 +23,5 @@ description: Test description
 * [Binary Installation Instructions (Recommended) <i class="icon icon-globe"></i>](https://github.com/UV-CDAT/uvcdat/wiki/install)
 * [Build from Source Directions <i class="icon icon-globe"></i>](https://github.com/UV-CDAT/uvcdat/wiki/Build)
 
-{% endblock container %}
+
 

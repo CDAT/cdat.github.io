@@ -2,9 +2,9 @@
 title: Tutorials
 ---
 
-{% extends "base.j2" %}
 
-{% block css %}
+
+
 <style type="text/css">
 div.tutorial {
   background-color: #eee;
@@ -18,9 +18,9 @@ div.row > div.tutorial > img {
   width: 90px;
 }
 </style>
-{% endblock css %}
 
-{% block container %}
+
+
 <h2>Tutorials</h2>
 <div class="row">
   <div class="span5 tutorial">
@@ -38,4 +38,4 @@ div.row > div.tutorial > img {
     <a class="tutorial-title" href="http://uvcdat.llnl.gov/media/mov/UVCDAT_error_tf-ta_anno4.mp4" target="_blank">3D Scalar Example with calculated variable</a>
   </div>
 </div>
-{% endblock container %}
+
