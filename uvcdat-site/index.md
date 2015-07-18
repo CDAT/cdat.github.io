@@ -67,10 +67,10 @@ mechanisms to support data analysis via the VisTrails infrastructure.
 
 <h3>U.S. Sponsors</h3>
 <div class="sponsor_image">
-  <img src="media/images/doe.svg" class="thumbnail" />
+  <img src="/images/doe.svg" class="thumbnail" />
 </div>
 <div class="sponsor_image">
-  <img src="media/images/nasa.svg" class="thumbnail" />
+  <img src="/images/nasa.svg" class="thumbnail" />
 </div>
 
 [gallery]: /gallery.php

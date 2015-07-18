@@ -55,6 +55,12 @@ div.announcement {
   font: 0/0 a;
 }
 
+div.sponsor_image img {
+  float:left;
+  height:200px;
+  margin:1em;
+}
+
 /* magic to vertically center image */
 .img-wrapper:before {
   content: ' ';
@@ -145,3 +151,55 @@ img {
 .highlight .vg { color: #008080 } /* Name.Variable.Global */
 .highlight .vi { color: #008080 } /* Name.Variable.Instance */
 .highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
+
+/* fix for anchor links */
+a[name] {
+  padding-top: 45px;
+  margin-top: -45px;
+  -webkit-backgorund-clip: content-box;
+  background-clip: content-box;
+}
+
+.footer-links {
+  text-align:center;
+}
+
+footer .nav>li>a {
+  padding-top:0;
+  padding-bottom:0;
+}
+
+footer a {
+  width:100%;
+  color: #888;
+}
+
+footer a:hover {
+  color: #AAA;
+}
+
+footer {
+  color:#777;
+  background-color:#EEE;
+  border-top:1px solid #DDD;
+  box-shadow: 0 1px 0 #FFF inset;
+  padding-top:30px;
+}
+
+.footernav {
+  border-right:1px solid #DDD;
+  box-shadow: -1px 0 0 #FFF inset;
+}
+
+.footernav:first-child {
+  text-align:right;
+}
+
+.footernav:last-child {
+  border-right:0;
+  box-shadow:none;
+}
+
+.bottom-links {
+  padding-top: 1em;
+}
