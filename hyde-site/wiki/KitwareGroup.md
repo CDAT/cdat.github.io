@@ -1,4 +1,0 @@
-###KitwareGroup
-
-* Berkgeveci
-* Aashish Chaudhary
