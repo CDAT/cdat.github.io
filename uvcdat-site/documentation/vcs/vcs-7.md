@@ -1,6 +1,8 @@
 ---
 title: VCS Chapter 7
-layout: default
+layout: docs
+manual: vcs
+index: 7
 ---
 
 
@@ -20,17 +22,17 @@ Guide](vcs-5.html) for colormap commands.
 **Note**, to see the list of object attributes, use the list() function. For
 example:
 
-``` python
+{% highlight python %}
 import vcs
 
 a=vcs.init()
 
-ln=a.createline(`new')
+ln=a.createline('new')
 ln.list() # This call will list the line attributes and their values
 
-tt=a.createtexttable(`new')
+tt=a.createtexttable('new')
 tt.list() # This call will list the text-table attributes and their values
-```
+{% endhighlight %}
 
 <table class="table">
     <tr>

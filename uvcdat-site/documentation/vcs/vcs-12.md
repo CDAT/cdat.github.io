@@ -58,7 +58,7 @@ The following example illustrates these features.
 
 ##### Example
 
-{% highlight text %}
+{% highlight python %}
 import vcs, cdms2, sys
 x = vcs.init()
 f = cdms2.open( sys.prefix+"/sample_data/geos5-sample.nc" )
@@ -108,7 +108,7 @@ The following example illustrates these features.
 
 ##### Example
 
-{% highlight text %}
+{% highlight python %}
 import vcs, cdms2, sys
 x = vcs.init()
 f = cdms2.open(sys.prefix+"/sample_data/geos5-sample.nc")
@@ -134,7 +134,7 @@ x.interact()
 
 The attributes illustrated above will configure all plot constituents (e.g. `Volume`, `Surface`, and `Slice`) simultaneously. It is also possible to configure the plot constituents separately for some graphic method attributes (currently only the scaling of opacity and colormap). This is accomplished using a dictionary with keys designating the constituents to be configured (`Volume`, `Surface` or `Slice`) and values representing the corresponding configurations. For example, one can use the following command to set the colormap scaling to `[ 16.0, 30.0 ]` for the `Volume` constituent, `[ 30.0, 35.0 ]` for the `Surface` constituent, and `[ -46.0, 48.0 ]` for all other constituents:
 
-{% highlight text %}
+{% highlight python %}
 dv3d.ScaleColormap = ( [ -46.0, 48.0 ], { 'Volume': [ 16.0, 30.0 ], 'Surface': [ 30.0, 35.0 ] }
 {% endhighlight %}
 
@@ -144,7 +144,7 @@ The following example illustrates these features.
 
 ##### Example
 
-{% highlight text %}
+{% highlight python %}
 import vcs, cdms2, sys
 x = vcs.init()
 f = cdms2.open( sys.prefix+"/sample_data/geos5-sample.nc" )
@@ -186,7 +186,7 @@ x.interact()
 
 ##### Example
 
-{% highlight text %}
+{% highlight python %}
 import vcs, cdms2, sys
 x = vcs.init()
 f = cdms2.open(sys.prefix+"/sample_data/clt.nc")
@@ -234,7 +234,7 @@ Attribute | Use | Expected Value | Interaction Modality
 
 ##### Example
 
-{% highlight text %}
+{% highlight python %}
 x = vcs.init()
 f = cdms2.open("/Data/CAM/f1850c5_t2_ANN_climo-native.nc")
 v = f["U"]

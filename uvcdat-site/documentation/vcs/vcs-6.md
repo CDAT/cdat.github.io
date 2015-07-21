@@ -21,20 +21,20 @@ segment of the display.
 **Note**, to see the list of object attributes, use the list() function. For
 example:
 
-``` python
+{% highlight python %}
 import vcs
 
 a=vcs.init()
 
-box=a.createboxfill(`new')
+box=a.createboxfill('new')
 box.list() # This call will list the boxfill attributes and their values
 
-isof=a.createisofill(`new')
+isof=a.createisofill('new')
 isof.list() # This call will list the isofill attributes and their values
 
-tpl=a.createtemplate(`new')
+tpl=a.createtemplate('new')
 tpl.list() # This call will list the template attributes and their values
-```
+{% endhighlight %}
 
 
 <table class="table">

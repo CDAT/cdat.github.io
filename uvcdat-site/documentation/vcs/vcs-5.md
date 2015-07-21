@@ -52,10 +52,10 @@ the function.
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs,cdms2
 
-file=cdms2.open(`filename.nc')
+file=cdms2.open('filename.nc')
 slab=file.getslab('variable')
 a=vcs.init()
 # This examples constructs 4 VCS Canvas a.plot(slab)
@@ -79,7 +79,7 @@ isoline=c.getisoline('quick')
 # Get 'quick' isoline graphics method
 c.plot(isoline,slab,template)
 # Plot slab using isoline and template objects
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -105,13 +105,13 @@ c.plot(isoline,slab,template)
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 
 vcs.help()
 vcs.help('init')
 vcs.help('plot')
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -130,14 +130,14 @@ vcs.help('plot')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 ln=a.getline('red')
 # Get a VCS line object
 a.objecthelp(ln)
 # This will print out information on how to use ln
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -181,7 +181,7 @@ a.objecthelp(ln)
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 ...
 a=vcs.init()
@@ -197,7 +197,7 @@ box.datawc(-45.0, 45.0, -90.0, 90.0)
 ...
 a.update()
 # Update the changes manually
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -215,7 +215,7 @@ a.update()
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 ...
 a=vcs.init()
@@ -229,7 +229,7 @@ box.datawc(1e20,1e20,1e20,1e20)
 box.datawc(-45.0, 45.0, -90.0, 90.0)
 a.update()
 # Update the changes manually
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -248,11 +248,11 @@ a.update()
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.open()
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -270,12 +270,12 @@ a.open()
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.plot(array,'default','isofill','quick')
 a.close()
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -292,12 +292,12 @@ a.close()
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 a=vcs.init()
 a.plot(array)
 a.portrait()
 # Change the VCS Canvas orientation and set object flag to portrait
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -314,12 +314,12 @@ a.portrait()
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 a=vcs.init()
 a.plot(array)
 a.landscape()
 # Change the VCS Canvas orientation and set object flag to landscape
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -340,12 +340,12 @@ a.landscape()
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 a=vcs.init()
 a.plot(array)
 a.page()
 # Change the VCS Canvas orientation and set object flag to portrait
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -373,11 +373,11 @@ a.page()
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 a=vcs.init()
 a.plot(array,'default','isofill','quick')
 a.geometry(450, 337,100, 100)
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -435,7 +435,7 @@ a.geometry(450, 337,100, 100)
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.plot(array)
@@ -443,7 +443,7 @@ a.printer('printer_name')
 # Send plot(s) to postscript printer
 a.printer('printer_name','p')
 # Send plot(s) to the printer in portrait mode
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -510,7 +510,7 @@ a.printer('printer_name','p')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.plot(array)
@@ -527,7 +527,7 @@ a.gif('example',orientation='l')
 a.gif('example',orientation='p')
 # merge gif image into existing gif file and set the gif geometry
 a.gif('example',geometry='600x500')
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -542,8 +542,8 @@ a.gif('example',geometry='600x500')
         <p>Postscript output is another form of vector graphics. It is larger than its
         CGM output counter part, because it is stored out in ASCII format.</p>
 
-        <p>There are two modes for saving a postscript file: `Append' (a) mode appends
-        postscript output to an existing postscript file; and `Replace' (r) mode
+        <p>There are two modes for saving a postscript file: 'Append' (a) mode appends
+        postscript output to an existing postscript file; and 'Replace' (r) mode
         overwrites an existing postscript file with new postscript output. The default
         mode is to overwrite an existing postscript file (i.e. mode (r)).</p>
       </td>
@@ -596,7 +596,7 @@ a.gif('example',geometry='600x500')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.plot(array)
@@ -614,7 +614,7 @@ a.postscript('example', width=11.5, height= 8.5)
 a.postscript('example', width=21, height=29.7, units='cm')
 # US Legal output and control of margins (for printer friendly output), default units 'inches'
 a.postscript('example', right_margin=.2,left_margin=.2,top_margin=.2,bottom_margin=.2)
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -642,10 +642,10 @@ a.postscript('example', right_margin=.2,left_margin=.2,top_margin=.2,bottom_marg
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 a=vcs.init()
 a.plot(array,'default','isofill','quick')
-# Note, if you don't specify the extension `.cgm' at the end of file name, then the extension `.cgm' will be put on for you.
+# Note, if you don't specify the extension '.cgm' at the end of file name, then the extension '.cgm' will be put on for you.
 a.cgm(o)
 a.cgm('example')
 # by default a cgm file will be appended it an existing file
@@ -653,7 +653,7 @@ a.cgm('example','a')
 # 'a' will instruct cgm to append to an existing file
 a.cgm('example','r')
 # 'r' will instruct cgm to over write an existing file
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -703,16 +703,16 @@ a.cgm('example','r')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.plot(array)
-# Note, if you don't specify the extension `.ras' at the end of file name, then the extension `.ras' will be put on for you.
+# Note, if you don't specify the extension '.ras' at the end of file name, then the extension '.ras' will be put on for you.
 a.raster('example','a')
 # append raster image to existing file
 a.raster('example','r')
 # over write existing raster file
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -739,14 +739,14 @@ a.raster('example','r')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.plot(array)
 a.pstogif('filename.ps') # convert to landscape gif file
 a.pstogif('filename.ps','l') # convert to landscape gif file
 a.pstogif('filename.ps','p') # convert to portrait gif file
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -788,7 +788,7 @@ a.pstogif('filename.ps','p') # convert to portrait gif file
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 x=vcs.init()
 # x is an instance of the VCS class object (constructor)
@@ -808,7 +808,7 @@ box=x.createboxfill('new')
 # create boxfill graphics method 'new'
 x.plot(box,t,array)
 # plot array data using box 'new' and template 't'
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -832,7 +832,7 @@ x.plot(box,t,array)
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('boxfill')
@@ -859,7 +859,7 @@ a.boxfill('AMIP',array,'quick')
 # Use 'AMIP' template and 'quick' boxfill
 a.boxfill('AMIP','quick',array)
 # Use 'AMIP' template and 'quick' boxfill
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -883,7 +883,7 @@ a.boxfill('AMIP','quick',array)
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('continents')
@@ -896,7 +896,7 @@ a.clear()
 # Clear VCS canvas
 a.continents(array,con,template)
 # Plot array using specified con and template
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -920,7 +920,7 @@ a.continents(array,con,template)
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('isofill')
@@ -933,7 +933,7 @@ a.clear()
 # Clear VCS canvas
 a.isofill(array,iso,template)
 # Plot array using specified iso and template
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -957,7 +957,7 @@ a.isofill(array,iso,template)
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 a=vcs.init()
 a.show('isoline')
 # Show all the existing isoline graphics methods
@@ -968,7 +968,7 @@ a.isoline(array,iso)
 a.clear()
 # Clear VCS canvas a.isoline(array,iso,template)
 # Plot array using specified iso and template
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -992,7 +992,7 @@ a.clear()
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 a=vcs.init()
 a.show('outfill')
 # Show all the existing outfill graphics methods
@@ -1004,7 +1004,7 @@ a.clear()
 # Clear VCS canvas
 a.outfill(array,out,template)
 # Plot array using specified out and template
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -1028,7 +1028,7 @@ a.outfill(array,out,template)
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('outline')
@@ -1040,7 +1040,7 @@ a.outline(array,out)
 a.clear()
 # Clear VCS canvas a.outline(array,out,template)
 # Plot array using specified out and template
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -1064,7 +1064,7 @@ a.clear()
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 a=vcs.init()
 a.show('scatter')
 # Show all the existing scatter graphics methods
@@ -1076,7 +1076,7 @@ a.clear()
 # Clear VCS canvas
 a.scatter(array1,array2,sct,template)
 # Plot array using specified sct and template
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -1100,7 +1100,7 @@ a.scatter(array1,array2,sct,template)
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('vector')
@@ -1113,7 +1113,7 @@ a.clear()
 # Clear VCS canvas
 a.vector(array1,array2,vec,template)
 # Plot array using specified vec and template
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -1137,7 +1137,7 @@ a.vector(array1,array2,vec,template)
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('xvsy')
@@ -1150,7 +1150,7 @@ a.clear()
 # Clear VCS canvas
 a.xvsy(array1,array2,xy,template)
 # Plot array using specified xy and template
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -1174,7 +1174,7 @@ a.xvsy(array1,array2,xy,template)
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('xyvsy')
@@ -1188,7 +1188,7 @@ a.clear()
 a.xyvsy(array,xyy,template)
 # Plot array using specified xyy and template
 
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -1212,7 +1212,7 @@ a.xyvsy(array,xyy,template)
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('yxvsx')
@@ -1225,7 +1225,7 @@ a.clear()
 # Clear VCS canvas
 a.yxvsx(array,yxx,template)
 # Plot array using specified yxx and template
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -1241,12 +1241,12 @@ a.yxvsx(array,yxx,template)
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.plot(array,'default','isofill','quick')
 a.clear()
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -1270,7 +1270,7 @@ a.clear()
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 box=a.getboxfill() # Get an default boxfill
@@ -1283,7 +1283,7 @@ print a.graphicsmethodname(iso) # Will
 print a.graphicsmethodname(ln) # Will return
 # None, because ln is not a
 # graphics method
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -1301,12 +1301,12 @@ print a.graphicsmethodname(ln) # Will return
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 cont_type = a.getcontinentstype() # Get the
 # continents type
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -1329,7 +1329,7 @@ cont_type = a.getcontinentstype() # Get the
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 box=a.getboxfill('quick')
@@ -1337,7 +1337,7 @@ box=a.getboxfill('quick')
     ...
 if a.isgraphicsmethod(box):
     box.list()
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -1358,7 +1358,7 @@ if a.isgraphicsmethod(box):
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 box=a.getboxfill("quick")
@@ -1366,7 +1366,7 @@ box=a.getboxfill("quick")
 ...
 if a.isboxfill(box):
     box.list()
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -1387,7 +1387,7 @@ if a.isboxfill(box):
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 con=a.getcontinents("quick")
@@ -1396,7 +1396,7 @@ con=a.getcontinents("quick")
 if a.iscontinents(con):
     con.list()
 
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -1417,7 +1417,7 @@ if a.iscontinents(con):
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 iso=a.getisofill("quick")
@@ -1425,7 +1425,7 @@ iso=a.getisofill("quick")
 ...
 if a.isisofill(iso):
     iso.list()
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -1446,7 +1446,7 @@ if a.isisofill(iso):
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 iso=a.getisoline("quick")
@@ -1454,7 +1454,7 @@ iso=a.getisoline("quick")
 ...
 if a.isisoline(iso):
     iso.list()
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -1475,7 +1475,7 @@ if a.isisoline(iso):
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 out=a.getoutfill("quick")
@@ -1485,7 +1485,7 @@ out=a.getoutfill("quick")
 if a.isoutfill(out):
     out.list()
 
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -1506,7 +1506,7 @@ if a.isoutfill(out):
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 out=a.getoutline("quick")
@@ -1514,7 +1514,7 @@ out=a.getoutline("quick")
 ...
 if a.isoutline(out):
     out.list()
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -1535,7 +1535,7 @@ if a.isoutline(out):
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 vec=a.getvector("quick")
@@ -1543,7 +1543,7 @@ vec=a.getvector("quick")
 ...
 if a.isvector(vec):
     vec.list()
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -1564,7 +1564,7 @@ if a.isvector(vec):
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 xy=a.getxvsy("quick")
@@ -1572,7 +1572,7 @@ xy=a.getxvsy("quick")
 ...
 if a.isxvsy(xy):
     xy.list()
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -1593,7 +1593,7 @@ if a.isxvsy(xy):
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 xyy=a.getxyvsy("quick")
@@ -1601,7 +1601,7 @@ xyy=a.getxyvsy("quick")
 ...
 if a.isxyvsy(xyy):
     xyy.list()
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -1622,14 +1622,14 @@ if a.isxyvsy(xyy):
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 a=vcs.init()
 yxx=a.getyxvsx("quick")
 # To Modify an existing yxvsx object
 ...
 if a.isyxvsx(yxx):
     yxx.list()
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -1652,7 +1652,7 @@ if a.isyxvsx(yxx):
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a = vcs.init()
 scalar = a.getxyvsy("quick")
@@ -1660,7 +1660,7 @@ scalar = a.getxyvsy("quick")
 ...
 if vcs.is3d_scalar(scalar):
     scalar.list()
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -1683,7 +1683,7 @@ if vcs.is3d_scalar(scalar):
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a = vcs.init()
 vector = a.getxyvsy("quick")
@@ -1691,7 +1691,7 @@ vector = a.getxyvsy("quick")
 ...
 if vcs.is3d_vector(vector):
     vector.list()
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -1712,7 +1712,7 @@ if vcs.is3d_vector(vector):
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 a=vcs.init()
 templt=a.gettemplate('quick')
 # Modify an existing template named 'quick'
@@ -1720,7 +1720,7 @@ templt=a.gettemplate('quick')
 if a.istemplate(templt):
     templt.list()
 # If it is a template then list its members
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -1757,14 +1757,14 @@ if a.istemplate(templt):
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 a=vcs.init()
 line=a.getline('red')
 # To Modify an existing line object
 ...
 if a.issecondaryobject(line):
     box.list()
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -1781,14 +1781,14 @@ if a.issecondaryobject(line):
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 a=vcs.init()
 fa=a.getfillarea("def37")
 # To Modify an existing fillarea object
 ...
 if a.isfillarea(fa):
     fa.list()
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -1805,14 +1805,14 @@ if a.isfillarea(fa):
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 a=vcs.init()
 ln=a.getline("red")
 # To Modify an existing line object
 ...
 if a.isline(ln):
     ln.list()
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -1829,14 +1829,14 @@ if a.isline(ln):
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 a=vcs.init()
 mk=a.getmarker("red")
 # To Modify an existing marker object
 ...
 if a.ismarker(mk):
     mk.list()
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -1853,7 +1853,7 @@ if a.ismarker(mk):
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 a=vcs.init()
 tc=a.gettextcombined("std", "7left")
 # To Modify existing text table and orientation objects
@@ -1864,7 +1864,7 @@ if a.istexttable(tc):
     tc.list()
 if a.istextorientation(tc):
     tc.list()
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -1881,14 +1881,14 @@ if a.istextorientation(tc):
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 a=vcs.init()
 to=a.gettextorientation("7left")
 # To Modify an existing text orientation object
 ...
 if a.istextorientation(to):
     to.list()
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -1905,14 +1905,14 @@ if a.istextorientation(to):
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 a=vcs.init()
 tt=a.gettexttable("std")
 # To Modify an existing text table object
 ...
 if a.istexttable(tt):
     tt.list()
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -1936,11 +1936,11 @@ if a.istexttable(tt):
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.listelements()
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -1957,7 +1957,7 @@ a.listelements()
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('boxfill')
@@ -1965,7 +1965,7 @@ a.show('isofill')
 a.show('template')
 a.show('line')
 a.show('marker')
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -2005,7 +2005,7 @@ a.show('marker')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('boxfill')
@@ -2013,7 +2013,7 @@ box=a.createboxfill('example1')
 a.show('boxfill')
 box=a.createboxfill('example2','quick')
 a.show('boxfill')
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -2040,7 +2040,7 @@ a.show('boxfill')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('boxfill')
@@ -2049,7 +2049,7 @@ box=a.getboxfill()
 # box instance of 'default' boxfill graphics method
 box2=a.getboxfill('quick')
 # box2 instance of existing 'quick' boxfill graphics method
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -2141,7 +2141,7 @@ a.mode=1, or 0</pre>
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 
@@ -2188,7 +2188,7 @@ ext_2='y'
 missing=241
 # Color index value range 0 to 255
 
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -2222,7 +2222,7 @@ missing=241
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('continents')
@@ -2230,7 +2230,7 @@ con=a.createcontinents('example1',)
 a.show('continents')
 con=a.createcontinents('example2','quick')
 a.show('continents')
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -2256,7 +2256,7 @@ a.show('continents')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('continents')
@@ -2265,7 +2265,7 @@ con=a.getcontinents()
 # con instance of 'default' continents graphics method
 con2=a.getcontinents('quick')
 # con2 instance of existing 'quick' continents graphics method
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -2329,7 +2329,7 @@ con2=a.getcontinents('quick')
       </td>
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 
@@ -2378,7 +2378,7 @@ con.linecolor=([22])
 # Will set the continents to a specific color index
 con.linecolor=None # Turns off the line color index, defaults to Black
 
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -2412,7 +2412,7 @@ con.linecolor=None # Turns off the line color index, defaults to Black
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('isofill')
@@ -2420,7 +2420,7 @@ iso=a.createisofill('example1',)
 a.show('isofill')
 iso=a.createisofill('example2','quick')
 a.show('isofill')
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -2447,7 +2447,7 @@ a.show('isofill')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('isofill')
@@ -2456,7 +2456,7 @@ iso=a.getisofill()
 # iso instance of 'default' isofill graphics method
 iso2=a.getisofill('quick')
 # iso2 instance of existing 'quick' isofill graphics method
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -2536,7 +2536,7 @@ iso2=a.getisofill('quick')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 
@@ -2620,7 +2620,7 @@ fill=a.createisofill('new') # Copies 'default' to 'new'
 # To Modify an existing isofill use:
     fill=a.getisofill('def37')
 
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -2654,7 +2654,7 @@ fill=a.createisofill('new') # Copies 'default' to 'new'
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('isoline')
@@ -2662,7 +2662,7 @@ iso=a.createisoline('example1',)
 a.show('isoline')
 iso=a.createisoline('example2','quick')
 a.show('isoline')
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -2689,7 +2689,7 @@ a.show('isoline')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('isoline')
@@ -2698,7 +2698,7 @@ iso=a.getisoline()
 # iso instance of 'default' isoline graphics method
 iso2=a.getisoline('quick')
 # iso2 instance of existing 'quick' isoline graphics method
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -2771,7 +2771,7 @@ iso2=a.getisoline('quick')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 
@@ -2844,7 +2844,7 @@ There are three possibilities for setting the text color indices (Ex.):
     iso.textcolors=([22,33,44,55,66,77])
 iso.textcolors=(16,19,33,44)
 iso.textcolors=None # Turns off the text color index
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -2878,7 +2878,7 @@ iso.textcolors=None # Turns off the text color index
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('outfill')
@@ -2886,7 +2886,7 @@ out=a.createoutfill('example1',)
 a.show('outfill')
 out=a.createoutfill('example2','quick')
 a.show('outfill')
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -2913,7 +2913,7 @@ a.show('outfill')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('outfill')
@@ -2922,7 +2922,7 @@ out=a.getoutfill()
 # out instance of 'default' outfill graphics method
 out2=a.getoutfill('quick')
 # out2 instance of existing 'quick' outfill graphics method
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -2990,7 +2990,7 @@ out2=a.getoutfill('quick')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 
@@ -3036,7 +3036,7 @@ out.fillareacolor=(22) # Same as below
 out.fillareacolor=([22]) # Will set the outfill to a specific color index
 out.fillareacolor=None # Turns off the color index
 
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -3069,7 +3069,7 @@ out.fillareacolor=None # Turns off the color index
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('outline')
@@ -3077,7 +3077,7 @@ out=a.createoutline('example1',)
 a.show('outline')
 out=a.createoutline('example2','quick')
 a.show('outline')
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -3104,7 +3104,7 @@ a.show('outline')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('outline')
@@ -3113,7 +3113,7 @@ out=a.getoutline()
 # out instance of 'default' outline graphics method
 out2=a.getoutline('quick')
 # out2 instance of existing 'quick' outline graphics method
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -3184,7 +3184,7 @@ out2=a.getoutline('quick')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 
@@ -3242,7 +3242,7 @@ out.line=4 # same as out.line = 'long-dash'
 out.linecolor=([22]) # Will set the outline to a specific color index
 out.linecolor=None # Turns off the color index
 
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -3276,7 +3276,7 @@ out.linecolor=None # Turns off the color index
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('scatter')
@@ -3284,7 +3284,7 @@ sct=a.createscatter('example1',)
 a.show('scatter')
 sct=a.createscatter('example2','quick')
 a.show('scatter')
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -3311,7 +3311,7 @@ a.show('scatter')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('scatter')
@@ -3321,7 +3321,7 @@ sct=a.getscatter()
 sct2=a.getscatter('quick')
 # sct2 instance of existing 'quick' scatter graphics method
 
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -3406,7 +3406,7 @@ sct2=a.getscatter('quick')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 
@@ -3478,7 +3478,7 @@ sr.markersize=100
 sr.markersize=300
 sr.markersize=None
 
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -3512,7 +3512,7 @@ sr.markersize=None
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('vector')
@@ -3520,7 +3520,7 @@ vec=a.createvector('example1',)
 a.show('vector')
 vec=a.createvector('example2','quick')
 a.show('vector')
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -3547,7 +3547,7 @@ a.show('vector')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('vector')
@@ -3556,7 +3556,7 @@ vec=a.getvector()
 # vec instance of 'default' vector graphics method
 vec2=a.getvector('quick')
 # vec2 instance of existing 'quick' vector graphics method
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -3630,7 +3630,7 @@ vec2=a.getvector('quick')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 
@@ -3694,7 +3694,7 @@ vc.type=2 # Same as vc.type='solid arrow head'
 Specify the vector reference:
     vc.reference=4 # Can be an integer or float
 
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -3728,7 +3728,7 @@ Specify the vector reference:
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('xvsy')
@@ -3736,7 +3736,7 @@ xy=a.createxvsy('example1',)
 a.show('xvsy')
 xy=a.createxvsy('example2','quick')
 a.show('xvsy')
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -3763,7 +3763,7 @@ a.show('xvsy')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('xvsy')
@@ -3771,7 +3771,7 @@ a.show('xvsy')
 # graphics methods xy instance of 'default' XvsY graphics method
 xy2=a.getxvsy('quick')
 # xy2 instance of existing 'quick' XvsY graphics method
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -3842,7 +3842,7 @@ xy2=a.getxvsy('quick')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 
@@ -3910,25 +3910,25 @@ xy.marker=15 # Same as xy.marker='triangle_left_fill'
 xy.marker=16 # Same as xy.marker='triangle_right_fill'
 xy.marker=17 # Same as xy.marker='square_fill'
 xy.marker=None # Draw no markers
-</pre>
+{% endhighlight %}
 
         <p>There are four possibilities for setting the marker color index
         (<strong>Example</strong>):</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 xy.markercolors=22 # Same as below
 xy.markercolors=(22) # Same as below
 xy.markercolors=([22]) # Will set the markers to a specific
 xy.markercolors=None # Color index defaults to Black
-</pre>
+{% endhighlight %}
 
         <p>To set the XvsY Marker sizie:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 xy.markersize=5
 xy.markersize=55
 xy.markersize=100
 xy.markersize=300
 xy.markersize=None
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -3962,7 +3962,7 @@ xy.markersize=None
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('xyvsy')
@@ -3970,7 +3970,7 @@ xyy=a.createxyvsy('example1',)
 a.show('xyvsy')
 xyy=a.createxyvsy('example2','quick')
 a.show('xyvsy')
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -3995,7 +3995,7 @@ a.show('xyvsy')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('xyvsy')
@@ -4004,7 +4004,7 @@ xyy=a.getxyvsy()
 # xyy instance of 'default' Xyvsy graphics method
 xyy2=a.getxyvsy('quick')
 # xyy2 instance of existing 'quick' Xyvsy graphics method
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -4073,7 +4073,7 @@ xyy2=a.getxyvsy('quick')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 
@@ -4142,25 +4142,25 @@ xyy.marker=15 # Same as xyy.marker='triangle_left_fill'
 xyy.marker=16 # Same as xyy.marker='triangle_right_fill'
 xyy.marker=17 # Same as xyy.marker='square_fill'
 xyy.marker=None # Draw no markers
-</pre>
+{% endhighlight %}
 
         <p>There are four possibilities for setting the marker color index (Ex):</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 xyy.markercolors=22 # Same as below
 xyy.markercolors=(22) # Same as below
 xyy.markercolors=([22]) # Will set the markers to a specific
 # color index
 xyy.markercolors=None # Color index defaults to Black
-</pre>
+{% endhighlight %}
 
         <p>To set the Xyvsy Marker sizie:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 xyy.markersize=5
 xyy.markersize=55
 xyy.markersize=100
 xyy.markersize=300
 xyy.markersize=None
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -4194,7 +4194,7 @@ xyy.markersize=None
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('yxvsx')
@@ -4202,7 +4202,7 @@ yxx=a.createyxvsx('example1',)
 a.show('yxvsx')
 yxx=a.createyxvsx('example2','quick')
 a.show('yxvsx')
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -4229,7 +4229,7 @@ a.show('yxvsx')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('yxvsx')
@@ -4238,7 +4238,7 @@ yxx=a.getyxvsx()
 # yxx instance of 'default' Yxvsx graphics method
 yxx2=a.getyxvsx('quick')
 # yxx2 instance of existing 'quick' Yxvsx graphics method
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -4310,7 +4310,7 @@ yxx2=a.getyxvsx('quick')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 
@@ -4386,7 +4386,7 @@ yxx.markersize=55
 yxx.markersize=100
 yxx.markersize=300
 yxx.markersize=None
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -4421,7 +4421,7 @@ yxx.markersize=None
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('3d_scalar')
@@ -4430,7 +4430,7 @@ scalar = a.create3d_scalar('quick')
 # scalar is a new 3d_scalar that copies the 'default' 3d_scalar graphics method
 scalar2 = a.create3d_scalar('test', 'quick')
 # scalar2 is a new 3d_scalar that copies the existing 'quick' 3d_scalar graphics method
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -4457,7 +4457,7 @@ scalar2 = a.create3d_scalar('test', 'quick')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('3d_scalar')
@@ -4466,7 +4466,7 @@ scalar = a.get3d_scalar()
 # scalar is an instance of the 'default' 3d_scalar graphics method
 scalar2 = a.get3d_scalar('quick')
 # scalar2 is an instance of the existing 'quick' 3d_scalar graphics method
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -4501,7 +4501,7 @@ scalar2 = a.get3d_scalar('quick')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('3d_vector')
@@ -4510,7 +4510,7 @@ vector = a.create3d_vector('quick')
 # vector is a new 3d_vector that copies the 'default' 3d_vector graphics method
 vector2 = a.create3d_vector("test", 'quick')
 # vector2 is a new 3d_vector that copies the 'quick' 3d_vector graphics method
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -4537,7 +4537,7 @@ vector2 = a.create3d_vector("test", 'quick')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('3d_vector')
@@ -4546,7 +4546,7 @@ vector = a.get3d_vector()
 # vector is an instance of the 'default' 3d_vector graphics method
 vector2 = a.get3d_vector('quick')
 # vector2 is an instance of the existing 'quick' 3d_vector graphics method
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -4579,7 +4579,7 @@ vector2 = a.get3d_vector('quick')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('template')
@@ -4592,7 +4592,7 @@ con=a.createtemplate('example2','quick')
 # create 'example2' from 'quick' template
 a.listelements('template')
 # Show all the templates as a Python list
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -4619,7 +4619,7 @@ a.listelements('template')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('template')
@@ -4628,7 +4628,7 @@ templt=a.gettemplate()
 # templt instance of 'default' template
 templt2=a.gettemplate('quick')
 # templt2 contains 'quick' template
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -4669,7 +4669,7 @@ templt2=a.gettemplate('quick')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 
@@ -4690,7 +4690,7 @@ tpl=a.createtemplate('new')
 
 # To Modify an existing template use:
     tpl=a.gettemplate('AMIP')
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -4725,12 +4725,12 @@ tpl=a.createtemplate('new')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.plot(array,'default','isofill','quick')
 a.setcolormap("AMIP")
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -4762,7 +4762,7 @@ a.setcolormap("AMIP")
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.plot(array,'default','isofill','quick')
@@ -4773,7 +4773,7 @@ a.setcolorcell(31,0,100,0)
 a.setcolorcell(41,0,0,100)
 a.setcolorcell(51,100,100,100)
 a.setcolorcell(61,70,70,70)
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 <!--
@@ -4797,11 +4797,11 @@ a.setcolorcell(61,70,70,70)
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.colormapgui()
-</pre>
+{% endhighlight %}
       </td>
     </tr>-->
     <tr>
@@ -4834,7 +4834,7 @@ a.colormapgui()
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('fillarea')
@@ -4842,7 +4842,7 @@ fa=a.createfillarea('example1',)
 a.show('fillarea')
 fa=a.createfillarea('example2','black')
 a.show('fillarea')
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -4869,7 +4869,7 @@ a.show('fillarea')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('fillarea')
@@ -4878,7 +4878,7 @@ fa=a.getfillarea()
 # fa instance of 'default' fillarea secondary method
 fa2=a.getfillarea('quick')
 # fa2 instance of existing 'quick' fillarea secondary method
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -4921,7 +4921,7 @@ fa2=a.getfillarea('quick')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 
@@ -4967,7 +4967,7 @@ fa.index=17
 fa.index=18
 fa.index=19
 fa.index=20
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -5001,7 +5001,7 @@ fa.index=20
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('line')
@@ -5009,7 +5009,7 @@ ln=a.createline('example1',)
 a.show('line')
 ln=a.createline('example2','black')
 a.show('line')
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -5035,7 +5035,7 @@ a.show('line')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('line')
@@ -5044,7 +5044,7 @@ ln=a.getline()
 # ln instance of 'default' line secondary method
 ln2=a.getline('quick')
 # ln2 instance of existing 'quick' line secondary method
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -5084,7 +5084,7 @@ ln2=a.getline('quick')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 
@@ -5115,7 +5115,7 @@ ln.type='dash-dot'
 ln.type='long-dash'
 # Same as ln.type=4
 
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -5150,7 +5150,7 @@ ln.type='long-dash'
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('marker')
@@ -5158,7 +5158,7 @@ mrk=a.createmarker('example1',)
 a.show('marker')
 mrk=a.createmarker('example2','black')
 a.show('boxfill')
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -5184,7 +5184,7 @@ a.show('boxfill')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('marker')
@@ -5193,7 +5193,7 @@ mrk=a.getmarker()
 # mrk instance of 'default' marker secondary method
 mrk2=a.getmarker('quick')
 # mrk2 instance of existing 'quick' marker secondary method
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -5234,7 +5234,7 @@ mrk2=a.getmarker('quick')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 
@@ -5281,7 +5281,7 @@ mk.type='triangle_left_fill' # Same as mk.type=15
 mk.type='triangle_right_fill' # Same as mk.type=16
 mk.type='square_fill' # Same as mk.type=17
 
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -5317,7 +5317,7 @@ mk.type='square_fill' # Same as mk.type=17
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('texttable')
@@ -5325,7 +5325,7 @@ a.show('textorientation')
 tc=a.createtextcombined('example1','std','example1','7left')
 a.show('texttable')
 a.show('textorientation')
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -5354,7 +5354,7 @@ a.show('textorientation')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('texttable')
@@ -5369,7 +5369,7 @@ if istextcombined(tc):
     # Check to see if tc is a textcombined
 tc.list()
 # Print out all its attriubtes
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -5411,7 +5411,7 @@ tc.list()
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 
@@ -5458,7 +5458,7 @@ tc.valign='cap' # Same as tcvalign=1
 tc.valign='half' # Same as tcvalign=2
 tc.valign='base' # Same as tcvalign=3
 tc.valign='bottom' # Same as tcvalign=4
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -5494,7 +5494,7 @@ tc.valign='bottom' # Same as tcvalign=4
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('textorientation')
@@ -5502,7 +5502,7 @@ to=a.createtextorientation('example1')
 a.show('textorientation')
 to=a.createtextorientation('example2','black')
 a.show('textorientation')
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -5529,7 +5529,7 @@ a.show('textorientation')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('textorientation')
@@ -5538,7 +5538,7 @@ to=a.gettextorientation()
 # to instance of 'default' textorientation secondary method
 to2=a.gettextorientation('quick')
 # to2 instance of existing 'quick' textorientation secondary method
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -5581,7 +5581,7 @@ to2=a.gettextorientation('quick')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 
@@ -5626,7 +5626,7 @@ to.valign='half' # Same as tovalign=2
 to.valign='base' # Same as tovalign=3
 to.valign='bottom'
 # Same as tovalign=4
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -5661,7 +5661,7 @@ to.valign='bottom'
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('texttable')
@@ -5669,7 +5669,7 @@ tt=a.createtexttable('example1',)
 a.show('texttable')
 tt=a.createtexttable('example2','black')
 a.show('texttable')
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -5697,7 +5697,7 @@ a.show('texttable')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.show('texttable')
@@ -5706,7 +5706,7 @@ tt=a.gettexttable()
 # tt instance of 'default' texttable secondary method
 tt2=a.gettexttable('quick')
 # tt2 instance of existing 'quick' texttable secondary method
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -5748,7 +5748,7 @@ tt2=a.gettexttable('quick')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 
@@ -5778,7 +5778,7 @@ tt.list()
 # Specify the text color:
     tt.color=241
 # The text color attribute value must be in the range 1 to 257
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -5812,7 +5812,7 @@ tt.list()
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 line=a.getline('red')
@@ -5828,7 +5828,7 @@ a.removeobject(iso)
 # Remove isoline object from VCS list
 del iso
 # Destroy instance "iso", garbage collection
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -5877,13 +5877,13 @@ del iso
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 # Set continents to "United States"
 a.setcontinentstype(3)
 a.plot(array,'default','isofill','quick'
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -5915,13 +5915,13 @@ a.plot(array,'default','isofill','quick'
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.set('isofill','quick')
 # Changes the default graphics method to Isofill: 'quick'
 a.plot(array)
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -5945,12 +5945,12 @@ a.plot(array)
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.plot(array,'default','isofill','quick')
 a.animate()
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -5973,12 +5973,12 @@ a.animate()
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a.plot(array,'default','isofill','quick')
 a.flush()
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -6007,13 +6007,13 @@ a.flush()
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a=vcs.init()
 a.grid(12,24, -70,70, -150,150)
 a.plot(array,'default','isofill','quick')
-</pre>
+{% endhighlight %}
       </td>
     </tr>
 
@@ -6031,13 +6031,13 @@ a.plot(array,'default','isofill','quick')
 
       <td>
         <p>Example of Use:</p>
-        <pre style="word-break:normal;">
+        {% highlight python %}
 import vcs
 a=vcs.init()
 a=vcs.init()
 a.resetgrid()
 a.plot(array,'default','isofill','quick')
-</pre>
+{% endhighlight %}
       </td>
     </tr>
   </tbody>

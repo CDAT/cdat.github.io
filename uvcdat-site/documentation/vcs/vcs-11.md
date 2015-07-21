@@ -53,8 +53,8 @@ canvases can be active at one time.
 <p class="Normal">
 <a name="pgfId-908108"></a>Note: The number of VCS Canvases is limited to eight.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
-x=vcs.init()</pre></td></tr>
+<td>{% highlight python %}import vcs
+x=vcs.init(){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -64,9 +64,9 @@ x=vcs.init()</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910001"></a>Gives insight to other VCS functions by providing a description and at least one example.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 vcs.help()
-vcs.help(`init')</pre></td></tr>
+vcs.help(`init'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -76,11 +76,11 @@ vcs.help(`init')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910043"></a>Print out information on VCS objects. See example on its use.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
 ln=a.createline('red')
 x.objecthelp(ln)
-</pre></td></tr>
+{% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -90,12 +90,12 @@ x.objecthelp(ln)
 <p class="Normal">
 <a name="pgfId-910590"></a>Plot an array(s) of data given a template and graphics method. </p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 f=cdms2.open('clt.nc')
 s=f.getslab('clt')
 x=vcs.init()
 x.plot(s)
-</pre></td></tr>
+{% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -105,12 +105,12 @@ x.plot(s)
 <p class="Normal">
 <a name="pgfId-911892"></a>This routine will remove all  plots on the VCS Canvas.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 f=cdms2.open('clt.nc')
 s=f.getslab('clt')
 x=vcs.init()
 x.plot(s)
-x.clear()</pre></td></tr>
+x.clear(){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -120,10 +120,10 @@ x.clear()</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910032"></a>Updating of the graphical displays on the VCS Canvas can be deferred until a later time. </p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
 x.mode=0
-</pre></td></tr>
+{% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -133,7 +133,7 @@ x.mode=0
 <p class="Normal">
 <a name="pgfId-910021"></a>If a series of commands are given to VCS and the Canvas Mode is set to manual, then use this function to update the VCS Canvas manually.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 f=cdms2.open('clt.nc')
 s=f.getslab('clt')
 x=vcs.init()
@@ -146,7 +146,7 @@ box.xticlabels('','')
 box.datawc(1e20,1e20,1e20,1e20)
 box.datawc(-45.0, 45.0, -90.0, 90.0)
 x.update()
-</pre></td></tr>
+{% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -156,10 +156,10 @@ x.update()
 <p class="Normal">
 <a name="pgfId-910137"></a>Open VCS Canvas object. This routine really just manages the VCS canvas. It will popup the VCS Canvas for viewing. It can be used to display only the VCS Canvas.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
 x.open()
-</pre></td></tr>
+{% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -169,10 +169,10 @@ x.open()
 <p class="Normal">
 <a name="pgfId-910126"></a>Close the VCS Canvas. It will remove the VCS Canvas object from the screen, but not deallocate it.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
 x.plot(s)
-a.close()</pre></td></tr>
+a.close(){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -182,12 +182,12 @@ a.close()</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910115"></a>Change the VCS Canvas orientation to Portrait.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 f=cdms2.open('clt.nc')
 s=f.getslab('clt')
 x=vcs.init()
 x.plot(s)
-x.portrait()</pre></td></tr>
+x.portrait(){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -197,12 +197,12 @@ x.portrait()</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910104"></a>Change the VCS Canvas orientation to Landscape.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 f=cdms2.open('clt.nc')
 s=f.getslab('clt')
 x=vcs.init()
 x.plot(s)
-x.landscape()</pre></td></tr>
+x.landscape(){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -212,12 +212,12 @@ x.landscape()</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910093"></a>Change the VCS Canvas orientation to either 'portrait' or 'landscape'.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 f=cdms2.open('clt.nc')
 s=f.getslab('clt')
 x=vcs.init()
 x.plot(s)
-x.page()</pre></td></tr>
+x.page(){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -227,12 +227,12 @@ x.page()</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910082"></a>The geometry command is used to set the size and position of the VCS canvas.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 f=cdms2.open('clt.nc')
 s=f.getslab('clt')
 x=vcs.init()
 x.plot(s)
-x.geometry(450, 337,100, 100)</pre></td></tr>
+x.geometry(450, 337,100, 100){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -242,12 +242,12 @@ x.geometry(450, 337,100, 100)</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910257"></a>his function creates a temporary cgm file and then sends it to the specified printer.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 f=cdms2.open('clt.nc')
 s=f.getslab('clt')
 x=vcs.init()
 x.plot(s)
-x.printer('printer_name')</pre></td></tr>
+x.printer('printer_name'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -257,12 +257,12 @@ x.printer('printer_name')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910246"></a>Generate a gif file</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 f=cdms2.open('clt.nc')
 s=f.getslab('clt')
 x=vcs.init()
 x.plot(s)
-x.gif('example')</pre></td></tr>
+x.gif('example'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -272,12 +272,12 @@ x.gif('example')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910235"></a>Generate a postscript file.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 f=cdms2.open('clt.nc')
 s=f.getslab('clt')
 x=vcs.init()
 x.plot(s)
-x.postscript('example')</pre></td></tr>
+x.postscript('example'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -287,12 +287,12 @@ x.postscript('example')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910224"></a>Generate a cgm file.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 f=cdms2.open('clt.nc')
 s=f.getslab('clt')
 x=vcs.init()
 x.plot(s)
-x.cgm('example')</pre></td></tr>
+x.cgm('example'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -302,12 +302,12 @@ x.cgm('example')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910521"></a>Generate a raster file.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 f=cdms2.open('clt.nc')
 s=f.getslab('clt')
 x=vcs.init()
 x.plot(s)
-x.raster('example')</pre></td></tr>
+x.raster('example'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -317,9 +317,9 @@ x.raster('example')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910510"></a>Converts a postscript file to a gif file.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-x.pstogif('filename.ps')</pre></td></tr>
+x.pstogif('filename.ps'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -329,12 +329,12 @@ x.pstogif('filename.ps')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910488"></a>Generate a boxfill plot given the data, boxfill graphics method, and  template.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 f=cdms2.open('clt.nc')
 s=f.getslab('clt')
 x=vcs.init()
 x.boxfill(s)
-</pre></td></tr>
+{% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -344,12 +344,12 @@ x.boxfill(s)
 <p class="Normal">
 <a name="pgfId-910477"></a>Generate a continents plot given the continents graphics method, and template. </p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 f=cdms2.open('clt.nc')
 s=f.getslab('clt')
 x=vcs.init()
 x.continents(s)
-</pre></td></tr>
+{% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -359,12 +359,12 @@ x.continents(s)
 <p class="Normal">
 <a name="pgfId-910466"></a>Generate a isofill plot given the data, isofill graphics method, and template.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 f=cdms2.open('clt.nc')
 s=f.getslab('clt')
 x=vcs.init()
 x.isofill(s)
-</pre></td></tr>
+{% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -374,12 +374,12 @@ x.isofill(s)
 <p class="Normal">
 <a name="pgfId-910455"></a>Generate a isoline plot given the data, isoline graphics method, and template.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 f=cdms2.open('clt.nc')
 s=f.getslab('clt')
 x=vcs.init()
 x.isoline(s)
-</pre></td></tr>
+{% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -389,12 +389,12 @@ x.isoline(s)
 <p class="Normal">
 <a name="pgfId-910444"></a>Generate a outfill plot given the data, outfill graphics method, and template. </p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 f=cdms2.open('clt.nc')
 s=f.getslab('clt')
 x=vcs.init()
 x.outfill(s)
-</pre></td></tr>
+{% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -404,12 +404,12 @@ x.outfill(s)
 <p class="Normal">
 <a name="pgfId-910433"></a>Generate a outline plot given the data, outline graphics method, and template.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 f=cdms2.open('clt.nc')
 s=f.getslab('clt')
 x=vcs.init()
 x.outline(s)
-</pre></td></tr>
+{% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -419,12 +419,12 @@ x.outline(s)
 <p class="Normal">
 <a name="pgfId-910422"></a>Generate a scatter plot given the data, scatter graphics method, and template. </p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 f=cdms2.open('clt.nc')
 s=f.getslab('clt')
 x=vcs.init()
 x.scatter(s)
-</pre></td></tr>
+{% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -434,12 +434,12 @@ x.scatter(s)
 <p class="Normal">
 <a name="pgfId-910411"></a>Generate a vector plot given the data, vector graphics method, andtemplate.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 f=cdms2.open('clt.nc')
 s=f.getslab('clt')
 x=vcs.init()
 x.vector(s)
-</pre></td></tr>
+{% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -449,12 +449,12 @@ x.vector(s)
 <p class="Normal">
 <a name="pgfId-910400"></a>Generate a XvsY plot given the data, XvsY graphics method, and template.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 f=cdms2.open('clt.nc')
 s=f.getslab('clt')
 x=vcs.init()
 x.xvsy(s)
-</pre></td></tr>
+{% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -464,12 +464,12 @@ x.xvsy(s)
 <p class="Normal">
 <a name="pgfId-910389"></a>Generate a Xyvsy plot given the data, Xyvsy graphics method, and template. </p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 f=cdms2.open('clt.nc')
 s=f.getslab('clt')
 x=vcs.init()
 x.xyvsy(s)
-</pre></td></tr>
+{% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -479,12 +479,12 @@ x.xyvsy(s)
 <p class="Normal">
 <a name="pgfId-910378"></a>Generate a Yxvsx plot given the data, Yxvsx graphics method, and template. </p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 f=cdms2.open('clt.nc')
 s=f.getslab('clt')
 x=vcs.init()
 x.yxvsx(s)
-</pre></td></tr>
+{% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -494,10 +494,10 @@ x.yxvsx(s)
 <p class="Normal">
 <a name="pgfId-910733"></a>Returns the grapics method's type string: boxfill, isofill, isoline, outfill, outline, continents, scatter, vector, xvsy, xyvsy, or yxvsx.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
 box=x.getboxfill()
-x.graphicsmethodname(box)</pre></td></tr>
+x.graphicsmethodname(box){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -507,9 +507,9 @@ x.graphicsmethodname(box)</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910722"></a>Return continents type from VCS. Remember the value can only be between 0 and 11.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-cont_type = x.getcontinentstype()</pre></td></tr>
+cont_type = x.getcontinentstype(){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -519,10 +519,10 @@ cont_type = x.getcontinentstype()</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910711"></a>Indicates if the entered argument is one of the following graphics methods: boxfill, isofill, isoline, outfill, outline, continents, scatter, vector, xvsy, xyvsy, yxvsx.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
 box=x.getboxfill('quick')
-x.isgraphicsmethod(box)</pre></td></tr>
+x.isgraphicsmethod(box){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -532,10 +532,10 @@ x.isgraphicsmethod(box)</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910700"></a>Check to see if an object is a VCS primary boxfill graphics method object.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
 box=x.getboxfill("quick")
-x.isboxfill(box)</pre></td></tr>
+x.isboxfill(box){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -545,11 +545,11 @@ x.isboxfill(box)</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910689"></a>Check to see if an object is a VCS primary continents graphics method.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
 con=x.getcontinents("quick")
 x.iscontinents(con)
-</pre></td></tr>
+{% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -559,11 +559,11 @@ x.iscontinents(con)
 <p class="Normal">
 <a name="pgfId-910678"></a>Check to see if an object is a VCS primary isofill graphics method.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
 iso=x.getisofill("quick")
 x.isisofill(iso)
-</pre></td></tr>
+{% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -573,10 +573,10 @@ x.isisofill(iso)
 <p class="Normal">
 <a name="pgfId-910667"></a>Check to see if an object is a VCS primary isoline graphics method.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
 iso=x.getisoline("quick"
-x.isisoline(iso)</pre></td></tr>
+x.isisoline(iso){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -586,10 +586,10 @@ x.isisoline(iso)</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910656"></a>Check to see if this object is a VCS primary outfill graphics method.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
 out=x.getoutfill("quick")
-x.isoutfill(out)</pre></td></tr>
+x.isoutfill(out){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -599,10 +599,10 @@ x.isoutfill(out)</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910645"></a>Check to see if an object is a VCS primary outline graphics method.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
 out=x.getoutline("quick")
-x.isoutline(out)</pre></td></tr>
+x.isoutline(out){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -612,10 +612,10 @@ x.isoutline(out)</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910634"></a>Check to see if an object is a VCS primary vector graphics method.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
 vec=x.getvector("quick")
-x.isvector(vec)</pre></td></tr>
+x.isvector(vec){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -625,10 +625,10 @@ x.isvector(vec)</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910623"></a>Check to see if an object is a VCS primary xvsy graphics method.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
 xy=x.getxvsy("quick")
-x.isxvsy(xy)</pre></td></tr>
+x.isxvsy(xy){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -638,10 +638,10 @@ x.isxvsy(xy)</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910367"></a>Check to see if an object is a VCS primary Xyvsy graphics method.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
 xyy=x.getxyvsy("quick")
-x.isxyvsy(xyy)</pre></td></tr>
+x.isxyvsy(xyy){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -651,10 +651,10 @@ x.isxyvsy(xyy)</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910356"></a>Check to see if an object is a VCS primary yxvsx graphics method.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
 yxx=x.getyxvsx("quick")
-x.isyxvsx(yxx)</pre></td></tr>
+x.isyxvsx(yxx){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -664,10 +664,10 @@ x.isyxvsx(yxx)</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910937"></a>Indicates if the entered argument a template.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
 templt=x.gettemplate('quick')
-x.istemplate(templt)</pre></td></tr>
+x.istemplate(templt){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -677,10 +677,10 @@ x.istemplate(templt)</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910929"></a>Query to see if an object is a secondary object.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
 line=x.getline()
-x.issecondaryobject(line)</pre></td></tr>
+x.issecondaryobject(line){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -690,10 +690,10 @@ x.issecondaryobject(line)</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910345"></a>Check to see if an object is a VCS secondary fillarea.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
 fa=x.getfillarea("def37")
-x.isfillarea(fa)</pre></td></tr>
+x.isfillarea(fa){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -703,10 +703,10 @@ x.isfillarea(fa)</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911023"></a>Check to see if this object is a VCS secondary line.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
 ln=x.getline()
-x.isline(ln)</pre></td></tr>
+x.isline(ln){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -716,10 +716,10 @@ x.isline(ln)</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911015"></a>Check to see if this object is a VCS secondary marker.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
 ln=x.getmarker()
-x.ismarker(ln)</pre></td></tr>
+x.ismarker(ln){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -729,10 +729,10 @@ x.ismarker(ln)</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911007"></a>Check to see if an object is a VCS secondary text combined.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
 tc=x.gettextcombined("std", "7left")
-x.istextcombined(tc)</pre></td></tr>
+x.istextcombined(tc){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -742,10 +742,10 @@ x.istextcombined(tc)</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910999"></a>Check to see if an object is a VCS secondary text orientation.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
 to=x.gettextorientation("7left")
-x.istextorientation(to)</pre></td></tr>
+x.istextorientation(to){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -755,10 +755,10 @@ x.istextorientation(to)</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910991"></a>Check to see if an object is a VCS secondary text table.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
 tt=x.gettexttable("std")
-x.istexttable(tt)</pre></td></tr>
+x.istexttable(tt){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -768,9 +768,9 @@ x.istexttable(tt)</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910983"></a>Returns a Python list of all the VCS class objects.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-x.listelements()</pre></td></tr>
+x.listelements(){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -780,12 +780,12 @@ x.listelements()</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910334"></a>Show the list of VCS primary and secondary class objects.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
 x.show('boxfill')
 x.show('isofill')
 x.show(`template')
-x.show(`line')</pre></td></tr>
+x.show(`line'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -795,9 +795,9 @@ x.show(`line')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910323"></a>Create a new boxfill graphics method given the  name and the existingboxfill graphics method to copy the attributes from. </p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-box=x.createboxfill('example','quick')</pre></td></tr>
+box=x.createboxfill('example','quick'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -807,9 +807,9 @@ box=x.createboxfill('example','quick')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910312"></a>This function will create a boxfill class object from an existing VCS boxfill graphics method.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-box2=x.getboxfill('quick')</pre></td></tr>
+box2=x.getboxfill('quick'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -819,9 +819,9 @@ box2=x.getboxfill('quick')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911195"></a>Create a new continents graphics method given the the name and the existing continents graphics method to copy the attributes from. </p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-con=x.createcontinents('example','quick')</pre></td></tr>
+con=x.createcontinents('example','quick'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -831,9 +831,9 @@ con=x.createcontinents('example','quick')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911187"></a>This function will create a continents class object from an existing VCS continents graphics method. </p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-con2=x.getcontinents('quick')</pre></td></tr>
+con2=x.getcontinents('quick'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -843,9 +843,9 @@ con2=x.getcontinents('quick')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911179"></a>Create a new isofill graphics method given the the name and the existing isofill graphics method to copy the attributes from. </p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-iso=x.createisofill('example','quick')</pre></td></tr>
+iso=x.createisofill('example','quick'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -855,9 +855,9 @@ iso=x.createisofill('example','quick')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911171"></a>This function will create a isofill class object from an existing VCS isofill graphics method. </p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-iso2=x.getisofill('quick')</pre></td></tr>
+iso2=x.getisofill('quick'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -867,9 +867,9 @@ iso2=x.getisofill('quick')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911163"></a>Create a new isoline graphics method given the the name and the existing isoline graphics method to copy the attributes from. </p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-iso=x.createisoline('example','quick')</pre></td></tr>
+iso=x.createisoline('example','quick'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -879,9 +879,9 @@ iso=x.createisoline('example','quick')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911155"></a>This function will create a isoline class object from an existing VCS isoline graphics method. </p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-iso2=x.getisoline('quick')</pre></td></tr>
+iso2=x.getisoline('quick'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -891,9 +891,9 @@ iso2=x.getisoline('quick')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911291"></a>Create a new outfill graphics method given the the name and the existing outfill graphics method to copy the attributes from. </p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-out=x.createoutfill('example','quick')</pre></td></tr>
+out=x.createoutfill('example','quick'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -903,9 +903,9 @@ out=x.createoutfill('example','quick')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911283"></a>This function will create a outfill class object from an existing VCS outfill graphics method. </p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-out2=x.getoutfill('quick')</pre></td></tr>
+out2=x.getoutfill('quick'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -915,9 +915,9 @@ out2=x.getoutfill('quick')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911275"></a>Create a new outline graphics method given the the name and the existing outline graphics method to copy the attributes from.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-out=x.createoutline('example','quick')</pre></td></tr>
+out=x.createoutline('example','quick'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -927,9 +927,9 @@ out=x.createoutline('example','quick')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911267"></a>This function will create a outline class object from an existing VCS outline graphics method. </p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-out2=x.getoutline('quick')</pre></td></tr>
+out2=x.getoutline('quick'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -939,9 +939,9 @@ out2=x.getoutline('quick')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911259"></a>Create a new scatter graphics method given the the name and the existing mscatter graphics method to copy the attributes from.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-sct=x.createscatter('example','quick')</pre></td></tr>
+sct=x.createscatter('example','quick'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -951,9 +951,9 @@ sct=x.createscatter('example','quick')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911251"></a>This function will create a scatter class object from an existing VCS scatter graphics method.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-sct2=x.getscatter('quick')</pre></td></tr>
+sct2=x.getscatter('quick'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -963,9 +963,9 @@ sct2=x.getscatter('quick')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911243"></a>Create a new vector graphics method given the the name and the existing vector graphics method to copy the attributes from. </p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-vec=x.createvector('example','quick')</pre></td></tr>
+vec=x.createvector('example','quick'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -975,9 +975,9 @@ vec=x.createvector('example','quick')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911235"></a>This function will create a vector class object from an existing VCS vector graphics method.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-vec2=x.getvector('quick')</pre></td></tr>
+vec2=x.getvector('quick'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -987,9 +987,9 @@ vec2=x.getvector('quick')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911227"></a>Create a new XvsY graphics method given the the name and the existing XvsY graphics method to copy the attributes from.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-xy=x.createxvsy('example','quick')</pre></td></tr>
+xy=x.createxvsy('example','quick'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -999,9 +999,9 @@ xy=x.createxvsy('example','quick')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911219"></a>This function will create a XvsY class object from an existing VCS XvsY graphics method. </p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-xy2=x.getxvsy('quick')</pre></td></tr>
+xy2=x.getxvsy('quick'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -1011,9 +1011,9 @@ xy2=x.getxvsy('quick')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911211"></a>Create a new Xyvsy graphics method given the the name and the existing Xyvsy graphics method to copy the attributes from. </p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-xyy=x.createxyvsy('example','quick')</pre></td></tr>
+xyy=x.createxyvsy('example','quick'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -1023,9 +1023,9 @@ xyy=x.createxyvsy('example','quick')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911203"></a>This function will create a Xyvsy class object from an existing VCS Xyvsy graphics method.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-xyy2=x.getxyvsy('quick')</pre></td></tr>
+xyy2=x.getxyvsy('quick'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -1035,9 +1035,9 @@ xyy2=x.getxyvsy('quick')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910301"></a>Create a new Yxvsx graphics method given the the name and the existing Yxvsx graphics method to copy the attributes from. </p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-yxx=x.createyxvsx('example','quick')</pre></td></tr>
+yxx=x.createyxvsx('example','quick'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -1047,9 +1047,9 @@ yxx=x.createyxvsx('example','quick')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910290"></a>This function will create a Yxvsx class object from an existing VCS Yxvsx graphics method. </p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-yxx2=x.getyxvsx('quick')</pre></td></tr>
+yxx2=x.getyxvsx('quick'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -1059,9 +1059,9 @@ yxx2=x.getyxvsx('quick')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910279"></a>Create a new template given the the name and the existing template to copy the attributes from. </p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-con=x.createtemplate('example','quick')</pre></td></tr>
+con=x.createtemplate('example','quick'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -1071,9 +1071,9 @@ con=x.createtemplate('example','quick')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910268"></a>his function will create a  template class object from an existing VCS template. </p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-templt2=x.gettemplate('quick')</pre></td></tr>
+templt2=x.gettemplate('quick'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -1083,9 +1083,9 @@ templt2=x.gettemplate('quick')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910213"></a>This routine will change the VCS color map.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-x.setcolormap("AMIP")</pre></td></tr>
+x.setcolormap("AMIP"){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -1095,11 +1095,11 @@ x.setcolormap("AMIP")</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911616"></a>Set a individual color cell in the active colormap. If default is the active colormap, then return an error string.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
 x.setcolormap("AMIP")
 a.setcolorcell(11,0,0,0)
-x.setcolorcell(21,100,0,0)</pre></td></tr>
+x.setcolorcell(21,100,0,0){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -1115,9 +1115,9 @@ x.setcolorcell(21,100,0,0)</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911697"></a>        The colormapgui GUI will only work for 8-bit 'Pseudo Color'.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-x.colormapgui()</pre></td></tr>
+x.colormapgui(){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -1127,9 +1127,9 @@ x.colormapgui()</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911672"></a>Create a new fillarea secondary method given the the name and the existing fillarea secondary method to copy the attributes from. </p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-fa=x.createfillarea('example','black')</pre></td></tr>
+fa=x.createfillarea('example','black'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -1139,9 +1139,9 @@ fa=x.createfillarea('example','black')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911664"></a>This function will create a fillarea class object from an existing VCS fillarea secondary method.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-fa2=x.getfillarea('quick')</pre></td></tr>
+fa2=x.getfillarea('quick'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -1151,9 +1151,9 @@ fa2=x.getfillarea('quick')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911656"></a>Create a new line secondary method given the the name and the existing line secondary method to copy the attributes from. </p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-ln=x.createline('example','black')</pre></td></tr>
+ln=x.createline('example','black'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -1163,9 +1163,9 @@ ln=x.createline('example','black')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911648"></a>This function will create a line class object from an existing VCS line secondary method. </p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-ln2=x.getline('quick')</pre></td></tr>
+ln2=x.getline('quick'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -1175,9 +1175,9 @@ ln2=x.getline('quick')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911640"></a>Create a new marker secondary method given the the name and the existing marker secondary method to copy the attributes from. </p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-mrk=x.createmarker('example','black')</pre></td></tr>
+mrk=x.createmarker('example','black'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -1187,9 +1187,9 @@ mrk=x.createmarker('example','black')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911632"></a>This function will create a marker class object from an existing VCS marker secondary method. </p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-mrk2=x.getmarker('quick')</pre></td></tr>
+mrk2=x.getmarker('quick'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -1199,9 +1199,9 @@ mrk2=x.getmarker('quick')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911624"></a>Create a new textcombined secondary method given the the names and the existing texttable and textorientation secondary methods to copy the attributes from. I</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-tc=x.createtextcombined('example1','std','example1','7left')</pre></td></tr>
+tc=x.createtextcombined('example1','std','example1','7left'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -1211,9 +1211,9 @@ tc=x.createtextcombined('example1','std','example1','7left')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911608"></a>This function will create a textcombined class object from an existing VCS texttable secondary method and an existing VCS textorientation secondary method. </p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-tc2=x.gettextcombined('std','7left')</pre></td></tr>
+tc2=x.gettextcombined('std','7left'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -1223,9 +1223,9 @@ tc2=x.gettextcombined('std','7left')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911600"></a>Create a new textorientation secondary method given the the name and  he existing textorientation secondary method to copy the attributes from. </p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-to=x.createtextorientation('example1')</pre></td></tr>
+to=x.createtextorientation('example1'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -1235,9 +1235,9 @@ to=x.createtextorientation('example1')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911592"></a>This function will create a textorientation class object from an existing VCS textorientation secondary method. </p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-to2=x.gettextorientation('quick')</pre></td></tr>
+to2=x.gettextorientation('quick'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -1247,9 +1247,9 @@ to2=x.gettextorientation('quick')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911770"></a>Create a new texttable secondary method given the the name and the existing texttable secondary method to copy the attributes from. </p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-tt=x.createtexttable('example','black')</pre></td></tr>
+tt=x.createtexttable('example','black'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -1259,9 +1259,9 @@ tt=x.createtexttable('example','black')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911762"></a>This function will create a  texttable class object from an existing VCS texttable secondary method. </p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
-tt2=x.gettexttable('quick')</pre></td></tr>
+tt2=x.gettexttable('quick'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -1275,12 +1275,12 @@ tt2=x.gettexttable('quick')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911820"></a>    Also note, The user is not allowed to remove a "default" class object.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
 line=x.getline('red')
 x.removeobject(line)
 iso=x.createisoline('example')
-x.removeobject(iso)</pre></td></tr>
+x.removeobject(iso){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -1290,12 +1290,12 @@ x.removeobject(iso)</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911746"></a>One has the option of using continental maps that are predefined or that are user-defined. Predefined continental maps are either internal to VCS or are specified by external files. (The continents type number ranges from 0 to 11.)</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
 f=cdms2.open('clt.nc')
 s=f.getslab('clt')
 x.setcontinentstype(3)
-x.plot(array,'default','isofill','quick')</pre></td></tr>
+x.plot(array,'default','isofill','quick'){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -1305,12 +1305,12 @@ x.plot(array,'default','isofill','quick')</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911738"></a>Set the default VCS primary class objects: template and graphics methods.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
 f=cdms2.open('clt.nc')
 s=f.getslab('clt')
 x.set('isofill','quick')
-x.plot(s)</pre></td></tr>
+x.plot(s){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -1324,12 +1324,12 @@ x.plot(s)</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911859"></a>        The animation GUI will only work for 8-bit 'Pseudo Color'.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 x=vcs.init()
 f=cdms2.open('clt.nc')
 s=f.getslab('clt')
 x.plot(s)
-x.animate()</pre></td></tr>
+x.animate(){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -1339,12 +1339,12 @@ x.animate()</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-910202"></a>The flush command executes all buffered X events in the que.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 f=cdms2.open('clt.nc')
 s=f.getslab('clt')
 x=vcs.init()
 x.plot(s)
-x.flush()</pre></td></tr>
+x.flush(){% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -1354,13 +1354,13 @@ x.flush()</pre></td></tr>
 <p class="Normal">
 <a name="pgfId-911557"></a>Set the default plotting region for variables that have more dimension values than the graphics method. This will also be used for animating plots over the third and fourth dimensions.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 f=cdms2.open('clt.nc')
 s=f.getslab('clt')
 x=vcs.init()
 x.grid(12,24, -70,70, -150,150)
 x.plot(s)
-</pre></td></tr>
+{% endhighlight %}</td></tr>
 <tr>
 <td rowspan="1" colspan="1">
 <code class="Normal">
@@ -1370,13 +1370,13 @@ x.plot(s)
 <p class="Normal">
 <a name="pgfId-911546"></a>Set the plotting region to default values. That is, let the variable's dimension values determine the grid.</p>
 </td>
-<td><pre style="word-break:normal">import vcs
+<td>{% highlight python %}import vcs
 f=cdms2.open('clt.nc')
 s=f.getslab('clt')
 x=vcs.init()
 x.resetgrid()
 x.plot(s)
-</pre></td></tr>
+{% endhighlight %}</td></tr>
 </tbody></table>
 
 

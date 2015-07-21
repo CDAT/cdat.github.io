@@ -5,11 +5,6 @@ manual: vcs
 index: 8
 ---
 
-
-
-
-
-
 ##  CHAPTER 8 VCS Examples
 This section shows useful VCS examples.
 
@@ -83,7 +78,7 @@ if __name__ == "__main__":
 
 ###Simple Overlay Plot Example:
 
-``` python
+{% highlight python %}
 #
 # Simple Overlay Plot module
 #
@@ -154,7 +149,7 @@ def simpleoverlay():
 
 if __name__ == "__main__":
     simpleoverlay()
-{% highlight text %}
+{% endhighlight %}
 
 <a name="boxfill"></a>
 
@@ -418,7 +413,7 @@ def examplecontinents():
 
 
 if __name__ == "__main__":
-examplecontinents()
+    examplecontinents()
 {% endhighlight %}
 
 <a name="isofill"></a>
@@ -1973,7 +1968,7 @@ if __name__ == "__main__":
 
 ###Hardcopy Example:
 
-{% endhighlight %}python
+{% highlight python %}
 #
 # Example Hardcopy module
 #
@@ -2056,7 +2051,7 @@ def examplehardcopy():
 
 if __name__ == "__main__":
 	examplehardcopy()
-```
+{% endhighlight %}
 
 <a name="picture_template"></a>
 

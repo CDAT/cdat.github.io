@@ -331,7 +331,7 @@ be last. Note that the order of the objects is not restrictive, just as long
 as they are before any keyword argument. See the two `plot()` function examples
 below.
 
-```python
+{% highlight python %}
 import vcs # import the VCS module
 import cdms2 # import cdms2 for ingesting data
 
@@ -350,7 +350,7 @@ x.clear() # clear the VCS Canvas of all plots
 
 x.plot(t,iso,s,continents=0) # shows that the order of the objects are irrelevant,
 # but not that all keyword arguments must be last.
-```
+{% endhighlight %}
 
 ####  Other Plotting functions in VCS
 
