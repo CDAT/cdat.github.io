@@ -71,7 +71,7 @@ The URB member mailing list:
   * Individual Contributor License Agreement: [Individual Agreement]
   * Software Grant and Corporate Contributor License Agreement: [Grant and Corporate Agreement][corporate agreement]
 
-[individual agreement]: media/pdf/uv-cdat-individual-contributor-agreement.pdf
-[corporate agreement]:  media/pdf/uv-cdat-corporate-contributor-agreement.pdf
+[individual agreement]: /pdf/uv-cdat-individual-contributor-agreement.pdf
+[corporate agreement]:  /pdf/uv-cdat-corporate-contributor-agreement.pdf
 
 

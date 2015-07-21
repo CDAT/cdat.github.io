@@ -27,9 +27,9 @@ layout: default
 
 Our projects use Git and GitHub wherever possible. If that's not your usual cup
 of tea and you'd like to contribute, check out GitHub's
-<a href="https://help.github.com/articles/set-up-git"> very friendly introduction <img src="media/images/icon_external_site.gif"> </a>
+<a href="https://help.github.com/articles/set-up-git"> very friendly introduction <img src="/images/icon_external_site.gif"> </a>
 to Git. Then, for instructions specific to contributing, see their 
-<a href="https://help.github.com/articles/fork-a-repo">article on forking<img src="media/images/icon_external_site.gif"> </a>.
+<a href="https://help.github.com/articles/fork-a-repo">article on forking<img src="/images/icon_external_site.gif"> </a>.
 
 If you're ready to go, pick which project you'd like to contribute to:
 
@@ -39,14 +39,14 @@ If you're ready to go, pick which project you'd like to contribute to:
     <div>
       <a href="https://github.com/UV-CDAT/uvcdat-devel">Code</a> /
       <a href="https://github.com/UV-CDAT/uvcdat/issues">Issues</a> /
-      <a href="https://github.com/UV-CDAT/uvcdat/wiki">Wiki <img src="media/images/githubwiki.png"></a> 
+      <a href="https://github.com/UV-CDAT/uvcdat/wiki">Wiki <img src="/images/githubwiki.png"></a> 
     </div>  
   </div>
   <div class="span4">
     <h3>Contribute to this website</h3>
     <a href="https://github.com/aims-group/uvcdat-site">Code</a> /
     <a href="https://github.com/aims-group/uvcdat-site/issues">Issues</a> /
-    <a href="https://github.com/aims-group/uvcdat-site/wiki/">Wiki <img src="media/images/githubwiki.png"></a> &rarr;
+    <a href="https://github.com/aims-group/uvcdat-site/wiki/">Wiki <img src="/images/githubwiki.png"></a> &rarr;
   </div>
 </div>
 

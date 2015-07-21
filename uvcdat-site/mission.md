@@ -51,6 +51,6 @@ script captures the entire process for reproducibility and knowledge sharing.
 [kitware]:  http://kitware.com/
 [tech-x]:   http://txcorp.com/
 
-[uv-cdat concept]: media/images/uv-cdat-concept.png
+[uv-cdat concept]: /images/uv-cdat-concept.png
 
 

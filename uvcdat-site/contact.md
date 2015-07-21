@@ -56,7 +56,7 @@ To leave the mailing list, send an email to [majordomo@lists.llnl.gov][devunsub]
 
 #### Other forms of contact
 
-<a href="https://www.youtube.com/results?search_query=UVCDAT"><img class="contact-logo" src="media/images/youtube.png" alt="YouTube logo"/></a>
+<a href="https://www.youtube.com/results?search_query=UVCDAT"><img class="contact-logo" src="/images/youtube.png" alt="YouTube logo"/></a>
 
 
 

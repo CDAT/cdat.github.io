@@ -33,10 +33,10 @@ div.row > div.tutorial > img {
 </div>
 <div class="row">
   <div class="span5 tutorial">
-    <a class="tutorial-title" href="http://uvcdat.llnl.gov/media/mov/UVCDAT_Departures_MM_annotated4.mp4" target="_blank">Hovm&ouml;ller 3D Example</a>
+    <a class="tutorial-title" href="http://uvcdat.llnl.gov/mov/UVCDAT_Departures_MM_annotated4.mp4" target="_blank">Hovm&ouml;ller 3D Example</a>
   </div>
   <div class="span5 tutorial">
-    <a class="tutorial-title" href="http://uvcdat.llnl.gov/media/mov/UVCDAT_error_tf-ta_anno4.mp4" target="_blank">3D Scalar Example with calculated variable</a>
+    <a class="tutorial-title" href="http://uvcdat.llnl.gov/mov/UVCDAT_error_tf-ta_anno4.mp4" target="_blank">3D Scalar Example with calculated variable</a>
   </div>
 </div>
 

@@ -27,7 +27,7 @@ Collaboration across research, government, academic, and private sectors is inte
 computing libraries and applications through a tailorable provenance framework, empowering scientists to exchange
 and examine data in novel ways.
 
-#### <a target="_blank" href="media/pdf/three-year-comprehensive-report.pdf">UV-CDAT Three Year Comprehensive Report</a>
+#### <a target="_blank" href="/pdf/three-year-comprehensive-report.pdf">UV-CDAT Three Year Comprehensive Report</a>
 For the past three years, a large analysis and visualization effort funded by the Department of Energys Office
 of Biological and Environmental Research (BER), the National Aeronautics and Space Administration (NASA),
 and the National Oceanic and Atmospheric Administration (NOAA) has brought together a wide variety of
