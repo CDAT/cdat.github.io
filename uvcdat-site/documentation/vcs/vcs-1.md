@@ -1,8 +1,8 @@
 ---
 title: VCS Chapter 1
-subtitle: Columns template
-description: Test description
-layout: default
+layout: docs
+manual: vcs
+index: 1
 ---
 
 

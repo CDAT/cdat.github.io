@@ -1,6 +1,8 @@
 ---
 title: UV-CDAT Utilities Chapter 2
-layout: default
+layout: docs
+manual: utils
+index: 2
 ---
 
 
@@ -25,9 +27,9 @@ Returns the correlation between 2 slabs. By default on the first dimension, cent
 
 **Usage:**
 
-```python
+{% highlight python %}
 result = correlation(x, y, weights = weightoptions, axis = axisoptions, centered = centeredoptions, biased = biasedoptions )
-```
+{% endhighlight %}
 
 **Options:**
 
@@ -50,7 +52,7 @@ statistic pass anything but 1.
 
 **Example:**
 
-```python
+{% highlight python %}
 # Let us try an example where we want to look at a
 # variable 'tas' from the NCEP reanalysis and compute
 # some spatial statistics between data slices for time
@@ -67,7 +69,7 @@ statistic pass anything but 1.
 # area. To accomplish this we can use the 'generate'
 # option for weights.
 >>> wcor = statistics.correlation(ncep1, ncep2,\ weights='generate', axis='xy')
-```
+{% endhighlight %}
 
 **`covariance`**
 
@@ -75,9 +77,9 @@ Returns the covariance between 2 slabs. By default on the first dimension, cente
 
 **Usage:**
 
-``` python
+{% highlight python %}
 cov = covariance(x, y, weights = weightoptions, axis = axisoptions, centered = centeredoptions, biased = biasedoptions )
-```
+{% endhighlight %}
 
 **Options:**
 
@@ -105,9 +107,9 @@ Returns the autocorrelation of a slab at lag k centered,partial and "biased" by 
 
 **Usage:**
 
-```python
+{% highlight python %}
 result = autocorrelation(x, lag = lagoptions, axis = axisoptions,centered = centeredoptions, partial = partialoptions, biased = biasedoptions, noloop = noloopoptions )
-```
+{% endhighlight %}
 
 **Options:**
 
@@ -141,9 +143,9 @@ Returns the autocovariance of a slab. By default over the first dimension, cente
 
 **Usage:**
 
-```python
+{% highlight python %}
 result = autocovariance(x, lag = lagoptions, axis = axisoptions, centered = centeredoptions, partial = partialoptions, noloop = noloopoptions )
-```
+{% endhighlight %}
 
 **Options:**
 
@@ -173,9 +175,9 @@ Returns the correlation between 2 slabs at lag k centered, partial and "biased" 
 
 **Usage:**
 
-```python
+{% highlight python %}
 result = laggedcorrelation(x,y, lag = lagoptions, axis = axisoptions, centered = centeredoptions, partial = partialoptions, biased = biasedoptions, noloop = noloopoptions ) 
-```
+{% endhighlight %}
 
 Returns value for x lags y by lag
 
@@ -211,9 +213,9 @@ Returns the covariance between 2 slabs at lag k centered and partial by default
 
 **Usage:**
 
-```python
+{% highlight python %}
 result = laggedcovariance(x, y, lag = lagoptions, axis = axisoptions, centered = centeredoptions, partial = partialoptions, noloop = noloopoptions)
-```
+{% endhighlight %}
 
 Returns value for x lags y by lag (integer)
 
@@ -245,9 +247,9 @@ Returns the mean absolute difference between 2 slabs x and y. By default on the 
 
 **Usage:**
 
-```python
+{% highlight python %}
 result = meanabsdiff(x, y, weights = weightoptions, axis = axisoptions, centered = centeredoptions)
-```
+{% endhighlight %}
 
 **Options:**
 
@@ -265,10 +267,10 @@ default value = 1 removes the mean first. Set to 0 or None for uncentered.
 
 **Example:**
 
-```python
+{% highlight python %}
 # To compute the mean absolute difference between ncep1 and ncep2.
 >>> absd = statistics.meanabsdiff(ncep1, \ ncep2,axis='xy')
-```
+{% endhighlight %}
 
 **`rms`**
 
@@ -276,9 +278,9 @@ Returns the root mean square difference between 2 slabs. By default from a slab 
 
 **Usage:**
 
-```python
+{% highlight python %}
 result = rms(x, y, weights = weightoptions, axis = axisoptions, centered = centeredoptions, biased = biasedoptions )
-```
+{% endhighlight %}
 
 **Options:**
 
@@ -300,10 +302,10 @@ default value = 1 If want to compute an unbiased variance pass anything but 1.
 
 **Example:**
 
-```python
+{% highlight python %}
 # To compute the "temporal" rms difference between the two time periods
 >>> rms = statistics.rms(ncep1, ncep2, axis='t')
-```
+{% endhighlight %}
 
 **`std`**
 
@@ -311,9 +313,9 @@ Returns the standard deviation from a slab. By default on first dimension, cente
 
 **Usage:**
 
-```python
+{% highlight python %}
 result = std(x, weights = weightoptions, axis = axisoptions, centered = centeredoptions, biased = b iasedoptions )
-```
+{% endhighlight %}
 
 **Options:**
 
@@ -339,9 +341,9 @@ Returns the variance from a slab. By default on first dimension, centered, and b
 
 **Usage:**
 
-```python
+{% highlight python %}
 result = variance(x, weights = weightoptions, axis = axisoptions, centered = centeredoptions, biased = biasedoptions )
-```
+{% endhighlight %}
 
 **Options:**
 
@@ -367,9 +369,9 @@ Returns the geometric mean over a sepcified axis.
 
 **Usage:**
 
-```python
+{% highlight python %}
 result = geometricmean(x, axis = axisoptions )
-```
+{% endhighlight %}
 
 **Options:**
 
@@ -383,9 +385,9 @@ Returns values at the defined percentiles for an array.
 
 **Usage:**
 
-```python
+{% highlight python %}
 result = percentiles(x, percentiles = percentilesoptions, axis = axisoptions )
-```
+{% endhighlight %}
 
 **Options:**
 
@@ -417,9 +419,9 @@ Computes the linear regression of y over x or an axis. This function returns Val
 
 **Usage:**
 
-```python
+{% highlight python %}
 result = linearregression(y, axis = axisoptions, x = xvalues, error = erroroptions, probability = probabilityoptions, nointercept = nointerceptoptions, noslope = noslopeoptions )
-```
+{% endhighlight %}
 
 **Options:**
 
@@ -490,7 +492,7 @@ Returns the minimum and maximum of a series of arrays/lists/tuples (or a combina
 
 **Examples:**
 
-```python
+{% highlight python %}
 >>> import genutil
 >>> s = range(7)
 >>> genutil.minmax(s)
@@ -500,7 +502,7 @@ Returns the minimum and maximum of a series of arrays/lists/tuples (or a combina
 >>> genutil.minmax([[s,s*2],4.,[6.,7.,s]],\
 [5.,7.,8,(6.,1.)])
 (-7.0, 8.0)
-```
+{% endhighlight %}
   
 **`grower`**
 
@@ -522,10 +524,10 @@ Given r,g,b values, this function returns the closest 'name'
 
 **Example:**
 
-```python
+{% highlight python %}
 >>> print rgb2str([0,0,0])
 'black'
-```
+{% endhighlight %}
 
 ##### str2rgb 
 
@@ -535,9 +537,9 @@ This is accomplished by looking in the /usr/X11R6/lib/X11/rgb.txt file. If the f
 
 **Examples:**
 
-```python 
+{% highlight python %} 
 >>> r, g, b = str2rgb('pink2')
 # returns: (238, 169, 184 )
 >>> r, g, b = str2rgb('crappy')
-```
+{% endhighlight %}
 

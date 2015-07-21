@@ -1,6 +1,8 @@
 ---
 title: VCS Manual
-layout: default
+layout: docs
+manual: vcs
+index: 0
 ---
 
 

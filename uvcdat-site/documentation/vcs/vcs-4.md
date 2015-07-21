@@ -1,6 +1,8 @@
 ---
 title: VCS Chapter 4
-layout: default
+layout: docs
+manual: vcs
+index: 4
 ---
 
 
@@ -100,15 +102,15 @@ Graphical displays often contain textual inscriptions, which provide further inf
 
 In Python, before one can start using a module they must first load it. To load the VCS module, like all other Python modules, either type:
 
-``` python
+{% highlight python %}
 from vcs import *
-```
+{% endhighlight %}
 
 or
 
-``` python
+{% highlight python %}
 import vcs
-```
+{% endhighlight %}
 
 If you use `import vcs`, then you must prepend "vcs" to certain calls (e.g., `vcs.help()`). If you use `from vcs import *`, then you must be aware of possible name clashes. That is, if two packages are imported using the form `from name import *` and both have a "help" function, then Python doesn't know which `help` function to call. For such cases, and indeed as an unspoken rule, it is best to use "import name" to avoid name clashing between packages.
 
@@ -116,9 +118,9 @@ If you use `import vcs`, then you must prepend "vcs" to certain calls (e.g., `vc
 
 To construct a VCS Canvas object type the following:
 
-```python
+{% highlight python %}
 a=vcs.init()
-```
+{% endhighlight %}
 
 There can only be at most 8 VCS Canvas objects initialized at any given time.
 When a VCS Canvas object is initialized, the current template and graphics
@@ -148,7 +150,7 @@ everything else.
 
 #####  Plotting a CDMS Persistent Array
 
-``` python
+{% highlight python %}
 import vcs # import the VCS module
 import cdms2 # import CDMS for ingesting data
 
@@ -171,13 +173,13 @@ v=vcs.init() # "v" is an instance of the VCS class
 v.plot(data, variable=psl) # call "plot" function to display the CDMS
 
 # Persistent Array on the VCS Canvas using default settings
-```
+{% endhighlight %}
 
 <a name="4.5.3"></a>
 
 #####  Plotting a CDMS2 Slab Array
 
-```python
+{% highlight python %}
 import vcs # import the VCS module
 import cdms2 # import CDMS2 for ingesting data
 
@@ -192,13 +194,13 @@ v=vcs.init() # "v" is an instance of the VCS
 v.plot(s) # call "plot" function to display the CDMS2 "slab"
 
 # array on the VCS Canvas using default settings
-```
+{% endhighlight %}
 
 <a name="4.5.4"></a>
 
 #####  Plotting a Numeric Array
 
-```python
+{% highlight python %}
 import vcs # import the VCS module
 import Numeric # import Numeric for generating data
 
@@ -213,7 +215,7 @@ v=vcs.init() # "v" is an instance of the VCS
 v.plot(a) # call "plot" function to display the Numeric
 
 # "array" data on the VCS Canvas using default settings
-```
+{% endhighlight %}
 
 <a name="4.5.5"></a>
 
@@ -226,16 +228,16 @@ showing the uses of array objects, template object, graphics method object,
 and key word arguments. Objects placed in brackets "[ ]" indicate optional
 entries into the plot function:
 
-``` python
+{% highlight python %}
 plot(array1, [array2 [, template [, graphics method [,key=value [, key=value
 [, ...]]]]]]),
-```
+{% endhighlight %}
 
 where `array1` and `array2` are Numeric arrays or CDMS2 slabs; `template` represents a template object; `graphics method` represents a graphics method object (such as, `boxfill` or `isofill`); and `key=value` represents one variable attributes used to display textual information or to modify the plot's output. If no template is specified, then the default template will be used. If no graphics method is specified, then the default boxfill graphics method is used.
 
 ###### Variable attribute keys are:
 
-```python
+{% highlight python %}
 comment1 = string # Comment plotted above file_comment
 comment2 = string # Comment plotted above comment1
 comment3 = string # Comment plotted above comment2
@@ -248,45 +250,45 @@ name = string # Variable name (defaults to var.id)
 time = cdtime # instance (relative or absolute), cdtime, reltime or abstime value
 units = string # Variable units
 ymd = string (yy/mm/dd) # Year, month, day
-```
+{% endhighlight %}
 
 
 ######Dimension attribute keys (dimension length=n) are:
 
-```python
+{% highlight python %}
 [x|y|z|t|w]array1 = NumPy array of length n # x or y Dimension values
 [x|y|z|t|w]array2 = NumPy array of length n # x or y Dimension
-```
+{% endhighlight %}
 
 
 ######values:
 
-```python
+{% highlight python %}
 [x|y]bounds = NumPy array of shape (n,2) # x or y Dimension
-```
+{% endhighlight %}
 
 
 ######boundaries:
 
-```python
+{% highlight python %}
 [x|y|z|t|w]name = string # x or y Dimension name
 [x|y|z|t|w]units = string # x or y Dimension units
 [x|y]weights = NumPy array of length n # x or y Dimension weights (used # to calculate area-weighted mean)
-```
+{% endhighlight %}
 
 
 ######CDMS object attributes are:
 
-```python
+{% highlight python %}
 [x|y|z|t|w]axis = CDMS axis object # x or y Axis
 grid = CDMS grid object # Grid object (e.g. grid=var.getGrid())
 variable = CDMS variable object # Variable object
-```
+{% endhighlight %}
 
 
 ######Miscellaneous attributes are:
 
-```python
+{% highlight python %}
 [x|y]rev = 0|1 # if ==1, reverse the direction of the x or y axis
 continents = 0,1,2,3,4,5,6,7,8,9,10,11 # if >=1, plot continental
 # outlines (default: plot if x-axis is longitude, y-axis is latitude -or-
@@ -304,13 +306,13 @@ continents = 0,1,2,3,4,5,6,7,8,9,10,11 # if >=1, plot continental
 # type defined by the files
 # data_continent_other7
 # through data_continent_other12.
-```
+{% endhighlight %}
 
 ######Graphics Output in Background Mode:
 
-```python
+{% highlight python %}
 bg = 0|1 # if==1, create images in the background (Don't display the VCS Canvas)
-```
+{% endhighlight %}
 
 Note: More specific attributes take precedence over general attributes. In
 particular, specific attributes override variable object attributes; dimension

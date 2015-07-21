@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+
+    <div class="container-fluid">
+        {% assign last_ind = page.index | minus: 1 %}
+        {% assign next_ind = page.index | plus: 1 %}
+        {{ content }}
+        {% for p in site.pages %}
+            {% if p.layout == "docs" %}
+                {% if p.manual == page.manual %}
+                    {% if p.index == last_ind and last_ind != 0 %}
+                        {% assign prev = p %}
+                    {% endif %}
+                    {% if p.index == next_ind %}
+                        {% assign next = p %}
+                    {% endif %}
+                    {% if p.index == 0 and page.index != 0 %}
+                        {% assign toc = p %}
+                    {% endif %}
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+        <div class="row center">
+            <a class="btn btn-default {% if prev %}{% else %}disabled{% endif %}" href="{{ prev.url }}">Previous</a>
+        
+            <a class="btn btn-default {% if toc %}{% else %}disabled{% endif %}" href="{{ toc.url }}">Table of Contents </a>
+        
+            <a class="btn btn-default {% if next %}{% else %}disabled{% endif %}" href="{{ next.url }}">Next</a>
+        </div>
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

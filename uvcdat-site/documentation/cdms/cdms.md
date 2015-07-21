@@ -1,6 +1,8 @@
 ---
 title: CDMS Table of Contents
-layout: default
+layout: docs
+manual: cdms
+index: 0
 ---
 
 

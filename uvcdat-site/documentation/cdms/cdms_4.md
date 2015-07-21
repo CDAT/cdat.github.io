@@ -1,6 +1,8 @@
 ---
 title: CDMS Chapter 4
-layout: default
+layout: docs
+manual: cdms
+index: 4
 ---
 
 
@@ -28,7 +30,7 @@ CDMS provides several methods for interpolating gridded data:
 
 The simplest method to regrid a variable from one rectangular, lat/lon grid to another is to use the regrid function defined for variables. This function takes the target grid as an argument, and returns the variable regridded to the target grid:
 
-```python
+{% highlight python %}
 >>> import cdms
 >>> f = cdms.open('/pcmdi/cdms/exp/cmip2/ccc/perturb.xml')
 >>> rlsf = f('rls') # Read the data
@@ -44,7 +46,7 @@ The simplest method to regrid a variable from one rectangular, lat/lon grid to a
 >>> outgrid.shape
 (46, 72)
 
-```
+{% endhighlight %}
 
 A somewhat more efficient method is to create a regridder function. This has the advantage that the mapping is created only once and can be used for multiple arrays. Also, this method can be used with data in the form of an MA.MaskedArray or Numeric array. The steps in this process are:
 
@@ -53,7 +55,7 @@ A somewhat more efficient method is to create a regridder function. This has the
 
 The following example illustrates this process. The regridder function is generated at line 9, and the regridding is performed at line 10:
 
-``` python
+{% highlight python %}
 1 #!/usr/bin/env python
 2 import cdms
 3 from regrid import Regridder
@@ -67,7 +69,7 @@ The following example illustrates this process. The regridder function is genera
 10 rlsnew = regridfunc(rlsf)
 11 f.close()
 12 g.close()
-```
+{% endhighlight %}
 
 Line Notes
 
@@ -102,7 +104,7 @@ To interpolate between grids where one or both grids is non-rectangular, CDMS pr
   4. CDMS, open the remapping file and create a regridder function with the readRegridder method.
   5. Call the regridder function on the input variable, defined on the source grid. The return value is the variable interpolated to the new grid. Note that the variable may have more than two dimensions. Also note that the input arguments to the regridder function depend on the type of regridder. For example, the bicubic interpolation has additional arguments for the gradients of the variable.
 
-![Regridding]({{site.baseurl}}/media/images/regridding.jpg)
+![Regridding](/images/regridding.jpg)
 
 ###### FIGURE 3. Regridding data with SCRIP
 
@@ -156,25 +158,25 @@ Once the grids and input file are defined, run the scrip executable to generate 
 
 Next, run UV-CDAT and create the regridder:
 
-``` python
+{% highlight python %}
 # Import regrid package for regridder functions
 import regrid, cdms
 # Read the regridder from the remapper file
 remapf = cdms.open('rmp_T42_to_POP43_conserv.nc')
 regridf = regrid.readRegridder(remapf)
 remapf.close()
-```
+{% endhighlight %}
 
 Then read the input data and regrid:
 
-``` python
+{% highlight python %}
 # Get the source variable
 f = cdms.open('sampleT42Grid.nc')
 t42dat = f('src_array')
 f.close()
 # Regrid the source variable
 popdat = regridf(dat)
-```
+{% endhighlight %}
 
 Note that `t42dat` can have rank greater than 2. The trailing dimensions must match the input grid shape. For example, if `t42dat` has shape (12, 64, 128), then the input grid must have shape (64,128). Similarly if the variable had a generic grid with shape (8092,), the last dimension of the variable would have length 8092.
 
@@ -184,7 +186,7 @@ Note that `t42dat` can have rank greater than 2. The trailing dimensions must ma
 
 To regrid a variable which is a function of latitude, longitude, pressure level, and (optionally) time to a new set of pressure levels, use the `pressureRegrid` function defined for variables. This function takes an axis representing the target set of pressure levels, and returns a new variable `d` regridded to that dimension.
 
-``` python
+{% highlight pycon %}
 >>> var.shape
 (3, 16, 32)
 >>> var.getAxisIds()
@@ -194,7 +196,7 @@ To regrid a variable which is a function of latitude, longitude, pressure level,
 >>> result = var.pressureRegrid(levout)
 >>> result.shape
 (2, 16, 32)
-```
+{% endhighlight %}
 
 <a name="4.1.4"></a>
 
@@ -202,7 +204,7 @@ To regrid a variable which is a function of latitude, longitude, pressure level,
 
 To regrid a variable which is a function of latitude, height, and (optionally) time to a new latitude/height cross-section, use the `crossSectionRegridder` defined for variables. This function takes as arguments the new latitudes and heights, and returns the variable regridded to those axes.
 
-```python
+{% highlight python %}
  >>> varin.shape
 (11, 46)
 >>> varin.getAxisIds()
@@ -213,7 +215,7 @@ To regrid a variable which is a function of latitude, height, and (optionally) t
 >>> varout = varin.crossSectionRegrid(levOut, latOut)
 >>> varout.shape
 (12, 64)
-```
+{% endhighlight %}
  
 <a name="4.2_regrid_module"></a>
 
@@ -229,9 +231,9 @@ The `regrid` module implements the CDMS regridding functionality as well as the 
 
 The Python command
 
-``` python
+{% highlight python %}
 from regrid import Regridder
-```
+{% endhighlight %}
 
 makes the CDMS Regridder class available within a Python program. An instance of Regridder is a function which regrids data from rectangular input to output grids.
 
@@ -373,16 +375,16 @@ Finally, if the output grid has a mask, it is applied to the result array. Where
 
 A SCRIP regridder function is an instance of the ScripRegridder class. Such a function is created by calling the regrid.readRegridder method. Typical usage is  straightforward:
 
-``` python
+{% highlight pycon %}
 >>> regridf = regrid.readRegridder(remap_file)
 >>> outdat = regridf(indat)
-```
+{% endhighlight %}
 
 The bicubic regridder takes four arguments:
 
-```python
+{% highlight python %}
 >>> outdat = regridf(indat, gradlat, gradlon, gradlatlon)
-```
+{% endhighlight %}
 
 A regridder function also has associated methods to retrieve the following fields:
 
@@ -421,7 +423,7 @@ In addition, a conservative regridder has the associated grid cell areas for sou
 
 Regrid data to a uniform output grid.
 
-```python
+{% highlight python %}
 1   #!/usr/local/bin/python
 2   import cdms
 3   from regrid import Regridder
@@ -432,7 +434,7 @@ Regrid data to a uniform output grid.
 8   regridFunc = Regridder(ingrid, outgrid)
 9   newrls = regridFunc(rlsf)
 10  f.close()
-```
+{% endhighlight %}
  
 
 |Line|Notes|
@@ -449,7 +451,7 @@ Return the area fraction of the source (input) grid cell that participates in th
 
 Get a mask from a separate file, and set as the input grid mask.
 
-``` python
+{% highlight python %}
 1   import cdms
 2   from regrid import Regridder
 3   #
@@ -467,7 +469,7 @@ Get a mask from a separate file, and set as the input grid mask.
 15  f.close()
 16  g.close()
 17  h.close()
-```
+{% endhighlight %}
 
 
 |Line|Notes|
@@ -506,7 +508,7 @@ Generate an array of zonal mean values.
 
 Regrid an array with missing data, and calculate the area-weighted mean of the result.
 
-``` python
+{% highlight python %}
 1   from cdms.MV import *
     ...
 2   outgrid = cdms.createUniformGrid(90.0, 46, -4.0, 0.0, 72, 5.0)
@@ -522,7 +524,7 @@ Regrid an array with missing data, and calculate the area-weighted mean of the r
 11  regridFunc = Regridder(grid, outgrid)
 12  outsample, outmask = regridFunc(sample, mask=inmask, returnTuple=1)
 13  outmean = add.reduce(ravel(outmask*outweights*outsample)) / add.reduce(ravel(outmask*outweights))
-```
+{% endhighlight %}
 
 
 |Line|Notes|
@@ -547,7 +549,7 @@ Regrid an array with missing data, and calculate the area-weighted mean of the r
 
 Regrid from a curvilinear to a generic grid, using a conservative remapping. Compute the area-weighted means on input and output for comparison.
 
-``` python
+{% highlight python %}
 import cdms, regrid, MA
 
 # Open the SCRIP remapping file and data file
@@ -579,6 +581,6 @@ print 'Output mean:', outmean
 
 fremap.close)
 fdat.close()
-```
+{% endhighlight %}
 
 

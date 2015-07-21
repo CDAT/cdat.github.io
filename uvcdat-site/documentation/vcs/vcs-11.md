@@ -1,6 +1,8 @@
 ---
 title: VCS Chapter 11
-layout: default
+layout: docs
+manual: vcs
+index: 11 
 ---
 
 

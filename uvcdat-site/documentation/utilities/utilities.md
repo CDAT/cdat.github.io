@@ -1,6 +1,8 @@
 ---
 title: UV-CDAT Utilities
-layout: default
+layout: docs
+manual: utils
+index: 0
 ---
 
 

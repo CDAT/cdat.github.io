@@ -1,6 +1,8 @@
 ---
 title: VCS Chapter 8
-layout: default
+layout: docs
+manual: vcs
+index: 8
 ---
 
 
@@ -15,7 +17,7 @@ This section shows useful VCS examples.
 
 ###Simple Plotting Example:
 
-``` python
+{% highlight python %}
 #
 # Simple Plot module
 #
@@ -74,7 +76,7 @@ def simpleplot():
 
 if __name__ == "__main__":
     simpleplot()
-```
+{% endhighlight %}
 
 
 <a name="simple_overlay"></a>
@@ -158,7 +160,7 @@ if __name__ == "__main__":
 
 ###Boxfill Graphics Method Example:
 
-``` python
+{% highlight python %}
 #
 # Example Boxfill (Gfb) module
 #
@@ -288,13 +290,13 @@ def exampleboxfill():
 
 if __name__ == "__main__":
     exampleboxfill()
-```
+{% endhighlight %}
 
 <a name="continents"></a>
 
 ###Continents Graphics Method Example:
 
-``` python
+{% highlight python %}
 #
 # Example Continents (Gcon) module
 #
@@ -417,13 +419,13 @@ def examplecontinents():
 
 if __name__ == "__main__":
 examplecontinents()
-```
+{% endhighlight %}
 
 <a name="isofill"></a>
 
 ###Isofill Graphics Method Example:
 
-```python
+{% highlight python %}
 #
 # Example Isofill (Gfi) module
 #
@@ -568,13 +570,13 @@ def exampleisofill():
 
 if __name__ == "__main__":
     exampleisofill()
-```
+{% endhighlight %}
 
 <a name="isoline"></a>
 
 ###Isoline Graphics Method Example:
 
-``` python
+{% highlight python %}
 #
 # Example Isoline (Gi) module
 #
@@ -767,13 +769,13 @@ print '***************************************************'
 
 if __name__ == "__main__":
     exampleisoline()
-```
+{% endhighlight %}
 
 <a name="outfill"></a>
 
 ###Outfill Graphics Method Example:
 
-``` python
+{% highlight python %}
 #
 # Example Outfill (Gfo) module
 #
@@ -894,13 +896,13 @@ def exampleoutfill():
 
 if __name__ == "__main__":
     exampleoutfill()
-```
+{% endhighlight %}
 
 <a name="outline"></a>
 
 ###Outline Graphics Method Example:
 
-``` python
+{% highlight python %}
 #
 # Example Outline (Go) module
 #
@@ -1032,14 +1034,14 @@ def exampleoutline():
 
 if __name__ == "__main__":
     exampleoutfill()
-```
+{% endhighlight %}
 
 
 <a name="scatter"></a>
 
 ###Scatter Graphics Method Example:
 
-``` python
+{% highlight python %}
 #
 # Example Scatter (GSp) module
 #
@@ -1188,13 +1190,13 @@ def examplescatter():
 
 if __name__ == "__main__":
     examplescatter()
-```
+{% endhighlight %}
 
 <a name="vector"></a>
 
 ###Vector Graphics Method Example:
 
-```python
+{% highlight python %}
 #
 # Example Vector (Gv) module
 #
@@ -1347,13 +1349,13 @@ def examplevector():
 
 if __name__ == "__main__":
     examplevector()
-```
+{% endhighlight %}
 
 <a name="xvsy"></a>
 
 ###XvsY Graphics Method Example:
 
-```python
+{% highlight python %}
 #
 # Example XvsY (GXY) module
 #
@@ -1528,14 +1530,14 @@ def examplexvsy():
 
 if __name__ == "__main__":
     examplexvsy()
-```
+{% endhighlight %}
 
 
 <a name="xyvsy"></a>
 
 ###Xyvsy Graphics Method Example:
 
-``` python
+{% highlight python %}
 #
 # Example Xyvsy (GXy) module
 #
@@ -1709,13 +1711,13 @@ def examplexyvsy():
 
 if __name__ == "__main__":
     examplexyvsy()
-```
+{% endhighlight %}
 
 <a name="yxvsx"></a>
 
 ###Yxvsx Graphics Method Example:
 
-``` python
+{% highlight python %}
 #
 # Example Yxvsx (GYx) module
 #
@@ -1889,13 +1891,13 @@ def exampleyxvsx():
 
 if __name__ == "__main__":
     exampleyxvsx()
-```
+{% endhighlight %}
 
 <a name="colormap"></a>
 
 ###Colormap Example:
 
-``` python
+{% highlight python %}
 #
 # Example Colormap (Cp) module
 #
@@ -1965,7 +1967,7 @@ def examplecolormap():
 
 if __name__ == "__main__":
     examplecolormap()
-```
+{% endhighlight %}
 
 <a name="hardcopy"></a>
 
@@ -2060,7 +2062,7 @@ if __name__ == "__main__":
 
 ###Picture Template Example:
 
-``` python                                                                           
+{% highlight python %}                                                                           
 # Example Picture Template (P) module
 #
 ############################################################################
@@ -2173,13 +2175,13 @@ def exampletemplate():
 
 if __name__ == "__main__":
     exampletemplate()
-```
+{% endhighlight %}
 
 <a name="simple_animation"></a>
 
 ###Simple Animation Example:
 
-```python
+{% highlight python %}
 #
 # Simple animation module
 #
@@ -2239,13 +2241,13 @@ def simpleanimation():
 
 if __name__ == "__main__":
     simpleanimation()
-```
+{% endhighlight %}
 
 <a name="vcs3D_animation"></a>
 
 ### Simple Animation Example Using vcs3D:
 
-```python
+{% highlight python %}
 #
 # When the window appears, click in the 'configure' button and then the 'animate' button.   
 # You can then click on the 'run' button to start the animation.
@@ -2265,13 +2267,13 @@ def simpleanimation():
 
 if __name__ == "__main__":
     simpleanimation()
-```
+{% endhighlight %}
 
 <a name="vcs3D_vector"></a>
 
 ###Vector Plot Example Using vcs3D:
 
-```python
+{% highlight python %}
 #
 # There are buttons for adjusting the glyph size, density, and colors.   
 # It won't animate because the clt dataset contains only one time step for the u,v data.  
@@ -2290,13 +2292,13 @@ def simplevector():
 
 if __name__ == "__main__":
     simplevector()
-```
+{% endhighlight %}
 
 <a name="vcs3D_volume"></a>
 
 ###Volume Render Example Using vcs3D:
 
-```python
+{% highlight python %}
 #
 # There are buttons for adjusting the transfer function, opacity, colormap, and color scaling of the volume rendering.    
 #
@@ -2323,5 +2325,5 @@ def simplevolume():
 
 if __name__ == "__main__":
     simplevolume()
-```
+{% endhighlight %}
 

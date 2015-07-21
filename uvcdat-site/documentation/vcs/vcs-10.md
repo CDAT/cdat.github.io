@@ -1,6 +1,8 @@
 ---
 title: VCS Chapter 10
-layout: default
+layout: docs
+manual: vcs
+index: 10
 ---
 
 
@@ -26,131 +28,131 @@ show the 20 different patterns available.
 
 Font 1:
 
-![]({{ media_url("/images/vcs-3.gif") }})
+![](/images/vcs-3.gif)
 
 Font 2:
 
-![]({{ media_url("/images/vcs-4.gif") }})
+![](/images/vcs-4.gif)
 
 Font 3:
 
-![]({{ media_url("/images/vcs-5.gif") }})
+![](/images/vcs-5.gif)
 
 Font 4:
 
-![]({{ media_url("/images/vcs-6.gif") }})
+![](/images/vcs-6.gif)
 
 Font 5:
 
-![]({{ media_url("/images/vcs-7.gif") }})
+![](/images/vcs-7.gif)
 
 Font 6:
 
-![]({{ media_url("/images/vcs-8.gif") }})
+![](/images/vcs-8.gif)
 
 Font 7:
 
-![]({{ media_url("/images/vcs-9.gif") }})
+![](/images/vcs-9.gif)
 
 Font 8:
 
-![]({{ media_url("/images/vcs-10.gif") }})
+![](/images/vcs-10.gif)
 
 Font 9:
 
-![]({{ media_url("/images/vcs-11.gif") }})
+![](/images/vcs-11.gif)
 
 ###Line Styles
 
 Line 1 (Solid):
 
-![]({{ media_url("/images/vcs-12.gif") }})
+![](/images/vcs-12.gif)
 
 Line 2 (Dashed):
 
-![]({{ media_url("/images/vcs-13.gif") }})
+![](/images/vcs-13.gif)
 
 Line 3 (Dotted):
 
-![]({{ media_url("/images/vcs-14.gif") }})
+![](/images/vcs-14.gif)
 
 Line 4 (Dashed-Dotted):
 
-![]({{ media_url("/images/vcs-15.gif") }})
+![](/images/vcs-15.gif)
 
 Line 5 (Long-Dashed):
 
-![]({{ media_url("/images/vcs-16.gif") }})
+![](/images/vcs-16.gif)
 
 ###Markers
 
 Marker 1 (Dot):
 
-![]({{ media_url("/images/vcs-17.gif") }})
+![](/images/vcs-17.gif)
 
 Marker 2 (Plus):
 
-![]({{ media_url("/images/vcs-18.gif") }})
+![](/images/vcs-18.gif)
 
 Marker 3 (Star):
 
-![]({{ media_url("/images/vcs-19.gif") }})
+![](/images/vcs-19.gif)
 
 Marker 4 (Circle):
 
-![]({{ media_url("/images/vcs-20.gif") }})
+![](/images/vcs-20.gif)
 
 Marker 5 (Cross):
 
-![]({{ media_url("/images/vcs-21.gif") }})
+![](/images/vcs-21.gif)
 
 Marker 6 (Diamond):
 
-![]({{ media_url("/images/vcs-22.gif") }})
+![](/images/vcs-22.gif)
 
 Marker 7 (Triangle-Up):
 
-![]({{ media_url("/images/vcs-23.gif") }})
+![](/images/vcs-23.gif)
 
 Marker 8 (Triangle-Down):
 
-![]({{ media_url("/images/vcs-24.gif") }})
+![](/images/vcs-24.gif)
 
 Marker 9 (Triangle-Left):
 
-![]({{ media_url("/images/vcs-25.gif") }})
+![](/images/vcs-25.gif)
 
 Marker 10 (Triangle-Right):
 
-![]({{ media_url("/images/vcs-26.gif") }})
+![](/images/vcs-26.gif)
 
 Marker 11 (Square):
 
-![]({{ media_url("/images/vcs-27.gif") }})
+![](/images/vcs-27.gif)
 
 Marker 12 (Diamond-Fill):
 
-![]({{ media_url("/images/vcs-28.gif") }})
+![](/images/vcs-28.gif)
 
 Marker 13 (Triangle-Up-Fill):
 
-![]({{ media_url("/images/vcs-29.gif") }})
+![](/images/vcs-29.gif)
 
 Marker 14 (Triangle-Down-Fill):
 
-![]({{ media_url("/images/vcs-30.gif") }})
+![](/images/vcs-30.gif)
 
 Marker 15 (Triangle-Left-Fill):
 
-![]({{ media_url("/images/vcs-31.gif") }})
+![](/images/vcs-31.gif)
 
 Marker 16 (Triangle-Right-Fill):
 
-![]({{ media_url("/images/vcs-32.gif") }})
+![](/images/vcs-32.gif)
 
 Marker 17 (Square-Fill):
 
-![]({{ media_url("/images/vcs-33.gif") }})
+![](/images/vcs-33.gif)
 
 
 
@@ -158,82 +160,82 @@ Marker 17 (Square-Fill):
 
 Pattern 1:
 
-![]({{ media_url("/images/vcs-34.gif") }})
+![](/images/vcs-34.gif)
 
 Pattern 2:
 
-![]({{ media_url("/images/vcs-35.gif") }})
+![](/images/vcs-35.gif)
 
 Pattern 3:
 
-![]({{ media_url("/images/vcs-36.gif") }})
+![](/images/vcs-36.gif)
 
 Pattern 4:
 
-![]({{ media_url("/images/vcs-37.gif") }})
+![](/images/vcs-37.gif)
 
 Pattern 5:
 
-![]({{ media_url("/images/vcs-38.gif") }})
+![](/images/vcs-38.gif)
 
 Pattern 6:
 
-![]({{ media_url("/images/vcs-39.gif") }})
+![](/images/vcs-39.gif)
 
 Pattern 7:
 
-![]({{ media_url("/images/vcs-40.gif") }})
+![](/images/vcs-40.gif)
 
 Pattern 8:
 
-![]({{ media_url("/images/vcs-41.gif") }})
+![](/images/vcs-41.gif)
 
 Pattern 9:
 
-![]({{ media_url("/images/vcs-42.gif") }})
+![](/images/vcs-42.gif)
 
 Pattern 10:
 
-![]({{ media_url("/images/vcs-43.gif") }})
+![](/images/vcs-43.gif)
 
 Pattern 11:
 
-![]({{ media_url("/images/vcs-44.gif") }})
+![](/images/vcs-44.gif)
 
 Pattern 12:
 
-![]({{ media_url("/images/vcs-45.gif") }})
+![](/images/vcs-45.gif)
 
 Pattern 13:
 
-![]({{ media_url("/images/vcs-46.gif") }})
+![](/images/vcs-46.gif)
 
 Pattern 14:
 
-![]({{ media_url("/images/vcs-47.gif") }})
+![](/images/vcs-47.gif)
 
 Pattern 15:
 
-![]({{ media_url("/images/vcs-48.gif") }})
+![](/images/vcs-48.gif)
 
 Pattern 16:
 
-![]({{ media_url("/images/vcs-49.gif") }})
+![](/images/vcs-49.gif)
 
 Pattern 17:
 
-![]({{ media_url("/images/vcs-50.gif") }})
+![](/images/vcs-50.gif)
 
 Pattern 18:
 
-![]({{ media_url("/images/vcs-51.gif") }})
+![](/images/vcs-51.gif)
 
 Pattern 19:
 
-![]({{ media_url("/images/vcs-52.gif") }})
+![](/images/vcs-52.gif)
 
 Pattern 20:
 
-![]({{ media_url("/images/vcs-53.gif") }})
+![](/images/vcs-53.gif)
 
 

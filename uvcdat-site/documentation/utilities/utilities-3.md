@@ -1,6 +1,8 @@
 ---
 title: UV-CDAT Utilities Chapter 3
-layout: default
+layout: docs
+manual: utils
+index: 3
 ---
 
 
@@ -54,7 +56,7 @@ A similar package is in Scientific Python.
 
 **Example:**
 
-```python
+{% highlight python %}
 >>> import binaryio
 >>> iunit = binaryio.bincreate('filename')
 >>> binaryio.binwrite(iunit, some_array)
@@ -64,7 +66,7 @@ A similar package is in Scientific Python.
 >>> y = binaryio.binread(iunit, n, ...)
 # (1-4 dimensions)
 >>> binaryio.binclose(iunit)
-```
+{% endhighlight %}
 
 Note that reads and writes must be paired exactly. Errors will cause a Fortran STOP that cannot be recovered from. You must know (or have written earlier in the file) the sizes of each array. All data is stored as 32-bit floats.
 
@@ -159,7 +161,7 @@ Computes variance estimate taking auto-correlation into account.
 
 **Example:**
 
-```python
+{% highlight python %}
 import reg_arl from trends
 rneff, result, res, cxx, rxx = reg_arl (lag, x, y)
 integer lag Max lag for autocorrelations.
@@ -170,7 +172,7 @@ real, intent(out):: result(31) !Array of linear regression results
 real, intent(out):: res(n1) !Residuals from linear regression
 real, intent(out):: cxx(1 + lag) !Autocovariance function
 real, intent(out):: rxx(1 + lag) !Autocorrelation function
-```
+{% endhighlight %}
 
 ##### Reading data from an Oort file (package ort) 
 
@@ -180,10 +182,10 @@ Module `ort` contains one Fortran function, `read1f`:
 
 Calling sequence:
 
-```python
+{% highlight python %}
 >>> import ort
 >>> lon, lat, data, nr = ort.read1f(filename, maxsta,\ nvarbs, nlevels)
-```
+{% endhighlight %}
 
 Input:
 

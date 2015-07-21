@@ -1,6 +1,8 @@
 ---
 title: CDMS Chapter 3
-layout: default
+layout: docs
+manual: cdms
+index: 3
 ---
 
 
@@ -18,9 +20,9 @@ layout: default
 
 The `cdtime` module implements the CDMS time types, methods, and calendars. These are made available with the command
 
-``` python
+{% highlight python %}
 import cdtime
-```
+{% endhighlight %}
 
 Two time types are available: relative time and component time. Relative time is time relative to a fixed base time. It consists of:
 
@@ -48,9 +50,9 @@ A calendar specifies the number of days in each month, for a given year. cdtime 
 
 Several `cdtime` functions have an optional calendar argument. The default calendar is the `MixedCalendar`. The default calendar may be changed with the command:
 
-``` python
+{% highlight python %}
 cdtime.DefaultCalendar = newCalendar
-```
+{% endhighlight %}
 
 <a name="3.3"></a>
 

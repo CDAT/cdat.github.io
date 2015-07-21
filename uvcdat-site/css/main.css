@@ -164,6 +164,10 @@ a[name] {
   text-align:center;
 }
 
+footer {
+  margin-top: 1em;
+}
+
 footer .nav>li>a {
   padding-top:0;
   padding-bottom:0;
@@ -202,4 +206,10 @@ footer {
 
 .bottom-links {
   padding-top: 1em;
+}
+
+.center {
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
 }

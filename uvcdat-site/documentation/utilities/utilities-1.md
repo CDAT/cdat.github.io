@@ -1,6 +1,8 @@
 ---
 title: UV-CDAT Utilities Chapter 1
-layout: default
+layout: docs
+manual: utils
+index: 1
 ---
 
 
@@ -21,9 +23,9 @@ Area averaging is one of the most common data reduction procedures used in clima
 
 ##### Usage:    
 
-``` python
+{% highlight python %}
 result = averager( V, axis= axisoptions , weights= weightoptions , action= actionoptions , returned= returnedoptions , combinewts=combinewtsoptions )
-```
+{% endhighlight %}
 
 ##### Options:
 
@@ -74,7 +76,7 @@ result = averager( V, axis= axisoptions , weights= weightoptions , action= actio
 
 **Examples:**
 
-``` python
+{% highlight python %}
 >>> import cdms, cdutil
 >>> f = cdms.open('data_file_name')
 >>> result = cdutil.averager(f('var_name'), axis='1')
@@ -117,31 +119,31 @@ weights=['equal','equal'],\
 action='sum')
 # is a good way to compute the area fraction that the
 # data y that is non-missing
-```
+{% endhighlight %}
 
 **Note:**  When averaging data with missing values, extra care needs to be taken. It is recommended that you use the default `weights='generate'` option. This uses `cdutil.area_weights(V)` to get the correct weights to pass to the averager. 
 
-``` python
+{% highlight python %}
 >>> cdutil.averager(V, axis='xy', weight='generate')
 # The above is equivalent to:
 >>> V_wts = cdutil.area_weights(V)
 >>> result = cdutil.averager(V, axis='xy', weight=V_wts)
 #
 >>> result = cdutil.averager(V, axis='xy', weight=cdutil.area_weights(V))
-```
+{% endhighlight %}
 
 However, the `area_weights` function requires that the axis bounds are stored or can be calculated. In the case that such weights are not stored with the axis specifications (or the user desires to specify weights from another source), the use of `combinewts` option can produce the same results. In short, the following two are equivalent:
 
-```python
+{% highlight python %}
 >>> xavg_1 = averager(X, axis = 'xy', weights = area_weights(X))
 >>> xavg_2 = averager(X, axis = 'xy', weights = ['weighted', 'weighted', 'weighted'], combinewts=1)
-```
+{% endhighlight %}
 
 Where `X` is a function of x, y and a third dimension such as time or level. In general, where the `'weighted'` keyword appears above, it can be substituted with arrays of weights.
 
 The following example will help you see the `averager()` function in context
 
-```python
+{% highlight python %}
 >>> import cdms, cdutil
 >>> f = cdms.open('file_name')
 # Extract the variable over the required domain
@@ -150,14 +152,14 @@ The following example will help you see the `averager()` function in context
 # (denoted by 'x') and then the latitude axis
 # (denoted by 'y')
 >>> nino3_avg = cdutil.averager(t_nino3, axis='xy')
-```
+{% endhighlight %}
 
 Axis options can also be specified by name such as `axis = '(depth)'` or by index such as `axis = '20'` (note the numbers are enclosed in quotes). By default, the appropriate area weights are generated from the grid information and the result of the averaging is the area weighted value. More control over the weights used is available. It is possible to specify the weights used to average over the longitude and latitude axes seperately.
 
-```python
+{% highlight python %}
 >>> nino3avg2 = cdutil.averager(t_nino3,
 axis='yx',weights=['generate','equal'])
-```
+{% endhighlight %}
 
 In the above example, we averaged over the latitude axis first (using generated weights) and then over the longitude axis (using equal weights). The weights can be `equal` or `generate` (generates the weights for the grid information contained in the variable) or any array of numbers the user wishes to apply.
 
@@ -165,9 +167,9 @@ In the above example, we averaged over the latitude axis first (using generated 
 
 For most averaging applications, the weights used are critical especially when there are missing data. The  cdutil package provides a way of generating the weights using grid information that is tied to the variable. The averager function uses this to generate the weights when the default averaging weights option kicks in. This function is easily called for some variable `x` in memory:
 
-```python
+{% highlight python %}
 >>> gen_weights = cdutil.area_weights(x)
-```
+{% endhighlight %}
 
 The resultant `gen_weights` is in the same shape as the variable `x` and has the appropriate area weights set to missing values where data was missing in `x`.
 
@@ -175,19 +177,19 @@ The resultant `gen_weights` is in the same shape as the variable `x` and has the
 
 For many applications data extraction needs to be precise and the ability to define the precise regions to extract is one of the strengths of UV-CDAT. This is provided by the `cdutil` region selector for rectilinear grids (non-rectilinear grid support will be available in a future release). The general form of this region definition is illustrated best by the following example:
 
-``` python
+{% highlight python %}
 >>> import cdutil
 #Using cdutil.region.domain to specify the NINO3 region
 >>> NINO3 = cdutil.region.domain(latitude=(-5.,5.),\ longitude=(210.,270.)))
-```
+{% endhighlight %}
 
 The above definition of `NINO3` then allows the user to extract the data so:
 
-```python
+{% highlight python %}
 >>> import cdms
 >>> f = cdms.open('t_file.nc')
 >>> t_nino3_exact = f('t', NINO3)
-```
+{% endhighlight %}
 
 The data extracted above will have the bounds and weights of the region extracted precisely. Some commonly used domains have been pre-defined for convenience. They are:
 
@@ -205,7 +207,7 @@ Averaging over time is a special problem in climate data analysis. The `cdutil` 
 
 **Note:** It is essential that the data have an appropriate axis designated as the "time" axis. In addition to this, the results depend on the time axis having correctly set `bounds`. If `bounds` are not stored with the data in files, default `bounds` are generated by the data extraction steps in `cdms`. However, they are not always correct. The user must take care to verify that the bounds are set correctly. Since the default time bounds set by `cdms` puts the time point in the middle of the month, (for example time axis values of 0, 1,....  would put the bounds at [-0.5, 0.5], [0.5, 1.5].... etc.), the user can make use of the `setTimeBoundsMonthly` function. To use this method to set the bounds for monthly data:
 
-``` python
+{% highlight python %}
 >>> import cdutil, cdms
 >>> f = cdms.open('some_monthly_data.nc')
 >>> x = f('var')
@@ -214,7 +216,7 @@ Averaging over time is a special problem in climate data analysis. The `cdutil` 
 time point is at the beginning of the month. To compute bounds assuming that
 the time point at the end of the month,
 >>> cdutil.setTimeBoundsMonthly(x, 1)
-```
+{% endhighlight %}
 
 The predefined time averaging periods are:
 
@@ -226,7 +228,7 @@ The predefined time averaging periods are:
 
 Some simple examples of time averaging operations are shown here.
 
-```python
+{% highlight python %}
 >>> import cdutil
 # The individual DJF (December-January-February)
 # seasons are extracted using
@@ -237,56 +239,56 @@ Some simple examples of time averaging operations are shown here.
 >>> djf_anom = cdutil.DJF.departures(x)
 # The monthly anomalies for x are computed by:
 >>> x_anom = cdutil.ANNUALCYCLE.departures(x)
-```
+{% endhighlight %}
 
 ##### Creating Custom Seasons 
 
 You can even create your own "custom seasons" beyond the pre-defined seasons listed above. For example:
 
-```python
+{% highlight python %}
 >>> JJAS = cdutil.times.Seasons('JJAS')
-```
+{% endhighlight %}
  
 ##### Specifying time periods for climatologies. 
 
 So far we have seen the way to compute the means, climatologies, and anomalies for the entire length of the time-series. The typical application may require specified time intervals over which climatologies are computed and used in calculating departures. For example, to compute the DJF climatology for the time period 1979-1988 we would do the following:
 
-``` python
+{% highlight python %}
 >>> import cdtime
 >>> start_time = cdtime.comptime(1979)
 >>> print 'start_time = ', start_time
 >>> end_time = cdtime.comptime(1989)
 >>> print 'end_time = ', end_time
-```
+{% endhighlight %}
 
 Note that we created the time point `end_time` at the begining of 1989 so we can select all the time between `start_time` and `end_time` but not including `end_time` by specifying the option `co` - shorthand for *c*losed at `start_time` and *o*pen at `end_time`. More options and details about them can be found in the [Climate Data Management System Manual]({{site.baseurl}}/cdms/cdms.html).
 
-```python
+{% highlight python %}
 >>> djfclim = cdutil.DJF.climatology(x(time= \ (start_time, end_time, 'co')))
-```
+{% endhighlight %}
 
 Now that we have our climatology over the desired period we can to compute anomalies over the full period relative to that climatology.
 
-```python
+{% highlight python %}
 >>> djfdep2 = cdutil.DJF.departures(s, ref=djfclim)
-```
+{% endhighlight %}
 
 ##### Specifying Data Coverage Criteria 
 
 The real power of these functions is in the ability to specify minimum data coverage and to also be able to specify the distribution (both in the temporal sense) which are required for the averages to be computed. The default behaviour of the functions that compute seasonal averages, climatologies, etc. is to require that a minimum of 50% of the data be present. Now let's say you like to extract DJF but without restricting it to 50% of the data being present. You would do:
 
-```python
+{% highlight python %}
 >>> djfs = cdutil.DJF(avg, criteriaarg=[0., None])
-```
+{% endhighlight %}
 
 The above statement comutes the DJF average with `criteriaarg` (passed as a list) which has 2 arguments.
 
 * The first argument represents the minimum fraction of time that is required to compute the seasonal mean. So you can pass a fractional value between 0.0 and 1.0 (including both extremes) or even a representation such as 3.0/4.0 (in case you need at least 3 out of 4 months of data in the case of the average JJAS we defined previously). 
 * The second argument in the `criteriaarg` is `None`. This implies no "centroid function" is used. In other cases, this argument represents the maximum value of the "centroid function". A value between 0 and 1 represents the spread of values across the mean time. The centroid value of 0.0 represents a full even distribution of data across the time interval. For example, if you are considering the DJF average, then if data is available for Dec, Jan and Feb months then the centroid is 0.0. On the other hand, the following criteria will "mask" (ignore) a DJF season if there is only a December month with data (and therefore has a centroid value of 1.0). Therefore any seasons resulting in centroid values above 0.5 will result in missing values! 
 
-```python
+{% highlight python %}
 >>> djfs = cdutil.DJF(avg, criteriaarg = [0., .5])
-```
+{% endhighlight %}
 
 In the case of computing an annual mean, having data only in Jan and Dec months leads to a centroid value of 0 for the regular centroid, and the resulting annual mean for the year is biased toward the winter. In this situation, you should use a cyclical centroid where the circular nature of the year is recognised and the centroid is calculated accordingly. Here are some examples of typical usage:
 
@@ -308,9 +310,9 @@ In the case of computing an annual mean, having data only in Jan and Dec months 
 
 So far we have the annual means calculated using various criteria. Now if we wish to compute the climatological annual mean, we can average the individual annual means. However, we can apply more criteria to the calculation of that annual mean climatology. Here we simply require 60% of the years to be present, and a criteria on the temporal distribution (i.e the centroid = 0.7) to make sure all of the annual means are not clustered at the end of the record.
 
-```python
+{% highlight python %}
 >>> annavg_clim = cdutil.YEAR.average(annavg_4,\ criteriaarg =[.6,.7])
-```
+{% endhighlight %}
 
 The tutorial file `times_tutorial.py` has detailed examples of time averaging in action. Further documentation is available on the UV-CDAT home page.
 
@@ -332,11 +334,11 @@ The `WeightsMaker` generates a transient variable containing fractions (between 
 
 The `WeightsMaker` is constructed as follows:
 
-```python
+{% highlight python %}
 MM = cdutil.WeightsMaker( source=sourceoptions, var=varoptions,
                           actions=actionsoption, values=valuesoption,
                           combiningActions=combiningActionsoption)
-```
+{% endhighlight %}
 
 **Options:**
 
@@ -366,21 +368,21 @@ MM = cdutil.WeightsMaker( source=sourceoptions, var=varoptions,
 
 The mask defined by the `WeightsMaker` object MM can be obtained as follows:
 
-```python
+{% highlight python %}
 >>> mask = MM.get()
-```
+{% endhighlight %}
 
 or, alternately,
 
-```python
+{% highlight python %}
 >>> mask=MM() or mask=MM(my-variable)
-```
+{% endhighlight %}
 
 Remember that if a variable (e.g., `my-variable`) is passed as an argument of `MM`, then this variable would be "acted on" by a function given by the `actions` argument of `WeightsMaker` only if the first element of the corresponding `values` item is `input`. Otherwise, the variable acted on is defined by `source`.
 
 Let's define a mask that will weight each grid cell by the land fraction and then mask out areas where the values of a user defined (at runtime) variable are greater than a threshold T.
 
-``` python
+{% highlight python %}
 >>> File='string-pointing-to-the-fraction-of-land-expressed-as-a-percent'
 >>> T=a-threshold-value
 >>> MM=cdutil.WeightsMaker(source=File,var='sftlf')
@@ -394,7 +396,7 @@ land in each cell, but masking cells where values of V are greater than T)
 >>> M2=MM(2.*V)
 # Retrieved another mask, which should be different, since now area where 2*V
 is greater than T are masked.
-```
+{% endhighlight %}
 
 ##### `WeightedGridMaker` Object. 
 
@@ -404,12 +406,12 @@ The `WeightedGridMaker` generates a cdms grid object (see cdms documentation for
 
 The `WeightedGridMaker` is constructed as follows:
 
-```python
+{% highlight python %}
 MGM = cdutil.WeightedGridMaker( source=sourceoption, var=varoption, type=typeoption,
                                 nlat=nlatoption, flat=flatoption, dellat=dellatoption,
                 nlon=nlonoption, flon=flonoption, dellon=dellonoption,
                 WeightsMaker=WeightsMakeroption )
-```
+{% endhighlight %}
 
 **Options:**
 
@@ -455,16 +457,16 @@ MGM = cdutil.WeightedGridMaker( source=sourceoption, var=varoption, type=typeopt
 
 **Usage:**
 
-```python 
+{% highlight python %} 
 >>> MGM=cdutil.WeightedGridMaker(grid=mygrid)
 >>> MGM=cdutil.WeightedGridMaker(nlat=64, type='gaussian', flon=-180., WeightsMaker=mymask)
 >>> MGM=cdutil.WeightedGridMaker(nlat=50, type='equal', nlon=64, flon=2.8125, dellon=5.625)
 >>> MGM=cdutil.WeightedGridMaker(nlat=18, dellat=10., flat=-85, nlon=36, dellon=10., flon=0.)
-```
+{% endhighlight %}
 
 Arguments can also be set after construction. For example:
 
-```python
+{% highlight python %}
 >>> MGM=cdutil.WeightedGridMaker()
 >>> MGM.longitude.n=36
 >>> MGM.longitude.first=0.
@@ -473,25 +475,25 @@ Arguments can also be set after construction. For example:
 >>> MGM.latitude.first=-85.
 >>> MGM.latitude.delta=10.
 >>> MGM.latitude.type='uniform'
-```
+{% endhighlight %}
 
 To retrieve the grid object, use the `get` method:
 
-```python
+{% highlight python %}
 >>> g=MGM.get()
-```
+{% endhighlight %}
 
 or, alternately,
 
-```python
+{% highlight python %}
 >>> g=MGM()
-```
+{% endhighlight %}
 
 The `WeightsMaker` object associated with the grid can be obtained as follows:
 
-```python
+{% highlight python %}
 >>> gm = MGM.WeightsMaker()
-```
+{% endhighlight %}
 
 Note that if a `WeightsMaker` object has not been passed to the constructor, then the grid object returned by `MGM.WeightsMaker()` will be: `None`.
 
@@ -503,12 +505,12 @@ The `VariableConditioner` constructor must be provided either with a transient v
 
 The `VariableConditioner` is constructed as follows:
 
-```python
+{% highlight python %}
 VC=cdutil.VariableConditioner(source, var=varoption, cdmsArguments=cdmsArgumentsoption,
                               cdmsKeywords=cdmsKeywordsoption, WeightsMaker=WeightsMakeroption,
                               WeightedGridMaker=WeightedGridMakeroption, offset=offsetoption,
                               slope=slopeoption, id=idoption)
-```
+{% endhighlight %}
 
 Where:
 
@@ -548,36 +550,36 @@ Where:
 
 **Usage:**
 
-```python
+{% highlight python %}
 VC=cdutil.VariableConditioner( '/pcmdi/obs/mo/tas/jones_amip/tas.jones_amip.ctl', var='tas', id='JONES')
-```
+{% endhighlight %}
 
 Arguments can also be set after construction. For example:
 
-```python
+{% highlight python %}
 >>> ref='/pcmdi/obs/mo/tas/jones_amip/tas.jones_amip.ctl'
 >>> VC = cdutil.VariableConditioner(ref)
 >>> VC.var='tas'
 >>> VC.id='JONES'
-```
+{% endhighlight %}
 
 To retrieve the modified variable (i.e., generate a masked variable), use the `get` method:
 
-```python
+{% highlight python %}
 >>> data = VC.get(returnTuple=0)
-```
+{% endhighlight %}
 
 or, alternately,
 
-```python
+{% highlight python %}
 >>> data = VC(returnTuple=0)
-```
+{% endhighlight %}
 
 One may additionally wish to retrieve the fraction of each target grid cell where data existed on the original grid (i.e., where data had not been masked). If, for example, 20% of the target grid cell were masked on the original grid (or were flagged as missing data), this fraction is set to 0.8.  If the target grid cell itself is masked, this fraction is set to 0. To retrieve these fractions along with the modified variable itself, the keyword `returnTuple` is set to 1 (or omitted, since 1 is the default):
 
-```python
+{% highlight python %}
 >>> data, frac=VC()
-```
+{% endhighlight %}
 
 The order that operations are executed by the `get` method of the `VariableConditioner` object is as follows:
 
@@ -590,13 +592,13 @@ The order that operations are executed by the `get` method of the `VariableCondi
 
 The `VariablesMatcher` object can be used to facilitate comparison of two different variables. It places these variables on a common grid, allows for application of masks, and optionally indicates the fraction of each grid cell for which information was available (i.e., not missing) when the field was put on its final grid. The `VariablesMatcher` object processes two `VariableConditioner` objects (which represent the two variables to be compared). It can also apply a supplied external-data mask and map everything to a new grid. The `VariablesMatcher` object is constructed as follows:
 
-```python
+{% highlight python %}
 VM=cdutil.VariablesMatcher(variableConditioner1=variableConditioner1option,
                            variableConditioner2=variableConditioner2option,
                cdmsArguments=cdmsArgumentsoption, cdmsKeywords=cdmsKeywordsoption,
                externalVariableConditioner=externalVariableConditioneroption,
                WeightedGridMaker= WeightedGridMakeroption )
-```
+{% endhighlight %}
 
 Options:
 
@@ -624,21 +626,21 @@ Options:
 
 To retrieve the modified variable (i.e., generate a masked variable), use the `get` method:
 
-``` python
+{% highlight python %}
 >>> variable1, variable2 = VM.get(returnTuple=0)
-```
+{% endhighlight %}
 
 or, alternately,
 
-``` python
+{% highlight python %}
 >>> variable1, variable2 = VM(returnTuple=0)
-```
+{% endhighlight %}
 
 One may additionally wish to retrieve the fraction of each target grid cell where data existed on the original grid (i.e., where data had not been masked). If, for example, 20% of the target grid cell has been masked on the original grid (or has been flagged as missing data), this fraction is set to 0.8. If the target grid cell itself is masked, this fraction is set to 0. To retrieve these fractions along with the modified variable itself, the keyword `returnTuple` is set to 1 (or omitted, since 1 is the default):
 
-```python
+{% highlight python %}
 >>> (variable1, frac1), (variable2, frac2) = VM()
-```
+{% endhighlight %}
 
 The order that operations are executed by the `get` method of the `VariablesMatcher` object is as follows:
 
@@ -658,7 +660,7 @@ The order that operations are executed by the `get` method of the `VariablesMatc
 
 In this example we retrieve data for 2 different variables over the maximum common period, and put them both on a 10x10 degree grid.
 
-```python
+{% highlight python %}
 >>> import cdutil
 # Reference
 >>> ref='/pcmdi/obs/mo/tas/jones_amip/tas.jones_amip.ctl'
@@ -684,7 +686,7 @@ In this example we retrieve data for 2 different variables over the maximum comm
 >>> (ref, ref_frac), (test, test_frac) = c.get()
 >>> ref, test = c.get(returnTuple=0)
 >>> ref, test = c(returnTuple=0)
-```
+{% endhighlight %}
 
 ###### A more complicated example 
 
@@ -697,7 +699,7 @@ In this example we
 
 Try skipping the final step and note the difference. (Tip: to do so, simply change the definition of FG to: FG=cdutil.WeightedGridMaker(fgmask, var='sftlf'))
 
-```python
+{% highlight python %}
 >>> import cdutil, vcs, sys
 # First let's creates the mask (it is the same for NCEP and ECMWF since they are on the same grid).
 >>> refmsk='/pcmdi/obs/etc/sftl.25deg.ctl'
@@ -734,7 +736,7 @@ Try skipping the final step and note the difference. (Tip: to do so, simply chan
 # Wait for user to press return
 >>> print "Press enter"
 >>> sys.stdin.readline()
-```
+{% endhighlight %}
 
 ###### A very complicated example 
 
@@ -749,7 +751,7 @@ This example shows MOST of the options and power of VariablesMatcher. In this ex
 * mask the land area according to a 10x10 degree land/sea mask 
 * select only the Northern Hemisphere region using a defined "selector" (see cdutil.region documentation). 
 
-```python
+{% highlight python %}
 >>> import cdutil, MV, vcs, sys
 # First let us define the mask (it is the same for NCEP and ECMWF since they are on the same grid)
 >>> refmsk='/pcmdi/obs/etc/sftl.25deg.ctl'
@@ -821,5 +823,5 @@ This example shows MOST of the options and power of VariablesMatcher. In this ex
 # Wait for user to press return
 >>> print "Press enter"
 >>> sys.stdin.readline()
-```
+{% endhighlight %}
 

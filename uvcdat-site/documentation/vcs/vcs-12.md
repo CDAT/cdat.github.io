@@ -1,6 +1,8 @@
 ---
 title: VCS Manual
-layout: default
+layout: docs
+manual: vcs
+index: 12
 ---
 
 
@@ -87,7 +89,7 @@ x.interact()
 
 ##### Resulting Plot
 
-![]({{ media_url("/images/vcs3d-1.png") }})
+![](/images/vcs3d-1.png)
 
 <a name="vector_attributes"></a>
 
@@ -124,7 +126,7 @@ x.interact()
 <a name="fig12.2"></a>
 
 ##### Resulting Plot
-![]({{media_url("/images/vcs3d-2.png")}})
+![](/images/vcs3d-2.png)
 
 
 <a name="config_constituents"></a>
@@ -173,7 +175,7 @@ x.interact()
 
 ##### Resulting Plot
 
-![]({{media_url("/images/vcs3d-3.png")}})
+![](/images/vcs3d-3.png)
 
 <a name="3D_Hovmoller"></a>
 ### 3D Hovmoller Plot
@@ -207,7 +209,7 @@ x.interact()
 <a name="fig12.4"></a>
 
 ##### Resulting Plot
-![]({{media_url("/images/vcs3d-4.png")}})
+![](/images/vcs3d-4.png)
 
 
 <a name="unstructured_grid"></a>
@@ -251,5 +253,5 @@ x.interact()
 <a name="fig12.5"></a>
 
 ##### Resulting Plot
-![]({{media_url("/images/vcs3d-5.png")}})
+![](/images/vcs3d-5.png)
 

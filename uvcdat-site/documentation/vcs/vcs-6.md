@@ -1,6 +1,8 @@
 ---
 title: VCS Chapter 6
-layout: default
+layout: docs
+manual: vcs
+index: 6
 ---
 
 

@@ -1,11 +1,9 @@
 ---
 title: CDMS Chapter 1
-layout: default
+layout: docs
+manual: cdms
+index: 1
 ---
-
-
-
-
 
 
 ## CHAPTER 1
@@ -28,10 +26,10 @@ CDMS is implemented as part of the Ultrascale Visualization Climate Data Analysi
 
 The basic unit of computation in CDMS is the variable. A variable is essentially a multidimensional data array, augmented with a domain, a set of attributes, and optionally a spatial and/or temporal coordinate system (see [Coordinate Axes](#1.4)). As a data array, a variable can be sliced to obtain a portion of the data, and can be used in arithmetic computations. For example, if `u` and `v` are variables representing the eastward and northward components of wind speed, respectively, and both variables are functions of time, latitude, and longitude, then the velocity for time 0 (first index) can be calculated as
 
-``` python
+{% highlight python %}
 from cdms import MV
 vel = MV.sqrt(u[0]**2 + v[0]2)
-```
+{% endhighlight %}
 
 This illustrates several points:
 
@@ -48,32 +46,32 @@ This illustrates several points:
 
 A variable can be obtained from a file or collection of files, or can be generated as the result of a computation. Files can be in any of the self- describing formats netCDF, HDF, GrADS/GRIB (GRIB with a GrADS control file), or PCMDI DRS. (HDF and DRS support is optional, and is configured at the time UV-CDAT is installed.) For instance, to read data from file sample.nc into variable u:
 
-``` python
+{% highlight pycon %}
 >>> import cdms
 >>> f = cdms.open('sample.nc')
 >>> u = f('u')
-```
+{% endhighlight %}
 
 Data can be read by index or by world coordinate values. The following reads the n-th timepoint of u (the syntax slice(i,j) refers to indices k such that i <= k < j):
 
-``` python
+{% highlight pycon %}
 >>> u0 = f('u',time=slice(n,n+1))
-```
+{% endhighlight %}
 
 To read `u` at time 366.0:
 
-``` python
+{% highlight pycon %}
 >>> u1 = f('u',time=366.)
-```
+{% endhighlight %}
 
 A variable can be written to a file with the write function:
 
-``` python
+{% highlight pycon %}
 >>> g = cdms.open('sample2.nc','w')
 >>> g.write(u)
 <Variable: u, file: sample2.nc, shape: (1, 16, 32)>
 >>> g.close()
-```
+{% endhighlight %}
 
 <a name="1.4"  ></a>
 
@@ -85,7 +83,7 @@ Often in climate applications an axis is a one-dimensional variable whose values
 
 The shape and physical ordering of a variable is represented by the variables domain , an ordered tuple of one-dimensional axes. In the previous example, the domain of the variable u is the tuple (time, latitude, longitude). This indicates the order of the dimensions, with the slowest- varying dimension listed first (time). The domain may be accessed with the `getAxisList()` method:
 
-``` python
+{% highlight pycon %}
 >>> s.getAxisList()
 
 [ id: lat
@@ -114,7 +112,7 @@ The shape and physical ordering of a variable is represented by the variables do
         axis: X
     Python id: 833f174
 ]
-```
+{% endhighlight %}
 
 In the above example, the domain elements are axes that are also spatiotemporal. In general it is not always the case that an element of a domain is spatiotemporal:
 
@@ -123,13 +121,13 @@ In the above example, the domain elements are axes that are also spatiotemporal.
 
 As previously noted, a spatial and/or temporal coordinate system may be associated with a variable. The methods getLatitude, getLongitude, getLevel, and getTime return the associated coordinate axes. For example:
 
-```python
+{% highlight pycon %}
 >>> t = u.getTime()
 >>> print t[:]
 [ 0., 366., 731.,]
 >>> print t.units
 `days since 2000-1-1'
-```
+{% endhighlight %}
 
 <a name="1.5"></a>
 
@@ -137,27 +135,27 @@ As previously noted, a spatial and/or temporal coordinate system may be associat
 
 As mentioned above, variables can have associated attributes , name-value pairs. In fact, nearly all CDMS objects can have associated attributes, which are accessed using the Python dot notation:
 
-``` python
+{% highlight pycon %}
 >>> u.units='m/s'
 >>> print u.units
 m/s
-```
+{% endhighlight %}
 
 Attribute values can be strings, scalars, or 1-D Numeric arrays.
 
 When a variable is written to a file, not all the attributes are written. Some attributes, called internal attributes, are used for bookkeeping, and are not intended to be part of the external file representation of the variable. In contrast, external attributes are written to an output file along with the variable. By default, when an attribute is set, it is treated as external. Every variable has a field attributes, a Python dictionary that defines the external attributes:
 
-``` python
+{% highlight pycon %}
 >>> print u.attributes.keys()
 ['datatype', 'name', 'missing_value', 'units']
-```
+{% endhighlight %}
 
 The Python dir command lists the internal attribute names:
 
-``` python
+{% highlight pycon %}
 >>> dir(u)
 ['_MaskedArray__data', '_MaskedArray__fill_value,' ..., 'id', 'parent']
-```
+{% endhighlight %}
 
 In general internal attributes should not be modified directly. One exception is the id attribute, the name of the variable. It is used in plotting and I/O, and can be set directly.
 
@@ -169,7 +167,7 @@ Optionally, variables have a mask that represents where data are missing. If pre
 
 Arithmetic operations in CDMS take missing data into account. The same is true of the functions defined in the cdms.MV module. For example:
 
-``` python
+{% highlight pycon %}
 >>> a = MV.array([1,2,3]) # Create array a, with no mask
 >>> b = MV.array([4,5,6]) # Same for b
 >>> a+b
@@ -187,7 +185,7 @@ array(
     mask = [0,1,0,],
     fill_value=[0,]
     )
-```
+{% endhighlight %}
 
 When data is read from a file, the result variable is masked if the file variable has a missing_value attribute. The mask is set to one for those elements equal to the missing value, zero elsewhere. If no such attribute is present in the file, the result variable is not masked.
 
@@ -207,12 +205,12 @@ A variable can be obtained either from a file, a collection of files, or as the 
 
 Typical use of a file variables is to inquire information about the variable in a file without actually reading the data for the variables. A file variable is obtained by applying the slice operator [] to a file, passing the name of the variable, or by calling the getVariable function. Note that obtaining a file variable does not actually read the data array:
 
-``` python
+{% highlight pycon %}
 >>> f = cdms.open('sample.nc','r+')
 >>> u = f.getVariable('u') # or u=f['u']
 >>> u.shape
 (3, 16, 32)
-```
+{% endhighlight %}
 
 File variables are also useful for fine-grained I/O. They behave like transient variables, but operations on them also affect the associated file. Specifically:
 
@@ -222,7 +220,7 @@ File variables are also useful for fine-grained I/O. They behave like transient 
 * setting an attribute writes the attribute,
 * and calling a file variable like a function reads data associated with the variable:
 
-``` python
+{% highlight pycon %}
 >>> f = cdms.open('sample.nc','r+') # Open read/write
 >>> uvar = f['u'] # Note square brackets
 >>> uvar.shape
@@ -240,11 +238,11 @@ File variables are also useful for fine-grained I/O. They behave like transient 
 # Calling a variable like a function reads data
 >>> u24 = uvar(time=24.0)
 >>> f.close() # Save changes to sample.nc (I/O may be buffered)
-```
+{% endhighlight %}
 
 In an interactive application, the type of variable can be determined simply by printing the variable:
 
-``` python
+{% highlight pycon %}
 >>> rlsf # Transient variable
 rls
 array(
@@ -253,11 +251,11 @@ array(
 <Variable: rls, dataset: mri_perturb, shape: (4, 46, 72)>
 >>> prc # File variable
 <Variable: prc, file: testnc.nc, shape: (16, 32, 64)>
-```
+{% endhighlight %}
 
 Note that the data values themselves are not printed. For transient variables, the data is printed only if the size of the array is less than the print limit . This value can be set with the function MV.set_print_limit to force the data to be printed:
 
-``` python
+{% highlight pycon %}
 >>> smallvar.size() # Number of elements
 20
 >>> MV.get_print_limit() # Current limit
@@ -284,14 +282,14 @@ array(
 [[ 0., 1., 2., 3., 4., 5., 6., 7., 8., 9.,
 10., 11., 12., 13., 14., 15., 16., 17., 18., 19.,]
 ... ])
-```
+{% endhighlight %}
 
 The datatype of the variable is determined with the typecode function:
 
-``` python
+{% highlight pycon %}
 >>> x.typecode()
 'd'
-```
+{% endhighlight %}
 
 <a name="1.8"></a>
 
@@ -307,12 +305,12 @@ $ cdscan -x cdsample.xml [uv]*.nc
 
 The metafile **cdsample.xml** is then used like an ordinary data file:
 
-``` python
+{% highlight pycon %}
 >>> f = cdms.open('cdsample.xml')
 >>> u = f('u')
 >>> u.shape
 (3, 16, 32)
-```
+{% endhighlight %}
 
 
 <a name="1.9"></a>
@@ -344,7 +342,7 @@ In this example, variable sample is defined on a 128x192 curvilinear grid. Note 
 * lat and lon each have domain ( y , x )
 
 
-``` python
+{% highlight pycon %}
 >>> f = cdms.open('sampleCurveGrid.nc')
 
 # lat and lon are coordinate axes, but are grouped
@@ -386,9 +384,9 @@ array(
 array (128,192) , type = d, has 24576 elements)
 # ... so can be used in computation
 >>> lat_in_radians = lat*Numeric.pi/180.0
-```
+{% endhighlight %}
 
-![curvilinear grid]({{ media_url("/images/curvilinear_grid.jpg") }})
+![curvilinear grid](/images/curvilinear_grid.jpg)
 
 <a name="1.9.2"></a>
 
@@ -396,7 +394,7 @@ array (128,192) , type = d, has 24576 elements)
 
 In this example variable zs is defined on a generic grid. Figure 2 illustrates the grid, in this case a geodesic grid.
 
-``` python
+{% highlight pycon %}
 >>> f.variables.keys()
 ['lat', 'bounds_lon', 'lon', 'zs', 'bounds_lat']
 >>> f.axes.keys()
@@ -427,16 +425,16 @@ In this example variable zs is defined on a generic grid. Figure 2 illustrates t
 # axes: values are not monotonic
 >>> lat.__class__
 <class cdms.auxcoord.TransientAuxAxis1D at 0x82eea24>
-```
+{% endhighlight %}
 
-![generic grid]({{ media_url("/images/generic_grid.jpg") }})
+![generic grid](/images/generic_grid.jpg)
 
 FIGURE 2. Generic grid
 
 Generic grids can be used to represent any of the grid types. The method
 toGenericGrid can be applied to any grid to convert it to a generic representation. Similarly, a rectangular grid can be represented as curvilinear. The method toCurveGrid is used to convert a non-generic grid to curvilinear representation:
 
-``` python
+{% highlight pycon %}
 >>> import cdms
 >>> f = cdms.open('clt.nc')
 >>> clt = f('clt')
@@ -450,7 +448,7 @@ toGenericGrid can be applied to any grid to convert it to a generic representati
 >>> genericgrid
 <TransientGenericGrid, id: grid_1, shape: (3312,)>
 >>> 
-```
+{% endhighlight %}
 
 <a name="1.10"></a>
 
@@ -467,7 +465,7 @@ Regridding is the process of mapping variables from one grid to another. CDMS su
 
 The built-in CDMS regridder is used to transform data from one rectangular grid to another. For example, to regrid variable `u` (from a rectangular grid) to a 96x192 rectangular Gaussian grid:
 
-``` python
+{% highlight pycon %}
 >>> u = f('u')
 >>> u.shape
 (3, 16, 32)
@@ -475,11 +473,11 @@ The built-in CDMS regridder is used to transform data from one rectangular grid 
 >>> u63 = u.regrid(t63_grid)
 >>> u63.shape
 (3, 96, 192)
-```
+{% endhighlight %}
 
 To regrid a variable `uold` to the same grid as variable `vnew`:
 
-``` python
+{% highlight pycon %}
 >>> uold.shape
 (3, 16, 32)
 >>> vnew.shape
@@ -488,7 +486,7 @@ To regrid a variable `uold` to the same grid as variable `vnew`:
 >>> u63 = u.regrid(t63_grid)
 >>> u63.shape
 (3, 96, 192)
-```
+{% endhighlight %}
 
 
 <a name="1.10.2"></a>
@@ -513,7 +511,7 @@ Steps 1 and 2 need only be done once. The regridder can be used as often as nece
 
 For example, suppose the source data on a T42 grid is to be mapped to a POP curvilinear grid. Assume that SCRIP generated a remapping file named rmp_T42_to_POP43_conserv.nc:
 
-``` python
+{% highlight python %}
 # Import regrid package for regridder functions
 import regrid, cdms
 
@@ -529,7 +527,7 @@ remapf.close()
 
 # Regrid the source variable
 popdat = regridf(dat)
-```
+{% endhighlight %}
 
 Regridding is discussed in [Chapter 4](cdms_4.md).
 
@@ -550,7 +548,7 @@ Two time types are available: relative time and component time . Relative time i
 For example, the time "28.0 days since 1996-1-1" has value= 28.0 , and units=" days since 1996-1-1". To create a relative time type:
 
 
-``` python
+{% highlight pycon %}
 >>> import cdtime
 >>> rt = cdtime.reltime(28.0, "days since 1996-1-1")
 >>> rt
@@ -559,7 +557,7 @@ For example, the time "28.0 days since 1996-1-1" has value= 28.0 , and units=" d
 28.0
 >>> rt.units
 'days since 1996-1-1'
-```
+{% endhighlight %}
 
 A component time consists of the integer fields year, month, day, hour, minute , and the floating-point field second . For example:
 
@@ -612,7 +610,7 @@ To generate a plot:
 
 For example:
 
-``` python
+{% highlight pycon %}
 >>> import cdms, vcs
 >>> f = cdms.open('sample.nc')
 >>> f['time'][:] # Print the time coordinates
@@ -626,7 +624,7 @@ For example:
 Graphics method 'Boxfill' is currently set to Gfb_default.
 >>> w.plot(precip) # Generate a plot
 (generates a boxfill plot)
-```
+{% endhighlight %}
 
 By default for rectangular grids, a boxfill plot of the lat-lon slice is produced. Since variable precip includes information on time, latitude, and longitude, the continental outlines and time information are also plotted. If the variable were on a non-rectangular grid, the plot would be a meshfill plot.
 
@@ -647,13 +645,13 @@ Databases add the ability to search for data and metadata in a distributed compu
 
 Here is an example of accessing data via a database:
 
-``` python
+{% highlight pycon %}
 >>> db = cdms.connect() # Connect to the default database.
 >>> f = db.open('ncep_reanalysis_mo') # Open a dataset.
 >>> f.variables.keys() # List the variables in the dataset.
 ['ua', 'evs', 'cvvta', 'tauv', 'wap', 'cvwhusa', 'rss', 'rls', ...
 'prc', 'ts', 'va']
-```
+{% endhighlight %}
 
 Databases are discussed further in [Section 2.7](cdms_2.html#2.7).
 

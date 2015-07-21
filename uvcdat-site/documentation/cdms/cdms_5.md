@@ -1,6 +1,8 @@
 ---
 title: CDMS Chapter 5
-layout: default
+layout: docs
+manual: cdms
+index: 5
 ---
 
 
@@ -29,7 +31,7 @@ In the following examples, it is assumed that variable `psl` is dimensioned (tim
 
 #### 5.2.1 Example: plotting a gridded variable
 
-``` python
+{% highlight python %}
 1 import cdms, vcs
 2 
 3 f = cdms.open('sample.xml')
@@ -39,7 +41,7 @@ In the following examples, it is assumed that variable `psl` is dimensioned (tim
 7 
 8 w.plot(sample)
 9 f.close()
-```
+{% endhighlight %}
 
 **Notes:**
 
@@ -59,11 +61,11 @@ What if the units are not explicitly defined for `psl`, or a different descripti
 
 #### 5.2.2 Example: using aplot keywords.
 
-``` python
+{% highlight python %}
 w.plot(array, units='mm/day', file_comment='High-frequency reanalysis',
        long_name="Sea level pressure", comment1="Sample plot", hms="18:00:00",
        ymd="1978/01/01")
-```
+{% endhighlight %}
 
 **Note:** Keyword arguments can be listed in any order.
 
@@ -73,11 +75,11 @@ w.plot(array, units='mm/day', file_comment='High-frequency reanalysis',
 
 Assuming that variable `psl` has domain `(time,latitude,longitude)`, this example selects and plots a time-latitude slice:
 
-``` python
+{% highlight python %}
 1 samp = psl[:,:,0]
 2 w = vcs.init()
 3 w.plot(samp, name='sea level pressure')
-```
+{% endhighlight %}
 
 Notes:
 
@@ -93,12 +95,12 @@ Line | Notes
 
 Calling the variable `psl` as a function reads a subset of the variable. The result variable `samp` can be plotted directly:
 
-```python
+{% highlight python %}
 ...
 1 samp = psl(time = (0.0,100.0), longitude = 180.0)
 2 w = vcs.init()
 3 w.plot(samp)
-```
+{% endhighlight %}
  
 
 <a name="5.3"></a>
@@ -107,9 +109,9 @@ Calling the variable `psl` as a function reads a subset of the variable. The res
 
 The `plot` method is documented in the UV-CDAT Reference Manual. This section augments the documentation with a description of the optional keyword arguments. The general form of the plot command is:
 
-``` python
+{% highlight python %}
 canvas.plot(array [, args] [,key=value [, key=value [, ...] ] ])
-```
+{% endhighlight %}
 
 where:
 

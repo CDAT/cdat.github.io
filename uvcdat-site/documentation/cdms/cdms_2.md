@@ -1,6 +1,8 @@
 ---
 title: CDMS Chapter 2
-layout: default
+layout: docs
+manual: cdms
+index: 2
 ---
 
 
@@ -44,7 +46,7 @@ The chapter sections correspond to the CDMS classes. Each section contains table
 
 The following Python script reads January and July monthly temperature data from an input dataset, averages over time, and writes the results to an output file. The input temperature data is ordered (time, latitude, longitude).
 
-``` python
+{% highlight python %}
 1   #!/usr/bin/env python
 2   import cdms
 3   from cdms import MV
@@ -64,7 +66,7 @@ The following Python script reads January and July monthly temperature data from
 17  out.comment = "Average January/July from Jones dataset"
 18  jones.close()
 19  out.close()
-```
+{% endhighlight %}
 
 
 
@@ -88,15 +90,15 @@ The following Python script reads January and July monthly temperature data from
 
 The cdms module is the Python interface to CDMS. The objects and methods in this chapter are made accessible with the command:
 
-``` python
+{% highlight python %}
 import cdms
-```
+{% endhighlight %}
 
 The functions described in this section are not associated with a class. Rather, they are called as module functions, e.g.,
 
-``` python
+{% highlight python %}
 file = cdms.open('sample.nc')
-```
+{% endhighlight %}
 
 
 <a name="table_2.2"></a>
@@ -225,9 +227,9 @@ All objects derived from CdmsObj have a special attribute .attributes. This is a
 
 **Example**: get a list of all external attributes of obj.
 
-``` python
+{% highlight python %}
 extatts = obj.attributes.keys()
-```
+{% endhighlight %}
 
 
 <a name="table_2.4"></a>
@@ -420,12 +422,12 @@ slice | definition
 
 a longitude axis has value `[0.0, 2.0, ..., 358.0]`, of length `180`. map the coordinate interval `-5.0 <= x < 5.0` to index interval(s), with wraparound. the result index interval `-2 <= n < 3` wraps around, since `-2 < 0`, and has a stride of `1`. this is equivalent to the two contiguous index intervals `2 <= n < 0` and `0 <= n < 3`
 
-```python
+{% highlight python %}
 >>> axis.isCircular()
 1
 >>> axis.mapIntervalExt((-5.0,5.0,'co'))
 (-2,3,1)
-```
+{% endhighlight %}
 
 <a name="2.6"></a>
 
@@ -576,7 +578,7 @@ The figure below illustrates several important points:
 
 - Subordinate objects are thought of as being contained in the parent. In this example, the database 'CDMS' contains two datasets, each of which contain several variables.
 
-![Diagram 1]({{ media_url("/images/diagram1.jpg") }})
+![Diagram 1](/images/diagram1.jpg)
 
 ###### Figure 1
 
@@ -779,15 +781,15 @@ The set of objects searched is called the search scope. The top object in the hi
 - 
 A search result is accessed sequentially within a for loop:
 
-```python
+{% highlight python %}
 result = db.searchFilter('(&(category=obs*)(id=ncep*))')
 for entry in result:
   print entry.name
-```
+{% endhighlight %}
 
 Search results can be narrowed using `searchPredicate`. In the following example, the result of one search is itself searched for all variables defined on a 94x192 grid:
 
-```python
+{% highlight python %}
 >>> result = db.searchFilter('parentid=ncep*',tag="variable")
 >>> len(result)
 65
@@ -806,7 +808,7 @@ variable=rlds,dataset=ncep_reanalysis_mo,database=CDMS,ou=PCMDI,
 variable=rlus,dataset=ncep_reanalysis_mo,database=CDMS,ou=PCMDI,
 
       o=LLNL, c=US
-```
+{% endhighlight %}
 
 
 <a name="table_2.19"></a>
@@ -857,11 +859,11 @@ To access data via CDMS:
 
 In the next example, a portion of variable 'ua' is read from dataset 'ncep\_reanalysis\_mo':
 
-```python
+{% highlight python %}
 dset = db.open('ncep_reanalysis_mo')
 ua = dset.variables['ua']
 data = ua[0,0]
-```
+{% endhighlight %}
 
 <a name="2.7.4"></a>
 
@@ -869,42 +871,42 @@ data = ua[0,0]
 
 In the following examples, db is the database opened with
 
-```python
+{% highlight python %}
 db = cdms.connect()
-```
+{% endhighlight %}
 
 This defaults to the database defined in environment variable `CDMSROOT`.
 
 **Example:**
 List all variables in dataset 'ncep\_reanalysis\_mo':
 
-```python
+{% highlight python %}
 for entry in db.searchFilter(filter = "parentid=ncep_reanalysis_mo",
 tag = "variable"):
   print entry.name
-```
+{% endhighlight %}
 
 **Example:**
 Find all axes with bounds defined:
 
-```python
+{% highlight python %}
 for entry in db.searchFilter(filter="bounds=*",tag="axis"):
   print entry.name
-```
+{% endhighlight %}
 
 **Example:**
 Locate all GDT datasets:
 
-```python
+{% highlight python %}
 for entry in
 db.searchFilter(filter="Conventions=GDT*",tag="dataset"):
 print entry.name
-```
+{% endhighlight %}
 
 **Example:**
 Find all variables with missing time values, in observed datasets:
 
-```python
+{% highlight python %}
 def missingTime(obj):
   time = obj.getTime()
   return time.length != time.partition_length
@@ -912,43 +914,43 @@ def missingTime(obj):
 result = db.searchFilter(filter="category=observed")
 for entry in result.searchPredicate(missingTime):
   print entry.name
-```
+{% endhighlight %}
 
 **Example:**
 Find all CMIP2 datasets having a variable with id "hfss":
 
-```python
+{% highlight python %}
 for entry in db.searchFilter(filter = "(&(project=CMIP2)(id=hfss))", tag = "variable"):
   print entry.getObject().parent.id
-```
+{% endhighlight %}
 
 **Example:**
 Find all observed variables on 73x144 grids:
 
-```python
+{% highlight python %}
 result = db.searchFilter(category='obs*')
 for entry in result.searchPredicate(lambda x: x.getGrid().shape==(73,144),tag="variable"):
   print entry.name
-```
+{% endhighlight %}
 
 **Example:**
 Find all observed variables with more than 1000 timepoints:
 
-```python
+{% highlight python %}
 result = db.searchFilter(category='obs*')
 for entry in result.searchPredicate(lambda x: len(x.getTime())>1000, tag = "variable"):
   print entry.name, len(entry.getObject().getTime())
-```
+{% endhighlight %}
 
 **Example:**
 Find the total number of each type of object in the database
 
-```python
+{% highlight python %}
 print len(db.searchFilter(tag="database")),"database"
 print len(db.searchFilter(tag="dataset")),"datasets"
 print len(db.searchFilter(tag="variable")),"variables"
 print len(db.searchFilter(tag="axis")),"axes"
-```
+{% endhighlight %}
 
 <a name="2.8"></a>
 
@@ -2277,22 +2279,22 @@ subSlice(*specs, time=None, level=None, latitude=None, longitude=None, squeeze=0
 
 Variable ta is a function of (time, latitude, longitude). Read data corresponding to all times, latitudes -45.0 up to but not including+45.0, longitudes 0.0 through and including longitude 180.0:
 
-``` python
+{% highlight python %}
 data = ta.subRegion(':', (-45.0,45.0,'co'), (0.0, 180.0))
-```
+{% endhighlight %}
 
 or equivalently:
 
-``` python
+{% highlight python %}
 data = ta.subRegion(latitude=(-45.0,45.0,'co'), longitude=(0.0,
 180.0)
-```
+{% endhighlight %}
 
 Read all data for March, 1980:
 
-``` python
+{% highlight python %}
 data = ta.subRegion(time=('1980-3','1980-4','co'))
-```
+{% endhighlight %}
 
 
 <a name="table_2.36"></a>
@@ -2335,37 +2337,37 @@ data = ta.subRegion(time=('1980-3','1980-4','co'))
 
 A selector is a specification of a region of data to be selected from a variable. For example, the statement
 
-``` python
+{% highlight python %}
 x = v(time='1979-1-1', level=(1000.0,100.0))
-```
+{% endhighlight %}
 
 means 'select the values of variable v for time '1979-1-1' and levels 1000.0 to 100.0 inclusive, setting x to the result.' Selectors are generally used to represent regions of space and time.
 
 The form for using a selector is
 
-``` python
+{% highlight python %}
 result = v(s)
-```
+{% endhighlight %}
 
 where v is a variable and s is the selector. An equivalent form is
 
-``` python
+{% highlight python %}
 result = f('varid', s)
-```
+{% endhighlight %}
 
 where f is a file or dataset, and 'varid' is the string ID of a variable.
 
 A selector consists of a list of selector components. For example, the selector
 
-```python
+{% highlight python %}
 time='1979-1-1', level=(1000.0,100.0)
-```
+{% endhighlight %}
 
 has two components: time='1979-1-1', and level=(1000.0,100.0). This illustrates that selector components can be defined with keywords, using the form:
 
-``` python
+{% highlight python %}
 keyword=value
-```
+{% endhighlight %}
 
 Note that for the keywords time, level, latitude, and longitude, the selector can be used with any variable. If the corresponding axis is not found, the selector component is ignored. This is very useful for writing general purpose scripts. The required keyword overrides this behavior. These keywords take values that are coordinate ranges or index ranges as defined in Table 2.37 on page 102.
 
@@ -2394,62 +2396,62 @@ The following keywords are available: Another form of selector components is the
 Another form of selector components is the positional form, where the component
 order corresponds to the axis order of a variable. For example:
 
-```python
+{% highlight python %}
 x9 = hus(('1979-1-1','1979-2-1'),1000.0)
-```
+{% endhighlight %}
 
 reads data for the range ('1979-1-1','1979-2-1') of the first axis, and coordinate value 1000.0 of the second axis. Non-keyword arguments of the form(s) listed in Table 2.37 on page 102 are treated as positional. Such selectors are more concise, but not as general or flexible as the other types described in this section.
 
 Selectors are objects in their own right. This means that a selector can be defined and reused, independent of a particular variable. Selectors are constructed using the cdms.selectors.Selector class. The constructor takes an argument list of selector components. For example:
 
-```python
+{% highlight python %}
 from cdms.selectors import Selector
 sel = Selector(time=('1979-1-1','1979-2-1'), level=1000.)
 x1 = v1(sel)
 x2 = v2(sel)
-```
+{% endhighlight %}
 
 For convenience CDMS provides several predefined selectors, which can be used directly or can be combined into more complex selectors. The selectors time, level, latitude, longitude, and required are equivalent to their keyword counterparts. For example:
 
-```python
+{% highlight python %}
 from cdms import time, level
 x = hus(time('1979-1-1','1979-2-1'), level(1000.))
-```
+{% endhighlight %}
 
 and
 
-```python
+{% highlight python %}
 x = hus(time=('1979-1-1','1979-2-1'), level=1000.)
-```
+{% endhighlight %}
 
 are equivalent. Additionally, the predefined selectors `latitudeslice`, `longitudeslice`, `levelslice`, and `timeslice` take arguments `(startindex, stopindex[, stride])`:
 
-```python
+{% highlight python %}
 from cdms import timeslice, levelslice
 x = v(timeslice(0,2), levelslice(16,17))
-```
+{% endhighlight %}
 
 Finally, a collection of selectors is defined in module cdutil.region:
 
-``` python
+{% highlight python %}
 from cdutil.region import *
 NH=NorthernHemisphere=domain(latitude=(0.,90.)
 SH=SouthernHemisphere=domain(latitude=(-90.,0.))
 Tropics=domain(latitude=(-23.4,23.4))
 NPZ=AZ=ArcticZone=domain(latitude=(66.6,90.))
 SPZ=AAZ=AntarcticZone=domain(latitude=(-90.,-66.6))
-```
+{% endhighlight %}
 
 Selectors can be combined using the &amp; operator, or by refining them in the call:
 
-``` python
+{% highlight python %}
 from cdms.selectors import Selector
 from cdms import level
 sel2 = Selector(time=('1979-1-1','1979-2-1'))
 sel3 = sel2 & level(1000.0)
 x1 = hus(sel3)
 x2 = hus(sel2, level=1000.0)
-```
+{% endhighlight %}
  
 
 <a name="2.11.2"></a>
@@ -2458,7 +2460,7 @@ x2 = hus(sel2, level=1000.0)
 
 CDMS provides a variety of ways to select or slice data. In the following examples, variable hus is contained in file sample.nc, and is a function of (time, level, latitude, longitude). Time values are monthly starting at 1979-1-1. There are 17 levels, the last level being 1000.0. The name of the vertical level axis is 'plev'. All the examples select the first two times and the last level. The last two examples remove the singleton level dimension from the result array.
 
-```python
+{% highlight python %}
 import cdms
 f = cdms.open('sample.nc')
 hus = f.variables['hus']
@@ -2503,7 +2505,7 @@ x = hus[0:2,16]
 x = hus(time=('1979-1-1','1979-2-1'), level=1000., squeeze=1)
 
 f.close()
-```
+{% endhighlight %}
 
 <a name="2.12"></a>
 
@@ -2517,7 +2519,7 @@ In this example, two datasets are opened, containing surface air temperature ('t
 
 Data is extracted from both datasets for January of the first input year through December of the second input year. For each time and level, three quantities are calculated: slope, variance, and correlation. The results are written to a netCDF file. For brevity, the functions `corrCoefSlope` and `removeSeasonalCycle` are omitted.
 
-``` python
+{% highlight python %}
 1.  import cdms
     import MV
 
@@ -2572,7 +2574,7 @@ Data is extracted from both datasets for January of the first input year through
         pathTas = '/pcmdi/cdms/sample/ccmSample_tas.xml'  
         # Process Jan80 through Dec81
         ccSlopeVarianceBySeasonFiltNet(pathTa,pathTas,'80-1','81-12')
-```
+{% endhighlight %}
 
 **Notes:**
 
@@ -2591,7 +2593,7 @@ Data is extracted from both datasets for January of the first input year through
 
 In the next example, the pointwise variance of a variable over time is calculated, for all times in a dataset. The name of the dataset and variable are entered, then the variance is calculated and plotted via the vcs module.
 
-``` python
+{% highlight python %}
         #!/usr/bin/env python
         #
         # Calculates gridpoint total variance
@@ -2668,11 +2670,11 @@ In the next example, the pointwise variance of a variable over time is calculate
             w.plot(n)
             pause()
             w.clear()
-```
+{% endhighlight %}
 
 The result of running this script is as follows:
 
-```
+{% highlight pycon %}
 % calcVar.py
 Enter dataset path [/pcmdi/cdms/sample/obs/erbs_mo.xml]:
 
@@ -2693,7 +2695,7 @@ Select a variable: albt
 Hit return to continue:
 
 <The number of points is plotted>
-```
+{% endhighlight %}
 
 **Notes:**
 

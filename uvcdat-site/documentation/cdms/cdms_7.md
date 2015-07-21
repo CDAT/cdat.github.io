@@ -1,6 +1,8 @@
 ---
 title: CDMS Chapter 7
-layout: default
+layout: docs
+manual: cdms
+index: 7
 ---
 
 

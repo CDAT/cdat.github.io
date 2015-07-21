@@ -1,11 +1,9 @@
 ---
 title: CDMS Appendix
-layout: default
+layout: docs
+manual: cdms
+index: 8
 ---
-
-
-
-
 
 
 <a name="a"></a>
@@ -22,7 +20,7 @@ In general the concrete subclasses closely mirror the interface of the abstract 
 
 <a name="fig_1"></a>
 
-![]({{ media_url("/images/cdms_classes.jpg") }})
+![](/images/cdms_classes.jpg)
 
 ###### FIGURE 1. CDMS Classes
 
