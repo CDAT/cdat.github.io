@@ -9,7 +9,7 @@ index: 2
 
 
 
-##  UV-CDAT Utilities 3.3 - CHAPTER 2
+##  UV-CDAT Utilities - CHAPTER 2
 
 ###  CHAPTER 2
 
@@ -21,7 +21,9 @@ The functions in the `genutil` package are written to be general purpose functio
 
 Statistics functions available in this package include commonly used functions to compute correlation, covariance, auto-correlation, auto-covariance, lagged correlation, lagged covariance, mean absolute difference, root mean square, standard deviation, variance, geometric mean, median, percentiles and linear regression.
 
-**`correlation`**
+---
+
+#### `correlation`
 
 Returns the correlation between 2 slabs. By default on the first dimension, centered and biased by default.
 
@@ -71,7 +73,9 @@ statistic pass anything but 1.
 >>> wcor = statistics.correlation(ncep1, ncep2,\ weights='generate', axis='xy')
 {% endhighlight %}
 
-**`covariance`**
+---
+
+#### `covariance`
 
 Returns the covariance between 2 slabs. By default on the first dimension, centered and biased by default.
 
@@ -101,7 +105,9 @@ default value = 1 removes the mean first. Set to 0 or None for uncentered.
 
 default value = 1 If want to compute an unbiased variance pass anything but 1.
 
-**`autocorrelation`**
+---
+
+#### `autocorrelation`
 
 Returns the autocorrelation of a slab at lag k centered,partial and "biased" by default
 
@@ -137,7 +143,9 @@ default value = 1 computes the biased statistic. If want to compute an unbiased 
 
 default value = 0 computes statistic at all lags upto 'lag'. If you set noloop=1 statistic is computed at lag only (not up to lag).
 
-**`autocovariance`**
+---
+
+#### `autocovariance`
 
 Returns the autocovariance of a slab. By default over the first dimension, centered, and partial.
 
@@ -169,7 +177,9 @@ default value = 1 uses only common time for means.
 
 default value = 0 computes statistic at all lags upto 'lag'. If you set noloop=1 statistic is computed at lag only (not up to lag).
 
-**`laggedcorrelation`**
+---
+
+#### `laggedcorrelation`
 
 Returns the correlation between 2 slabs at lag k centered, partial and "biased" by default.
 
@@ -207,7 +217,9 @@ default value = 1 If want to compute an unbiased variance pass anything but 1.
 
 default value = 0 computes statistic at all lags upto 'lag'. If you set noloop=1 statistic is computed at lag only (not up to lag).
 
-**`laggedcovariance`**
+---
+
+#### `laggedcovariance`
 
 Returns the covariance between 2 slabs at lag k centered and partial by default
 
@@ -241,7 +253,9 @@ default value = 1 uses only common time for means.
 
 default value = 0 computes statistic at all lags upto 'lag'. If you set noloop=1 statistic is computed at lag only (not up to lag).
 
-**`meanabsdiff`**
+---
+
+#### `meanabsdiff`
 
 Returns the mean absolute difference between 2 slabs x and y. By default on the first dimension and centered
 
@@ -272,7 +286,9 @@ default value = 1 removes the mean first. Set to 0 or None for uncentered.
 >>> absd = statistics.meanabsdiff(ncep1, \ ncep2,axis='xy')
 {% endhighlight %}
 
-**`rms`**
+---
+
+#### `rms`
 
 Returns the root mean square difference between 2 slabs. By default from a slab (on first dimension) "uncentered" and "biased" by default
 
@@ -307,7 +323,9 @@ default value = 1 If want to compute an unbiased variance pass anything but 1.
 >>> rms = statistics.rms(ncep1, ncep2, axis='t')
 {% endhighlight %}
 
-**`std`**
+---
+
+#### `std`
 
 Returns the standard deviation from a slab. By default on first dimension, centered, and biased.
 
@@ -335,7 +353,9 @@ default value = 1 removes the mean first. Set to 0 or None for uncentered.
 
 default value = 1 If want to compute an unbiased variance pass anything but 1.
 
-**`variance`**
+---
+
+#### `variance`
 
 Returns the variance from a slab. By default on first dimension, centered, and biased.
 
@@ -363,7 +383,9 @@ default value = 1 removes the mean first. Set to 0 or None for uncentered.
 
 default value = 1 If want to compute an unbiased variance pass anything but 1.
 
-**`geometricmean`**
+---
+
+#### `geometricmean`
 
 Returns the geometric mean over a sepcified axis.
 
@@ -379,7 +401,9 @@ result = geometricmean(x, axis = axisoptions )
 
 default value = 0. You can pass the name of the dimension or index (integer value 0...n) over which you want to compute the statistic.
 
-**`percentiles`**
+---
+
+#### `percentiles`
 
 Returns values at the defined percentiles for an array.
 
@@ -399,7 +423,9 @@ Default = \[50.\] (the 50th percentile i.e the median value)
 
 default value = 0. You can pass the name of the dimension or index (integer value 0...n) over which you want to compute the statistic.
 
-**`median`**
+---
+
+#### `median`
 
 Returns the median value of an array.
 
@@ -413,7 +439,9 @@ result = median(x, axis = axisoptions )
 
 default value = 0. You can pass the name of the dimension or index (integer value 0...n) over which you want to compute the statistic.
 
-**`linearregression`**
+---
+
+#### `linearregression`
 
 Computes the linear regression of y over x or an axis. This function returns Values of the slope and intercept, and optionally, Error estimates and associated probability distributions for T-value (T-Test) and F-value (for analysis of variance f) can be returned. You can choose to return all these for either slope or intercept or both (default behaviour). For theoretical details, refer to "Statistical Methods in Atmospheric Sciences" by Daniel S. Wilks, Academic Press, 1995.
 
@@ -486,13 +514,15 @@ The tutorials (see the document Ultrascale Visualization Climate Data Analysis T
 
 Additional convenience functions 
 
-**`minmax`**
+---
+
+#### `minmax`
 
 Returns the minimum and maximum of a series of arrays/lists/tuples (or a combination of these). You can combine list/tuples/... pretty much any combination is allowed.
 
 **Examples:**
 
-{% highlight python %}
+{% highlight pycon %}
 >>> import genutil
 >>> s = range(7)
 >>> genutil.minmax(s)
@@ -504,7 +534,9 @@ Returns the minimum and maximum of a series of arrays/lists/tuples (or a combina
 (-7.0, 8.0)
 {% endhighlight %}
   
-**`grower`**
+---
+
+#### `grower`
 
 This function takes 2 transient variables and grows them to match their axes.
 
@@ -518,13 +550,15 @@ x, y = grower(x, y, singleton = singletonoption )
 
 Default = 0 If `singletonoption` is set to 1 then an error is raised if one of the dims is not a singleton dimension.
 
-**`rgb2str`**
+---
+
+#### `rgb2str`
 
 Given r,g,b values, this function returns the closest 'name'
 
 **Example:**
 
-{% highlight python %}
+{% highlight pycon %}
 >>> print rgb2str([0,0,0])
 'black'
 {% endhighlight %}

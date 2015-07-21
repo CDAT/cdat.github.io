@@ -5,11 +5,7 @@ manual: utils
 index: 3
 ---
 
-
-
-
-
-## UV-CDAT Utilities 3.3 - CHAPTER 3
+## UV-CDAT Utilities - CHAPTER 3
 
 ### CHAPTER 3
 
@@ -25,16 +21,16 @@ Reads text files written by such programs as spreadsheets, in which data has bee
 
 **Example:**
 
-``` python
+{% highlight pycon %}
 >>> import asciidata
 >>> time, pressure = asciidata.comma_separated(`myfile.txt')
-{% highlight text %}
+{% endhighlight %}
 
 For documentation type:
 
-{% endhighlight %}
+{% highlight bash %}
 % pydoc -w asciidata
-```
+{% endhighlight %}
 
 Scientific Python also contains a subpackage `IO` that contains other useful
 facilities of this type. In particular there is a useful package for reading
@@ -56,7 +52,7 @@ A similar package is in Scientific Python.
 
 **Example:**
 
-{% highlight python %}
+{% highlight pycon %}
 >>> import binaryio
 >>> iunit = binaryio.bincreate('filename')
 >>> binaryio.binwrite(iunit, some_array)
@@ -86,11 +82,11 @@ For documentation type:
 
 **Example:**
 
-```python
+{% highlight pycon %}
 >>> import cdms, vcs
 >>> from eof import Eof
 >>> f=cdms.open('/home/dubois/clt.nc')
->>> u = f(`u', latitude=(-20,40), longitude=(60, 120))
+>>> u = f('u', latitude=(-20,40), longitude=(60, 120))
 >>> result = Eof(u)
 >>> principal_components = result.principal_components
 >>> print "Percent explained", result.percent_explained
@@ -105,7 +101,7 @@ amr[3],'cc'), order='xyt')
 >>> result2 = Eof(u, number_of_components=4,\
 mean_choice=12)
 >>> print "Percent explained", result.percent_explained
-{% highlight text %}
+{% endhighlight %}
 
 ##### Computing L-moments (package lmoments) 
 
@@ -115,15 +111,15 @@ This package is an interface to a Fortran library. The calling sequence from Pyt
 
 For documentation type:
 
-{% endhighlight %}
+{% highlight bash %}
 % pydoc -w lmoments
-{% highlight text %}
+{% endhighlight %}
 
 to see list of functions.
 
-{% endhighlight %}
+{% highlight bash %}
 % pydoc -w lmoments.pelexp
-```
+{% endhighlight %}
 
 or other function name, for the particular. See also documentation for [Pyfort](http://pyfortran.sourceforge.net) for further details on argument conventions. If built from source, a file `flmoments.txt` appears which gives the Python calling sequences.
 
@@ -133,7 +129,7 @@ Interface to `regridpack`
 
 For documentation type:
 
-{% highlight text %}
+{% highlight bash %}
 % pydoc -w adamsregrid
 {% endhighlight %}
 
@@ -147,7 +143,7 @@ Interface to Spherepack. This package contains a Python interface to the subrout
 
 For documentation type:
 
-{% highlight text %}
+{% highlight bash %}
 % pydoc -w sphere
 {% endhighlight %}
 
