@@ -299,9 +299,9 @@ The third type of variable, a *dataset variable*, is associated with a *dataset*
 
 For example, suppose data for variables u and v are stored in six files: u_2000.nc, u_2001.nc, u_2002.nc, v_2000.nc, v_2001.nc , and v_2002.nc. A metafile can be generated with the command:
 
-```
+{% highlight text %}
 $ cdscan -x cdsample.xml [uv]*.nc
-```
+{% endhighlight %}
 
 The metafile **cdsample.xml** is then used like an ordinary data file:
 

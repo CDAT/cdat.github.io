@@ -729,22 +729,22 @@ The `searchFilter` method is used to search a database. The result is called a s
 
 In its simplest form, `searchFilter` takes an argument consisting of a string filter. The search returns a sequence of entries, corresponding to those objects having an attribute which matches the filter. Simple filters have the form (tag = value), where value can contain wildcards. For example:
 
-```
+{% highlight text %}
 (id = ncep*)
 (project = AMIP2)
-```
+{% endhighlight %}
 
 Simple filters can be combined with the logical operators '&', '|', '!'. For example,
 
-```
+{% highlight text %}
 (&(id = bmrc*)(project = AMIP2))
-```
+{% endhighlight %}
 
 matches all objects with id starting with bmrc, and a project attribute with value 'AMIP2'.
 
 Formally, search filters are strings defined as follows:
 
-```
+{% highlight text %}
 filter ::= "(" filtercomp ")"
 
 filtercomp ::= "&" filterlist | # and
@@ -762,7 +762,7 @@ op ::= "=" | # equality
 
 tag ::= string attribute name
 value ::= string attribute value, may include '*' as a wild card
-```
+{% endhighlight %}
 
 Attribute names are defined in the chapter on "Climate Data Markup Language (CDML)" on page 149. In addition, some special attributes are defined for convenience:
 
@@ -1200,23 +1200,23 @@ The MV module is a work-alike replacement for the MA module, that carries along 
 
 MV can be imported with the command:
 
-```
+{% highlight text %}
 import MV
-```
+{% endhighlight %}
 
 The command
 
-```
+{% highlight text %}
 from MV import *
-```
+{% endhighlight %}
 
 allows use of MV commands without any prefix.
 
 Table 2.26 on page 75 lists the constructors in MV. All functions return a transient variable. In most cases the keywords axes, attributes, and id are available. axes is a list of axis objects which specifies the domain of the variable. attributes is a dictionary. id is a special attribute string that serves as the identifier of the variable, and should not contain blanks or non-printing characters. It is used when the variable is plotted or written to a file. Since the id is just an attribute, it can also be set like any attribute:
 
-```
+{% highlight text %}
 var.id = 'temperature'
-```
+{% endhighlight %}
 
 For completeness MV provides access to all the MA functions. The functions not listed in the following tables are identical to the corresponding MA function: `allclose`, `allequal`, `common_fill_value`, `compress`, `create_mask`, `dot`, `e`, `fill_value`, `filled`, `get_print_limit`, `getmask`, `getmaskarray`, `identity`, `indices`, `innerproduct`, `isMA`, `isMaskedArray`, `is_mask`, `isarray`, `make_mask`, `make_mask_none`, `mask_or`, `masked`, `pi`, `put`, `putmask`, `rank`, `ravel`, `set_fill_value`, `set_print_limit`, `shape`, `size`. See the documentation at http://numpy.sourceforge.net for a description of these functions.
 

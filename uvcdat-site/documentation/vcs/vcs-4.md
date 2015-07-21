@@ -126,11 +126,11 @@ There can only be at most 8 VCS Canvas objects initialized at any given time.
 When a VCS Canvas object is initialized, the current template and graphics
 method will be displayed. For example:
 
-```
+{% highlight text %}
 Template is currently set to P_default.
 
 Graphics method 'Boxfill' is currently set to Gfb_default.
-```
+{% endhighlight %}
 
 <a name="4.5"></a>
 
@@ -531,9 +531,9 @@ Script commands define the actions that are necessary to preserve an interactive
 
 After creating and/or modifying a VCS object, the user can save the object in the initial.attributes file. The initial.attributes file contains many predefined attribute settings to aid the beginning user of VCS. The path to the file must be:
 
-```
+{% highlight text %}
 /$HOME/PCMDI_GRAPHICS/initial.attributes
-```
+{% endhighlight %}
 
 where `/$HOME` denotes the user's home directory. (Note, when VCS is executed for the first time, a `/PCMDI_GRAPHICS` subdirectory will be created automatically if one has not already been created.) The user also can customize the initial.attributes file directly.
 

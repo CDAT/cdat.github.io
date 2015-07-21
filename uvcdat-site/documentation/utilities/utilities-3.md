@@ -28,11 +28,11 @@ Reads text files written by such programs as spreadsheets, in which data has bee
 ``` python
 >>> import asciidata
 >>> time, pressure = asciidata.comma_separated(`myfile.txt')
-```
+{% highlight text %}
 
 For documentation type:
 
-```
+{% endhighlight %}
 % pydoc -w asciidata
 ```
 
@@ -48,9 +48,9 @@ These are the files that you read and write in Fortran with statements like `rea
 
 For documentation type:
 
-```
+{% highlight text %}
 % pydoc -w binaryio.
-```
+{% endhighlight %}
 
 A similar package is in Scientific Python.
 
@@ -80,9 +80,9 @@ This routine is computationally efficient, solving the problem in either the nor
 
 For documentation type:
 
-```
+{% highlight text %}
 % pydoc -w eof.Eof
-```
+{% endhighlight %}
 
 **Example:**
 
@@ -105,7 +105,7 @@ amr[3],'cc'), order='xyt')
 >>> result2 = Eof(u, number_of_components=4,\
 mean_choice=12)
 >>> print "Percent explained", result.percent_explained
-```
+{% highlight text %}
 
 ##### Computing L-moments (package lmoments) 
 
@@ -115,13 +115,13 @@ This package is an interface to a Fortran library. The calling sequence from Pyt
 
 For documentation type:
 
-```
+{% endhighlight %}
 % pydoc -w lmoments
-```
+{% highlight text %}
 
 to see list of functions.
 
-```
+{% endhighlight %}
 % pydoc -w lmoments.pelexp
 ```
 
@@ -133,9 +133,9 @@ Interface to `regridpack`
 
 For documentation type:
 
-```
+{% highlight text %}
 % pydoc -w adamsregrid
-```
+{% endhighlight %}
 
 This package contains a Python interface to the subroutine library regridpack.
 
@@ -147,9 +147,9 @@ Interface to Spherepack. This package contains a Python interface to the subrout
 
 For documentation type:
 
-```
+{% highlight text %}
 % pydoc -w sphere
-```
+{% endhighlight %}
 
 to see list of functions.
 
@@ -189,24 +189,24 @@ Calling sequence:
 
 Input:
 
-```
+{% highlight text %}
 character*(*) filename ! name of the file to be read
 ! max number of stations (soundings) possible
 integer maxsta
 ! number of variables and P-levels in each sounding
 integer nvarbs, nlevels
-```
+{% endhighlight %}
 
 Output:
 
-```
+{% highlight text %}
 ! longitudes / latitudes of the stations
 real, intent(out):: lon(maxsta), lat(maxsta)
 ! sounding data
 real , intent(out):: data(nvarbs, nlevels, maxsta)
 ! actual number of stations with data
 integer , intent(out):: nr
-```
+{% endhighlight %}
 
 ##### A grads like interface (package grads) 
 

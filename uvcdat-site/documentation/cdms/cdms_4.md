@@ -120,7 +120,7 @@ In this example:
   - The input data is variable src_array in file sampleT42Grid.nc.
   - The file scrip_in has contents:
 
-```
+{% highlight text %}
 &remap_inputs
  num_maps = 1
 
@@ -138,13 +138,13 @@ In this example:
             luse_grid1_area = .false.
             luse_grid2_area = .false.
 /
-```
+{% endhighlight %}
 
 `num_maps` specifies the number of mappings generated, either 1 or 2. For a single mapping, `grid1_file` and `grid2_file` are the source and target grid definitions, respectively. The `map_method` specifies the type of interpolation, either 'conservative', 'bilinear', 'bicubic', or 'distwgt' (distanceweighted). The remaining parameters are described in the SCRIP documentation.
 
 Once the grids and input file are defined, run the scrip executable to generate the remapping file 'rmp_T42_to_POP43_conserv.nc'
 
-```
+{% highlight text %}
 % scrip
  Using latitude bins to restrict search.
   Computing remappings between:
@@ -154,7 +154,7 @@ Once the grids and input file are defined, run the scrip executable to generate 
   grid1 sweep
   grid2 sweep
   Total number of links = 63112
-```
+{% endhighlight %}
 
 Next, run UV-CDAT and create the regridder:
 
@@ -382,7 +382,7 @@ A SCRIP regridder function is an instance of the ScripRegridder class. Such a fu
 
 The bicubic regridder takes four arguments:
 
-{% highlight python %}
+{% highlight pycon %}
 >>> outdat = regridf(indat, gradlat, gradlon, gradlatlon)
 {% endhighlight %}
 

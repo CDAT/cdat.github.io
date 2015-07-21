@@ -19,9 +19,9 @@ You must have the XGKS fonts directory set. XGKS is an implementation of the ANS
 
 Before running VCS, it is necessary to set the environment variable XGKSFontDir. That is, enter:
 
-```
+{% highlight text %}
 setenv XGKSFontDir /the_absolute_path/fontdb
-```
+{% endhighlight %}
 
 where `/the_absolute_path` denotes the absolute path location for the `/fontdb` directory.
 
@@ -29,9 +29,9 @@ It is best if this setenv statement is included in the `.login` or `.cshrc` file
 
 Note: if VCS aborts with the message:
 
-```
+{% highlight text %}
 "XGKS: can't load font 1 from /the_absolute_path./fontdb - aborting"
-```
+{% endhighlight %}
 
 then the `XGKSFontDir` variable is improperly set.
 
@@ -55,9 +55,9 @@ It is strongly recommended that two input files be put in place before attemptin
 
 At start-up, VCS reads a script file named initial.attributes that defines the initial settings of the VCS tables. Although not required to run VCS, this initial.attributes file contains many predefined settings to aid the beginning user of VCS. The path to the file must be:
 
-```
+{% highlight text %}
 /$HOME/PCMDI_GRAPHICS/initial.attributes
-```
+{% endhighlight %}
 
 where `/$HOME` denotes the user's home directory. (Note, when VCS is executed for the first time, a `/PCMDI_GRAPHICS` subdirectory will be created automatically if it has not already been created.)
 
@@ -65,9 +65,9 @@ where `/$HOME` denotes the user's home directory. (Note, when VCS is executed fo
 
 The user can customize the contents of the initial.attributes file. This is most easily accomplished by changing the contents of a VCS object saving the state of the system with the use of the `saveVCSinitialattribute()` function.  This action will place a new initial.attributes file with the desired setting(s) in the user's
 
-```
+{% highlight text %}
 /$HOME/PCMDI_GRAPHICS
-```
+{% endhighlight %}
 
 directory. For recovery purposes, the old initial.attributes file is copied to file initial.attributes% in the same directory.
 
@@ -77,9 +77,9 @@ directory. For recovery purposes, the old initial.attributes file is copied to f
 
 VCS graphical displays can be printed only if the user customizes a `HARD_COPY` file (included with the VCS software) for the home system. The path to the `HARD_COPY` file must be:
 
-```
+{% highlight text %}
 /$HOME/PCMDI_GRAPHICS/HARD_COPY
-```
+{% endhighlight %}
 
 where `/$HOME` denotes the user's home directory. The `HARD_COPY` file contains the following necessary information for printing at the user's home site:
 

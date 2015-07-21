@@ -43,15 +43,15 @@ Otherwise, there is considerable flexibility in how a dataset can be partitioned
 
 The syntax of the `cdscan` command is
 
-```
+{% highlight text %}
 cdscan [options] file1 file2 ...
-```
+{% endhighlight %}
 
 or
 
-```
+{% highlight text %}
 cdscan [options] -f file_list
-```
+{% endhighlight %}
 
 where
 
@@ -296,13 +296,13 @@ Output is written to standard output by default. Use the -x option to specify an
 
 #### 7.1.3 Examples
 
-```
+{% highlight text %}
 cdscan -c noleap -d test -x test.xml [uv]*.nc
-```
+{% endhighlight %}
 
-```
+{% highlight text %}
 cdscan -d pcmdi_6h -i 0.25 -r 'days since 1979-1-1' *6h*.ctl
-```
+{% endhighlight %}
 
 <a name="7.1.4"></a>
 

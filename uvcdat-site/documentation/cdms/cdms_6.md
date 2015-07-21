@@ -83,15 +83,15 @@ Character | Encoding
 
 For example, the comment
 
-```
+{% highlight text %}
 Certain "special characters", such as <, >, and , must be encoded.
-```
+{% endhighlight %}
 
 would appear in an attribute string as:
 
-```HTML
+{% highlight html %}
 comment = "Certain &quot;special characters&quot;, such as &lt;, &gt;, and &apos;, must be encoded."
-```
+{% endhighlight %}
 
 <a name="6.4"></a>
 
@@ -126,9 +126,7 @@ A CDML document consists of a prolog followed by a single dataset element.
 The prolog defines the XML version, and the Document Type Definition (DTD), a formal specification of the document syntax. See http:// www.w3.org/TR/1998/REC-xml-19980210 for a formal definition of XML Version 1.0.
 
 
-`prolog ::=` 
-	**\<?xml version="1.0"?>**
-	**\<!DOCTYPE dataset SYSTEM "http://www-pcmdi.llnl.gov/~drach/cdms/cdml.dtd"\>**
+`prolog ::= <?xml version="1.0"?> <!DOCTYPE dataset SYSTEM "http://www-pcmdi.llnl.gov/~drach/cdms/cdml.dtd">`
 
 <a name="#6.6.1"></a>
 
@@ -136,8 +134,9 @@ The prolog defines the XML version, and the Document Type Definition (DTD), a fo
 
 A dataset element describes a single dataset. The content is a list of elements corresponding to the axes, grids, and variables contained in the dataset. Axis, variable, and grid elements can be listed in any order, and an element ID can be used before the element is actually defined.
 
-    `dataset-element ::=` **<dataset** `dataset-attributes`**>** `dataset-content` **</dataset>**
-    `dataset-content ::= (axis-element | grid-element | variable-element)* extra-attribute-element+`
+`dataset-element ::=` **<dataset** `dataset-attributes`**>** `dataset-content` **</dataset>**
+
+`dataset-content ::= (axis-element | grid-element | variable-element)* extra-attribute-element+`
 
 <a name="table_6.3"></a>
 
@@ -270,15 +269,25 @@ A dataset element describes a single dataset. The content is a list of elements 
 The `cdms_filemap` attribute describes how the dataset is partitioned into files. The format is:
 
 `filemap ::= [ varmap, varmap, ...]`
+
 `varmap ::= [ namelist, slicelist ]`
+
 `namelist ::= [ name, name, ... ]`
+
 `slicelist ::= [ indexlist, indexlist, ,,, ]`
+
 `indexlist ::= [ time0, time1, lev0, lev1, path ]`
+
 `name ::= variable name`
+
 `time0 ::= first index of time in the file, or '-' if not split on time`
+
 `time1 ::= last index of time + 1, in the file, or '-' if not split on time`
+
 `lev0 ::= first index of vertical levels in the file, or '-' if not split on level`
+
 `lev1 ::= last index +1 of vertical levels in the file, or '-' if not split on level`
+
 `path ::= pathname of the file containing data for this time/level range.`
 
 The pathname is appended to the value of the directory attribute, to obtain an absolute pathname.
@@ -289,10 +298,13 @@ The pathname is appended to the value of the directory attribute, to obtain an a
 
 An axis element describes a single coordinate axis. The content can be a blank-separated list of axis values or a linear element. A linear element is a representation of a linearly-spaced axis as (start, delta, length).
 
-    `axis-element ::=` **<axis** `axis-attributes`**>** `axis-content` **</axis>**
-    `axis-content ::= (axis-values | linear-element) extra-attribute-element*`
-    `axis-values ::= [value*]`
-    `linear-element ::=` **<linear delta="`value`" length=**"`Integer`"** start=**"`value`"**> </linear>**
+`axis-element ::=` **<axis** `axis-attributes`**>** `axis-content` **</axis>**
+
+`axis-content ::= (axis-values | linear-element) extra-attribute-element*`
+
+`axis-values ::= [value*]`
+
+`linear-element ::=` **<linear delta="`value`" length=**"`Integer`"** start=**"`value`"**> </linear>**
 
 <a name="table_6.4"></a>
 
@@ -908,7 +920,7 @@ Dataset "sample" has two variables, and six axes.
  - The global attribute cdms_filemap describes the mapping between variables and files. The entry `[[u],[[0,1,-,-,u_2000.nc],[1,2,-,-,u_2001.nc],[2,3,,-,u_2002.nc] ]` indicates that variable `u` is contained in file u_2000.nc for time index 0, u_2001.nc for time index 1, etc.
 
 
-```xml
+{% highlight xml %}
 <?xml version="1.0"?>
 <!DOCTYPE dataset SYSTEM "http://www-pcmdi.llnl.gov/software/cdms/cdml.dtd">
 <dataset
@@ -985,6 +997,6 @@ Dataset "sample" has two variables, and six axes.
 		</domain>
 	</variable>
 </dataset>
-```
+{% endhighlight %}
 
 

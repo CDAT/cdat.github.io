@@ -58,7 +58,7 @@ The following example illustrates these features.
 
 ##### Example
 
-```
+{% highlight text %}
 import vcs, cdms2, sys
 x = vcs.init()
 f = cdms2.open( sys.prefix+"/sample_data/geos5-sample.nc" )
@@ -83,7 +83,7 @@ dv3d.ScaleColormap = ( -46.0, 48.0 )
 dv3d.ScaleTransferFunction = ( 12.0, 77.0 )
 x.plot( v, dv3d )
 x.interact()
-```
+{% endhighlight %}
 
 <a name="fig12.1"></a>
 
@@ -108,7 +108,7 @@ The following example illustrates these features.
 
 ##### Example
 
-```
+{% highlight text %}
 import vcs, cdms2, sys
 x = vcs.init()
 f = cdms2.open(sys.prefix+"/sample_data/geos5-sample.nc")
@@ -121,7 +121,7 @@ dv3d.GlyphDensity = 3.5
 dv3d.GlyphSize = 0.27
 x.plot( u, v, dv3d )
 x.interact()
-```
+{% endhighlight %}
 
 <a name="fig12.2"></a>
 
@@ -134,9 +134,9 @@ x.interact()
 
 The attributes illustrated above will configure all plot constituents (e.g. `Volume`, `Surface`, and `Slice`) simultaneously. It is also possible to configure the plot constituents separately for some graphic method attributes (currently only the scaling of opacity and colormap). This is accomplished using a dictionary with keys designating the constituents to be configured (`Volume`, `Surface` or `Slice`) and values representing the corresponding configurations. For example, one can use the following command to set the colormap scaling to `[ 16.0, 30.0 ]` for the `Volume` constituent, `[ 30.0, 35.0 ]` for the `Surface` constituent, and `[ -46.0, 48.0 ]` for all other constituents:
 
-```
+{% highlight text %}
 dv3d.ScaleColormap = ( [ -46.0, 48.0 ], { 'Volume': [ 16.0, 30.0 ], 'Surface': [ 30.0, 35.0 ] }
-```
+{% endhighlight %}
 
 The following example illustrates these features.
 
@@ -144,7 +144,7 @@ The following example illustrates these features.
 
 ##### Example
 
-```
+{% highlight text %}
 import vcs, cdms2, sys
 x = vcs.init()
 f = cdms2.open( sys.prefix+"/sample_data/geos5-sample.nc" )
@@ -169,7 +169,7 @@ dv3d.ScaleColormap = [ -46.0, 48.0 ], { 'Volume': [ 16.0, 30.0 ], 'Surface': [ 3
 dv3d.ScaleTransferFunction = [ 12.0, 77.0 ]
 x.plot( v, dv3d )
 x.interact()
-```
+{% endhighlight %}
 
 <a name="fig12.3"></a>
 
@@ -186,7 +186,7 @@ x.interact()
 
 ##### Example
 
-```
+{% highlight text %}
 import vcs, cdms2, sys
 x = vcs.init()
 f = cdms2.open(sys.prefix+"/sample_data/clt.nc")
@@ -204,7 +204,7 @@ dv3d.Camera={'Position': (436.8, -126.3, 285.2), 'ViewUp': (-0.5, 0.25, 0.83), '
 
 x.plot( v, dv3d )
 x.interact()
-```
+{% endhighlight %}
 
 <a name="fig12.4"></a>
 
@@ -234,7 +234,7 @@ Attribute | Use | Expected Value | Interaction Modality
 
 ##### Example
 
-```
+{% highlight text %}
 x = vcs.init()
 f = cdms2.open("/Data/CAM/f1850c5_t2_ANN_climo-native.nc")
 v = f["U"]
@@ -248,7 +248,7 @@ dv3d.ScaleTransferFunction = [15.3, 50.7]
 dv3d.ToggleSphericalProj = vcs.on
 x.plot( v, dv3d, grid_file="/Data/CAM/ne120np4_latlon.nc" )
 x.interact()
-```
+{% endhighlight %}
 
 <a name="fig12.5"></a>
 

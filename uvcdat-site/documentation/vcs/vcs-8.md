@@ -154,7 +154,7 @@ def simpleoverlay():
 
 if __name__ == "__main__":
     simpleoverlay()
-```
+{% highlight text %}
 
 <a name="boxfill"></a>
 
@@ -1973,7 +1973,7 @@ if __name__ == "__main__":
 
 ###Hardcopy Example:
 
-```python
+{% endhighlight %}python
 #
 # Example Hardcopy module
 #
