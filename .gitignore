@@ -1,11 +1,4 @@
-layout/deploy
-deploy
-*.hyde_deps
-*.DS_Store
-*.swp
-*.pyc
-originals/
-wiki/zHTML/
-content/media/gallery/thumbnail/*.png
-*.pyc
-
+_site
+.sass-cache
+gallery/thumbnails/*
+.DS_Store

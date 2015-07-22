@@ -1,0 +1,29 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="" href="/">
+        <img class="logo" src="{{ site.logo }}">
+      </a>
+    </div>
+    <ul class="nav navbar-nav">
+    {% for navlink in site.data.navlinks %}
+          {% if navlink.url %}
+          <li {% if page.url == navlink.url %}class="active"{% endif %}>
+            <a href="{{ navlink.url }}">{{ navlink.title }}</a>
+          </li>
+          {% else %}
+            {% if navlink.dropdown %}
+            <li class="dropdown{% for d in navlink.dropdown %}{% if d.url == page.url %} active{% endif %}{% endfor %}">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ navlink.title }} <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                {% for drop in navlink.dropdown %}
+                <li{% if drop.url == page.url %} class="active"{% endif %}><a href="{{drop.url}}">{{drop.title}}</a></li>
+                {% endfor %}
+              </ul>
+            </li>
+            {% endif %}
+          {% endif %}
+    {% endfor %}
+    </ul>
+  </div>
+</nav>

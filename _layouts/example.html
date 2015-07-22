@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <div class="container-fluid">
+        <h2>{{ page.title }}</h2>
+        <p>
+        ( <a href="{{ page.fullsize }}">png</a> )
+        {% for assoc in other %}
+        ( <a href="{{ assoc.url }}">{{ assoc.type }}</a> )
+        {% if assoc.type == "nc" %}
+        {% assign has_datafile = 'true' %}
+       	{% endif %} 
+        {% endfor %}
+        <a href="{{ page.script }}">Source</a>
+        </p>
+        <p><img src="{{page.fullsize}}" /> </p>
+        {% if has_datafile %}
+        <div class="alert alert-warning">
+        This script requires datasets, which are linked above (<b>nc</b> files) in order to run.
+        </div>
+        {% endif %}
+        {% highlight cython %}{% include {{page.script | prepend:"source/"}} %}{% endhighlight %}
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

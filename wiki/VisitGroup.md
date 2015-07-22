@@ -1,4 +1,0 @@
-VisIt Group:
-
-* Charles
-* SeanAhern
