@@ -2,14 +2,14 @@
 
 if [ $# -eq 0 ]
 then
-	echo "Usage: resize.bash /path/to/media"
+	echo "Usage: resize.bash /path/to/_site"
 	exit 1;
 fi
 
 media_dir=$1
-if [ `basename $media_dir` = "media" ]
+if [ `basename $media_dir` = "_site" ]
 then
-	echo "Found media directory... resizing"
+	echo "Found _site directory... resizing"
 	media_dir=${media_dir%/}
 
 	for f in $media_dir/gallery/fullsize/*.png; do
