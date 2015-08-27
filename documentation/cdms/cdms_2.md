@@ -384,16 +384,12 @@ Type | Method | Definition
   || `None or ':'`
   || where `x` and `y` are coordinates indicating the interval `[x,y)`, and: 
   || `indicator` is a two or three-character string, where the first character is `'c'` if the interval is closed on the left, `'o'` if open, and the second character has the same meaning for the right-hand point. If present, the third character specifies how the interval should be intersected with the axis:
-
   || `'n'` - select node values which are contained in the interval
-
   || `'b'` -select axis elements for which the corresponding cell boundary intersects the interval
-
   || `'e'` - same as n, but include an extra node on either side
-
-    || `'s'` - select axis elements for which the cell boundary is a subset of the interval
- || The default indicator is 'ccn', that is, the interval is closed, and nodes in the interval are selected. 
- || If `cycle` is specified, the axis is treated as circular with the given cycle value. By default, if `axis.isCircular()` is true, the axis is treated as circular with a default modulus of `360.0`.
+  || `'s'` - select axis elements for which the cell boundary is a subset of the interval
+  || The default indicator is 'ccn', that is, the interval is closed, and nodes in the interval are selected. 
+  || If `cycle` is specified, the axis is treated as circular with the given cycle value. By default, if `axis.isCircular()` is true, the axis is treated as circular with a default modulus of `360.0`.
 || An interval of `None` or `':'` returns the full index interval of the axis.
 || The method returns the corresponding index interval as a 3tuple `(i,j,k)`, where `k` is the integer stride, and `[i.j)` is the half-open index interval `i <= k < j` `(i >= k > j if k < 0)`, or `none` if the intersection is empty.
 ||for an axis which is circular (`axis.topology == 'circular'`), `[i,j)` is interpreted as follows, where `n = len(axis)`
