@@ -5,6 +5,8 @@ title: UV-CDAT Gallery
 
 # Gallery
 
+[Index](/example_index.html)
+
 {% for example in site.examples %}
 <div class="example">
 	<a href="{{ example.url }}">
