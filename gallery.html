@@ -1,0 +1,50 @@
+---
+layout: default
+title: UV-CDAT Gallery
+scripts: [/js/gallery_filter.js]
+---
+
+<h1>Gallery <small><a href="/example_index.html">(Index)</a></small></h1>
+
+{% assign ex_tags = site.examples | map: "tags" %}
+
+{% assign tags = "" %}
+
+{% for tarr in ex_tags %}
+    {% assign splittags = tags | split: "|" %}
+    {% for tag in tarr %}
+        {% assign tags = tags | append: tag | append: "|" %}
+    {% endfor %}
+{% endfor %}
+
+{% assign tag_array = tags | split: "|" %}
+
+{% assign filtered_tags = "" %}
+
+{% for tag in tag_array %}
+    {% assign ft_arr = filtered_tags | split: "|" %}
+    {% unless ft_arr contains tag %}
+        {% assign filtered_tags = filtered_tags | append: tag | append: "|" %}
+    {% endunless %}
+{% endfor %}
+
+{% assign tags = filtered_tags | split:"|" %}
+
+<h4>Filters</h4>
+
+<ul class="filters">
+{% for tag in tags %}
+<li><a data-tag="{{tag}}" href="#" class="filter_link">{{tag}}</a></li>
+{% endfor %}
+</ul>
+
+{% for example in site.examples %}
+<div class="example" data-tags="{{example.tags | join:','}}">
+	<a href="{{ example.url }}">
+		<div class="img-wrapper">
+			<img src="{{ example.thumb }}" />
+		</div>
+		<p>{{ example.title }}</p>
+	</a>
+</div>
+{% endfor %}

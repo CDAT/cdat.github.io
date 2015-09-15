@@ -213,3 +213,22 @@ footer {
   margin-left:auto;
   margin-right:auto;
 }
+
+h1 small {
+  font-size:.5em;
+}
+
+.filters {
+    width: 100%;
+    padding:0;
+    margin-top: 1em;
+}
+.filters > li {
+    display: inline-block;
+    width: 24%;
+}
+
+.filtering {
+  font-weight: bold;
+}
+
