@@ -11,4 +11,46 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  {% if page.scripts %}
+    {% for script in page.scripts %}
+  <script src="{{script | prepend: site.baseurl}}"></script>
+    {% endfor %}
+  {% endif %}
+  <script>
+  (function() {
+    var cx = '012988142653460303446:qilcggw0-fo';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<style>
+    .gsc-control-cse *,
+    .gsc-control-searchbox-only * {
+        -webkit-box-sizing: content-box;
+          -moz-box-sizing: content-box;
+               box-sizing: content-box;
+    }
+    .gsc-search-box-tools .gsc-search-box td.gsc-input {
+      padding-right:0;
+    }
+    input.gsc-search-button {
+      margin-left:0 !important;
+      margin-top:4px !important;
+      border-radius:0 5px 5px 0 !important;
+      border-left:0 !important;
+    }
+    .gsc-input-box {
+      border-radius:5px 0 0 5px;
+      width:250px;
+    }
+    .gsc-control-cse input,
+    .gsc-control-searchbox-only input {
+        line-height:normal;
+    }
+</style>
 </head>
