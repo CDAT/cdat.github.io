@@ -25,11 +25,6 @@ jumbo_text: UV-CDAT is a powerful and complete front-end to a rich set of visual
   </p>
 </div>
 
-<div class="hero-unit announcement">
-  <h3>The Report on Face to Face 2014 is out!</h3>
-  <p>You can get it <a href="http://aims-group.github.io/pdf/2014-ESGF_UV-CDAT_Conference_Report.pdf">here</a>. If you're looking for slides from the conference, they're available <a href="/facetoface.html">here</a>.</p>
-</div>
-
 <h2 id="new">Welcome to UV-CDAT!</h2>
 
 New here? Don't worry! We'll help you get started. If you're interested in what you can do with UV-CDAT, you can take a look at our [gallery]. If you're interested in anything you see there, you can look into getting our application [installed][install].
