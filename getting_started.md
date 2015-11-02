@@ -12,7 +12,7 @@ To run the examples, you first have to use the unix `source` command to load the
 If you installed using a binary:
 
 ~~~bash
-source /usr/local/uvcdat/bin/setup_runtime.sh
+source /usr/local/uvcdat/$VERSION/bin/setup_runtime.sh
 ~~~
 
 If you installed from source:
@@ -21,7 +21,7 @@ If you installed from source:
 source /THE/PATH/YOU/INSTALLED/TO/bin/setup_runtime.sh
 ~~~
 
-You can type `which python` to verify that you're properly set up (should output something like `/usr/local/uvcdat/bin/python` for a binary install, or the path to your installation followed by `/bin/python` for a source install)
+You can type `which python` to verify that you're properly set up (should output something like `/usr/local/uvcdat/$VERSION/bin/python` for a binary install, or the path to your installation followed by `/bin/python` for a source install)
 
 Once you've loaded the environment, you should be able to run the examples. They should output a .png file that has the same image as the example.
 
