@@ -3466,10 +3466,10 @@ sr.marker=14 # Same as sr.marker='triangle_down_fill'
 sr.marker=15 # Same as sr.marker='triangle_left_fill'
 sr.marker=16
 # Same as below
-sr.markercolors=(22) # Same as below
-sr.markercolors=([22]) # Will set the markers to a specific
+sr.markercolor=(22) # Same as below
+sr.markercolor=([22]) # Will set the markers to a specific
 # color index
-sr.markercolors=None # Color index defaults to Black
+sr.markercolor=None # Color index defaults to Black
 
 #To set the Marker sizie:
     sr.markersize=5
@@ -3915,10 +3915,10 @@ xy.marker=None # Draw no markers
         <p>There are four possibilities for setting the marker color index
         (<strong>Example</strong>):</p>
         {% highlight python %}
-xy.markercolors=22 # Same as below
-xy.markercolors=(22) # Same as below
-xy.markercolors=([22]) # Will set the markers to a specific
-xy.markercolors=None # Color index defaults to Black
+xy.markercolor=22 # Same as below
+xy.markercolor=(22) # Same as below
+xy.markercolor=([22]) # Will set the markers to a specific
+xy.markercolor=None # Color index defaults to Black
 {% endhighlight %}
 
         <p>To set the XvsY Marker sizie:</p>
@@ -4146,11 +4146,11 @@ xyy.marker=None # Draw no markers
 
         <p>There are four possibilities for setting the marker color index (Ex):</p>
         {% highlight python %}
-xyy.markercolors=22 # Same as below
-xyy.markercolors=(22) # Same as below
-xyy.markercolors=([22]) # Will set the markers to a specific
+xyy.markercolor=22 # Same as below
+xyy.markercolor=(22) # Same as below
+xyy.markercolor=([22]) # Will set the markers to a specific
 # color index
-xyy.markercolors=None # Color index defaults to Black
+xyy.markercolor=None # Color index defaults to Black
 {% endhighlight %}
 
         <p>To set the Xyvsy Marker sizie:</p>
@@ -4375,11 +4375,11 @@ yxx.marker=16 # Same as yxx.marker='triangle_right_fill'
 yxx.marker=17 # Same as yxx.marker='square_fill'
 yxx.marker=None # Draw no markers
 # There are four possibilities for setting the marker color index (Example):
-    yxx.markercolors=22 # Same as below
-yxx.markercolors=(22) # Same as below
-yxx.markercolors=([22])
+    yxx.markercolor=22 # Same as below
+yxx.markercolor=(22) # Same as below
+yxx.markercolor=([22])
 # Will set the markers to a specific color index
-yxx.markercolors=None # Color index defaults to Black
+yxx.markercolor=None # Color index defaults to Black
 # To set the Yxvsx Marker size:
     yxx.markersize=5
 yxx.markersize=55
