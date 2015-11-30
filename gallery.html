@@ -36,7 +36,7 @@ scripts: [/js/gallery_filter.js]
 
 <ul class="filters">
 {% for tag in tags %}
-<li><a data-tag="{{tag}}" href="#" class="filter_link">{{tag}}</a></li>
+<li><a href="#{{tag}}" class="filter_link">{{tag}}</a></li>
 {% endfor %}
 </ul>
 
