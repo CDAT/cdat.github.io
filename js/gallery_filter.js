@@ -1,7 +1,11 @@
 $("body").ready(function(){
     function gethash(url) {
         var halves = url.split("#");
-        return halves[1];
+        if (halves.length > 1) {
+            return halves[1];
+        } else {
+            return "";
+        }
     }
     function hashchanged(e){
 
@@ -12,6 +16,7 @@ $("body").ready(function(){
         $(".filter_link.filtering").removeClass("filtering");
         // Grab the correct link
         if (new_hash === "") {
+            $('.example').show();
             return;
         }
         var a = $(".filter_link[href='#" + new_hash + "']");
