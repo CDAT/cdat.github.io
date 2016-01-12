@@ -7,6 +7,8 @@ layout: default
 <a name="2.4"></a>
 # 2.4 Changelog
 
+[New Features Documentation](/releases/2.4_features.html)
+
 ## Closed Issues
 ### ACME
 
