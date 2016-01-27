@@ -5,11 +5,13 @@ layout: default
 ---
 
 <a name="2.4"></a>
+
 # 2.4 Changelog
 
 [New Features Documentation](/releases/2.4_features.html)
 
 ## Closed Issues
+
 ### ACME
 
  * **Bug**: [average() indentation error](https://github.com/UV-CDAT/uvcdat/issues/1048)
@@ -296,9 +298,11 @@ layout: default
 
 
 <a name="2.2"></a>
+
 # 2.2 Changelog
 
 ## Closed Issues
+
 ### ACME
 
  * **Bug**: [No usch text combined](https://github.com/UV-CDAT/uvcdat/issues/1096) ([#1107](https://github.com/UV-CDAT/uvcdat/pull/1107))
