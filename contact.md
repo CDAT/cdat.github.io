@@ -56,7 +56,12 @@ To leave the mailing list, send an email to [listserv@listserv.llnl.gov][devunsu
 
 #### See something wrong with the site?
 
-[Submit an issue on GitHub](https://github.com/UV-CDAT/uvcdat-site/issues)
+- [Submit an issue on GitHub](https://github.com/UV-CDAT/uvcdat-site/issues)
+
+#### Found a bug in UV-CDAT?
+
+- [Submit an issue on GitHub](https://github.com/UV-CDAT/uvcdat/issues)
+- [Send an email to uvcdat-support][support]
 
 ---
 
