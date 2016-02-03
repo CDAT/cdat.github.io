@@ -500,3 +500,160 @@ layout: default
  * [Unable to write unsigned int8 variable in netcdf4 file (non-netcdf3 type)](https://github.com/UV-CDAT/uvcdat/issues/481)
  * [Fix setup_runtime.sh script for DMG](https://github.com/UV-CDAT/uvcdat/issues/409)
  * [system picks up wrong pip when building ipython and tornado ](https://github.com/UV-CDAT/uvcdat/issues/269)
+
+<a id="2.1"></a>
+
+# 2.1 Changelog
+
+## Closed Issues
+
+### Build
+
+ * **Bug**: [On Mac Udunits fails because of flex not found](https://github.com/UV-CDAT/uvcdat/issues/733)
+ * **Bug**: [CMOR doesn't build](https://github.com/UV-CDAT/uvcdat/issues/786)
+ * **Bug**: [visit_vtk failed to build: missing vtkPolyDataToPolyDataFilter.h](https://github.com/UV-CDAT/uvcdat/issues/802)
+ * **Bug**: [git_update.sh fails if updating to a tag](https://github.com/UV-CDAT/uvcdat/issues/837)
+
+### DV3D
+
+ * **Enhancement**: [Change template name from xyt to Hovmoller-3D](https://github.com/UV-CDAT/uvcdat/issues/765)
+ * **Bug**: [3D_Scalar plot (xyt) gives errors plotting 3D variable with no time dimensions.](https://github.com/UV-CDAT/uvcdat/issues/854)
+ * **Bug**: [Plotted a 3D-scalar, and the vertical level reported in the heading appears to be upside-down.](https://github.com/UV-CDAT/uvcdat/issues/853)
+ * **Bug**: [Two UV-CDAT Labels in the Lower Right for 3D VCS Plots](https://github.com/UV-CDAT/uvcdat/issues/858)
+ * **Bug**: [ubuntu animations aren't saved](https://github.com/UV-CDAT/uvcdat/issues/799)
+
+### UVCDAT GUI
+
+ * **Bug**: [rename colormap does not put it in list of available colormaps](https://github.com/UV-CDAT/uvcdat/issues/829)
+ * **Enhancement**: [Error messages when launching uvcdat on Rhea.](https://github.com/UV-CDAT/uvcdat/issues/727)
+
+### VCS
+
+ * **Bug**: [meshfill missing color not respected](https://github.com/UV-CDAT/uvcdat/issues/873)
+ * ***Bug*: [Scatter plot labels](https://github.com/UV-CDAT/uvcdat/issues/716)
+ * **Bug**: [x.showbg() does not work in 2.0.0](https://github.com/UV-CDAT/uvcdat/issues/863)
+ * **Bug**: [x.interact() should print an error message when no canvas is open](https://github.com/UV-CDAT/uvcdat/issues/862)
+ * **Bug**: [cleanup EzTemplate](https://github.com/UV-CDAT/uvcdat/issues/826)
+ * **Bug**: [meshfill plot broekn with bg=0](https://github.com/UV-CDAT/uvcdat/issues/804)
+ * **Bug**: [continents chopped](https://github.com/UV-CDAT/uvcdat/issues/693)
+ * **Bug**: [yxvsx plot a black screen when no text and box1.priority = 0](https://github.com/UV-CDAT/uvcdat/issues/706)
+ * **Bug**: [x.clear does not do anything.](https://github.com/UV-CDAT/uvcdat/issues/707)
+ * **Bug**: [boxfill/isofill missing attrbute does not change coor of missing](https://github.com/UV-CDAT/uvcdat/issues/855)
+ * **Bug**: [VTK not mapping?](https://github.com/UV-CDAT/uvcdat/issues/871)
+ * **Bug**: [templates do not save associated texttable/orientation](https://github.com/UV-CDAT/uvcdat/issues/816)
+ * **Bug**: [oned plots wrong when levels are flipped](https://github.com/UV-CDAT/uvcdat/issues/832)
+ * **Bug**: [Can't load data in uvcdat 2.0.0 !](https://github.com/UV-CDAT/uvcdat/issues/843) ([#852](https://github.com/UV-CDAT/uvcdat/pull/852))
+ * **Bug**: [xname and yname doesn't work](https://github.com/UV-CDAT/uvcdat/issues/710)
+ * **Bug**: [boxfill leve_1 level_2 reassigned](https://github.com/UV-CDAT/uvcdat/issues/869)
+ * **Bug**: [default boxfill wrong lat labels](https://github.com/UV-CDAT/uvcdat/issues/960)
+ * **Bug**: [isoline pure numpy fails](https://github.com/UV-CDAT/uvcdat/issues/928) ([#929](https://github.com/UV-CDAT/uvcdat/pull/929))
+ * **Bug**: [template rescale could move things too far and lead to errors](https://github.com/UV-CDAT/uvcdat/issues/805)
+ * **Enhancement**: [drawing of colorbar in vcs too slow](https://github.com/UV-CDAT/uvcdat/issues/849)
+ * **Enhancement**: [white bg by default](https://github.com/UV-CDAT/uvcdat/issues/817)
+ * **Enhancement**: [Blank png: x.png does not set the alpha/transparency info correctly !](https://github.com/UV-CDAT/uvcdat/issues/848)
+
+### VTK
+
+ * **Bug**: [Contours colored wrong when data has a wide range](https://github.com/UV-CDAT/uvcdat/issues/851)
+
+### VisTrails
+
+ * **Bug**: [uvcdat script broken](https://github.com/UV-CDAT/uvcdat/issues/894)
+
+### cdms2
+
+ * **Enhancement**: [convert cdtime object to datetime](https://github.com/UV-CDAT/uvcdat/issues/771)
+
+### cdutil/genutil
+
+ * **Bug**: [full averaging weirdness](https://github.com/UV-CDAT/uvcdat/issues/757)
+
+## Merged Pull Requests
+
+ * [#748: Removes scripts from images/ directory](https://github.com/UV-CDAT/uvcdat/pull/748)
+ * [#791: Fixes BUILDINSOURCE detection](https://github.com/UV-CDAT/uvcdat/pull/791)
+ * [#827: Vcs dv3d separate plot constituents updated](https://github.com/UV-CDAT/uvcdat/pull/827)
+ * [#828: Typo when disabling a package](https://github.com/UV-CDAT/uvcdat/pull/828)
+ * [#831: Patches Python to remove global OSX packages](https://github.com/UV-CDAT/uvcdat/pull/831)
+ * [#833: Makes missing GIT_PROTOCOL an error](https://github.com/UV-CDAT/uvcdat/pull/833)
+ * [#835: Makes git_update.sh handle detached heads](https://github.com/UV-CDAT/uvcdat/pull/835)
+ * [#836: Fixes typo in vistrails_external.cmake](https://github.com/UV-CDAT/uvcdat/pull/836)
+ * [#904: Issue 898 vertical flipped monotonic decreasing](https://github.com/UV-CDAT/uvcdat/pull/904)
+ * [#905: Issue 691 interact mac broken](https://github.com/UV-CDAT/uvcdat/pull/905)
+ * [#907: Vcs3 d fix z axis problems](https://github.com/UV-CDAT/uvcdat/pull/907)
+ * [#912: Vcs3 d fix animation exception](https://github.com/UV-CDAT/uvcdat/pull/912)
+ * [#936: update images for dv3d_hovmoller_test and dv3d_slider_test](https://github.com/UV-CDAT/uvcdat/pull/936)
+ * [#940: Fix error causing 3D plots to hang](https://github.com/UV-CDAT/uvcdat/pull/940)
+
+<a id="2.0"></a>
+
+# 2.0 Changelog
+
+## Closed Issues
+
+### Build
+
+ * **Bug**: [setup_runtime.sh needs to be sourced with full path ](https://github.com/UV-CDAT/uvcdat/issues/522)
+ * **Bug**: [some regrid test try to import matplotlib even though they don't really need it](https://github.com/UV-CDAT/uvcdat/issues/574)
+ * **Bug**: [VTK doesn't build (freetype headers problem)](https://github.com/UV-CDAT/uvcdat/issues/594)
+ * **Bug**: [Building on Mac OS X 10.9.4 doesn't locate sqlite3 (no build error)](https://github.com/UV-CDAT/uvcdat/issues/588)
+ * **Bug**: [mac os 10.8/10.9](https://github.com/UV-CDAT/uvcdat/issues/562)
+ * **Bug**: [CDAT_BUILD_MODE=ALL does NOT build ALL](https://github.com/UV-CDAT/uvcdat/issues/544)
+ * **Bug**: [uvcdat build needs QMake even for DEFAULT and no GUI](https://github.com/UV-CDAT/uvcdat/issues/554)
+ * **Enhancement**: [sciFuncs submodule needs to be put in our source code,](https://github.com/UV-CDAT/uvcdat/issues/635)
+ * **Enhancement**: [Binaries release for 2.0](https://github.com/UV-CDAT/uvcdat/issues/618)
+
+### UVCDAT GUI
+
+ * **Bug**: [color map in GUI doesn't work](https://github.com/UV-CDAT/uvcdat/issues/640)
+ * **Bug**: [uvcdat gui vcs plots do not stick in spreadsheet](https://github.com/UV-CDAT/uvcdat/issues/575)
+ * **Bug**: [animation auto min/max is broken](https://github.com/UV-CDAT/uvcdat/issues/639)
+ * **Bug**: [Adjusting color map is broken](https://github.com/UV-CDAT/uvcdat/issues/677)
+ * **Bug**: [vcs windows do not stick in spreadsheet](https://github.com/UV-CDAT/uvcdat/issues/589)
+
+### VCS
+
+ * **Bug**: [possible isofill issue](https://github.com/UV-CDAT/uvcdat/issues/519)
+ * **Bug**: [test set_opt_polar does not plot in bg](https://github.com/UV-CDAT/uvcdat/issues/626)
+ * **Bug**: [boxfill as a .list() that needs to be removed](https://github.com/UV-CDAT/uvcdat/issues/625)
+ * **Bug**: [kill uvcdat gui middle of animation generating leads to many vtk errors](https://github.com/UV-CDAT/uvcdat/issues/617)
+ * **Bug**: [yx datawc_y1, y2 not respected anymore....](https://github.com/UV-CDAT/uvcdat/issues/669)
+ * **Bug**: [animations now need PyQt4 old code seems broken](https://github.com/UV-CDAT/uvcdat/issues/579)
+ * **Bug**: [flip does not work when missing values](https://github.com/UV-CDAT/uvcdat/issues/661)
+ * **Bug**: [VCS won't plot when every value is exactly zero](https://github.com/UV-CDAT/uvcdat/issues/648)
+ * **Bug**: [Close Does Not Work](https://github.com/UV-CDAT/uvcdat/issues/718)
+ * **Bug**: [The "clear" does nothing. ](https://github.com/UV-CDAT/uvcdat/issues/717)
+ * **Bug**: [colormap does not stick on animation](https://github.com/UV-CDAT/uvcdat/issues/676)
+ * **Bug**: [VTKPlots.plotVectors points/attributes length mismatch](https://github.com/UV-CDAT/uvcdat/issues/712)
+ * **Bug**: [x.show missing](https://github.com/UV-CDAT/uvcdat/issues/596)
+ * **Bug**: [Isofill does not work with polar coordinates](https://github.com/UV-CDAT/uvcdat/issues/586)
+ * **Bug**: [boxfill draws outside range](https://github.com/UV-CDAT/uvcdat/issues/620)
+ * **Bug**: [boxfill not fully plotted (lat bit white)](https://github.com/UV-CDAT/uvcdat/issues/627)
+ * **Bug**: [test_dump_json broken](https://github.com/UV-CDAT/uvcdat/issues/624)
+ * **Bug**: [x.interact() fails in vcs (None object)](https://github.com/UV-CDAT/uvcdat/issues/634)
+ * **Bug**: [inverted levels do not plot properly](https://github.com/UV-CDAT/uvcdat/issues/637)
+ * **Bug**: [wrapping in projection not quite working](https://github.com/UV-CDAT/uvcdat/issues/566)
+ * **Bug**: [Scatter plot won't plot the scatters](https://github.com/UV-CDAT/uvcdat/issues/724)
+ * **Bug**: [meshfill does not seem to mask](https://github.com/UV-CDAT/uvcdat/issues/551)
+ * **Bug**: [X and Y axis lables (xname, yname) won't show up on for any graphics method on the plot](https://github.com/UV-CDAT/uvcdat/issues/743)
+ * **Bug**: [boxfill does NOT show all data](https://github.com/UV-CDAT/uvcdat/issues/555)
+ * **Bug**: [markers are stretched too much when x and y scales are too different](https://github.com/UV-CDAT/uvcdat/issues/553)
+ * **Bug**: [vcs init fails if no initial.attributes](https://github.com/UV-CDAT/uvcdat/issues/614)
+ * **Bug**: [Test cdms_load_and_plot_axis_variable fails](https://github.com/UV-CDAT/uvcdat/issues/689)
+ * **Enhancement**: [read new json formatted initial file attribute](https://github.com/UV-CDAT/uvcdat/issues/597)
+ * **Enhancement**: [remove setcolormap warning](https://github.com/UV-CDAT/uvcdat/issues/598)
+ * **Enhancement**: [easily removable error warning when saving to new json file](https://github.com/UV-CDAT/uvcdat/issues/619)
+
+### VisTrails
+
+ * **Bug**: [vistrails module uvcdat_cdms missing](https://github.com/UV-CDAT/uvcdat/issues/581)
+ * **Bug**: [isoline plots don't plot on first try](https://github.com/UV-CDAT/uvcdat/issues/611)
+
+### cdms2
+
+ * **Enhancement**: [Read ACME test data](https://github.com/UV-CDAT/uvcdat/issues/658)
+
+## Merged Pull Requests
+
+ * [#739: Vcs3d record animation](https://github.com/UV-CDAT/uvcdat/pull/739)
+
