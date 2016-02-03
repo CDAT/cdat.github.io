@@ -1,7 +1,7 @@
 - title: Gallery
   url: /gallery.html
 - title: Installing
-  url: /installing.html
+  url: https://github.com/UV-CDAT/uvcdat/wiki/install
 - title: Documentation
   dropdown:
     - title: Getting Started
@@ -18,3 +18,9 @@
       url: https://github.com/UV-CDAT/uvcdat/wiki
 - title: Contact
   url: /contact.html
+- title: Releases
+  dropdown:
+    - title: Changelog
+      url: /changelog.html
+    - title: Release Announcements
+      url: /releases

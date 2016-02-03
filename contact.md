@@ -15,7 +15,11 @@ layout: default
 
 ### Contact Us
 
-Need help? We've got you covered. If you [subscribe][subscribe] to our support mailing list, [uvcdat-support@llnl.gov][support], you can send us your questions and developers of the project will get back to you as quickly as possible.
+Need help? We've got you covered.
+
+For quick Q&A, there's the [AskBot Forum](http://uvcdat.askbot.com/) for assistance from developers and users.
+
+If you [subscribe][subscribe] to our support mailing list, [uvcdat-support@llnl.gov][support], you can send us your questions and developers of the project will get back to you as quickly as possible.
 
 #### Subscribing to the mailing list
 
@@ -24,9 +28,11 @@ To join the mailing list, send an email to [listserv@listserv.llnl.gov][subscrib
     subscribe uvcdat-support
 
 #### Unsubscribing to the mailing list
+
 To leave the mailing list, send an email to [listserv@listserv.llnl.gov][unsubscribe] with the following in the body:
 
     signoff uvcdat-support
+
 
 ---
 
@@ -50,7 +56,12 @@ To leave the mailing list, send an email to [listserv@listserv.llnl.gov][devunsu
 
 #### See something wrong with the site?
 
-[Submit an issue on GitHub](https://github.com/UV-CDAT/uvcdat-site/issues)
+- [Submit an issue on GitHub](https://github.com/UV-CDAT/uvcdat-site/issues)
+
+#### Found a bug in UV-CDAT?
+
+- [Submit an issue on GitHub](https://github.com/UV-CDAT/uvcdat/issues)
+- [Send an email to uvcdat-support][support]
 
 ---
 

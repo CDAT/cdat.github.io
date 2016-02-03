@@ -21,7 +21,6 @@ jumbo_text: UV-CDAT is a powerful and complete front-end to a rich set of visual
     <a href="/changelog.html"> Change Log </a> |
     <a href="/releases/2.4_features.html"> New Features </a> |
     <a href="https://github.com/UV-CDAT/uvcdat/wiki/install"> Install </a> |
-    <a href="http://sourceforge.net/projects/cdat/files/Releases/UV-CDAT/2.4.0/"> Download </a> | 
     <a href="http://uvcdat.askbot.com"> AskBot </a>
   </p>
 </div>
