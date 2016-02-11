@@ -6,15 +6,6 @@ jumbo_text: UV-CDAT is a powerful and complete front-end to a rich set of visual
 ---
 
 <div class="hero-unit announcement">
-  <h3>ESGF Face to Face</h3>
-  <p>
-  <p> December 7 - 11, 2015</p>
-  <p>Thank you in advance for participating in the ESGF Conference. We are excited to host this event in Monterey, CA at the Marriott Hotel. This venue will allow for many of our program goals to be met including a series of poster sessions and a social interactions to facilitate networking and collaboration relationships with conference attendees.</p>
-  <p><a href="http://www.cvent.com/events/earth-system-grid-federation-esgf-conference-2015/event-summary-89df663c495a4c03b52523abc05df8be.aspx">Register Here</a></p>
-  </p>
-</div>
-
-<div class="hero-unit announcement">
   <h3>UV-CDAT 2.4.0 is Available</h3>
   <p>
     <a href="https://github.com/UV-CDAT/uvcdat/releases"> Basics </a> |
@@ -22,6 +13,20 @@ jumbo_text: UV-CDAT is a powerful and complete front-end to a rich set of visual
     <a href="/releases/2.4_features.html"> New Features </a> |
     <a href="https://github.com/UV-CDAT/uvcdat/wiki/install"> Install </a> |
     <a href="http://uvcdat.askbot.com"> AskBot </a>
+  </p>
+  <h4>Suggested Citation for UV-CDAT:</h4>
+  <p>
+    Dean N. Williams, Charles Doutriaux, Aashish Chaudhary, Sam Fries, Dan Lipsa, Sankhesh Jhaveri, Paul J. Durack, Jeffrey Painter, Denis Nadeau, Thomas Maxwell, Matthew Harris, Jonathan Beezley (2016). uvcdat v2.4.0. Zenodo. 10.5281/zenodo.45136
+  </p>
+  <p><a href="https://zenodo.org/record/45136#">Available Online</a></p>
+</div>
+
+<div class="hero-unit announcement">
+  <h3>ESGF Face to Face</h3>
+  <p>
+  <p> December 7 - 11, 2015</p>
+  <p>Thank you for participating in the ESGF Conference.</p>
+  <p> <a href="http://esgf.llnl.gov/media/pdf/2015-ESGF-Agenda.pdf">Agenda</a> | <a href="http://esgf.llnl.gov/media/pdf/2015-ESGF-Abstacts.pdf">Abstracts</a> | <a href="http://esgf.llnl.gov/2015-F2F.html">ESGF Face to Face Page</a> </p>
   </p>
 </div>
 
