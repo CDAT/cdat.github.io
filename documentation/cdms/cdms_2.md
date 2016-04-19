@@ -2320,8 +2320,8 @@ data = ta.subRegion(time=('1980-3','1980-4','co'))
 |---|---|---|
 |`x`|single point, such that axis[i]==x In general x is a scalar. If the axis is a time axis, x may also be a cdtime relative time type, component time type, or string of the form 'yyyy-mm-dd hh:mi:ss' (where trailing fields of the string may be omitted.|`180.0`<br/>`cdtime.reltime(48,"hour s since 1980-1")`<br/>`'1980-1-3'`|
 |`(x,y)`|indices i such that x &le; axis[i] &le; y|`(-180,180)`|
-|`(x,y,'co')`|`x &le; axis[i] &lt; y`. The third item is defined as in mapInterval.|`(-90,90,'cc')`|
-|`(x,y,'co',cycle)`|`x &le; axis[i] &lt; y`, with wraparound <br/> **Note:** It is not necesary to specify the cycle of a circular longitude axis, that is, for which `axis.isCircular()` is true.|`( 180, 180, 'co', 360.0)`|
+|`(x,y,'co')`|`x ≤ axis[i] < y`. The third item is defined as in mapInterval.|`(-90,90,'cc')`|
+|`(x,y,'co',cycle)`|`x ≤ axis[i]< y`, with wraparound <br/> **Note:** It is not necesary to specify the cycle of a circular longitude axis, that is, for which `axis.isCircular()` is true.|`( 180, 180, 'co', 360.0)`|
 |`slice(i,j,k)`|slice object, equivalent to i:j:k in a slice operator. Refers to the indices i, i+k, i+2k, ... up to but not including index j. If i is not specified or is None it defaults to 0. If j is not specified or is None it defaults to the length of the axis. The stride k defaults to 1. k may be negative.|`slice(1,10)`<br/>`slice(,,-1)` reverses the direction of the axis.|
 |`':'`|all axis values of one dimension|  |
 |`Ellipsis`|all values of all intermediate axes| |  
