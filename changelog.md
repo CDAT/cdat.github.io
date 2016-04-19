@@ -4,6 +4,81 @@ layout: default
 
 ---
 
+<a name="2.4.1"></a>
+
+# 2.4.1 Changelog
+
+## Closed Issues
+### Build
+
+ * **Bug**: [vcs import error](https://github.com/UV-CDAT/uvcdat/issues/1914)
+ * **Enhancement**: [Update eofs to 1.1.0](https://github.com/UV-CDAT/uvcdat/issues/1910) ([#1911](https://github.com/UV-CDAT/uvcdat/pull/1911))
+
+### VCS
+
+ * **Bug**: [`missing` color does not support all of the new color syntaxes.](https://github.com/UV-CDAT/uvcdat/issues/1825) ([#1831](https://github.com/UV-CDAT/uvcdat/pull/1831))
+ * **Bug**: [Custom continents don't work](https://github.com/UV-CDAT/uvcdat/issues/1826) ([#1828](https://github.com/UV-CDAT/uvcdat/pull/1828))
+ * **Enhancement**: [wide screen](https://github.com/UV-CDAT/uvcdat/issues/1822)
+
+### cdms2
+
+ * **Bug**: [cdms2 seg fault on some weird types](https://github.com/UV-CDAT/uvcdat/issues/1857) ([#1915](https://github.com/UV-CDAT/uvcdat/pull/1915))
+
+## Merged Pull Requests
+
+ * [#1729: Ocgis](https://github.com/UV-CDAT/uvcdat/pull/1729)
+ * [#1752: several tweaks, mainly saving method results for re-use, to improve](https://github.com/UV-CDAT/uvcdat/pull/1752)
+ * [#1797: Adding a vagrant configuration for building with a GUI](https://github.com/UV-CDAT/uvcdat/pull/1797)
+ * [#1802: Update readme master](https://github.com/UV-CDAT/uvcdat/pull/1802)
+ * [#1803: Remove repo size](https://github.com/UV-CDAT/uvcdat/pull/1803)
+ * [#1806: Fit to viewport cleanup](https://github.com/UV-CDAT/uvcdat/pull/1806)
+ * [#1810: Uvcmetrics devel](https://github.com/UV-CDAT/uvcdat/pull/1810)
+ * [#1815: Issue1798 durack1 update matplotlib 1.5.0 to 1.5.1](https://github.com/UV-CDAT/uvcdat/pull/1815)
+ * [#1816: Issue1799 durack1 update scipy 0.16.1 to 0.17.0](https://github.com/UV-CDAT/uvcdat/pull/1816)
+ * [#1820: Issue 1801 old scr files](https://github.com/UV-CDAT/uvcdat/pull/1820)
+ * [#1821: On my computer with 2 very wide screens init default was super big](https://github.com/UV-CDAT/uvcdat/pull/1821)
+ * [#1827: Update vtk proj4 9 2](https://github.com/UV-CDAT/uvcdat/pull/1827)
+ * [#1829: BUG #1809: Error wrapping a curved grid with masking.](https://github.com/UV-CDAT/uvcdat/pull/1829)
+ * [#1830: Add test for BUG # 1728: wrapping data creates long cells](https://github.com/UV-CDAT/uvcdat/pull/1830)
+ * [#1841: Add nc_del_attr to Cdunif to allow attribute removal in netCDF files](https://github.com/UV-CDAT/uvcdat/pull/1841)
+ * [#1847: Fix macos inconsistency](https://github.com/UV-CDAT/uvcdat/pull/1847)
+ * [#1855: BUG #1849: Re-enable datawc for linear projection.](https://github.com/UV-CDAT/uvcdat/pull/1855)
+ * [#1862: BUG #1740: plotting with bg=0 produces labels off](https://github.com/UV-CDAT/uvcdat/pull/1862)
+ * [#1870: Mintics now properly support lists](https://github.com/UV-CDAT/uvcdat/pull/1870)
+ * [#1874: uri starting with file:// were not interpreted correctly](https://github.com/UV-CDAT/uvcdat/pull/1874)
+ * [#1875: Pcmdi only tools](https://github.com/UV-CDAT/uvcdat/pull/1875)
+ * [#1878: BUG #1811: Show point information for plots using geographic projecti...](https://github.com/UV-CDAT/uvcdat/pull/1878)
+ * [#1891: Revert "issue1539 durack1 update iPython 3.0.0 to 4.1.2"](https://github.com/UV-CDAT/uvcdat/pull/1891)
+ * [#1896: ENH: ratio=autot works for geographic projected datasets](https://github.com/UV-CDAT/uvcdat/pull/1896)
+ * [#1902: Build vcs without .egg by default](https://github.com/UV-CDAT/uvcdat/pull/1902)
+ * [#1904: BUG #1886: Polar projection does not change pole.](https://github.com/UV-CDAT/uvcdat/pull/1904)
+ * [#1908: Cleanup for conda and setuptools](https://github.com/UV-CDAT/uvcdat/pull/1908)
+ * [#1917: Fixed inconsistent test names and other related issues](https://github.com/UV-CDAT/uvcdat/pull/1917)
+ * [#1918: Added missing test file](https://github.com/UV-CDAT/uvcdat/pull/1918)
+ * [#1928: Allow canvas.plot to handle vcs addons](https://github.com/UV-CDAT/uvcdat/pull/1928)
+ * [#1932: 2.4.1rc test](https://github.com/UV-CDAT/uvcdat/pull/1932)
+ * [#1933: merging master into release](https://github.com/UV-CDAT/uvcdat/pull/1933)
+ * [#1934: Release](https://github.com/UV-CDAT/uvcdat/pull/1934)
+
+## Known Bugs
+
+### Other
+
+ * [running autot_title with setbgoutputdimensions leads to seg fault](https://github.com/UV-CDAT/uvcdat/issues/1931)
+ * [autot tests seem to fail from master](https://github.com/UV-CDAT/uvcdat/issues/1930)
+ * [ctest does not seem to post to cdash anymore](https://github.com/UV-CDAT/uvcdat/issues/1929)
+ * [make -j8 seems to sometimes disable matplotlib](https://github.com/UV-CDAT/uvcdat/issues/1913)
+ * [Boxfill legend incorrect when there are fewer colors than levels](https://github.com/UV-CDAT/uvcdat/issues/1894)
+ * [vtk seg fault on (my) ubuntu 15.10](https://github.com/UV-CDAT/uvcdat/issues/1887)
+ * [DV3D/VCS plot error](https://github.com/UV-CDAT/uvcdat/issues/1867)
+ * [animation save does not preserve the colormap](https://github.com/UV-CDAT/uvcdat/issues/1845)
+ * [CMake build issue on travis](https://github.com/UV-CDAT/uvcdat/issues/1839)
+ * [Unable to load Ensembles dimension from Grads Ctl file](https://github.com/UV-CDAT/uvcdat/issues/1823)
+ * [Parallel build causing problems with egg installs overwriting easy-install.pth](https://github.com/UV-CDAT/uvcdat/issues/1817)
+ * [ratio="autot" fails to correctly generate the initial ratio](https://github.com/UV-CDAT/uvcdat/issues/1795)
+ * [Meshfill leaves extra display plots lying around](https://github.com/UV-CDAT/uvcdat/issues/1770)
+
+
 <a name="2.4"></a>
 
 # 2.4 Changelog
