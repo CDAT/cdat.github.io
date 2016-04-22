@@ -13,11 +13,10 @@ jumbo_text: UV-CDAT is a powerful and complete front-end to a rich set of visual
     <a href="https://github.com/UV-CDAT/uvcdat/wiki/install"> Install </a> |
     <a href="http://uvcdat.askbot.com"> AskBot </a>
   </p>
-  <h4>Suggested Citation for UV-CDAT:</h4>
+  <h4>Suggested Citation for UV-CDAT: <small><a href="https://zenodo.org/record/50101#">Available Online</a></small></h4>
   <p>
      Dean N. Williams, Charles Doutriaux, Sam Fries, Dan Lipsa, Jeffrey Painter, James McEnerney, Aashish Chaudhary, Sankhesh Jhaveri, Thomas Maxwell, Paul J. Durack, Denis Nadeau, Jonathan Beezley, Matthew Harris, Bryce Sampson (2016). uvcdat v2.4.1. Zenodo. 10.5281/zenodo.50101
   </p>
-  <p><a href="https://zenodo.org/record/50101#">Available Online</a></p>
 </div>
 
 <div class="hero-unit announcement">
