@@ -4,11 +4,102 @@ layout: default
 
 ---
 
+<a name="2.6"></a>
+
+# 2.6 Changelog
+
+## Closed Issues
+
+### Build
+
+ * **Enhancement**: [update bUILD_MODE instructions](https://github.com/UV-CDAT/uvcdat/issues/1455)
+ * **Bug**: [CMake build issue on travis](https://github.com/UV-CDAT/uvcdat/issues/1839)
+ * **Bug**: [Issue with setup_runtime.csh](https://github.com/UV-CDAT/uvcdat/issues/1920)
+ * **Bug**: [GEOS5_sample.nc not copied to correct sample_data directory for OSX](https://github.com/UV-CDAT/uvcdat/issues/1581)
+ * **Bug**: [make -j8 seems to sometimes disable matplotlib](https://github.com/UV-CDAT/uvcdat/issues/1913)
+ * **Bug**: [Parallel build causing problems with egg installs overwriting easy-install.pth](https://github.com/UV-CDAT/uvcdat/issues/1817)
+
+### Test Suite
+
+ * **Enhancement**: [uvcdat testing checks too many images](https://github.com/UV-CDAT/uvcdat/issues/1854) ([#1943](https://github.com/UV-CDAT/uvcdat/pull/1943))
+
+### VCS
+
+ * **Bug**: [isofill vcs bug](https://github.com/UV-CDAT/uvcdat/issues/1947) ([#2027](https://github.com/UV-CDAT/uvcdat/pull/2027))
+ * **Bug**: [ratio="autot" fails to correctly generate the initial ratio](https://github.com/UV-CDAT/uvcdat/issues/1795)
+ * **Bug**: [bad contouring algorithm](https://github.com/UV-CDAT/uvcdat/issues/1959)
+ * **Bug**: [autot tests seem to fail from master](https://github.com/UV-CDAT/uvcdat/issues/1930)
+ * **Bug**: [animation save does not preserve the colormap](https://github.com/UV-CDAT/uvcdat/issues/1845) ([#2028](https://github.com/UV-CDAT/uvcdat/pull/2028))
+ * **Bug**: [Boxfill legend incorrect when there are fewer colors than levels](https://github.com/UV-CDAT/uvcdat/issues/1894) ([#1895](https://github.com/UV-CDAT/uvcdat/pull/1895))
+ * **Enhancement**: [Enable postscript export to write text objects in addition to text as paths (shapes)](https://github.com/UV-CDAT/uvcdat/issues/1537)
+
+### VTK
+
+ * **Bug**: [vtk has hard links that seem to prevent anaconda libraries relocation](https://github.com/UV-CDAT/uvcdat/issues/1960)
+
+### cdutil/genutil
+
+ * **Bug**: [genutil broken in nightly](https://github.com/UV-CDAT/uvcdat/issues/2035)
+
+## Merged Pull Requests
+
+ * [#1756: Enforce CMake minimum version 2.8.12](https://github.com/UV-CDAT/uvcdat/pull/1756)
+ * [#1932: 2.4.1rc test](https://github.com/UV-CDAT/uvcdat/pull/1932)
+ * [#1933: merging master into release](https://github.com/UV-CDAT/uvcdat/pull/1933)
+ * [#1934: Release](https://github.com/UV-CDAT/uvcdat/pull/1934)
+ * [#1941: Allow unicode strings for subsetting.](https://github.com/UV-CDAT/uvcdat/pull/1941)
+ * [#1945: Update README.md](https://github.com/UV-CDAT/uvcdat/pull/1945)
+ * [#1951: Cdat web plot subsetting](https://github.com/UV-CDAT/uvcdat/pull/1951)
+ * [#1952: Cdscan importable](https://github.com/UV-CDAT/uvcdat/pull/1952)
+ * [#1956: Fix continents=0](https://github.com/UV-CDAT/uvcdat/pull/1956)
+ * [#1966: Click info point dataset](https://github.com/UV-CDAT/uvcdat/pull/1966)
+ * [#1967: Reenable autot_axis tests. Keep max Y to 500.](https://github.com/UV-CDAT/uvcdat/pull/1967)
+ * [#1968: Improve testing by moving common code to testing module](https://github.com/UV-CDAT/uvcdat/pull/1968)
+ * [#1970: Marked export to gs as no longer supported](https://github.com/UV-CDAT/uvcdat/pull/1970)
+ * [#1978: Vcs fix geometry instantiation](https://github.com/UV-CDAT/uvcdat/pull/1978)
+ * [#1983: BUG: Fix memory override for vtkContourFiler in isofillpipeline.](https://github.com/UV-CDAT/uvcdat/pull/1983)
+ * [#1987: updated crypto to latest version so it builds on Ubuntu 16](https://github.com/UV-CDAT/uvcdat/pull/1987)
+ * [#1988: Compute vector scaling correctly](https://github.com/UV-CDAT/uvcdat/pull/1988)
+ * [#1989: Fix flake8 warnings and a test generated file](https://github.com/UV-CDAT/uvcdat/pull/1989)
+ * [#1990: Orthographic](https://github.com/UV-CDAT/uvcdat/pull/1990)
+ * [#1991: Added missing graphics method types to creategraphicsmethod](https://github.com/UV-CDAT/uvcdat/pull/1991)
+ * [#1992: Added option to export text as object or path](https://github.com/UV-CDAT/uvcdat/pull/1992)
+ * [#2000: Fix regression for test_vcs_png_window_resize](https://github.com/UV-CDAT/uvcdat/pull/2000)
+ * [#2001: BUG: Use the geometry argument, if available, for background tests](https://github.com/UV-CDAT/uvcdat/pull/2001)
+ * [#2003: Fixes failing DV3D tests and VCS behavior](https://github.com/UV-CDAT/uvcdat/pull/2003)
+ * [#2005: BUG: Extend the isoline attribute list with the last value from the e...](https://github.com/UV-CDAT/uvcdat/pull/2005)
+ * [#2007: BUG: datawc does not work on a time axis.](https://github.com/UV-CDAT/uvcdat/pull/2007)
+ * [#2012: Part-1 of improved RST docs for VCS](https://github.com/UV-CDAT/uvcdat/pull/2012)
+ * [#2013: Updated cmake to use new location for legal and readme](https://github.com/UV-CDAT/uvcdat/pull/2013)
+ * [#2015: Conda build](https://github.com/UV-CDAT/uvcdat/pull/2015)
+ * [#2017: Fixed extends not working if you have a premade list for custom.](https://github.com/UV-CDAT/uvcdat/pull/2017)
+ * [#2025: Vcsaddons histo polar](https://github.com/UV-CDAT/uvcdat/pull/2025)
+ * [#2029: Cmake find activate](https://github.com/UV-CDAT/uvcdat/pull/2029)
+ * [#2030: Vtk update leak](https://github.com/UV-CDAT/uvcdat/pull/2030)
+ * [#2032: needed to duplicate yr fully in case the year starts in October for e...](https://github.com/UV-CDAT/uvcdat/pull/2032)
+ * [#2036: Generated png should have same name with baseline](https://github.com/UV-CDAT/uvcdat/pull/2036)
+ * [#2037: Fix wrong tuple instance condition for axis getitem call](https://github.com/UV-CDAT/uvcdat/pull/2037)
+
+## Known Bugs
+
+### Other
+
+ * [(python:26831): Gtk-WARNING **: Unable to find default local directory monitor type](https://github.com/UV-CDAT/uvcdat/issues/2006)
+ * [Conda channel nightly updates not up-to-date](https://github.com/UV-CDAT/uvcdat/issues/1997)
+ * [numpy.NewAxis broken](https://github.com/UV-CDAT/uvcdat/issues/1974)
+ * [cdms2.open fails on an xml file with "invalid" attributes](https://github.com/UV-CDAT/uvcdat/issues/1942)
+ * [ctest does not seem to post to cdash anymore](https://github.com/UV-CDAT/uvcdat/issues/1929)
+ * [vtk seg fault on (my) ubuntu 15.10](https://github.com/UV-CDAT/uvcdat/issues/1887)
+ * [DV3D/VCS plot error](https://github.com/UV-CDAT/uvcdat/issues/1867)
+ * [Unable to load Ensembles dimension from Grads Ctl file](https://github.com/UV-CDAT/uvcdat/issues/1823)
+
+
 <a name="2.4.1"></a>
 
 # 2.4.1 Changelog
 
 ## Closed Issues
+
 ### Build
 
  * **Bug**: [vcs import error](https://github.com/UV-CDAT/uvcdat/issues/1914)
