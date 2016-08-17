@@ -1,8 +1,7 @@
 ---
 title: CDATWeb
 layout: default
-
----
+---------------
 
 <div class="jumbotron">
   <h1>CDATWeb</h1>
