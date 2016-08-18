@@ -1,4 +1,4 @@
----
+git---
 fullsize: /gallery/fullsize/test_EzTemplate_00.png
 layout: example
 other:
