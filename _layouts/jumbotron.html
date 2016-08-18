@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html>
-
   {% include head.html %}
-
   <body>
-
     {% include header.html %}
-
     <div class="jumbotron no-overflow">
       <div class="hero-bg"></div>
       <div class="container">
@@ -15,13 +11,9 @@
         <p>{{ page.jumbo_text }}</p>
       </div>
     </div>
-
-    <div class="container-fluid">
+    <div class="container">
         {{ content }}
     </div>
-    
     {% include footer.html %}
-
   </body>
-
 </html>
