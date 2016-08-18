@@ -5,7 +5,7 @@
 - title: Documentation
   dropdown:
     - title: Getting Started
-      url: /getting_started.html
+      url: https://github.com/UV-CDAT/uvcdat/wiki/Getting-Started
     - title: CDMS
       url: /documentation/cdms/cdms.html
     - title: CDAT Utilities
