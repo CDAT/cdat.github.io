@@ -1,9 +1,9 @@
 ---
-fullsize: /gallery/fullsize/spaghetti.png
+fullsize: /gallery/fullsize/TAS_spaghetti.png
 layout: example
 other: []
 script: spaghetti.py
-thumb: /gallery/thumbnails/spaghetti.png
+thumb: /gallery/thumbnails/TAS_spaghetti.png
 title: spaghetti
 
 ---
