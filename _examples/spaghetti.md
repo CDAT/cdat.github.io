@@ -1,9 +1,9 @@
 ---
-authors: [Sam Fries]
-fullsize: /gallery/fullsize/TAS_Spaghetti.png
+fullsize: /gallery/fullsize/spaghetti.png
 layout: example
+other: []
 script: spaghetti.py
-tags: [oned, spaghetti, template, multiplot, EzTemplate]
-thumb: /gallery/thumbnails/TAS_Spaghetti.png
-title: "Spaghetti Plot"
+thumb: /gallery/thumbnails/spaghetti.png
+title: spaghetti
+
 ---
