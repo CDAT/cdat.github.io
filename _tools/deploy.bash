@@ -14,4 +14,4 @@ git pull;
 jekyll b;
 mkdir _site/gallery/thumbnails;
 ./_tools/resize.bash $media_dir;
-gs
+g
