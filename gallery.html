@@ -8,7 +8,7 @@ scripts: [/js/gallery_filter.js]
 
 <div class="alert alert-success">Feeling lost? Check out our <a href="/getting_started.html">Getting Started</a> guide.</div>
 
-{% assign ex_tags = site.examples | map: "tags" %}
+{% assign ex_tags = site.examples | map: "tags"%}
 
 {% assign tags = "" %}
 
@@ -30,7 +30,7 @@ scripts: [/js/gallery_filter.js]
     {% endunless %}
 {% endfor %}
 
-{% assign tags = filtered_tags | split:"|" %}
+{% assign tags = filtered_tags | split:"|" | sort%}
 
 <h4>Filters</h4>
 
