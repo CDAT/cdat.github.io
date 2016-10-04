@@ -5,5 +5,5 @@ other: []
 script: pattern_chart.py
 thumb: /gallery/thumbnails/pattern_chart.png
 title: pattern_chart
-
+priority: 6
 ---

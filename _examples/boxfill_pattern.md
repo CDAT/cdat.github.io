@@ -5,5 +5,5 @@ other: []
 script: boxfill_pattern.py
 thumb: /gallery/thumbnails/boxfill_pattern.png
 title: boxfill_pattern
-
+priority: 6
 ---

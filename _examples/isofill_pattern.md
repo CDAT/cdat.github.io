@@ -5,5 +5,5 @@ other: []
 script: isofill_pattern.py
 thumb: /gallery/thumbnails/isofill_pattern.png
 title: isofill_pattern
-
+priority: 6
 ---

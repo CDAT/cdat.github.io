@@ -8,4 +8,5 @@ script: hovmoeller_hus.py
 tags: [isofill, isoline, Text]
 thumb: /gallery/thumbnails/hovmoeller_hus.png
 title: "Hovm\xF6ller HUS"
+priority: 3
 ---

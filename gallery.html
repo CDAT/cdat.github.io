@@ -40,7 +40,8 @@ scripts: [/js/gallery_filter.js]
 {% endfor %}
 </ul>
 
-{% for example in site.examples %}
+{% assign sorted_examples = site.examples | sort: "priority" %}
+{% for example in sorted_examples %}
 <div class="example" data-tags="{{example.tags | join:','}}">
 	<a href="{{ example.url }}">
 		<div class="img-wrapper">

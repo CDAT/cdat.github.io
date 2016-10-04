@@ -4,6 +4,7 @@ import cdms2
 import EzTemplate
 import cdutil
 
+vcs.download_sample_data_files()
 
 def spaghetti_plot(variables, template=None, min_y=None, max_y=None, left_label=None, right_label=None, tick_sides=None, line="default", marker="default", x_labels="*", y_labels="*", canvas=None):
     """

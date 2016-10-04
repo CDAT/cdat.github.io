@@ -5,5 +5,5 @@ other: []
 script: iso_levels.py
 thumb: /gallery/thumbnails/iso_levels.png
 title: iso_levels
-
+priority: 6
 ---

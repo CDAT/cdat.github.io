@@ -5,5 +5,5 @@ other: []
 script: continents_line.py
 thumb: /gallery/thumbnails/continents_line.png
 title: continents_line
-
+priority: 6
 ---

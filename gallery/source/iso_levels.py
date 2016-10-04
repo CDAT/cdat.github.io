@@ -5,6 +5,7 @@ import cdms2
 An example demonstrating the use of templates, as well as the
 importance of setting levels appropriately for your visualization.
 """
+vcs.download_sample_data_files()
 
 # Let's use an aspect ratio of 2:1 width/height
 canvas = vcs.init(size=2)

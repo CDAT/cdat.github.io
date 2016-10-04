@@ -14,7 +14,8 @@ for scriptname in os.listdir("source"):
             "fullsize": "/gallery/fullsize/%s.png" % example_name,
             "thumb": "/gallery/thumbnails/%s.png" % example_name,
             "other": [],
-            "title": example_name
+            "title": example_name,
+            "priority": 6
         }
         for o in others:
             if o.startswith(example_name):

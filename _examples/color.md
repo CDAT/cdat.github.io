@@ -5,5 +5,5 @@ other: []
 script: color.py
 thumb: /gallery/thumbnails/color.png
 title: color
-
+priority: 6
 ---

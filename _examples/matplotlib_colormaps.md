@@ -5,5 +5,5 @@ other: []
 script: matplotlib_colormaps.py
 thumb: /gallery/thumbnails/matplotlib_colormaps.png
 title: matplotlib_colormaps
-
+priority: 6
 ---

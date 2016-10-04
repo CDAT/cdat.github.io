@@ -7,4 +7,5 @@ script: BlueMarble_huss_satellite_view.py
 tags: [Text]
 thumb: /gallery/thumbnails/BlueMarble_huss_satellite_view_daytimeview.png
 title: BlueMarble_huss_satellite_view
+priority: 1
 ---

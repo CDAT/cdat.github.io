@@ -1,5 +1,7 @@
 import vcs, cdms2, os
 
+vcs.download_sample_data_files()
+
 # An example demonstrating patterns with meshfill
 cltfile = cdms2.open(os.path.join(vcs.sample_data, "clt.nc"))
 clt = cltfile("clt")

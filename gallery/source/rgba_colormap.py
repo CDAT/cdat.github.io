@@ -1,5 +1,7 @@
 import vcs, cdms2, os
 
+vcs.download_sample_data_files()
+
 colormap = vcs.createcolormap("transparent")
 for i in range(5, 240):
     percent = int(100 * (i - 5) / 234.)

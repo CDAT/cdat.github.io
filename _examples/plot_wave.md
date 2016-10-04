@@ -6,5 +6,5 @@ other:
 script: plot_wave.py
 thumb: /gallery/thumbnails/plot_wave.png
 title: plot_wave
-
+priority: 6
 ---
