@@ -18,6 +18,15 @@ layout: default
     		<p>Basic VCS demo</p>
     	</a>
     </div>
+    <div class="example">
+    	<a href="iPython/boxfill/boxfill.html">
+    		<div class="img-wrapper">
+    			<img src="iPython/boxfill/output_30_0.png" />
+    		</div>
+    		<p>Walkthrough of each attribute of Boxfill</p>
+    	</a>
+    </div>
+
 </div>
 
 <div class="container">
