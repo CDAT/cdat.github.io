@@ -26,6 +26,14 @@ layout: default
     		<p>Walkthrough of each attribute of Boxfill</p>
     	</a>
     </div>
+    <div class="example">
+    	<a href="iPython/ParallelCoordinates/ParallelCoordinates.html">
+    		<div class="img-wrapper">
+    			<img src="iPython/ParallelCoordinates/ParallelCoordinates_files/ParallelCoordinates_13_0.png" />
+    		</div>
+    		<p>Parallel Coordinates (vcs addon) tutorial</p>
+    	</a>
+    </div>
 
 </div>
 
