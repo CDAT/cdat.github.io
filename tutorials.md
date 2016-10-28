@@ -34,6 +34,11 @@ layout: default
     		<p>Parallel Coordinates (vcs addon) tutorial</p>
     	</a>
     </div>
+    <div class="example">
+    	<a href="iPython/EasilyCreatingStringsWithTemplating/EasilyCreatingStringsWithTemplating.html">
+    		<p>Easily Creating Strings With Templating tutorial</p>
+    	</a>
+    </div>
 
 </div>
 
