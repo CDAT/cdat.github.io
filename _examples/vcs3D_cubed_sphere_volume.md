@@ -1,7 +1,8 @@
 ---
 fullsize: /gallery/fullsize/vcs3D_cubed_sphere_volume.png
 layout: example
-other: []
+other: 
+- {type: nc, url: /data/vcs3D_cubed_sphere_volume.nc}
 script: vcs3D_cubed_sphere_volume.py
 tags: [3d_scalar, projections]
 thumb: /gallery/thumbnails/vcs3D_cubed_sphere_volume.png
