@@ -39,6 +39,12 @@ layout: default
     		<p>Easily Creating Strings With Templating tutorial</p>
     	</a>
     </div>
+    <div class="example">
+    	<a
+        href="iPython/Redecorate+Transient+Variable/Redecorate+Transient+Variable.html">
+    		<p>Put Variable Dimensions And Attributes Back tutorial</p>
+    	</a>
+    </div>
 
 </div>
 
