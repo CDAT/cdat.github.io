@@ -6,6 +6,17 @@ jumbo_text: UV-CDAT is a powerful and complete front-end to a rich set of visual
 ---
 
 <div class="hero-unit announcement">
+  <h3>UV-CDAT 2.8.0 is Available</h3>
+  <p>
+    <a href="https://github.com/UV-CDAT/uvcdat/releases"> Basics </a> |
+    <a href="/changelog.html#2.8"> Change Log </a> |
+    <a href="https://github.com/UV-CDAT/uvcdat/wiki/install"> Install </a> |
+    <a href="http://sourceforge.net/projects/cdat/files/Releases/UV-CDAT/2.8.0/"> Download </a> | 
+    <a href="http://uvcdat.askbot.com"> AskBot </a>
+  </p>
+</div>
+
+<div class="hero-unit announcement">
   <h3>ESGF 2016</h3>
   <p>
     ESGF Face to Face <br/> 
