@@ -4,6 +4,90 @@ layout: default
 
 ---
 
+<a name="2.8"></a>
+
+# 2.8 Release Notes
+
+## VCS:
+
+ - [Fix export svg](https://github.com/UV-CDAT/uvcdat/pull/2058)
+ - [Add test for BUG #26: If masking reduces the bounds of a dataset, plots look incomplete. ](https://github.com/UV-CDAT/uvcdat/pull/2134)
+ - [utils.generate_time_labels(), wrong conversion to seconds?](https://github.com/UV-CDAT/uvcdat/pull/2068)
+ - [x.plot(s,bg=bg) does not output image](https://github.com/UV-CDAT/uvcdat/pull/2137)
+ - [Proposed new color names](https://github.com/UV-CDAT/uvcdat/pull/2065)
+ - [Legend offset new attribute](https://github.com/UV-CDAT/uvcdat/pull/2069)
+ - [System dependent outline](https://github.com/UV-CDAT/uvcdat/pull/2070)
+ - [Fix spaces flake8](https://github.com/UV-CDAT/uvcdat/pull/2064)
+ - [Fix bug with orthographic projection](https://github.com/UV-CDAT/uvcdat/pull/2086)
+ - [Fix for template name collision bug.](https://github.com/UV-CDAT/uvcdat/pull/2087)
+ - [corrected initil.attributes](https://github.com/UV-CDAT/uvcdat/pull/2091)
+ - [Fix flake8](https://github.com/UV-CDAT/uvcdat/pull/2094)
+ - [remove default parameter assignment on getcolors. Fixes #2097.](https://github.com/UV-CDAT/uvcdat/pull/2098)
+ - [BUG #1265: Fix datawc zoom-in for geographic projections.](https://github.com/UV-CDAT/uvcdat/pull/2102)
+ - [Viridis latest](https://github.com/UV-CDAT/uvcdat/pull/2105)
+ - [Remove trailing whitespace from utils.py](https://github.com/UV-CDAT/uvcdat/pull/2111)
+ - [All vcs docstrings updated merged](https://github.com/UV-CDAT/uvcdat/pull/2117)
+ - [fixes #2118](https://github.com/UV-CDAT/uvcdat/pull/2120)
+ - [Split repos](https://github.com/UV-CDAT/uvcdat/pull/2123)
+ - [Additional test for BUG #5: vtkPolyData::RemoveDeletedCells does not …](https://github.com/UV-CDAT/uvcdat/pull/2124)
+ - [Fix test suite vcs imports](https://github.com/UV-CDAT/uvcdat/pull/2126)
+ - [Improve put png](https://github.com/UV-CDAT/uvcdat/pull/2127)
+ - [Added test for drawLenged](https://github.com/UV-CDAT/uvcdat/pull/2130)
+ - [Docstring cleanup](https://github.com/UV-CDAT/uvcdat/pull/2056)
+ - [Docstring cleanup](https://github.com/UV-CDAT/uvcdat/pull/2057)
+ - [Adds support for gettextextent()](https://github.com/UV-CDAT/uvcdat/pull/2053)
+ - [BUG #1770: Display meshfill template elements through renderTemplate.](https://github.com/UV-CDAT/uvcdat/pull/2049)
+ - [BUG #1944: Rename line to linetype for isoline, unified1d and vector.](https://github.com/UV-CDAT/uvcdat/pull/2046)
+ - [allows user to set default range to use when calling getcolors](https://github.com/UV-CDAT/vcs/pull/1)
+ - [Fixes #2, Gfb.rename().](https://github.com/UV-CDAT/vcs/pull/4)
+ - [Fixes to queries.py documentation](https://github.com/UV-CDAT/vcs/pull/7)
+ - [Split repos](https://github.com/UV-CDAT/vcs/pull/8)
+ - [Revert "BUG #1265: Fix datawc zoom-in for geographic projections."](https://github.com/UV-CDAT/vcs/pull/9)
+ - [Fix isofill levels](https://github.com/UV-CDAT/vcs/pull/10)
+ - [Improve put png](https://github.com/UV-CDAT/vcs/pull/12)
+ - [VCS API Doc](https://github.com/UV-CDAT/vcs/pull/16)
+ - [Parallel coord](https://github.com/UV-CDAT/vcs/pull/17)
+ - [Documentation](https://github.com/UV-CDAT/vcs/pull/20)
+ - [Fix PEP8 convention issues with VTKPlots](https://github.com/UV-CDAT/vcs/pull/24)
+ - [Pcoords](https://github.com/UV-CDAT/vcs/pull/25)
+ - [BUG #26: If masking reduces the bounds of a dataset, plots look incomplete](https://github.com/UV-CDAT/vcs/pull/27)
+ - [patch : png compression level option from user](https://github.com/UV-CDAT/vcs/pull/28)
+ - [fixed flake8](https://github.com/UV-CDAT/vcs/pull/30)
+
+## CDMS:
+
+ - [fix issue where cyclical would fail for non numerical axes](https://github.com/UV-CDAT/cdms/pull/2)
+ - [Numpy1 11](https://github.com/UV-CDAT/cdms/pull/8)
+ - [add docs](https://github.com/UV-CDAT/cdms/pull/9)
+ - [Adds basic .gitignore](https://github.com/UV-CDAT/cdms/pull/11)
+ - [Tests!](https://github.com/UV-CDAT/cdms/pull/12)
+ - [Np11](https://github.com/UV-CDAT/cdms/pull/20)
+ - [add UVCDAT testing](https://github.com/UV-CDAT/cdms/pull/22)
+ - [Ken drs file](https://github.com/UV-CDAT/cdms/pull/24)
+ - [Fixmasterpush](https://github.com/UV-CDAT/cdms/pull/25)
+ - [Np11](https://github.com/UV-CDAT/uvcdat/pull/2136)
+ - [got it to look into cdms repo to add tests](https://github.com/UV-CDAT/uvcdat/pull/2133)
+
+## VCSAddons:
+
+ - [added possibility to scratch text next to markes in legend functions](https://github.com/UV-CDAT/vcsaddons/pull/3)
+ - [Parallel coord](https://github.com/UV-CDAT/vcsaddons/pull/2)
+
+## Build:
+
+ - [need to pass -b to build cdat_info out of source](https://github.com/UV-CDAT/uvcdat/pull/2051)
+
+
+## UV-CDAT GUI:
+
+ - Fixed issue where files were not caching properly due to use of URI and path
+ - Fixed single color handling for all graphics methods, added color picker widget for linecolor/markercolor on 1ds
+ - Fixed some issues with how dimensions were handled
+ - Fixed bug where deselecting a vcs cell would raise an exception
+ - Redesigned how time slider stuff is handled, severely improved code quality
+ - Fixed lack of plotting due to missing now having list values instead of int
+
+
 <a name="2.6"></a>
 
 # 2.6 Changelog
