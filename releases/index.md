@@ -4,7 +4,12 @@ layout: default
 ---
 
 # Release Announcements
-
+- 2.8
+  - [Announcement](https://github.com/UV-CDAT/uvcdat/releases/tag/v2.8.0)
+  - [Changelog](/changelog.html#2.8)
+- 2.6
+  - [Announcement](https://github.com/UV-CDAT/uvcdat/releases/tag/v2.6.0)
+  - [Changelog](/changelog.html#2.6)
 - 2.4
   - [Announcement](https://github.com/UV-CDAT/uvcdat/releases/tag/v2.4.0)
   - [New Features](2.4_features.html)
