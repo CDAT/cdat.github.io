@@ -81,6 +81,8 @@ mechanisms to support data analysis via the VisTrails infrastructure.
 
 [gallery]: /gallery.php
 [install]: /installing.html
-[support]: mailto:majordomo@lists.llnl.gov?body=subscribe%20uvcdat-support&amp;subject=Subscribe
-[dev]: mailto:majordomo@lists.llnl.gov?body=subscribe%20uvcdat-devel&amp;subject=Subscribe
+[support]: mailto:UVCDAT-SUPPORT@LISTSERV.LLNL.GOV?body=subscribe%20uvcdat-support
+[dev]: mailto:UVCDAT-DEVEL@LISTSERV.LLNL.GOV?body=subscribe%20uvcdat-devel
 [wiki]: https://github.com/UV-CDAT/uvcdat/wiki
+
+<!-- &amp;subject=Subscribe -->
