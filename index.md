@@ -16,17 +16,6 @@ jumbo_text: UV-CDAT is a powerful and complete front-end to a rich set of visual
   </p>
 </div>
 
-<div class="hero-unit announcement">
-  <h3>ESGF 2016</h3>
-  <p>
-    <a href="http://esgf.llnl.gov/2016-F2F.html">ESGF Face to Face</a> <br/> 
-    Conference Dates: December 6, 2016 - December 9, 2016 <br/>
-    <a href="http://esgf.llnl.gov/media/2016-F2F/Agenda.pdf">Agenda</a> |
-    <a href="http://esgf.llnl.gov/media/2016-F2F/Abstracts.pdf">Abstracts</a> |
-    <a href="http://esgf.llnl.gov/media/2016-F2F/Telecommute.pdf">Telecommute</a>
-  </p>
-</div>
-
 <h2 id="new">Welcome to UV-CDAT!</h2>
 
 New here? Don't worry! We'll help you get started. If you're interested in what you can do with UV-CDAT, you can take a look at our [gallery]. If you're interested in anything you see there, you can look into getting our application [installed][install].
