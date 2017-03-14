@@ -5,17 +5,6 @@ jumbo_subtitle: Climate Data Analysis Tools
 jumbo_text: UV-CDAT is a powerful and complete front-end to a rich set of visual-data exploration and analysis capabilities well suited for climate-data analysis problems.
 ---
 
-<div class="hero-unit announcement">
-  <h3>UV-CDAT 2.8.0 is Available</h3>
-  <p>
-    <a href="https://github.com/UV-CDAT/uvcdat/releases"> Basics </a> |
-    <a href="/changelog.html#2.8"> Change Log </a> |
-    <a href="https://github.com/UV-CDAT/uvcdat/wiki/install"> Install </a> |
-    <a href="http://sourceforge.net/projects/cdat/files/Releases/UV-CDAT/2.8.0/"> Download </a> | 
-    <a href="http://uvcdat.askbot.com"> AskBot </a>
-  </p>
-</div>
-
 <h2 id="new">Welcome to UV-CDAT!</h2>
 
 New here? Don't worry! We'll help you get started. If you're interested in what you can do with UV-CDAT, you can take a look at our [gallery]. If you're interested in anything you see there, you can look into getting our application [installed][install].
