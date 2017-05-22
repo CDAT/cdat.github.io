@@ -4,6 +4,150 @@ layout: default
 
 ---
 
+<a name="2.10"></a>
+
+# Releases Notes from Github Repos for Milestone: 2.10
+ 
+# uvcdat
+ 
+## Closed Issues
+
+### Bug
+
+ * **Bug**: [Conda install failing on OS X](https://github.com/UV-CDAT/uvcdat/issues/2138)
+
+### Enhancement
+
+ * **Enhancement**: [ask anonymous should periodically ask again in case it's no](https://github.com/UV-CDAT/uvcdat/issues/2178)
+ * **Enhancement**: [Rebuild all packages with conda >= 2.0?](https://github.com/UV-CDAT/uvcdat/issues/2171)
+ * **Enhancement**: [cdat_info has debug print statement](https://github.com/UV-CDAT/uvcdat/issues/2169)
+
+## Merged Pull Requests
+
+
+## Known Bugs
+
+### Other
+
+ * [cdms2.open fails on an xml file with "invalid" attributes](https://github.com/UV-CDAT/uvcdat/issues/1942)
+ * [ctest does not seem to post to cdash anymore](https://github.com/UV-CDAT/uvcdat/issues/1929)
+ * [vtk seg fault on (my) ubuntu 15.10](https://github.com/UV-CDAT/uvcdat/issues/1887)
+ * [DV3D/VCS plot error](https://github.com/UV-CDAT/uvcdat/issues/1867)
+ * [Unable to load Ensembles dimension from Grads Ctl file](https://github.com/UV-CDAT/uvcdat/issues/1823)
+ * [dv3d cannot go back into interact mode](https://github.com/UV-CDAT/uvcdat/issues/1295)
+ * [dv3d plotting ad changing attributes breaks dv3d](https://github.com/UV-CDAT/uvcdat/issues/1286)
+ * [Fix setup_runtime.sh script for DMG](https://github.com/UV-CDAT/uvcdat/issues/409)
+
+Unable to find milestone 2.10
+ 
+# cdms
+ 
+## Closed Issues
+
+### bug
+
+ * ****: [cdutil.ANNUALCYCLE.departures lopping off the final month](https://github.com/UV-CDAT/cdms/issues/36)
+ * ****: [https dap broken](https://github.com/UV-CDAT/cdms/issues/135)
+ * ****: [ESMF linear regridding fails with periodic data](https://github.com/UV-CDAT/cdms/issues/87)
+ * ****: [test_fillvalue.py failed](https://github.com/UV-CDAT/cdms/issues/29)
+ * ****: [cdsm2 createGenericGrid need to be generic](https://github.com/UV-CDAT/cdms/issues/5)
+ * ****: [mean broken on MV array](https://github.com/UV-CDAT/cdms/issues/4)
+ * ****: [No boundary data error](https://github.com/UV-CDAT/cdms/issues/108)
+ * ****: [weird cdscan error](https://github.com/UV-CDAT/cdms/issues/70)
+ * ****: [implement context management with the `with` keyword ](https://github.com/UV-CDAT/cdms/issues/94)
+ * ****: [netcdf string variables unable to be read](https://github.com/UV-CDAT/cdms/issues/78)
+ * ****: [missing_value attribute in file not respected when reading in](https://github.com/UV-CDAT/cdms/issues/18)
+
+### critical
+
+ * ****: [Update cdms2 to deal with all common datatypes (uint8, uint16, char, str etc)](https://github.com/UV-CDAT/cdms/issues/63)
+ * ****: [Upgrade ESMP to ESMpy](https://github.com/UV-CDAT/cdms/issues/57)
+
+### enhancement
+
+ * ****: [flake8 / pep8 cdms2](https://github.com/UV-CDAT/cdms/issues/133)
+ * ****: [Warning from numpy1.9.0 in ESMP_API.py and avariable.py](https://github.com/UV-CDAT/cdms/issues/62)
+ * ****: [periodicity warnings](https://github.com/UV-CDAT/cdms/issues/126)
+ * ****: [uvcdat conda channel highest cdms2 version is 2.8.1.](https://github.com/UV-CDAT/cdms/issues/128)
+ * ****: [PET0.ESMF_LogFile should be turned off](https://github.com/UV-CDAT/cdms/issues/106)
+ * ****: [Docstrings](https://github.com/UV-CDAT/cdms/issues/13)
+ * ****: [Update numpy to 1.10](https://github.com/UV-CDAT/cdms/issues/59)
+ * ****: [MaskedArrayFutureWarning Numpy 1.11 - does this require some cdms tweaks?](https://github.com/UV-CDAT/cdms/issues/122)
+
+## Merged Pull Requests
+
+ * [#134: fix https reading issue](https://github.com/UV-CDAT/cdms/pull/134)
+
+## Known Bugs
+
+### Other
+
+ * [variable loses mask after applying crossSectionRegrid](https://github.com/UV-CDAT/cdms/issues/138)
+ * [cdms2 seg faults when using unknown '+rw' mode for opening a file](https://github.com/UV-CDAT/cdms/issues/77)
+ * [cdscan path needs a patch](https://github.com/UV-CDAT/cdms/issues/71)
+
+ 
+# vcs
+ 
+## Closed Issues
+
+### bug
+
+ * ****: [Portrait plot issues](https://github.com/UV-CDAT/vcs/issues/146)
+ * ****: [vcs does not respect geometry on newer mac XCode 8.3](https://github.com/UV-CDAT/vcs/issues/147)
+ * ****: [VCS/VTK warnings and UV-CDAT logo missing in pdf/ps output files](https://github.com/UV-CDAT/vcs/issues/76)
+ * ****: [Text location changes with `textAsPaths` setting](https://github.com/UV-CDAT/vcs/issues/150)
+ * ****: [text alignment seems a bit off](https://github.com/UV-CDAT/vcs/issues/47)
+ * ****: [gettextextent broken?](https://github.com/UV-CDAT/vcs/issues/15)
+ * ****: [boxfill missing value does not respect opacity](https://github.com/UV-CDAT/vcs/issues/121)
+ * ****: [vcs.Gfb.rename() seems to destroy the object that it's renaming](https://github.com/UV-CDAT/vcs/issues/2)
+ * ****: [If masking reduces the bounds of a dataset, plots look incomplete.](https://github.com/UV-CDAT/vcs/issues/26)
+ * ****: [isofill broken](https://github.com/UV-CDAT/vcs/issues/5)
+ * ****: [doc strings PR introduced bug in test suite](https://github.com/UV-CDAT/vcs/issues/136)
+ * ****: [meshfill broken](https://github.com/UV-CDAT/vcs/issues/135)
+ * ****: [canvas.png writes a PNG with labels off if bg=0](https://github.com/UV-CDAT/vcs/issues/70)
+ * ****: ['.py' extension on script functions not working](https://github.com/UV-CDAT/vcs/issues/103)
+
+### enhancement
+
+ * ****: [VCS PDF filesize is much larger than what you would get from MPL](https://github.com/UV-CDAT/vcs/issues/33)
+ * ****: [Multiple parallel coordinates (y-axis) on single plot](https://github.com/UV-CDAT/vcs/issues/11)
+ * ****: [x.show('crap') could return a sorted list of valid options](https://github.com/UV-CDAT/vcs/issues/139)
+
+## Merged Pull Requests
+
+
+## Known Bugs
+
+### Other
+
+ * [vcs window do not disappear](https://github.com/UV-CDAT/vcs/issues/192)
+ * [vcs init seems to fail using ${HOME} correctly](https://github.com/UV-CDAT/vcs/issues/145)
+ * [Black png returned when using a vnc session](https://github.com/UV-CDAT/vcs/issues/117)
+ * [vcs seg fault on ubuntu 16.04 using regular not nox vtk ](https://github.com/UV-CDAT/vcs/issues/116)
+
+ 
+# cdutil
+ 
+## Closed Issues
+
+### bug
+
+ * ****: [cdutil.region.domain: variable loses unit attribute](https://github.com/UV-CDAT/cdutil/issues/9)
+ * ****: [Weight problems in cdutil.ANNUALCYCLE.climatology (daily data)](https://github.com/UV-CDAT/cdutil/issues/4)
+
+### enhancement
+
+ * ****: [Docstrings](https://github.com/UV-CDAT/cdutil/issues/1)
+
+## Merged Pull Requests
+
+
+## Known Bugs
+
+No known issues!
+Unable to find milestone 2.10
+
 <a name="2.8"></a>
 
 # 2.8 Release Notes
