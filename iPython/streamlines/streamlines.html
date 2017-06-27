@@ -11767,7 +11767,14 @@ div#notebook {
     });
     </script>
     <!-- End of mathjax configuration --></head>
-<body>
+    <body>
+      <div align="center">
+        <h1>Streamlines Tutorial</h1>
+        <p>
+          <a href="streamlines.ipynb">download iPython Notebook</a>
+        </p>
+      </div>
+      
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
@@ -11776,7 +11783,10 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># This tutorial demonstrates VCS streamline support.</span>
+<span class="c1"># We show randomly seeded and evenly spaced streamlines.</span>
+<span class="c1">#</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
 <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
 <span class="kn">import</span> <span class="nn">vcs</span>
 <span class="kn">import</span> <span class="nn">cdms2</span>
@@ -11839,17 +11849,26 @@ div#notebook {
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># create the streamline graphics method</span>
 <span class="n">gm</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">createstreamline</span><span class="p">()</span>
-<span class="c1"># we want randomly seeded streamlines</span>
-<span class="c1"># this attribute is only available on releases after 2.10 or on the nightly packages.</span>
-<span class="n">gm</span><span class="o">.</span><span class="n">evenlyspaced</span> <span class="o">=</span> <span class="bp">False</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># we set parameters for randomly seeded streamlines</span>
+<span class="n">gm</span><span class="o">.</span><span class="n">evenlyspaced</span> <span class="o">=</span> <span class="bp">False</span>         <span class="c1"># only available on releases after 2.10 or on the nightly packages.</span>
 <span class="c1"># streamlines are colored by vector magnitude</span>
 <span class="n">gm</span><span class="o">.</span><span class="n">coloredbyvector</span> <span class="o">=</span> <span class="bp">True</span>
 <span class="c1"># We want 10 glyphs(arrows) per streamline</span>
 <span class="n">gm</span><span class="o">.</span><span class="n">numberofglyphs</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="n">gm</span><span class="o">.</span><span class="n">filledglyph</span> <span class="o">=</span> <span class="bp">True</span>
-
-<span class="c1"># only for random seeded streamlines</span>
-<span class="c1"># We place 400 random seeds in a circle that covers the data. This means fewer seeds will be inside the data.</span>
+<span class="c1"># we place 400 random seeds in a circle that covers the data. This means fewer seeds will be inside the data.</span>
 <span class="c1"># The number of seeds inside the data will result in streamlines.</span>
 <span class="n">gm</span><span class="o">.</span><span class="n">numberofseeds</span> <span class="o">=</span> <span class="mi">400</span>
 </pre></div>
@@ -11861,7 +11880,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># use the robinson projection for the data.</span>
@@ -11877,10 +11896,10 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># create the streamline plot with random seeds</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># we plot randomly seeded streamlines</span>
 <span class="n">x</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">gm</span><span class="p">,</span> <span class="n">bg</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
@@ -11894,7 +11913,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[7]:</div>
+<div class="prompt output_prompt">Out[8]:</div>
 
 
 
@@ -13135,19 +13154,16 @@ gAAAACB18GvwAAAAkDr/H8q/T8xm8HmyAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">x</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-<span class="c1"># Available only on releases &gt; 2.10 or on the nightly packages</span>
-<span class="c1"># only for evenly spaced streamlines</span>
-<span class="c1"># We want evenly spaced streamlines</span>
-<span class="n">gm</span><span class="o">.</span><span class="n">evenlyspaced</span> <span class="o">=</span> <span class="bp">True</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># we plot evenly spaced streamlines</span>
+<span class="n">x</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="n">gm</span><span class="o">.</span><span class="n">evenlyspaced</span> <span class="o">=</span> <span class="bp">True</span> <span class="c1"># only available only on releases &gt; 2.10 or on the nightly packages</span>
 <span class="c1"># We want the streamline to be about one cell apart from each other</span>
 <span class="n">gm</span><span class="o">.</span><span class="n">separatingdistance</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="c1"># The seed for the first streamline. All other seeds are generated automatically</span>
 <span class="n">gm</span><span class="o">.</span><span class="n">startseed</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
-
 <span class="c1"># create an evenly spaced streamline plot</span>
 <span class="n">x</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">gm</span><span class="p">,</span> <span class="n">bg</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
@@ -13162,7 +13178,7 @@ gAAAACB18GvwAAAAkDr/H8q/T8xm8HmyAAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[8]:</div>
+<div class="prompt output_prompt">Out[9]:</div>
 
 
 
@@ -14240,18 +14256,17 @@ AACkw2PwAABAOv8PQxWjbPijOOkAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">x</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># we plot randomly seeded streamlines with a red color map</span>
+<span class="n">x</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
 <span class="c1">#create a red colormap with low values mapped to low opacity</span>
 <span class="n">cmap</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">createcolormap</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">256</span><span class="p">):</span>
     <span class="n">cmap</span><span class="o">.</span><span class="n">setcolorcell</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="mf">100.</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">i</span><span class="o">/</span><span class="mf">2.55</span><span class="p">)</span>
 <span class="n">x</span><span class="o">.</span><span class="n">setcolormap</span><span class="p">(</span><span class="n">cmap</span><span class="p">)</span>
-<span class="c1"># create a streamline plot with random seeds</span>
-<span class="c1"># attribute available only on releases &gt; 2.10 or on the nightly packages</span>
-<span class="n">gm</span><span class="o">.</span><span class="n">evenlyspaced</span><span class="o">=</span><span class="bp">False</span>
+<span class="n">gm</span><span class="o">.</span><span class="n">evenlyspaced</span><span class="o">=</span><span class="bp">False</span>    <span class="c1"># attribute available only on releases &gt; 2.10 or on the nightly packages</span>
 <span class="n">x</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">gm</span><span class="p">,</span> <span class="n">bg</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
@@ -14265,7 +14280,7 @@ AACkw2PwAABAOv8PQxWjbPijOOkAAAAASUVORK5CYII=
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[9]:</div>
+<div class="prompt output_prompt">Out[10]:</div>
 
 
 
