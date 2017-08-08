@@ -37,8 +37,6 @@ layout: default
  * [dv3d cannot go back into interact mode](https://github.com/UV-CDAT/uvcdat/issues/1295)
  * [dv3d plotting ad changing attributes breaks dv3d](https://github.com/UV-CDAT/uvcdat/issues/1286)
  * [Fix setup_runtime.sh script for DMG](https://github.com/UV-CDAT/uvcdat/issues/409)
-
-Unable to find milestone 2.10
  
 # cdms
  
@@ -144,11 +142,6 @@ Unable to find milestone 2.10
 
 
 ## Known Bugs
-
-No known issues!
-Unable to find milestone 2.10
-
-<a name="2.8"></a>
 
 # 2.8 Release Notes
 
