@@ -4,6 +4,108 @@ layout: default
 
 ---
 
+<a name="2.12"></a>
+# Releases Notes from Github Repos for Milestone: 2.12
+ 
+# uvcdat
+ 
+## Closed Issues
+
+### Bug
+
+ * **Bug**: [vcs.plot(iso) creates text object that are not removed after clear](https://github.com/UV-CDAT/uvcdat/issues/1424)
+
+### Enhancement
+
+ * **Enhancement**: [logger should cache records until server acknowledge success](https://github.com/UV-CDAT/uvcdat/issues/2172)
+ * **Enhancement**: [submitPing should cache datsa in case server is dead](https://github.com/UV-CDAT/uvcdat/issues/2174)
+
+## Merged Pull Requests
+
+
+## Known Bugs
+
+### Other
+
+ * [(python:26831): Gtk-WARNING **: Unable to find default local directory monitor type](https://github.com/UV-CDAT/uvcdat/issues/2006)
+ * [DV3D/VCS plot error](https://github.com/UV-CDAT/uvcdat/issues/1867)
+
+ 
+# cdms
+ 
+## Closed Issues
+
+### bug
+
+ * ****: [Undefined local variable with regrid2.crossSection.get_latitude_wts_bnds](https://github.com/UV-CDAT/cdms/issues/153) ([#154](https://github.com/UV-CDAT/cdms/pull/154))
+ * ****: [crossRegrid does not return an MV2](https://github.com/UV-CDAT/cdms/issues/155)
+ * ****: [nc4 classic file can't be edited](https://github.com/UV-CDAT/cdms/issues/144)
+ * ****: [netCDF4 file not readable by cdms2](https://github.com/UV-CDAT/cdms/issues/149) ([#150](https://github.com/UV-CDAT/cdms/pull/150))
+
+## Merged Pull Requests
+
+ * [#142: add mask to transient variable](https://github.com/UV-CDAT/cdms/pull/142)
+
+## Known Bugs
+
+### Other
+
+ * [cdscan path needs a patch](https://github.com/UV-CDAT/cdms/issues/71)
+
+ 
+# vcs
+ 
+## Closed Issues
+
+### bug
+
+ * ****: [taylordiagram markers copied over from default andaffect default](https://github.com/UV-CDAT/vcs/issues/216)
+ * ****: [taylordiagram won't plot in jupyter](https://github.com/UV-CDAT/vcs/issues/215)
+ * ****: [taylordiagram drawing line between markers broken (clor)](https://github.com/UV-CDAT/vcs/issues/219)
+ * ****: [Catastrophic 2.8 and 2.10 x.plot failure on our new CentOS 7 server](https://github.com/UV-CDAT/vcs/issues/230)
+ * ****: [pngs do not clear object properly in some cases](https://github.com/UV-CDAT/vcs/issues/203)
+ * ****: [template.scalefont broken](https://github.com/UV-CDAT/vcs/issues/205) ([#207](https://github.com/UV-CDAT/vcs/pull/207))
+ * ****: [3d_scalar seg faults on mac](https://github.com/UV-CDAT/vcs/issues/245)
+ * ****: [taylordiagram adds an extra marker if marker attributes set manually](https://github.com/UV-CDAT/vcs/issues/223)
+
+### enhancement
+
+ * ****: [Color maps could look better](https://github.com/UV-CDAT/vcs/issues/238) ([#244](https://github.com/UV-CDAT/vcs/pull/244))
+ * ****: [drawLinesAndTemplate could use new functionalities](https://github.com/UV-CDAT/vcs/issues/224)
+ * ****: [taylordiagram should draw legend](https://github.com/UV-CDAT/vcs/issues/221)
+
+### invalid
+
+ * ****: [isof.fillareacolors does not like rgb tuple in list of colors](https://github.com/UV-CDAT/vcs/issues/206)
+
+## Merged Pull Requests
+
+
+## Known Bugs
+
+### Other
+
+ * [Colormap for difference or anomaly field needs adjustment](https://github.com/UV-CDAT/vcs/issues/246)
+
+Unable to find milestone 2.12
+ 
+# cdat_info
+ 
+## Closed Issues
+
+### enhancement
+
+ * ****: [need to turn off logging](https://github.com/UV-CDAT/cdat_info/issues/2)
+ * ****: [Need mecanism to track cdat packages installed and othe rprovenance](https://github.com/UV-CDAT/cdat_info/issues/4) ([#5](https://github.com/UV-CDAT/cdat_info/pull/5))
+
+## Merged Pull Requests
+
+
+## Known Bugs
+
+No known issues!
+Unable to find milestone 2.12
+
 <a name="2.10"></a>
 
 # Releases Notes from Github Repos for Milestone: 2.10
