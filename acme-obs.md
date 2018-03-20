@@ -1,8 +1,8 @@
 ---
 title: ACME Obs
 layout: default
-
 ---
+
 To get access to the ACME Observations, visit these URLs:
 
 <div class="alert">

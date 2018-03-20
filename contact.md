@@ -1,9 +1,7 @@
 ---
 title: Contact
 layout: default
-
 ---
-
 
 <style type="text/css">
   img.contact-logo {
@@ -11,13 +9,9 @@ layout: default
   }
 </style>
 
-
-
 ### Contact Us
 
 Need help? We've got you covered.
-
-For quick Q&A, there's the [AskBot Forum](http://uvcdat.askbot.com/) for assistance from developers and users.
 
 If you [subscribe][subscribe] to our support mailing list, [uvcdat-support@llnl.gov][support], you can send us your questions and developers of the project will get back to you as quickly as possible.
 
@@ -38,7 +32,7 @@ To leave the mailing list, send an email to [listserv@listserv.llnl.gov][unsubsc
 
 ### Participate
 
-Interested in working on UV-CDAT with us? [Subscribe][devsub] to our development mailing list, [uvcdat-devel@llnl.gov][devel] and we'll help you get up to speed.
+Interested in working on CDAT with us? [Subscribe][devsub] to our development mailing list, [uvcdat-devel@llnl.gov][devel] and we'll help you get up to speed.
 
 #### Subscribing to the mailing list
 
@@ -56,11 +50,11 @@ To leave the mailing list, send an email to [listserv@listserv.llnl.gov][devunsu
 
 #### See something wrong with the site?
 
-- [Submit an issue on GitHub](https://github.com/UV-CDAT/uvcdat-site/issues)
+- [Submit an issue on GitHub](https://github.com/CDAT/uvcdat-site/issues)
 
-#### Found a bug in UV-CDAT?
+#### Found a bug in CDAT?
 
-- [Submit an issue on GitHub](https://github.com/UV-CDAT/uvcdat/issues)
+- [Submit an issue on GitHub](https://github.com/CDAT/uvcdat/issues)
 - [Send an email to uvcdat-support][support]
 
 ---
@@ -69,9 +63,6 @@ To leave the mailing list, send an email to [listserv@listserv.llnl.gov][devunsu
 
 <a href="https://www.youtube.com/results?search_query=UVCDAT"><img class="contact-logo" src="/images/youtube.png" alt="YouTube logo"/></a>
 
-
-
-
 [uvcdat-askbot]:   http://askbot-uvcdat.llnl.gov
 [support]:         mailto:uvcdat-support@llnl.gov
 [devel]:           mailto:uvcdat-devel@llnl.gov
@@ -79,5 +70,3 @@ To leave the mailing list, send an email to [listserv@listserv.llnl.gov][devunsu
 [devunsub]:        mailto:listserv@listserv.llnl.gov?body=signoff%20uvcdat-devel&amp;subject=Unsubscribe
 [subscribe]:       mailto:listserv@listserv.llnl.gov?body=subscribe%20uvcdat-support&amp;subject=Subscribe
 [unsubscribe]:     mailto:listserv@listserv.llnl.gov?body=signoff%20uvcdat-support&amp;subject=Unsubscribe
-
-

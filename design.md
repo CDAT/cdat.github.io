@@ -4,10 +4,6 @@ layout: default
 
 ---
 
-
-
-
-
 ## Design Documents
 
 ### 2013
@@ -19,7 +15,3 @@ layout: default
 #### <a target="_blank" href="https://docs.google.com/a/iastate.edu/document/d/1g0ZZnoJsuhCeqtgOBNm-wcC0Db8oMuU56fJHE2Kumrg/edit#heading=h.le7l7bihou8">Design Plan for Diagnosticsin UV-CDAT <img src="/images/icon_external_site.gif"></a>
 
 #### <a target="_blank" href="https://docs.google.com/file/d/0B7wntV0jIObsYU0weUEwclg1eVk/edit?usp=sharing&pli=1">UV-CDAT web pdf <img src="/images/icon_external_site.gif"></a>
-
-
-
-

@@ -1,11 +1,11 @@
 - title: Gallery
   url: /gallery.html
 - title: Installing
-  url: https://github.com/UV-CDAT/uvcdat/wiki/install
+  url: https://github.com/CDAT/uvcdat/wiki/install
 - title: Documentation
   dropdown:
     - title: Getting Started
-      url: https://github.com/UV-CDAT/uvcdat/wiki/Getting-Started
+      url: https://github.com/CDAT/uvcdat/wiki/Getting-Started
     - title: CDMS
       url: /documentation/cdms/cdms.html
     - title: CDAT Utilities
@@ -15,7 +15,7 @@
     - title: Tutorials
       url: /tutorials.html
     - title: Wiki
-      url: https://github.com/UV-CDAT/uvcdat/wiki
+      url: https://github.com/CDAT/uvcdat/wiki
 - title: Contact
   url: /contact.html
 - title: Releases

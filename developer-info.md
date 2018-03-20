@@ -1,11 +1,7 @@
 ---
 title: Developer info
 layout: default
-
 ---
-
-
-
 
 <style type="text/css">
   div.span4 {
@@ -20,9 +16,6 @@ layout: default
   }
 </style>
 
-
-
-
 ## Developer info
 
 Our projects use Git and GitHub wherever possible. If that's not your usual cup
@@ -35,19 +28,17 @@ If you're ready to go, pick which project you'd like to contribute to:
 
 <div class="span12">
   <div class="span4">
-    <h3>Contribute to UV-CDAT</h3>
+    <h3>Contribute to CDAT</h3>
     <div>
-      <a href="https://github.com/UV-CDAT/uvcdat-devel">Code</a> /
-      <a href="https://github.com/UV-CDAT/uvcdat/issues">Issues</a> /
-      <a href="https://github.com/UV-CDAT/uvcdat/wiki">Wiki <img src="/images/githubwiki.png"></a> 
+      <a href="https://github.com/CDAT/uvcdat/">Code</a> /
+      <a href="https://github.com/CDAT/uvcdat/issues/">Issues</a> /
+      <a href="https://github.com/CDAT/uvcdat/wiki/">Wiki <img src="/images/githubwiki.png"></a> 
     </div>  
   </div>
   <div class="span4">
     <h3>Contribute to this website</h3>
-    <a href="https://github.com/aims-group/uvcdat-site">Code</a> /
-    <a href="https://github.com/aims-group/uvcdat-site/issues">Issues</a> /
-    <a href="https://github.com/aims-group/uvcdat-site/wiki/">Wiki <img src="/images/githubwiki.png"></a> &rarr;
+    <a href="https://github.com/CDAT/cdat.github.io/">Code</a> /
+    <a href="https://github.com/CDAT/cdat.github.io/issues/">Issues</a> /
+    <a href="https://github.com/CDAT/cdat.github.io/wiki/">Wiki <img src="/images/githubwiki.png"></a> &rarr;
   </div>
 </div>
-
-

@@ -8,7 +8,7 @@ description: Face To Face Presentations from F2F 2014
 
 
 
-## Presentations from the ESGF/UV-CDAT Face To Face Meeting, 2014
+## Presentations from the ESGF/CDAT Face To Face Meeting, 2014
 
 ### [Agenda][agenda]
 
@@ -16,7 +16,7 @@ description: Face To Face Presentations from F2F 2014
 
 #### Session 1: Welcome, Safety, Introductions, Opening Remarks, and Awards
 
- * [ESGF &amp; UV-CDAT F2F Welcome][welcome] by Dean Williams
+ * [ESGF &amp; CDAT F2F Welcome][welcome] by Dean Williams
 
 #### Session 2: ESGF Governance
 
@@ -54,7 +54,7 @@ description: Face To Face Presentations from F2F 2014
 
  * [Network Requirements&mdash;ICNWG][icnwg] (Session Keynote) by Eli Dart
 
-### Day 2: ESGF &amp; UV-CDAT Technical Presentations and Discussions
+### Day 2: ESGF &amp; CDAT Technical Presentations and Discussions
 
 #### Session 6: ESGF Technical Development
 
@@ -73,7 +73,7 @@ description: Face To Face Presentations from F2F 2014
  * [ESGF Metadata Search Evolution: esgf-mswt][esgf-mswt] by Luca Cinquini
  * [Making the Case for the ESGF and Apache: Long-Term Software Stewardship][apache] Chris Mattman
 
-#### Session 7: UV-CDAT Technical Development
+#### Session 7: CDAT Technical Development
 
  * [ESGF Computer Working Team (ESGF-CWT): Distributed Analytics Application Programming Interface (API)][esgf-cwt-api] (Session Keynote) by Dan Duffy
  * [Diagnostics: acme-dwt][acme-diag] by Jeff Painter, Brian Smith, and Jim McEnerney
@@ -82,11 +82,11 @@ description: Face To Face Presentations from F2F 2014
  * [On Demand Data Reordering for Remote Data Processing and Exploration][reordering] by Timo Bremer
  * [ESGF Analysis and Visualization: Challenges and Opportunities][esgf-analysis] by Roland Schweitzer and Kevin O'Brien
  * [Web-based Visualization: Overview of Client and Server Side Techniques and their Use in GeoJS and CDATWeb][cdatweb] by Aashish Chaudhary
- * [Ultrascale Climate Data Visualization and Analysis Using UV-CDAT and DV3D][dv3d] by Tom Maxwell
+ * [Ultrascale Climate Data Visualization and Analysis Using CDAT and DV3D][dv3d] by Tom Maxwell
  * [Workflow and Testing for Modern Software][testing] by Aashish Chaudhary
- * [GIS Capabilities in UV-CDAT][gis] by Ben Koziol
+ * [GIS Capabilities in CDAT][gis] by Ben Koziol
 
-### Day 3: ESGF and UV-CDAT Technical Presentations and Discussions, Technical Interoperability Discussions
+### Day 3: ESGF and CDAT Technical Presentations and Discussions, Technical Interoperability Discussions
 
 #### Session 8: Other Related Community Contributions
 
@@ -100,7 +100,7 @@ description: Face To Face Presentations from F2F 2014
  * [ESGF in an OpenStack Cloud][openstack] by Ben Evans
  * [Requirements for a Biology node on ESGF][bionode] by Patrik D'haeseleer and Sasha Ames
 
-[agenda]: http://aims-group.github.io/pdf/2014-ESGF-%26-UV-CDAT-F2F-Agenda.pdf
+[agenda]: http://aims-group.github.io/pdf/2014-ESGF-%26-CDAT-F2F-Agenda.pdf
 [welcome]: http://aims-group.github.io/pdf/f2f2014/f2f_2014_welcome.pdf
 [governance]: http://aims-group.github.io/pdf/f2f2014/ESGF_Governance.pdf
 [user support]: http://aims-group.github.io/pdf/f2f2014/user_support_process.pdf

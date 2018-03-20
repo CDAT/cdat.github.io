@@ -1,28 +1,23 @@
 ---
 title: Governance
 layout: default
-
 ---
-
-
-
-
 
 ## Governance
 
 ### Purpose
-The UV-CDAT Review Board (URB) is a group of individuals whose goal is to advance the technology in UV-CDAT by providing direction and oversight to its development. While the open-source nature of UV-CDAT allows natural progression via its many developers, the board seeks to balance the intentions of each small group of developers, ensuring that changes will benefit the community as a whole. The URB serves the following functions:
+The CDAT Review Board (URB) is a group of individuals whose goal is to advance the technology in CDAT by providing direction and oversight to its development. While the open-source nature of CDAT allows natural progression via its many developers, the board seeks to balance the intentions of each small group of developers, ensuring that changes will benefit the community as a whole. The URB serves the following functions:
 
-  * Maintain a roadmap of UV-CDAT including long-term plans.
-  * Make decisions on high-impact code changes to UV-CDAT.
+  * Maintain a roadmap of CDAT including long-term plans.
+  * Make decisions on high-impact code changes to CDAT.
 
-Any changes in direction that deviate significantly from the UV-CDAT proposal must be cleared with the Department of Energy (DOE) Biological and Environmental Research (BER) office, the primary sponsor of this activity.
+Any changes in direction that deviate significantly from the CDAT proposal must be cleared with the Department of Energy (DOE) Biological and Environmental Research (BER) office, the primary sponsor of this activity.
 
 ### Scope of URB Intervention
 Code changes with a high impact on developers and/or users should be reviewed by the URB. The following are some guiding principles for deciding whether changes require URB involvement:
 
   * Will the change significantly affect backwards compatibility?
-  * Does the change cause a significant shift in the functionality and scope of UV-CDAT?
+  * Does the change cause a significant shift in the functionality and scope of CDAT?
   * Are there licensing issues with the code?
 
 Bug fixes will not in general require URB approval.  Small feature additions will not require approval provided they are part of an associated development plan (see the Managing the Development Process document). In both cases, changes must be formally documented and published to the mailing list for comment before implementation.
@@ -33,13 +28,13 @@ The **Chair** organizes the meeting agenda and maintains the roadmap and the lis
 The **Secretary** keeps records of each meeting, assists in the setup of the meeting location and technology (e.g. projectors, video conferencing, etc.) required, and facilitates communication of proposals to the URB, as well as decisions from the URB back to the community.
 
 ### Meetings
-The URB will meet on a schedule of their choosing and convenience, but at least twice a year. The URB may meet informally at any time as the need arises to evaluate proposals. (Meeting notes and scheduled meetings will be posted on the UV-CDAT website.)
+The URB will meet on a schedule of their choosing and convenience, but at least twice a year. The URB may meet informally at any time as the need arises to evaluate proposals. (Meeting notes and scheduled meetings will be posted on the CDAT website.)
 
 ### Conflict Resolution
 Conflicts will be resolved by discussion and consensus where at all possible. When such an agreement is impossible, the members of the URB will vote on the issue, with the Chair breaking any tie vote.
 
 ### Membership
-Initial membership was determined by the UV-CDAT Project Leader at LLNL and consists of the following individuals:
+Initial membership was determined by the CDAT Project Leader at LLNL and consists of the following individuals:
 
   * E. Wes Bethel, Lawrence Berkeley National Laboratory (Visualization/Imaging/ Supercomputing/Analysis: VisIt)
   * Aashish Chaudhary, Kitware Inc. (Supercomputing: VTK, ParaView)
@@ -65,7 +60,6 @@ The URB member mailing list:
   * Silva, Claudio -- csilva@nyu.edu
   * Williams, Dean N. -- williams13@llnl.gov -- **Chair**
 
-
 ### Contributor License Agreements ("Agreement")
 
   * Individual Contributor License Agreement: [Individual Agreement]
@@ -73,5 +67,3 @@ The URB member mailing list:
 
 [individual agreement]: /pdf/uv-cdat-individual-contributor-agreement.pdf
 [corporate agreement]:  /pdf/uv-cdat-corporate-contributor-agreement.pdf
-
-
