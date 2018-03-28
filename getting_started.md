@@ -5,67 +5,64 @@ layout: default
 
 # Welcome to CDAT!
 
-After you've [installed](/installing.html), the next thing to do is try out some examples from the [gallery](/gallery.html)!
+After you've [installed](https://github.com/CDAT/cdat/wiki/install), the next thing to do is try out some examples from the [gallery](http://cdat.llnl.gov/gallery.html)!
 
 To run the examples, you first have to use the unix `source` command to load the CDAT environment.
 
-If you installed using a binary:
-
 ~~~bash
-source /usr/local/CDAT/$VERSION/bin/setup_runtime.sh
+conda activate [YOUR_CDAT_CONDA_ENV]
 ~~~
 
-If you installed from source:
+On older anaconda version it might be
 
 ~~~bash
-source /THE/PATH/YOU/INSTALLED/TO/bin/setup_runtime.sh
+source activate [YOUR_CDAT_CONDA_ENV]
 ~~~
-
-You can type `which python` to verify that you're properly set up (should output something like `/usr/local/CDAT/$VERSION/bin/python` for a binary install, or the path to your installation followed by `/bin/python` for a source install)
 
 Once you've loaded the environment, you should be able to run the examples. They should output a .png file that has the same image as the example.
 
-We strongly recommend using the interactive python console for figuring out how to use CDAT's scripting capabilities.
+We strongly recommend using Jupyter notebook for the tutotrials
+
+~~~
+jupyter-notebook
+~~~
+
+
+We also recommend using the interactive python console for figuring out how to use CDAT's scripting capabilities.
 
 To run the interactive console, use the `ipython` command, which should give you something like this:
 
 ~~~
-Python 2.7.10 (default, Sep 11 2015, 11:53:27)
+Python 2.7.14 | packaged by conda-forge | (default, Dec 25 2017, 01:18:54) 
 Type "copyright", "credits" or "license" for more information.
 
-IPython 3.0.0 -- An enhanced Interactive Python.
+IPython 5.5.0 -- An enhanced Interactive Python.
 ?         -> Introduction and overview of IPython's features.
 %quickref -> Quick reference.
 help      -> Python's own help system.
 object?   -> Details about 'object', use 'object??' for extra details.
 
-In [1]:
+In [1]: 
 ~~~
 
 To learn more about `ipython`, you can read [this tutorial](http://ipython.org/ipython-doc/2/interactive/tutorial.html).
 
 
-You can just type `import vcs, cdms2` to load the main two modules of CDAT (to learn more about them, you can check out the [VCS Manual](/documentation/vcs/vcs.html) and the [CDMS Manual](/documentation/cdms/cdms.html)), then hit enter.
+You can just type `import vcs, cdms2` to load the main two modules of UV-CDAT (to learn more about them, you can check out the [VCS Manual](http://uvcdat.llnl.gov/documentation/vcs/vcs.html) and the [CDMS Manual](http://uvcdat.llnl.gov/documentation/cdms/cdms.html)), then hit enter.
 
 Here's a very simple example that walks you through the most basic steps:
 
 ~~~python
 import vcs, cdms2, cdat_info
+
+# Download sample data files
+
+vcs.download_sample_data_files()
+
 # The vcs_canvas is the root object of VCS
 vcs_canvas = vcs.init()
 
-CDAT_version = cdat_info.version()
-
-# Now we'll load a netCDF file using CDMS2
-if CDAT_version[0] <= 2 and CDAT_version[1] <= 2 and CDAT_version[2] == 0:
-    # This is the way to find the sample data if you installed 2.2.0 (from the binary)
-    cdms_file = cdms2.open(vcs.prefix + "/sample_data/clt.nc")
-else:
-    # Versions newer than 2.2 use vcs.sample_data instead of vcs.prefix
-    # This would only happen if you installed from source; the examples
-    # in the gallery don't cover newer versions than 2.2,
-    # since that's still the most recent version.
-    cdms_file = cdms2.open(vcs.sample_data + "/clt.nc")
+cdms_file = cdms2.open(vcs.prefix + "/sample_data/clt.nc")
 
 # We'll pull a variable out of the netCDF file
 clt_variable = cdms_file("clt")
@@ -78,4 +75,4 @@ vcs_canvas.png("clt.png")
 # And that's it!
 ~~~
 
-Hopefully that helps some! If you have any other questions, [let us know](/contact.html)!
+Hopefully that helps some! If you have any other questions, [let us know](http://cdat.llnl.gov/contact.html)!

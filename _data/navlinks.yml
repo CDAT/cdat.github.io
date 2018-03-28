@@ -7,10 +7,10 @@
     - title: Getting Started
       url: https://github.com/CDAT/uvcdat/wiki/Getting-Started
     - title: CDMS
-      url: /documentation/cdms/cdms.html
+      url: http://cdms.readthedocs.io/en/cdmsdocsmerge/
     - title: CDAT Utilities
       url: /documentation/utilities/utilities.html
-    - title: VCS
+    - title: VCS Nightly
       url: /vcs
     - title: Tutorials
       url: /tutorials.html
