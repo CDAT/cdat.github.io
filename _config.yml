@@ -8,4 +8,4 @@ markdown: kramdown
 collections:
   examples:
     output: true
-highlighter: pygments
+highlighter: rouge
