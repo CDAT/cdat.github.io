@@ -1,12 +1,7 @@
 ---
 title: Reports
 layout: default
-
 ---
-
-
-
-
 
 ## Reports
 

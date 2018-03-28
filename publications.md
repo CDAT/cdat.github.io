@@ -1,12 +1,7 @@
 ---
 title: Publications
 layout: default
-
 ---
-
-
-
-
 
 ## Related Publications
 
@@ -188,5 +183,3 @@ Williams, S.; Petersen, M.; Bremer, P.-T.; Hecht, M.; Pascucci, V.; Ahrens, J.;
 Hlawitschka, M.; Hamann, B.; , "Adaptive Extraction and Quantification of
 Geophysical Vortices," Visualization and Computer Graphics, IEEE Transactions
 on , vol.17, no.12, pp.2088-2095, Dec. 2011oi: 10.1109/TVCG.2011.162
-
-

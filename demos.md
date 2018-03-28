@@ -1,12 +1,7 @@
 ---
 title: Demos
 layout: default
-
 ---
-
-
-
-
 
 ## ACME Demos
 <p>

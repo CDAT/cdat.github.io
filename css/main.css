@@ -6,18 +6,19 @@
 .jumbotron.no-overflow {
 	position:relative;
 	overflow:hidden;
-	background-color: rgba(225, 225, 225, .85);
+  background-color: rgba(225, 225, 225, .85);
+  min-height: 350px
 }
 
 div.hero-bg {
   position: absolute;
-  left: 40px;
+  left: 25%;
   top: 0;
   z-index: -1;
-  background-image: url(/images/uvcdat-jumbo.png);
-  background-position: 0 -100px;
+  background-image: url(https://raw.githubusercontent.com/PCMDI/pcmdi_metrics/master/share/pcmdi/CDATLogoText_1898x863px_300dpi.png);
+  background-position: 20px 20px;
   background-repeat: no-repeat;
-  background-size: 750px auto;
+  background-size: 650px auto;
   width: 100%;
   height: 100%;
 }

@@ -1,18 +1,18 @@
 ---
-title: Getting Started with UV-CDAT
+title: Getting Started with CDAT
 layout: default
 ---
 
-# Welcome to UV-CDAT!
+# Welcome to CDAT!
 
 After you've [installed](/installing.html), the next thing to do is try out some examples from the [gallery](/gallery.html)!
 
-To run the examples, you first have to use the unix `source` command to load the UV-CDAT environment.
+To run the examples, you first have to use the unix `source` command to load the CDAT environment.
 
 If you installed using a binary:
 
 ~~~bash
-source /usr/local/uvcdat/$VERSION/bin/setup_runtime.sh
+source /usr/local/CDAT/$VERSION/bin/setup_runtime.sh
 ~~~
 
 If you installed from source:
@@ -21,11 +21,11 @@ If you installed from source:
 source /THE/PATH/YOU/INSTALLED/TO/bin/setup_runtime.sh
 ~~~
 
-You can type `which python` to verify that you're properly set up (should output something like `/usr/local/uvcdat/$VERSION/bin/python` for a binary install, or the path to your installation followed by `/bin/python` for a source install)
+You can type `which python` to verify that you're properly set up (should output something like `/usr/local/CDAT/$VERSION/bin/python` for a binary install, or the path to your installation followed by `/bin/python` for a source install)
 
 Once you've loaded the environment, you should be able to run the examples. They should output a .png file that has the same image as the example.
 
-We strongly recommend using the interactive python console for figuring out how to use UV-CDAT's scripting capabilities.
+We strongly recommend using the interactive python console for figuring out how to use CDAT's scripting capabilities.
 
 To run the interactive console, use the `ipython` command, which should give you something like this:
 
@@ -45,7 +45,7 @@ In [1]:
 To learn more about `ipython`, you can read [this tutorial](http://ipython.org/ipython-doc/2/interactive/tutorial.html).
 
 
-You can just type `import vcs, cdms2` to load the main two modules of UV-CDAT (to learn more about them, you can check out the [VCS Manual](/documentation/vcs/vcs.html) and the [CDMS Manual](/documentation/cdms/cdms.html)), then hit enter.
+You can just type `import vcs, cdms2` to load the main two modules of CDAT (to learn more about them, you can check out the [VCS Manual](/documentation/vcs/vcs.html) and the [CDMS Manual](/documentation/cdms/cdms.html)), then hit enter.
 
 Here's a very simple example that walks you through the most basic steps:
 
@@ -54,10 +54,10 @@ import vcs, cdms2, cdat_info
 # The vcs_canvas is the root object of VCS
 vcs_canvas = vcs.init()
 
-uvcdat_version = cdat_info.version()
+CDAT_version = cdat_info.version()
 
 # Now we'll load a netCDF file using CDMS2
-if uvcdat_version[0] <= 2 and uvcdat_version[1] <= 2 and uvcdat_version[2] == 0:
+if CDAT_version[0] <= 2 and CDAT_version[1] <= 2 and CDAT_version[2] == 0:
     # This is the way to find the sample data if you installed 2.2.0 (from the binary)
     cdms_file = cdms2.open(vcs.prefix + "/sample_data/clt.nc")
 else:

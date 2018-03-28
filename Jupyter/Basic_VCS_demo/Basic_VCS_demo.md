@@ -1,10 +1,5 @@
----
-layout: default
-title: Basic VCS Tutorial
----
 
 # Basic VCS Tutorial
-[download iPython Notebook](Basic_VCS_demo.ipynb)
 
 
 ```python
@@ -17,6 +12,11 @@ import cdms2
 # MAke sure sample data is here
 vcs.download_sample_data_files()
 ```
+
+    Downloading: 'th_yr.nc' from 'https://uvcdat.llnl.gov/cdat/sample_data/' in: /Users/doutriaux1/anaconda2/envs/cdat/share/uvcdat/sample_data/th_yr.nc
+    Downloading: 'th_yr.nc' from 'https://uvcdat.llnl.gov/cdat/sample_data/' in: /Users/doutriaux1/anaconda2/envs/cdat/share/uvcdat/sample_data/th_yr.nc
+    Downloading: 'th_yr.nc' from 'https://uvcdat.llnl.gov/cdat/sample_data/' in: /Users/doutriaux1/anaconda2/envs/cdat/share/uvcdat/sample_data/th_yr.nc
+
 
 
 ```python
@@ -32,7 +32,7 @@ s=f("clt")
 
 ```python
 # Create vcs canvas (basically X window to draw in)
-x=vcs.init()
+x=vcs.init(bg=True)
 ```
 
 
@@ -44,13 +44,17 @@ x=vcs.init()
 ```python
 #because we are in jupyter using bg=True to plot thing in background (no flashing on your screen)
 bg=True
-x.plot(s,bg=bg)
+x.plot(s)
 ```
 
+    /Users/doutriaux1/anaconda2/envs/cdat/lib/python2.7/site-packages/vtk/util/numpy_support.py:135: FutureWarning: Conversion of the second argument of issubdtype from `complex` to `np.complexfloating` is deprecated. In future, it will be treated as `np.complex128 == np.dtype(complex).type`.
+      assert not numpy.issubdtype(z.dtype, complex), \
 
 
 
-![png](output_7_0.png)
+
+
+![png](Basic_VCS_demo_files/Basic_VCS_demo_7_1.png)
 
 
 
@@ -60,7 +64,7 @@ x.plot(s,bg=bg)
 print vcs.listelements()
 ```
 
-    ['1d', '3d_dual_scalar', '3d_scalar', '3d_vector', 'boxfill', 'colormap', 'display', 'fillarea', 'font', 'fontNumber', 'isofill', 'isoline', 'line', 'list', 'marker', 'meshfill', 'projection', 'scatter', 'taylordiagram', 'template', 'textcombined', 'textorientation', 'texttable', 'vector', 'xvsy', 'xyvsy', 'yxvsx']
+    ['1d', '3d_dual_scalar', '3d_scalar', '3d_vector', 'boxfill', 'colormap', 'display', 'fillarea', 'font', 'fontNumber', 'isofill', 'isoline', 'line', 'list', 'marker', 'meshfill', 'projection', 'scatter', 'streamline', 'taylordiagram', 'template', 'textcombined', 'textorientation', 'texttable', 'vector', 'xvsy', 'xyvsy', 'yxvsx']
 
 
 
@@ -75,9 +79,9 @@ gm = vcs.createisofill()
 gm.list()
 ```
 
-     ----------Isofill (Gfi) member (attribute) listings ----------
+    ---------- Isofill (Gfi) member (attribute) listings ----------
     graphics method = Gfi
-    name = __isofill_47070857589361
+    name = __isofill_868519049142806
     projection = linear
     xticlabels1 = *
     xticlabels2 = *
@@ -99,9 +103,11 @@ gm.list()
     ext_1 =  False
     ext_2 =  False
     fillareastyle =  solid
-    fillareaindices =  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    fillareaindices =  [1]
     fillareacolors =  [1]
-    fillareaopacity =  [None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+    fillareaopacity =  []
+    fillareapixelspacing =  None
+    fillareapixelscale =  None
     levels =  ([1.0000000200408773e+20, 1.0000000200408773e+20],)
     legend =  None
 
@@ -135,7 +141,7 @@ x.plot(s,gm,bg=bg)
 
 
 
-![png](output_12_0.png)
+![png](Basic_VCS_demo_files/Basic_VCS_demo_12_0.png)
 
 
 
@@ -151,9 +157,9 @@ t = vcs.createtemplate()
 t.list()
 ```
 
-    ----------Template (P) member (attribute) listings ----------
+    ---------- Template (P) member (attribute) listings ----------
     method = P
-    name = __template_210241759330535
+    name = __template_467292516430798
     orientation = 0
     member =  file
          priority = 1
@@ -349,12 +355,12 @@ t.list()
     member =  xmintic1
          priority = 0
          y1 = 0.259999990463
-         y2 = 0.256999999285
+         y2 = 0.248999999285
          line = default
     member =  xmintic2
          priority = 0
          y1 = 0.860000014305
-         y2 = 0.860000014305
+         y2 = 0.868000014305
          line = default
     member =  ytic1
          priority = 1
@@ -383,7 +389,7 @@ t.list()
          textorientation = defcenter
     member =  xlabel2
          priority = 0
-         y = 0.870000004768
+         y = 0.880000004768
          texttable = default
          textorientation = defcenter
     member =  ylabel1
@@ -499,7 +505,7 @@ x.plot(s,gm,t)
 
 
 
-![png](output_16_0.png)
+![png](Basic_VCS_demo_files/Basic_VCS_demo_16_0.png)
 
 
 
@@ -513,11 +519,6 @@ x.plot(s,gm,t,ratio="autot")
 
 
 
-![png](output_17_0.png)
+![png](Basic_VCS_demo_files/Basic_VCS_demo_17_0.png)
 
 
-
-
-```python
-
-```

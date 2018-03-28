@@ -11833,9 +11833,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>VCS 2.12 does not produce animation directly visible in the notebook
-The class bellow helps with this
-Nightly versions of vcs do produce animations objects that are adequate for notebooks</p>
+<p>We need some sample data</p>
 
 </div>
 </div>
@@ -11843,39 +11841,6 @@ Nightly versions of vcs do produce animations objects that are adequate for note
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">class</span> <span class="nc">FFMPEG</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">source</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">320</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">240</span><span class="p">,</span><span class="n">controls</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="n">source</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">width</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">controls</span><span class="o">=</span><span class="n">controls</span>
-    <span class="k">def</span> <span class="nf">_repr_html_</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">html</span> <span class="o">=</span> <span class="s2">&quot;&lt;video width=&#39;</span><span class="si">%i</span><span class="s2">&#39; height=&#39;</span><span class="si">%i</span><span class="s2">&#39;&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">)</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">controls</span><span class="p">:</span>
-            <span class="n">html</span> <span class="o">+=</span> <span class="s2">&quot;controls&quot;</span>
-        <span class="n">html</span> <span class="o">+=</span> <span class="s2">&quot;&gt;&lt;source src=&#39;</span><span class="si">%s</span><span class="s2">&#39; type=&#39;video/mp4&#39;&gt;&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">source</span><span class="p">)</span>
-        <span class="k">return</span>  <span class="n">html</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We also need some sample data</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
@@ -11911,7 +11876,7 @@ Nightly versions of vcs do produce animations objects that are adequate for note
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">cdms2</span>
@@ -11935,7 +11900,7 @@ Nightly versions of vcs do produce animations objects that are adequate for note
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># make directory for pngs if not present</span>
@@ -11966,10 +11931,8 @@ Nightly versions of vcs do produce animations objects that are adequate for note
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>/Users/doutriaux1/anaconda2/envs/2.12-nox/lib/python2.7/site-packages/numpy/ma/core.py:6385: MaskedArrayFutureWarning: In the future the default for ma.maximum.reduce will be axis=0, not the current None, to match np.maximum.reduce. Explicitly pass 0 or None to silence this warning.
-  return self.reduce(a)
-/Users/doutriaux1/anaconda2/envs/2.12-nox/lib/python2.7/site-packages/numpy/ma/core.py:6385: MaskedArrayFutureWarning: In the future the default for ma.minimum.reduce will be axis=0, not the current None, to match np.minimum.reduce. Explicitly pass 0 or None to silence this warning.
-  return self.reduce(a)
+<pre>/Users/doutriaux1/anaconda2/envs/cdat/lib/python2.7/site-packages/vtk/util/numpy_support.py:135: FutureWarning: Conversion of the second argument of issubdtype from `complex` to `np.complexfloating` is deprecated. In future, it will be treated as `np.complex128 == np.dtype(complex).type`.
+  assert not numpy.issubdtype(z.dtype, complex), \
 </pre>
 </div>
 </div>
@@ -11989,20 +11952,14 @@ Nightly versions of vcs do produce animations objects that are adequate for note
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">glob</span>
 <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;2d_animation.mp4&quot;</span>
 
 <span class="c1"># Create animation into file</span>
-<span class="n">out</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">ffmpeg</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;pngs/2d*png&quot;</span><span class="p">)))</span>
-<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">out</span><span class="p">,</span><span class="nb">bool</span><span class="p">):</span> <span class="c1"># older vcs</span>
-    <span class="k">print</span> <span class="s2">&quot;Preparing ffmpeg for Jupyter embedding&quot;</span>
-    <span class="n">out</span> <span class="o">=</span> <span class="n">FFMPEG</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span><span class="n">controls</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span> <span class="c1"># nightlies</span>
-    <span class="k">print</span> <span class="s2">&quot;Already Jupyter embedded&quot;</span>
-<span class="n">out</span>
+<span class="n">x</span><span class="o">.</span><span class="n">ffmpeg</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;pngs/2d*png&quot;</span><span class="p">)))</span>
 </pre></div>
 
 </div>
@@ -12015,23 +11972,12 @@ Nightly versions of vcs do produce animations objects that are adequate for note
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Preparing ffmpeg for Jupyter embedding
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[5]:</div>
+<div class="prompt output_prompt">Out[4]:</div>
 
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
-<video width='800' height='600'controls><source src='2d_animation.mp4' type='video/mp4'>
+<video width='640' height='420'controls><source src='2d_animation.mp4' type='video/mp4'>
 </div>
 
 </div>
@@ -12060,11 +12006,11 @@ Nightly versions of vcs do produce animations objects that are adequate for note
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">cdutil</span>
-
+<span class="kn">import</span> <span class="nn">numpy</span>
 <span class="c1"># Open data file</span>
 <span class="n">f</span><span class="o">=</span><span class="n">cdms2</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;clt.nc&quot;</span><span class="p">)</span>
 
@@ -12106,7 +12052,7 @@ Nightly versions of vcs do produce animations objects that are adequate for note
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Create a &quot;blank&quot; template</span>
@@ -12147,7 +12093,7 @@ Nightly versions of vcs do produce animations objects that are adequate for note
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">vcs</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">bg</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -12168,26 +12114,6 @@ Nightly versions of vcs do produce animations objects that are adequate for note
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/Users/doutriaux1/anaconda2/envs/2.12-nox/lib/python2.7/site-packages/vcs/VTKPlots.py:998: MaskedArrayFutureWarning: setting an item on a masked array which has a shared mask will not copy the mask and also change the original mask array in the future.
-Check the NumPy 1.11 release notes for more information.
-  data[:] = numpy.ma.masked_invalid(data, numpy.nan)
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -12200,19 +12126,13 @@ Check the NumPy 1.11 release notes for more information.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;1d_animation.mp4&quot;</span>
 
 <span class="c1"># Create animation into file</span>
-<span class="n">out</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">ffmpeg</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;pngs/1d*png&quot;</span><span class="p">)))</span>
-<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">out</span><span class="p">,</span><span class="nb">bool</span><span class="p">):</span> <span class="c1"># older vcs</span>
-    <span class="k">print</span> <span class="s2">&quot;Preparing ffmpeg for Jupyter embedding&quot;</span>
-    <span class="n">out</span> <span class="o">=</span> <span class="n">FFMPEG</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span><span class="n">controls</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span> <span class="c1"># nightlies</span>
-    <span class="k">print</span> <span class="s2">&quot;Already Jupyter embedded&quot;</span>
-<span class="n">out</span>
+<span class="n">x</span><span class="o">.</span><span class="n">ffmpeg</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;pngs/1d*png&quot;</span><span class="p">)))</span>
 </pre></div>
 
 </div>
@@ -12225,23 +12145,12 @@ Check the NumPy 1.11 release notes for more information.
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Preparing ffmpeg for Jupyter embedding
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[9]:</div>
+<div class="prompt output_prompt">Out[8]:</div>
 
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
-<video width='800' height='600'controls><source src='1d_animation.mp4' type='video/mp4'>
+<video width='640' height='420'controls><source src='1d_animation.mp4' type='video/mp4'>
 </div>
 
 </div>
@@ -12261,20 +12170,14 @@ Check the NumPy 1.11 release notes for more information.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">glob</span>
 <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;1d_animation_slow.mp4&quot;</span>
 
 <span class="c1"># Create animation into file</span>
-<span class="n">out</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">ffmpeg</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;pngs/1d*png&quot;</span><span class="p">)),</span><span class="n">rate</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">out</span><span class="p">,</span><span class="nb">bool</span><span class="p">):</span> <span class="c1"># older vcs</span>
-    <span class="k">print</span> <span class="s2">&quot;Preparing ffmpeg for Jupyter embedding&quot;</span>
-    <span class="n">out</span> <span class="o">=</span> <span class="n">FFMPEG</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span><span class="n">controls</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span> <span class="c1"># nightlies</span>
-    <span class="k">print</span> <span class="s2">&quot;Already Jupyter embedded&quot;</span>
-<span class="n">out</span>
+<span class="n">x</span><span class="o">.</span><span class="n">ffmpeg</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;pngs/1d*png&quot;</span><span class="p">)),</span><span class="n">rate</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12287,23 +12190,12 @@ Check the NumPy 1.11 release notes for more information.
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Preparing ffmpeg for Jupyter embedding
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[10]:</div>
+<div class="prompt output_prompt">Out[9]:</div>
 
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
-<video width='800' height='600'controls><source src='1d_animation_slow.mp4' type='video/mp4'>
+<video width='640' height='420'controls><source src='1d_animation_slow.mp4' type='video/mp4'>
 </div>
 
 </div>
@@ -12323,20 +12215,14 @@ Check the NumPy 1.11 release notes for more information.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">glob</span>
 <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;1d_animation_fast.mp4&quot;</span>
 
 <span class="c1"># Create animation into file</span>
-<span class="n">out</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">ffmpeg</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;pngs/1d*png&quot;</span><span class="p">)),</span><span class="n">rate</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
-<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">out</span><span class="p">,</span><span class="nb">bool</span><span class="p">):</span> <span class="c1"># older vcs</span>
-    <span class="k">print</span> <span class="s2">&quot;Preparing ffmpeg for Jupyter embedding&quot;</span>
-    <span class="n">out</span> <span class="o">=</span> <span class="n">FFMPEG</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span><span class="n">controls</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span> <span class="c1"># nightlies</span>
-    <span class="k">print</span> <span class="s2">&quot;Already Jupyter embedded&quot;</span>
-<span class="n">out</span>
+<span class="n">x</span><span class="o">.</span><span class="n">ffmpeg</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;pngs/1d*png&quot;</span><span class="p">)),</span><span class="n">rate</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12349,23 +12235,12 @@ Check the NumPy 1.11 release notes for more information.
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Preparing ffmpeg for Jupyter embedding
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[11]:</div>
+<div class="prompt output_prompt">Out[10]:</div>
 
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
-<video width='800' height='600'controls><source src='1d_animation_fast.mp4' type='video/mp4'>
+<video width='640' height='420'controls><source src='1d_animation_fast.mp4' type='video/mp4'>
 </div>
 
 </div>
@@ -12395,7 +12270,7 @@ Check the NumPy 1.11 release notes for more information.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">f</span><span class="o">=</span><span class="n">cdms2</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;clt.nc&quot;</span><span class="p">)</span>
@@ -12418,7 +12293,7 @@ Check the NumPy 1.11 release notes for more information.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># create new canvas</span>
@@ -12454,7 +12329,7 @@ Check the NumPy 1.11 release notes for more information.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">for</span> <span class="n">centerLongitude</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">366</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
@@ -12480,20 +12355,14 @@ Check the NumPy 1.11 release notes for more information.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;rot_animation.mp4&quot;</span>
 
 <span class="c1"># Create animation into file</span>
 <span class="k">print</span> <span class="s2">&quot;files used&quot;</span><span class="p">,</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;pngs/rotate_*png&quot;</span><span class="p">)</span>
-<span class="n">out</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">ffmpeg</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;pngs/rotate_*png&quot;</span><span class="p">)),</span> <span class="n">rate</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
-<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">out</span><span class="p">,</span><span class="nb">bool</span><span class="p">):</span> <span class="c1"># older vcs</span>
-    <span class="k">print</span> <span class="s2">&quot;Preparing ffmpeg for Jupyter embedding&quot;</span>
-    <span class="n">out</span> <span class="o">=</span> <span class="n">FFMPEG</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span><span class="n">controls</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span> <span class="c1"># nightlies</span>
-    <span class="k">print</span> <span class="s2">&quot;Already Jupyter embedded&quot;</span>
-<span class="n">out</span>
+<span class="n">x</span><span class="o">.</span><span class="n">ffmpeg</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;pngs/rotate_*png&quot;</span><span class="p">)),</span> <span class="n">rate</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12511,19 +12380,18 @@ Check the NumPy 1.11 release notes for more information.
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>files used [&#39;pngs/rotate_000000.png&#39;, &#39;pngs/rotate_000005.png&#39;, &#39;pngs/rotate_000010.png&#39;, &#39;pngs/rotate_000015.png&#39;, &#39;pngs/rotate_000020.png&#39;, &#39;pngs/rotate_000025.png&#39;, &#39;pngs/rotate_000030.png&#39;, &#39;pngs/rotate_000035.png&#39;, &#39;pngs/rotate_000040.png&#39;, &#39;pngs/rotate_000045.png&#39;, &#39;pngs/rotate_000050.png&#39;, &#39;pngs/rotate_000055.png&#39;, &#39;pngs/rotate_000060.png&#39;, &#39;pngs/rotate_000065.png&#39;, &#39;pngs/rotate_000070.png&#39;, &#39;pngs/rotate_000075.png&#39;, &#39;pngs/rotate_000080.png&#39;, &#39;pngs/rotate_000085.png&#39;, &#39;pngs/rotate_000090.png&#39;, &#39;pngs/rotate_000095.png&#39;, &#39;pngs/rotate_000100.png&#39;, &#39;pngs/rotate_000105.png&#39;, &#39;pngs/rotate_000110.png&#39;, &#39;pngs/rotate_000115.png&#39;, &#39;pngs/rotate_000120.png&#39;, &#39;pngs/rotate_000125.png&#39;, &#39;pngs/rotate_000130.png&#39;, &#39;pngs/rotate_000135.png&#39;, &#39;pngs/rotate_000140.png&#39;, &#39;pngs/rotate_000145.png&#39;, &#39;pngs/rotate_000150.png&#39;, &#39;pngs/rotate_000155.png&#39;, &#39;pngs/rotate_000160.png&#39;, &#39;pngs/rotate_000165.png&#39;, &#39;pngs/rotate_000170.png&#39;, &#39;pngs/rotate_000175.png&#39;, &#39;pngs/rotate_000180.png&#39;, &#39;pngs/rotate_000185.png&#39;, &#39;pngs/rotate_000190.png&#39;, &#39;pngs/rotate_000195.png&#39;, &#39;pngs/rotate_000200.png&#39;, &#39;pngs/rotate_000205.png&#39;, &#39;pngs/rotate_000210.png&#39;, &#39;pngs/rotate_000215.png&#39;, &#39;pngs/rotate_000220.png&#39;, &#39;pngs/rotate_000225.png&#39;, &#39;pngs/rotate_000230.png&#39;, &#39;pngs/rotate_000235.png&#39;, &#39;pngs/rotate_000240.png&#39;, &#39;pngs/rotate_000245.png&#39;, &#39;pngs/rotate_000250.png&#39;, &#39;pngs/rotate_000255.png&#39;, &#39;pngs/rotate_000260.png&#39;, &#39;pngs/rotate_000265.png&#39;, &#39;pngs/rotate_000270.png&#39;, &#39;pngs/rotate_000275.png&#39;, &#39;pngs/rotate_000280.png&#39;, &#39;pngs/rotate_000285.png&#39;, &#39;pngs/rotate_000290.png&#39;, &#39;pngs/rotate_000295.png&#39;, &#39;pngs/rotate_000300.png&#39;, &#39;pngs/rotate_000305.png&#39;, &#39;pngs/rotate_000310.png&#39;, &#39;pngs/rotate_000315.png&#39;, &#39;pngs/rotate_000320.png&#39;, &#39;pngs/rotate_000325.png&#39;, &#39;pngs/rotate_000330.png&#39;, &#39;pngs/rotate_000335.png&#39;, &#39;pngs/rotate_000340.png&#39;, &#39;pngs/rotate_000345.png&#39;, &#39;pngs/rotate_000350.png&#39;, &#39;pngs/rotate_000355.png&#39;, &#39;pngs/rotate_000360.png&#39;, &#39;pngs/rotate_000365.png&#39;]
-Preparing ffmpeg for Jupyter embedding
 </pre>
 </div>
 </div>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[15]:</div>
+<div class="prompt output_prompt">Out[14]:</div>
 
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
-<video width='800' height='600'controls><source src='rot_animation.mp4' type='video/mp4'>
+<video width='640' height='420'controls><source src='rot_animation.mp4' type='video/mp4'>
 </div>
 
 </div>
@@ -12547,52 +12415,16 @@ Preparing ffmpeg for Jupyter embedding
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;rot_animation_correct_order.mp4&quot;</span>
 
 <span class="c1"># Create animation into file</span>
-<span class="n">out</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">ffmpeg</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;pngs/rotate_*png&quot;</span><span class="p">))[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">rate</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
-<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">out</span><span class="p">,</span><span class="nb">bool</span><span class="p">):</span> <span class="c1"># older vcs</span>
-    <span class="k">print</span> <span class="s2">&quot;Preparing ffmpeg for Jupyter embedding&quot;</span>
-    <span class="n">out</span> <span class="o">=</span> <span class="n">FFMPEG</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span><span class="n">controls</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span> <span class="c1"># nightlies</span>
-    <span class="k">print</span> <span class="s2">&quot;Already Jupyter embedded&quot;</span>
-<span class="n">out</span>
+<span class="n">x</span><span class="o">.</span><span class="n">ffmpeg</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;pngs/rotate_*png&quot;</span><span class="p">))[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">rate</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Preparing ffmpeg for Jupyter embedding
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[16]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<video width='800' height='600'controls><source src='rot_animation_correct_order.mp4' type='video/mp4'>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -12607,7 +12439,7 @@ Preparing ffmpeg for Jupyter embedding
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Create pngs</span>
@@ -12626,52 +12458,16 @@ Preparing ffmpeg for Jupyter embedding
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;rot_animation_all.mp4&quot;</span>
 
 <span class="c1"># Create animation into file</span>
-<span class="n">out</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">ffmpeg</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;pngs/all_*png&quot;</span><span class="p">))[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">rate</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">out</span><span class="p">,</span><span class="nb">bool</span><span class="p">):</span> <span class="c1"># older vcs</span>
-    <span class="k">print</span> <span class="s2">&quot;Preparing ffmpeg for Jupyter embedding&quot;</span>
-    <span class="n">out</span> <span class="o">=</span> <span class="n">FFMPEG</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span><span class="n">controls</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span> <span class="c1"># nightlies</span>
-    <span class="k">print</span> <span class="s2">&quot;Already Jupyter embedded&quot;</span>
-<span class="n">out</span>
+<span class="n">x</span><span class="o">.</span><span class="n">ffmpeg</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;pngs/all_*png&quot;</span><span class="p">))[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">rate</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Preparing ffmpeg for Jupyter embedding
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[18]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<video width='800' height='600'controls><source src='rot_animation_all.mp4' type='video/mp4'>
-</div>
-
-</div>
-
 </div>
 </div>
 

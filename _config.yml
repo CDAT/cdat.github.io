@@ -1,8 +1,8 @@
 # Site settings
-title: UV-CDAT
+title: CDAT
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://uvcdat.llnl.gov" # the base hostname & protocol for your site
-logo: "/images/uvcdat.png"
+url: "http://cdat.llnl.gov" # the base hostname & protocol for your site
+logo: "https://raw.githubusercontent.com/PCMDI/pcmdi_metrics/master/share/pcmdi/CDATLogo_140x49px_72dpi.png"
 # Build settings
 markdown: kramdown
 collections:

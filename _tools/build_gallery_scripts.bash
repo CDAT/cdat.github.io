@@ -1,10 +1,10 @@
 #!/bin/bash
-echo "Please enter the path to your install of UVCDAT"
+echo "Please enter the path to your install of CDAT"
 read -ep "Path: " binpath
 
 source $binpath/bin/setup_runtime.sh
 
-echo "Please enter the path to your build directory for UVCDAT"
+echo "Please enter the path to your build directory for CDAT"
 read -ep "Path: " buildpath
 
 tests="$buildpath/Testing/vcs/CTestTestfile.cmake"
