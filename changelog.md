@@ -5,7 +5,7 @@ layout: default
 ---
 <a name="8.0"></a>
 
-# Releases Notes from Github Repos for Milestone: 3.0
+# Releases Notes from Github Repos for: 8.0
  
 # cdat
  
