@@ -10,7 +10,7 @@
       url: http://cdms.readthedocs.io/en/cdmsdocsmerge/
     - title: CDAT Utilities
       url: /documentation/utilities/utilities.html
-    - title: VCS Nightly
+    - title: VCS
       url: http://cdat-vcs.readthedocs.io/en/latest/
     - title: Tutorials
       url: /tutorials.html
