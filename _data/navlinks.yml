@@ -11,7 +11,7 @@
     - title: CDAT Utilities
       url: /documentation/utilities/utilities.html
     - title: VCS Nightly
-      url: /vcs
+      url: http://cdat-vcs.readthedocs.io/en/latest/
     - title: Tutorials
       url: /tutorials.html
     - title: Wiki
