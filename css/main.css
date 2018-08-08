@@ -56,6 +56,10 @@ div.announcement {
   font: 0/0 a;
 }
 
+.portrait {
+  height: inherit;
+}
+
 div.sponsor_image img {
   float:left;
   height:200px;
