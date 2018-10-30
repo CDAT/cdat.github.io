@@ -18,3 +18,10 @@ layout: default
 
 * [Binary Installation Instructions (Recommended) <i class="icon icon-globe"></i>](https://github.com/CDAT/uvcdat/wiki/install)
 * [Build from Source Directions <i class="icon icon-globe"></i>](https://github.com/CDAT/uvcdat/wiki/Build)
+
+
+### After Installation
+
+Check out our:
+* [Gallery](http://cdat.llnl.gov/gallery.html) or
+* [Getting Started](http://cdat.llnl.gov/getting_started.html) guide

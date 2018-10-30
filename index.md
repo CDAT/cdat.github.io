@@ -7,7 +7,7 @@ jumbo_text: CDAT is a powerful and complete front-end to a rich set of visual-da
 
 <h2 id="new">Welcome to CDAT!</h2>
 
-New here? Don't worry! We'll help you get started. If you're interested in what you can do with CDAT, you can take a look at our [gallery]. If you're interested in anything you see there, you can look into getting our application [installed][install].
+New here? Don't worry! We'll help you get started. If you're interested in what you can do with CDAT, you can take a look at our [gallery]. If you're interested in anything you see there, you can look into getting our application [installed][install]. Once CDAT has been installed, check out our [Getting Started](http://cdat.llnl.gov/getting_started.html) guide.
 
 <h2 id="help">We'll give you a hand.</h2>
 
