@@ -7,7 +7,7 @@ jumbo_text: CDAT is a powerful and complete front-end to a rich set of visual-da
 
 <h2 id="new">Welcome to CDAT!</h2>
 
-New here? Don't worry! We'll help you get started. If you're interested in what you can do with CDAT, you can take a look at our [gallery]. If you're interested in anything you see there, you can look into getting our application [installed][install]. Once CDAT has been installed, check out our [Getting Started](http://cdat.llnl.gov/getting_started.html) guide.
+New here? Don't worry! We'll help you get started. If you're interested in what you can do with CDAT, you can take a look at our [gallery]. If you're interested in anything you see there, you can look into getting our application [installed][install]. Once CDAT has been installed, check out our [Getting Started][getting_started] guide.
 
 <h2 id="help">We'll give you a hand.</h2>
 
@@ -21,10 +21,10 @@ If you want to get to know us, you can come chat with us on our [developer mail 
 <p>
 CDAT builds on the following key technologies:
 <ol>
-  <li>The Community Data Analysis Tools (CDAT) framework developed at LLNL for the analysis, visualization, and management of large-scale distributed climate data;</li>
-  <li>ParaView: an open-source, multi-platform, parallel-capable visualization tool with recently added capabilities to better support specific needs of the climate-science community;</li>
-  <li>VisTrails, an open-source scientific workflow and provenance management system that supports data exploration and visualization;</li>
-  <li>VisIt: an open-source, parallel-capable, visual-data exploration and analysis tool that is capable of running on a diverse set of platforms, ranging from laptops to the Department of Energy's largest supercomputers.</li>
+  <li>Python and its ecosystem (e.g. numpy, matplotlib);</li>
+  <li>Jupyter Notebooks and iPython;</li>
+  <li>A toolset developed at LLNL for the analysis, visualization, and management of large-scale distributed climate data;</li>
+  <li>VTK, the Visualization Toolkit, which is open source software for manipulating and displaying scientific data.</li>
 </ol>
 </p>
 <p>
@@ -36,17 +36,17 @@ advance scientific visualization of large-scale climate data sets. The CDAT
 framework couples powerful software infrastructures through two primary means:
 
 <ol>
-  <li>Tightly coupled integration of the CDAT Core with the VTK/ParaView infrastructure to provide high-performance, parallel-streaming data analysis and visualization of massive climate-data sets (other tighly coupled tools include
-  VCS, VisTrails, DV3D, and ESMF/ESMP);</li>
+  <li>Tightly coupled integration of the CDAT Core with the VTK infrastructure to provide high-performance, parallel-streaming data analysis and visualization of massive climate-data sets (other tighly coupled tools include
+  VCS, DV3D, and ESMF/ESMP);</li>
   <li>Loosely coupled integration to provide the flexibility of using tools quickly
-  in the infrastructure such as ViSUS, VisIt, R, and MatLab for data analysis and
+  in the infrastructure such as ViSUS or R for data analysis and
   visualization as well as to apply customized data analysis applications within
   an integrated environment.</li>
 </ol>
 </p>
 <p>
 Within both paradigms, CDAT will provide data-provenance capture and
-mechanisms to support data analysis via the VisTrails infrastructure.
+mechanisms to support data analysis.
 </p>
 
 <h3>U.S. Sponsors</h3>
@@ -59,6 +59,7 @@ mechanisms to support data analysis via the VisTrails infrastructure.
 
 [gallery]: /gallery.php
 [install]: /installing.html
+[getting_started]: /getting_started.html
 [support]: mailto:UVCDAT-SUPPORT@LISTSERV.LLNL.GOV?body=subscribe%20uvcdat-support
 [dev]: mailto:UVCDAT-DEVEL@LISTSERV.LLNL.GOV?body=subscribe%20uvcdat-devel
 [wiki]: https://github.com/CDAT/uvcdat/wiki
