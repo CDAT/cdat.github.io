@@ -21,7 +21,7 @@ If you want to get to know us, you can come chat with us on our [developer mail 
 <p>
 CDAT builds on the following key technologies:
 <ol>
-  <li>Python and its ecosystem (e.g. numpy, matplotlib);</li>
+  <li>Python and its ecosystem (e.g. NumPy, Matplotlib);</li>
   <li>Jupyter Notebooks and iPython;</li>
   <li>A toolset developed at LLNL for the analysis, visualization, and management of large-scale distributed climate data;</li>
   <li>VTK, the Visualization Toolkit, which is open source software for manipulating and displaying scientific data.</li>
@@ -30,7 +30,7 @@ CDAT builds on the following key technologies:
 <p>
 
 These combined tools, along with others such as the R open-source statistical
-analysis and plotting software and custom packages (e.g. vtDV3D), form CDAT
+analysis and plotting software and custom packages (e.g. DV3D), form CDAT
 and provide a synergistic approach to climate modeling, allowing researchers to
 advance scientific visualization of large-scale climate data sets. The CDAT
 framework couples powerful software infrastructures through two primary means:
@@ -57,11 +57,11 @@ mechanisms to support data analysis.
   <img src="/images/nasa.svg" class="thumbnail" />
 </div>
 
-[gallery]: /gallery.php
-[install]: /installing.html
+[gallery]: /gallery.html
+[install]: https://github.com/CDAT/cdat/wiki/install
 [getting_started]: /getting_started.html
 [support]: mailto:UVCDAT-SUPPORT@LISTSERV.LLNL.GOV?body=subscribe%20uvcdat-support
 [dev]: mailto:UVCDAT-DEVEL@LISTSERV.LLNL.GOV?body=subscribe%20uvcdat-devel
-[wiki]: https://github.com/CDAT/uvcdat/wiki
+[wiki]: https://github.com/CDAT/cdat/wiki
 
 <!-- &amp;subject=Subscribe -->
