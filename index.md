@@ -49,6 +49,9 @@ Within both paradigms, CDAT will provide data-provenance capture and
 mechanisms to support data analysis.
 </p>
 
+CDAT is licensed under the [BSD-3][bds3] license.
+
+
 <h3>U.S. Sponsors</h3>
 <div class="sponsor_image">
   <img src="/images/doe.svg" class="thumbnail" />
@@ -60,8 +63,9 @@ mechanisms to support data analysis.
 [gallery]: /gallery.html
 [install]: https://github.com/CDAT/cdat/wiki/install
 [getting_started]: /getting_started.html
-[support]: mailto:UVCDAT-SUPPORT@LISTSERV.LLNL.GOV?body=subscribe%20uvcdat-support
-[dev]: mailto:UVCDAT-DEVEL@LISTSERV.LLNL.GOV?body=subscribe%20uvcdat-devel
+[support]: mailto:CDAT-SUPPORT@LISTSERV.LLNL.GOV?body=subscribe%20cdat-support
+[dev]: mailto:CDAT-DEV@LISTSERV.LLNL.GOV?body=subscribe%20cdat-dev
 [wiki]: https://github.com/CDAT/cdat/wiki
+[bsd3]: https://opensource.org/licenses/BSD-3-Clause
 
 <!-- &amp;subject=Subscribe -->
