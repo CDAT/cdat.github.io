@@ -13,49 +13,49 @@ layout: default
 
 Need help? We've got you covered.
 
-If you [subscribe][subscribe] to our support mailing list, [uvcdat-support@llnl.gov][support], you can send us your questions and developers of the project will get back to you as quickly as possible.
+If you [subscribe][subscribe] to our support mailing list, [cdat-support@llnl.gov][support], you can send us your questions and developers of the project will get back to you as quickly as possible.
 
 #### Subscribing to the mailing list
 
 To join the mailing list, send an email to [listserv@listserv.llnl.gov][subscribe] with the following in the body:
 
-    subscribe uvcdat-support
+    subscribe cdat-support
 
 #### Unsubscribing to the mailing list
 
 To leave the mailing list, send an email to [listserv@listserv.llnl.gov][unsubscribe] with the following in the body:
 
-    signoff uvcdat-support
+    signoff cdat-support
 
 
 ---
 
 ### Participate
 
-Interested in working on CDAT with us? [Subscribe][devsub] to our development mailing list, [uvcdat-devel@llnl.gov][devel] and we'll help you get up to speed.
+Interested in working on CDAT with us? [Subscribe][devsub] to our development mailing list, [cdat-dev@llnl.gov][dev] and we'll help you get up to speed.
 
 #### Subscribing to the mailing list
 
 To join the mailing list, send an email to [listserv@listserv.llnl.gov][devsub] with the following in the body:
 
-    subscribe uvcdat-devel
+    subscribe cdat-dev
 
 #### Unsubscribing to the mailing list
 
 To leave the mailing list, send an email to [listserv@listserv.llnl.gov][devunsub] with the following in the body:
 
-    signoff uvcdat-devel
+    signoff cdat-dev
 
 ---
 
-#### See something wrong with the site?
+#### See something wrong with the website?
 
-- [Submit an issue on GitHub](https://github.com/CDAT/uvcdat-site/issues)
+- [Submit an issue on the website GitHub](https://github.com/CDAT/cdat.github.io/issues)
 
 #### Found a bug in CDAT?
 
-- [Submit an issue on GitHub](https://github.com/CDAT/uvcdat/issues)
-- [Send an email to uvcdat-support][support]
+- [Submit an issue on the CDAT GitHub](https://github.com/CDAT/cdat/issues)
+- [Send an email to cdat-support][support]
 
 ---
 
@@ -64,9 +64,9 @@ To leave the mailing list, send an email to [listserv@listserv.llnl.gov][devunsu
 <a href="https://www.youtube.com/results?search_query=UVCDAT"><img class="contact-logo" src="/images/youtube.png" alt="YouTube logo"/></a>
 
 [uvcdat-askbot]:   http://askbot-uvcdat.llnl.gov
-[support]:         mailto:uvcdat-support@llnl.gov
-[devel]:           mailto:uvcdat-devel@llnl.gov
-[devsub]:          mailto:listserv@listserv.llnl.gov?body=subscribe%20uvcdat-devel&amp;subject=Subscribe
-[devunsub]:        mailto:listserv@listserv.llnl.gov?body=signoff%20uvcdat-devel&amp;subject=Unsubscribe
-[subscribe]:       mailto:listserv@listserv.llnl.gov?body=subscribe%20uvcdat-support&amp;subject=Subscribe
-[unsubscribe]:     mailto:listserv@listserv.llnl.gov?body=signoff%20uvcdat-support&amp;subject=Unsubscribe
+[support]:         mailto:cdat-support@llnl.gov
+[dev]:             mailto:cdat-dev@llnl.gov
+[devsub]:          mailto:listserv@listserv.llnl.gov?body=subscribe%20cdat-dev&amp;subject=Subscribe
+[devunsub]:        mailto:listserv@listserv.llnl.gov?body=signoff%20cdat-dev&amp;subject=Unsubscribe
+[subscribe]:       mailto:listserv@listserv.llnl.gov?body=subscribe%20cdat-support&amp;subject=Subscribe
+[unsubscribe]:     mailto:listserv@listserv.llnl.gov?body=signoff%20cdat-support&amp;subject=Unsubscribe
