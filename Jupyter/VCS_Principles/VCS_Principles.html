@@ -3,8 +3,6 @@ layout: default
 title: VCS_Principles Tutorial
 ---
 
-# VCS_Principles Tutorial
-[download iPython Notebook](VCS_Principles.ipynb)
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
@@ -11775,14 +11773,29 @@ div#notebook {
     </script>
     <!-- End of mathjax configuration --></head>
 <body>
-  <div tabindex="-1" id="notebook" class="border-box-sizing">
+
+<div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Visualization-Control-System-Principles">Visualization Control System Principles<a class="anchor-link" href="#Visualization-Control-System-Principles">&#182;</a></h1><p><a href="#toc">Table Of Content</a><a href="TOC"></a></p>
+<h1 id="Visualization-Control-System-Principles">Visualization Control System Principles<a id="top" /><a class="anchor-link" href="#Visualization-Control-System-Principles">&#182;</a></h1><p>This Notebook demonstrates the VCS Principles.</p>
+<ul>
+<li><a href="VCS_Principles.ipynb">Download the Jupyter notebook</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Content">Contents:<a class="anchor-link" href="#Content">&#182;</a></h1>
+
+
+
 <ul>
 <li><a href="#intro">Introduction</a></li>
 <li><a href="#what">What</a></li>
@@ -11897,15 +11910,15 @@ Downloading: &#39;th_yr.nc&#39; from &#39;https://uvcdat.llnl.gov/cdat/sample_da
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Introduction">Introduction<a href="intro" /><a class="anchor-link" href="#Introduction">&#182;</a></h2><p>VCS Allows scientists to produce highly customized plots. Everything can be precisely and logically controlled, without any <em>guessing</em> game</p>
-<p>Essentially a vcs plot can be broken down into three parts</p>
-<p><strong>WHAT</strong> is plotted (e.g data and labels) <strong>HOW</strong> it is rendered (isolines, boxfill, isofill, vectors, etc...) and <strong>WHERE</strong> (location on the page each elements is to be plotted)</p>
-<h2 id="What">What<a href="what" /><a class="anchor-link" href="#What">&#182;</a></h2><p>This is the scientific piece of information that the user is trying to represent for others (or self) to understand. It can be as raw as a simple numpy object. But it is recommended to use <a href="https://github.com/uv-cdat/cdms">CDMS</a>'s transient variables. CDNS transient variables contain metadata such as name, units, geospatial information, that can be used by VCS to represent data better.</p>
-<p>The [tutorials] section has many documents for CDMS. The CDMS documentation can be found <a href="http://readthedocs.org/projects/cdms/">here</a></p>
-<h2 id="How">How<a href="how" /><a class="anchor-link" href="#How">&#182;</a></h2><p>This describe the data representation, at the highest level it is a <code>graphics method</code> i.e <em>boxfill</em>, <em>isofill</em>, <em>vectors</em>, <em>streamlines</em>, <em>line plot</em>, etc... But it also contains information to further control these plot types, e.g which colors to use, which levels, lines thickness, etc...</p>
-<p>Graphic methods also describe how axes and labels show be represented (e.g which axes values to show and which text to use for it, the user might want to show the <code>-20.</code> longitude represented as <code>20S</code> or the date <code>2020-01-15</code> shown as <code>Jan 2020</code></p>
+<h2 id="Introduction">Introduction<a href="intro" /><a class="anchor-link" href="#Introduction">&#182;</a></h2><p>VCS Allows scientists to produce highly customized plots. Everything can be precisely and logically controlled, without any <em>guessing</em> game.</p>
+<p>Essentially a vcs plot can be broken down into three parts:</p>
+<p><strong>WHAT</strong> is plotted (e.g data and labels) <strong>HOW</strong> it is rendered (isolines, boxfill, isofill, vectors, etc...) and <strong>WHERE</strong> (location on the page each elements is to be plotted).</p>
+<h2 id="What">What<a href="what" /><a class="anchor-link" href="#What">&#182;</a></h2><p>This is the scientific piece of information that the user is trying to represent for others (or self) to understand. It can be as raw as a simple NumPy object. But it is recommended to use <a href="https://github.com/uv-cdat/cdms">CDMS</a>'s transient variables. CDMS transient variables contain metadata such as name, units, and geospatial information that can be used by VCS to represent data better.</p>
+<p>The [tutorials] section has many documents for CDMS. The CDMS documentation can be found <a href="http://readthedocs.org/projects/cdms/">here</a>.</p>
+<h2 id="How">How<a href="how" /><a class="anchor-link" href="#How">&#182;</a></h2><p>This describes the data representation. At the highest level it is a <code>graphics method</code> i.e. <em>boxfill</em>, <em>isofill</em>, <em>vectors</em>, <em>streamlines</em>, <em>line plot</em>, etc... However it also contains information to further control these plot types, e.g. which colors to use, which levels and lines thickness, etc...</p>
+<p>Graphic methods also describe how axes and labels should be represented (e.g which axes values to show and which text to use for it. For example, the user might want to show the <code>-20</code> latitude represented as <code>20S</code> or the date <code>2020-01-15</code> shown as <code>Jan 2020</code></p>
 <p>Currently VCS supports the following graphic methods:</p>
-<h3 id="Boxfill">Boxfill<a href="box" /><a class="anchor-link" href="#Boxfill">&#182;</a></h3><p>Boxfill is used to represent 2 dimensional arrays, filling each array cell with a color representing its value. In the case of rectilinear grids (x and y axes can be representing by a 1 dimension array) represented via CDMS, we use the axes <strong>bounds</strong> to determine the extends of each cell. This is especially useful if an axis is not increasing constantly (e.g, gaussian grid, pressure levels)</p>
+<h3 id="Boxfill">Boxfill<a href="box" /><a class="anchor-link" href="#Boxfill">&#182;</a></h3><p>Boxfill is used to represent 2 dimensional arrays, filling each array cell with a color representing its value. In the case of rectilinear grids (x and y axes can be represented by a 1 dimension array) represented via CDMS, we use the axes <strong>bounds</strong> to determine the extent of each cell. This is especially useful if an axis is not increasing constantly (e.g, gaussian grid, pressure levels).</p>
 <p>For more information on boxfill please see the <a href="https://cdat.llnl.gov/Jupyter/boxfill/boxfill.html">dedicated tutorial</a>.</p>
 
 </div>
@@ -12010,8 +12023,8 @@ Downloading: &#39;th_yr.nc&#39; from &#39;https://uvcdat.llnl.gov/cdat/sample_da
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Isofill">Isofill<a href="isof" /><a class="anchor-link" href="#Isofill">&#182;</a></h3><p>Isofill is similar to isolines (and usually plotted in conjounction with it) except that the are between two consecutive isoline is filled with a color representing the range of values in this area.</p>
-<p>For more information on boxfill please see the <a href="">dedicated tutorial</a>.</p>
+<h3 id="Isofill">Isofill<a href="isof" /><a class="anchor-link" href="#Isofill">&#182;</a></h3><p>Isofill is similar to isolines (and usually plotted in conjunction with it) except that the area between two consecutive isolines is filled with a color representing the range of values in this area.</p>
+<p>For more information on isofill please see the <a href="">dedicated tutorial</a>.</p>
 
 </div>
 </div>
@@ -12057,7 +12070,7 @@ Downloading: &#39;th_yr.nc&#39; from &#39;https://uvcdat.llnl.gov/cdat/sample_da
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Meshfill">Meshfill<a href="mesh" /><a class="anchor-link" href="#Meshfill">&#182;</a></h3><p>Meshfill is very similar to boxfill, but is used to represent data on generic grids (a.k.a native representation). Based on the input data and a <em>mesh</em></p>
+<h3 id="Meshfill">Meshfill<a href="mesh" /><a class="anchor-link" href="#Meshfill">&#182;</a></h3><p>Meshfill is very similar to boxfill, but is used to represent data on generic grids (a.k.a native representation). Based on the input data and a <em>mesh</em>.</p>
 <p>For more information on meshfill please see the <a href="">dedicated tutorial</a>.</p>
 
 </div>
@@ -12152,7 +12165,7 @@ Downloading: &#39;th_yr.nc&#39; from &#39;https://uvcdat.llnl.gov/cdat/sample_da
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Vector-Plots">Vector Plots<a class="anchor-link" href="#Vector-Plots">&#182;</a></h3><p>Vector plot are a collection of arrows with a given magnitude and direction, each attached to a point in the plane.</p>
-<p>For more information on streamlines please see the <a href="">dedicated tutorial</a>.</p>
+<p>For more information on vector plots please see the <a href="">dedicated tutorial</a>.</p>
 
 </div>
 </div>
@@ -12199,7 +12212,7 @@ Downloading: &#39;th_yr.nc&#39; from &#39;https://uvcdat.llnl.gov/cdat/sample_da
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Line(1D)-Plots">Line(1D) Plots<a href="1d" /><a class="anchor-link" href="#Line(1D)-Plots">&#182;</a></h3><p>A graph that shows frequency of data along a number line.</p>
-<p>For more information on 1D please see the <a href="">dedicated tutorial</a>.</p>
+<p>For more information on 1D line plots please see the <a href="">dedicated tutorial</a>.</p>
 <p>Also of interest are the <a href="https://github.com/CDAT/vcsaddons/blob/master/EzPlot/Doc/Jupyter/EzPlot%20Spaghetti%20Example.ipynb">EzPlot Addons</a>.</p>
 
 </div>
@@ -12297,11 +12310,11 @@ Downloading: &#39;th_yr.nc&#39; from &#39;https://uvcdat.llnl.gov/cdat/sample_da
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Where">Where<a href="where" /><a class="anchor-link" href="#Where">&#182;</a></h2><p>This is the most complicated part of VCS but also one of the most powerful. This controls precisely the location of every component on the plot, these <em>control</em> objects are called <code>templates</code>. Templates also contain one exception to the WHAT/HOW./WHERE rule as they control texts information, albeit via <a href="#primary">primary</a> objects.</p>
+<h2 id="Where">Where<a href="where" /><a class="anchor-link" href="#Where">&#182;</a></h2><p>This is the most complicated part of VCS but also one of the most powerful. This controls precisely the location of every component on the plot, these <em>control</em> objects are called <code>templates</code>. Templates also contain one exception to the WHAT/HOW/WHERE rule as they control text information, albeit via <a href="#primary">primary</a> objects.</p>
 <h2 id="Bringing-it-all-together">Bringing it all together<a class="anchor-link" href="#Bringing-it-all-together">&#182;</a></h2><h2 id="Secondary--Objects">Secondary  Objects<a id="secondary" /><a class="anchor-link" href="#Secondary--Objects">&#182;</a></h2><h3 id="Positioning-Secondary-objects">Positioning Secondary objects<a id="position" /><a class="anchor-link" href="#Positioning-Secondary-objects">&#182;</a></h3><p>Secondary object positioning is based on a double system.</p>
-<p>The most basic is called <strong>world coordinate</strong> by changing a secondary object's <code>worldcoordinate</code> attribute you can control the coordinates of the rectangle arrea within which the object will be plottted.</p>
-<p>All coordinate (<code>.x</code> and <code>.y</code>) are relative to the worldcoordinate attribute (defautling to 0-&gt;1)</p>
-<p>Any coordinate/segment extending beyond the <code>viewport</code> rectangle is cropped</p>
+<p>The most basic is called <strong>world coordinate</strong> by changing a secondary object's <code>worldcoordinate</code> attribute you can control the coordinates of the rectangular area within which the object will be plottted.</p>
+<p>All coordinates (<code>.x</code> and <code>.y</code>) are relative to the worldcoordinate attribute (defautling to 0-&gt;1).</p>
+<p>Any coordinate/segment extending beyond the <code>viewport</code> rectangle is cropped.</p>
 <p>See figure bellow for a visual explanation, along with the <a href="viewport_and_worldcoordinate.py">vcs script</a> to generate it:</p>
 <p><img src="./vp_and_wc.png" border=1px></p>
 
@@ -12312,8 +12325,8 @@ Downloading: &#39;th_yr.nc&#39; from &#39;https://uvcdat.llnl.gov/cdat/sample_da
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Text-Objects">Text Objects<a id="text" /><a class="anchor-link" href="#Text-Objects">&#182;</a></h3><p>Text object allow you insert text anywhere on the plot
-Text object are made by combining two different secondary object: text orientation objects and text table objects</p>
+<h3 id="Text-Objects">Text Objects<a id="text" /><a class="anchor-link" href="#Text-Objects">&#182;</a></h3><p>Text objects allow you to insert text anywhere on the plot.
+Text objects are made by combining two different secondary objects: a text orientation object and a text table object.</p>
 <p>For more details on text in vcs see this <a href="">dedicated tutorial</a>.</p>
 
 </div>
@@ -12398,8 +12411,8 @@ valign = half
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Line/Polygon-Objects">Line/Polygon Objects<a id="line" /><a class="anchor-link" href="#Line/Polygon-Objects">&#182;</a></h3><p>Line object allow you to draw lines on the plot. By closing the line you can draw a polygon</p>
-<p>For more details on line in vcs see this <a href="">dedicated tutorial</a>.</p>
+<h3 id="Line/Polygon-Objects">Line/Polygon Objects<a id="line" /><a class="anchor-link" href="#Line/Polygon-Objects">&#182;</a></h3><p>Line objects allow you to draw lines on the plot. By closing the line you can draw a polygon.</p>
+<p>For more details on lines in vcs see this <a href="">dedicated tutorial</a>.</p>
 
 </div>
 </div>
@@ -12447,7 +12460,7 @@ valign = half
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Filled-Polygons-Objects">Filled Polygons Objects<a id="fillarea" /><a class="anchor-link" href="#Filled-Polygons-Objects">&#182;</a></h3><p>Allows you to draw a filled polygon on the plot</p>
+<h3 id="Filled-Polygons-Objects">Filled Polygons Objects<a id="fillarea" /><a class="anchor-link" href="#Filled-Polygons-Objects">&#182;</a></h3><p>Allows you to draw a filled polygon on the plot.</p>
 <p>For more details on filled polygons in vcs see this <a href="">dedicated tutorial</a>.</p>
 
 </div>
@@ -12496,7 +12509,7 @@ valign = half
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Marker-Objects">Marker Objects<a id="marker" /><a class="anchor-link" href="#Marker-Objects">&#182;</a></h3><p>Allows you to draw a/many markers on a plot</p>
+<h3 id="Marker-Objects">Marker Objects<a id="marker" /><a class="anchor-link" href="#Marker-Objects">&#182;</a></h3><p>Allows you to draw one or many markers on a plot.</p>
 
 </div>
 </div>
@@ -12546,8 +12559,8 @@ valign = half
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Colormap-Objects">Colormap Objects<a id="colormap" /><a class="anchor-link" href="#Colormap-Objects">&#182;</a></h3><p>colormap object objects are used to control the colors on vcs plots, they can be attached to secondary object, graphic methods or canvases.
-Values are in red, green, blue, opacity percents (0 to 100)</p>
+<h3 id="Colormap-Objects">Colormap Objects<a id="colormap" /><a class="anchor-link" href="#Colormap-Objects">&#182;</a></h3><p>Colormap objects are used to control the colors on vcs plots. They can be attached to secondary objects, graphic methods or canvases.
+Values are in percenages (0 to 100) and the four attributes to specify are red, green, blue, and opacity.</p>
 <p>For more detail see this <a href="https://cdat.llnl.gov/Jupyter/Colormap_Create/Color_map_create_own.html">dedicated tutorial</a>.</p>
 
 </div>
@@ -12559,7 +12572,7 @@ Values are in red, green, blue, opacity percents (0 to 100)</p>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">cmap</span> <span class="o">=</span> <span class="n">vcs</span><span class="o">.</span><span class="n">createcolormap</span><span class="p">()</span>
-<span class="n">cmap</span><span class="o">.</span><span class="n">setcolorcell</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span>  <span class="c1"># 50% transparent red color</span>
+<span class="n">cmap</span><span class="o">.</span><span class="n">setcolorcell</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span>  <span class="c1"># 50% transparent red color</span>
 </pre></div>
 
 </div>
@@ -12571,7 +12584,7 @@ Values are in red, green, blue, opacity percents (0 to 100)</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Projection-Objects">Projection Objects<a id="projection" /><a class="anchor-link" href="#Projection-Objects">&#182;</a></h3><p>when plotting lat/lon plots (2d graphic methods) you can specifiy and control the projection associated with it. Projection object are then attached to the graphic method</p>
+<h3 id="Projection-Objects">Projection Objects<a id="projection" /><a class="anchor-link" href="#Projection-Objects">&#182;</a></h3><p>When plotting lat/lon plots (2d graphic methods) you can specifiy and control the projection associated with it. The projection object is then attached to the graphic method.</p>
 <p>For more detail see this <a href="">dedicated tutorial</a>.</p>
 
 </div>

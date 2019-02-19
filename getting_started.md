@@ -21,10 +21,10 @@ source activate [YOUR_CDAT_CONDA_ENV]
 
 Once you've loaded the environment, you should be able to run the examples. They should output a .png file that has the same image as the example.
 
-We strongly recommend using Jupyter notebook for the tutotrials.  When you type the command below it is best to have navigated to a folder that contains at least one jupyter notebook (file extention .ipynb).
+We strongly recommend using Jupyter notebooks for the tutorials. When you type the command below into your command-line window (e.g. Command Prompt for Windows or Terminal Window for Mac) it is best to have navigated via the command line to the folder that contains your Jupyter Notebooks either as single files (file extention .ipynb) or contained in subfolders. For additional help on Jupyter Notebooks see this [Jupyter Documentation](https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/execute.html) page.
 
 ~~~
-jupyter-notebook
+jupyter notebook
 ~~~
 
 
@@ -53,7 +53,9 @@ You can just type `import vcs, cdms2` to load the main two modules of UV-CDAT (t
 Here's a very simple example that walks you through the most basic steps:
 
 ~~~python
-import vcs, cdms2, cdat_info
+import vcs, cdms2
+import os
+import cdat_info
 
 # Download sample data files
 
@@ -62,7 +64,7 @@ vcs.download_sample_data_files()
 # The vcs_canvas is the root object of VCS
 vcs_canvas = vcs.init()
 
-cdms_file = cdms2.open(vcs.prefix + "/share/cdat/sample_data/clt.nc")
+cdms_file = cdms2.open(os.path.join(cdat_info.get_sampledata_path(), "clt.nc"))
 
 # We'll pull a variable out of the netCDF file
 clt_variable = cdms_file("clt")
