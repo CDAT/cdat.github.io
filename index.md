@@ -1,7 +1,7 @@
 ---
 layout: jumbotron
-jumbo_title: Community 
-jumbo_subtitle: Data Analysis Tools
+jumbo_title: Community Data Analysis Tools
+jumbo subtitle: 
 jumbo_text: CDAT is a powerful and complete front-end to a rich set of visual-data exploration and analysis capabilities well suited for data analysis problems.
 ---
 
