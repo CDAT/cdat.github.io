@@ -53,7 +53,9 @@ You can just type `import vcs, cdms2` to load the main two modules of UV-CDAT (t
 Here's a very simple example that walks you through the most basic steps:
 
 ~~~python
-import vcs, cdms2, cdat_info
+import vcs, cdms2
+import os
+import cdat_info
 
 # Download sample data files
 
@@ -62,7 +64,7 @@ vcs.download_sample_data_files()
 # The vcs_canvas is the root object of VCS
 vcs_canvas = vcs.init()
 
-cdms_file = cdms2.open(vcs.prefix + "/share/cdat/sample_data/clt.nc")
+cdms_file = cdms2.open(os.path.join(cdat_info.get_sampledata_path(), "clt.nc"))
 
 # We'll pull a variable out of the netCDF file
 clt_variable = cdms_file("clt")
