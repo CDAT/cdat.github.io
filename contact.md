@@ -63,7 +63,6 @@ To leave the mailing list, send an email to [listserv@listserv.llnl.gov][devunsu
 
 <a href="https://www.youtube.com/results?search_query=UVCDAT"><img class="contact-logo" src="/images/youtube.png" alt="YouTube logo"/></a>
 
-[uvcdat-askbot]:   http://askbot-uvcdat.llnl.gov
 [support]:         mailto:cdat-support@llnl.gov
 [dev]:             mailto:cdat-dev@llnl.gov
 [devsub]:          mailto:listserv@listserv.llnl.gov?body=subscribe%20cdat-dev&amp;subject=Subscribe
