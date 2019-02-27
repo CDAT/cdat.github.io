@@ -1,3 +1,6 @@
 [submodule "bootstrap"]
 	path = bootstrap
 	url = git://github.com/twitter/bootstrap.git
+[submodule "Jupyter-notebooks"]
+	path = Jupyter-notebooks
+	url = git://github.com/cdat/Jupyter-notebooks
