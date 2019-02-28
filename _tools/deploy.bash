@@ -10,7 +10,7 @@ base_dir=$1;
 media_dir=$base_dir'_site';
 
 cd $base_dir;
-git pull;
+git pull --recurse-submodules;
 /usr/local/bin/jekyll b;
 mkdir _site/gallery/thumbnails;
 ./_tools/resize.bash $media_dir;
