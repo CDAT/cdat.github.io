@@ -49,7 +49,7 @@ Within both paradigms, CDAT will provide data-provenance capture and
 mechanisms to support data analysis.
 </p>
 
-CDAT is licensed under the [BSD-3][bds3] license.
+CDAT is licensed under the [BSD-3][bsd3] license.
 
 
 <h3>U.S. Sponsors</h3>
