@@ -1,5 +1,5 @@
 # cdat.github.io
-cdat website
+CDAT website
 
 To run/see it into on my machine I have do:
 
