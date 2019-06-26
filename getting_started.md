@@ -48,7 +48,7 @@ In [1]:
 To learn more about `ipython`, you can read [this tutorial](http://ipython.org/ipython-doc/2/interactive/tutorial.html).
 
 
-You can just type `import vcs, cdms2` to load the main two modules of UV-CDAT (to learn more about them, you can check out the [VCS Manual](http://uvcdat.llnl.gov/documentation/vcs/vcs.html) and the [CDMS Manual](http://uvcdat.llnl.gov/documentation/cdms/cdms.html)), then hit enter.
+You can just type `import vcs, cdms2` to load the main two modules of UV-CDAT (to learn more about them, you can check out the [VCS Manual](http://uvcdat.llnl.gov/documentation/vcs/vcs.html) and the [CDMS Manual](http://cdms.readthedocs.io/en/cdmsdocsmerge/)), then hit enter.
 
 Here's a very simple example that walks you through the most basic steps:
 
