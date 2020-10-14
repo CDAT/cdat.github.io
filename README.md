@@ -9,11 +9,16 @@ cd cdat.github.io
 git submodule update --init --recursive
 ```
 
-To view the site on local machine with Jekyll:
+To install jekyll and other dependencies:
 
-```bash
+```
 conda install -c conda-forge ruby rb-jekyll
 gem install pygments.rb
+```
+
+Once dependencies are installed, to view the site on local machine with Jekyll:
+
+```bash
 jekyll s
 ```
 

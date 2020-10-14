@@ -3,3 +3,6 @@ _site
 gallery/thumbnails/*
 .DS_Store
 .idea/
+.jekyll-cache/
+Jupyter-notebooks/_site/*
+Jupyter-notebooks/.jekyll-cache/*
