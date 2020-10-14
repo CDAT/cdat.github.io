@@ -3,6 +3,404 @@ title: Changelog
 layout: default
 
 ---
+<a name="8.2.1"></a>
+
+# Releases Notes from Github Repos for Milestone: 8.2.1
+ 
+# cdat_info
+ 
+## Closed Issues
+
+### enhancement
+
+ * ****: [need to turn off logging](https://github.com/CDAT/cdat_info/issues/2) ([#38](https://github.com/CDAT/cdat_info/pull/38), [#40](https://github.com/CDAT/cdat_info/pull/40), [#41](https://github.com/CDAT/cdat_info/pull/41))
+ * ****: [Need mecanism to track cdat packages installed and othe rprovenance](https://github.com/CDAT/cdat_info/issues/4) ([#5](https://github.com/CDAT/cdat_info/pull/5))
+
+## Merged Pull Requests
+
+ * [#39: Try new conda recipes](https://github.com/CDAT/cdat_info/pull/39)
+
+## Known Bugs
+
+No known issues!
+ 
+# cdms
+ 
+## Closed Issues
+
+### bug
+
+ * ****: [AttributeError with cdscan](https://github.com/CDAT/cdms/issues/397) ([#399](https://github.com/CDAT/cdms/pull/399))
+
+### pending-release
+
+ * ****: [Attempt to import numpy.ma.rank failing with numpy 1.18.1](https://github.com/CDAT/cdms/issues/384) ([#389](https://github.com/CDAT/cdms/pull/389))
+ * ****: [Problems with reading "big" arrays (>8.1Gb)](https://github.com/CDAT/cdms/issues/383) ([#389](https://github.com/CDAT/cdms/pull/389))
+ * ****: [While importing cdms2 error pops up: ImportError: cannot import name 'rank'](https://github.com/CDAT/cdms/issues/396)
+ * ****: [Problems with udunits in CDAT82](https://github.com/CDAT/cdms/issues/374)
+
+## Merged Pull Requests
+
+ * [#387: replaced numpy.rank() with numpy.ndim(), adding test_setdimattribute*](https://github.com/CDAT/cdms/pull/387)
+
+## Known Bugs
+
+No known issues!
+ 
+# vcs
+ 
+## Closed Issues
+
+### bug
+
+ * ****: [vcs 3D rotating globe animation not working properly](https://github.com/CDAT/vcs/issues/409)
+ * ****: [an update triggers continents back on](https://github.com/CDAT/vcs/issues/397) ([#398](https://github.com/CDAT/vcs/pull/398))
+ * ****: [transparency does not work for text](https://github.com/CDAT/vcs/issues/396)
+ * ****: [text disappear in png with bg=False](https://github.com/CDAT/vcs/issues/308)
+ * ****: [vector linewidth not working](https://github.com/CDAT/vcs/issues/381)
+ * ****: [createprojection fails if 'polar' template is chosen](https://github.com/CDAT/vcs/issues/102)
+ * ****: [manageElements.py setLineAttributes doesn't work](https://github.com/CDAT/vcs/issues/106)
+ * ****: [vcs cannot go back into interact mode](https://github.com/CDAT/vcs/issues/86)
+
+### duplicate
+
+ * ****: [wind barb support](https://github.com/CDAT/vcs/issues/90)
+ * ****: [dv3d plotting ad changing attributes breaks dv3d](https://github.com/CDAT/vcs/issues/87)
+
+### enhancement
+
+ * ****: [1D plot do not seem to show time/level if available ](https://github.com/CDAT/vcs/issues/415)
+ * ****: [Developments with documentation](https://github.com/CDAT/vcs/issues/107)
+
+### fixed in a branch
+
+ * ****: [Automatic xticlabels2 and yticlabels2 don't work](https://github.com/CDAT/vcs/issues/142)
+
+### invalid
+
+ * ****: [Plots sometimes render text twice](https://github.com/CDAT/vcs/issues/124)
+ * ****: [ bg=True freaks out on OSMesa builds](https://github.com/CDAT/vcs/issues/119)
+ * ****: [Make VCS color palettes easier to edit/add](https://github.com/CDAT/vcs/issues/98)
+ * ****: [Several marker problems/differences in 2.1.0 (compared to 1.5.1)](https://github.com/CDAT/vcs/issues/95)
+ * ****: [x/yaxisconvert not respected anymore.](https://github.com/CDAT/vcs/issues/96)
+ * ****: [Bring back x.colormapgui() (and add color related resources on the web/wiki)?](https://github.com/CDAT/vcs/issues/140)
+ * ****: [after first plot you cannot switch between bg or fg](https://github.com/CDAT/vcs/issues/72)
+
+## Merged Pull Requests
+
+ * [#406: Rtd again](https://github.com/CDAT/vcs/pull/406)
+ * [#411: Projected isofill bounds](https://github.com/CDAT/vcs/pull/411)
+ * [#417: Extra dims slider](https://github.com/CDAT/vcs/pull/417)
+ * [#445: Run tests with variants and fix flake8 failures](https://github.com/CDAT/vcs/pull/445)
+ * [#446: Add makefile](https://github.com/CDAT/vcs/pull/446)
+
+## Known Bugs
+
+### Other
+
+ * [axisconvert seems to force datawc to be in converted units](https://github.com/CDAT/vcs/issues/416)
+ * [Canvas plot with ratio="autot" results in interaction errors](https://github.com/CDAT/vcs/issues/354)
+
+ 
+# cdutil
+ 
+## Closed Issues
+
+## Merged Pull Requests
+
+ * [#27: Migrate to circle ci](https://github.com/CDAT/cdutil/pull/27)
+
+## Known Bugs
+
+No known issues!
+ 
+# genutil
+ 
+## Closed Issues
+
+### bug
+
+ * ****: [Error in genutils.statistics.percentiles](https://github.com/CDAT/genutil/issues/38) ([#36](https://github.com/CDAT/genutil/pull/36), [#40](https://github.com/CDAT/genutil/pull/40))
+
+## Merged Pull Requests
+
+ * [#28: doesn't dump file unless asked, reads good var in assert func and sav](https://github.com/CDAT/genutil/pull/28)
+
+## Known Bugs
+
+No known issues!
+ 
+# dv3d
+ 
+## Closed Issues
+
+## Merged Pull Requests
+
+ * [#26: Pin mesalib libnetcdf nompi](https://github.com/CDAT/dv3d/pull/26)
+ * [#27: Use makefile n matrix](https://github.com/CDAT/dv3d/pull/27)
+
+## Known Bugs
+
+No known issues!
+ 
+# vcsaddons
+ 
+## Closed Issues
+
+## Merged Pull Requests
+
+ * [#40: new baseline for newer vtk](https://github.com/CDAT/vcsaddons/pull/40)
+ * [#43: Pin mesalib, add running tests with nompi and opempi libnetcdf, flix flake8](https://github.com/CDAT/vcsaddons/pull/43)
+ * [#46: Use makefile n matrix](https://github.com/CDAT/vcsaddons/pull/46)
+
+## Known Bugs
+
+No known issues!
+ 
+# wk
+ 
+## Closed Issues
+
+## Merged Pull Requests
+
+ * [#13: add running tests with nompi, openmpi and mpich libnetcdf](https://github.com/CDAT/wk/pull/13)
+ * [#14: add Makefile and use circleci 2.1 matrix](https://github.com/CDAT/wk/pull/14)
+
+## Known Bugs
+
+No known issues!
+
+
+<a name="8.1"></a>
+
+# Releases Notes from Github Repos for Milestone: 8.1
+ 
+# vcs
+ 
+## Closed Issues
+
+### bug
+
+ * ****: [template.tunits seems to be disabled](https://github.com/CDAT/vcs/issues/380)
+ * ****: [portrait plot does not work with python 3 env](https://github.com/CDAT/vcs/issues/368)
+ * ****: [cannot replace the default font](https://github.com/CDAT/vcs/issues/345)
+ * ****: [text objects with prjection are broken](https://github.com/CDAT/vcs/issues/344)
+ * ****: [vcs .addfont seems broken](https://github.com/CDAT/vcs/issues/343)
+ * ****: [when 1d is flipped or 2 arrays are passed template shows min/max for xaxis not data](https://github.com/CDAT/vcs/issues/314)
+ * ****: [Taylor Diagram with EzTemplate](https://github.com/CDAT/vcs/issues/272) ([#300](https://github.com/CDAT/vcs/pull/300))
+ * ****: [Taylor diagram loses y-axis with 2.12 version](https://github.com/CDAT/vcs/issues/253)
+ * ****: [3d_scalar seg faults on mac](https://github.com/CDAT/vcs/issues/245)
+ * ****: [1D plots are taking longer than expected ](https://github.com/CDAT/vcs/issues/195) ([#334](https://github.com/CDAT/vcs/pull/334))
+
+### enhancement
+
+ * ****: [Color maps could look better](https://github.com/CDAT/vcs/issues/238)
+
+### invalid
+
+ * ****: [Postscript files are truncated on Mac OS X Sierra](https://github.com/CDAT/vcs/issues/310)
+
+### question
+
+ * ****: [Tick label size adjustment](https://github.com/CDAT/vcs/issues/339)
+ * ****: [Plot creates new graphics method objects](https://github.com/CDAT/vcs/issues/268)
+ * ****: [viewport error for polar map projection](https://github.com/CDAT/vcs/issues/262)
+
+## Merged Pull Requests
+
+ * [#118: otherwise will push on every commit](https://github.com/CDAT/vcs/pull/118)
+ * [#120: correct travis syntax](https://github.com/CDAT/vcs/pull/120)
+ * [#123: 121 missing value opacity](https://github.com/CDAT/vcs/pull/123)
+ * [#131: Doctest cleanup](https://github.com/CDAT/vcs/pull/131)
+ * [#295: Ez plot](https://github.com/CDAT/vcs/pull/295)
+ * [#297: Cdat logo](https://github.com/CDAT/vcs/pull/297)
+ * [#302: cdtime broken for py3](https://github.com/CDAT/vcs/pull/302)
+ * [#316: [WIP] Log axes 2d](https://github.com/CDAT/vcs/pull/316)
+ * [#317: fix #251](https://github.com/CDAT/vcs/pull/317)
+ * [#319: Test for fillarea concave.](https://github.com/CDAT/vcs/pull/319)
+ * [#378: Fix some places where the truncation fix was missed](https://github.com/CDAT/vcs/pull/378)
+ * [#389: Add support for the 'reference' attribute on the vector gm](https://github.com/CDAT/vcs/pull/389)
+
+## Known Bugs
+
+### Other
+
+b" * [b'vector linewidth not working'](b'https://github.com/CDAT/vcs/issues/381')"
+b" * [b'template x/ymintics1 seems to be using line property of x/ytic1 for last label'](b'https://github.com/CDAT/vcs/issues/379')"
+b" * [b'text disappear in png with bg=False'](b'https://github.com/CDAT/vcs/issues/308')"
+b" * [b'Black png returned when using a vnc session'](b'https://github.com/CDAT/vcs/issues/117')"
+ 
+# cdutil
+ 
+## Closed Issues
+
+## Merged Pull Requests
+
+ * [#6: Documentation](https://github.com/CDAT/cdutil/pull/6)
+ * [#7: Is monthly cal bug](https://github.com/CDAT/cdutil/pull/7)
+ * [#8: add License files for conda-forge](https://github.com/CDAT/cdutil/pull/8)
+ * [#22: Issu#136 region](https://github.com/CDAT/cdutil/pull/22)
+
+## Known Bugs
+
+No known issues!
+ 
+# genutil
+ 
+## Closed Issues
+
+### enhancement
+
+ * ****: [Docstrings](https://github.com/CDAT/genutil/issues/2) ([#22](https://github.com/CDAT/genutil/pull/22), [#21](https://github.com/CDAT/genutil/pull/21))
+
+## Merged Pull Requests
+
+ * [#7: Documentation](https://github.com/CDAT/genutil/pull/7)
+ * [#8: add License files for conda-forge](https://github.com/CDAT/genutil/pull/8)
+
+## Known Bugs
+
+No known issues!
+ 
+# dv3d
+ 
+## Closed Issues
+
+## Merged Pull Requests
+
+ * [#24: forcing 3.6 python](https://github.com/CDAT/dv3d/pull/24)
+
+## Known Bugs
+
+No known issues!
+ 
+# vcsaddons
+ 
+## Closed Issues
+
+### enhancement
+
+ * ****: [parallelcoordinate plot fails if number of linecolors is greater than actual number of lines](https://github.com/CDAT/vcsaddons/issues/32) ([#33](https://github.com/CDAT/vcsaddons/pull/33))
+
+## Merged Pull Requests
+
+ * [#18: Ez plot](https://github.com/CDAT/vcsaddons/pull/18)
+ * [#19: almost all fixed](https://github.com/CDAT/vcsaddons/pull/19)
+ * [#20: Fixed EzPlot tests.](https://github.com/CDAT/vcsaddons/pull/20)
+ * [#38: Bad conda](https://github.com/CDAT/vcsaddons/pull/38)
+ * [#39: no dowgrade](https://github.com/CDAT/vcsaddons/pull/39)
+
+## Known Bugs
+
+No known issues!
+
+# cdms
+ 
+## Closed Issues
+
+### bug
+
+ * ****: [axis.clone does not clone anymore!](https://github.com/CDAT/cdms/issues/271) ([#272](https://github.com/CDAT/cdms/pull/272))
+ * ****: [Axis units in .attributes and .units not equal](https://github.com/CDAT/cdms/issues/246) ([#267](https://github.com/CDAT/cdms/pull/267))
+ * ****: [nightlies broken](https://github.com/CDAT/cdms/issues/245)
+ * ****: [Shapes not aligned rrror when appending to a FileVariable in Python 3](https://github.com/CDAT/cdms/issues/240)
+ * ****: [regrid broken?](https://github.com/CDAT/cdms/issues/237)
+ * ****: [nc4 classic file can't be edited](https://github.com/CDAT/cdms/issues/144)
+
+### cdms2
+
+ * ****: [cdms not using latest netcdf.](https://github.com/CDAT/cdms/issues/241)
+
+### critical
+
+ * ****: [Extreme CPU load ~3100% during variable read from netcdf](https://github.com/CDAT/cdms/issues/264)
+ * ****: [OSX ESMF authentication](https://github.com/CDAT/cdms/issues/173)
+
+### enhancement
+
+ * ****: [Propagate errors with context management](https://github.com/CDAT/cdms/issues/161)
+ * ****: [cdms2 (NetCDF) maximum dimension name length is 256](https://github.com/CDAT/cdms/issues/158)
+ * ****: [cdms2 axis cannot have dictionary as attribute values](https://github.com/CDAT/cdms/issues/156)
+
+### help wanted
+
+ * ****: [cdms logo](https://github.com/CDAT/cdms/issues/207)
+
+### question
+
+ * ****: [Augment cdms2.createAxis to accept "missing" argument](https://github.com/CDAT/cdms/issues/220)
+
+## Merged Pull Requests
+
+ * [#72: Verify that MV2.mean() works properly](https://github.com/CDAT/cdms/pull/72)
+ * [#74: Adds support for **kwargs to MV2 operation classes](https://github.com/CDAT/cdms/pull/74)
+ * [#75: added script to log in myproxy, needed for opendap esgf](https://github.com/CDAT/cdms/pull/75)
+ * [#76: Fix #7 NC_STRING Support.](https://github.com/CDAT/cdms/pull/76)
+ * [#80: otherwise will push on every commit](https://github.com/CDAT/cdms/pull/80)
+ * [#82: correct travis syntax](https://github.com/CDAT/cdms/pull/82)
+ * [#83: Glib2 travis issue [WIP]](https://github.com/CDAT/cdms/pull/83)
+ * [#84: missing_value = 'N/A' led to fail](https://github.com/CDAT/cdms/pull/84)
+ * [#86: Issue32](https://github.com/CDAT/cdms/pull/86)
+ * [#88: Adding badges in readme](https://github.com/CDAT/cdms/pull/88)
+ * [#89: Issue78 strvar](https://github.com/CDAT/cdms/pull/89)
+ * [#90: Fix #87 ESMF periodicity](https://github.com/CDAT/cdms/pull/90)
+ * [#91: add test for conda-forge](https://github.com/CDAT/cdms/pull/91)
+ * [#92: Circleci mac](https://github.com/CDAT/cdms/pull/92)
+ * [#93: Condaforgetest](https://github.com/CDAT/cdms/pull/93)
+ * [#95: Revert "Condaforgetest"](https://github.com/CDAT/cdms/pull/95)
+ * [#96: Revert "add test for conda-forge"](https://github.com/CDAT/cdms/pull/96)
+ * [#97: issue #4 a.mean() fixed!](https://github.com/CDAT/cdms/pull/97)
+ * [#210: removing dropbox code from run_tests.py](https://github.com/CDAT/cdms/pull/210)
+ * [#211: Fix cdscan using opendap](https://github.com/CDAT/cdms/pull/211)
+ * [#212: change conda-build](https://github.com/CDAT/cdms/pull/212)
+ * [#213: Cdms2](https://github.com/CDAT/cdms/pull/213)
+ * [#222: Fixesmf](https://github.com/CDAT/cdms/pull/222)
+ * [#223: Cdmsdocsmerge](https://github.com/CDAT/cdms/pull/223)
+ * [#224: Fixesmf](https://github.com/CDAT/cdms/pull/224)
+ * [#227: Issue#225](https://github.com/CDAT/cdms/pull/227)
+ * [#230: Issue#225](https://github.com/CDAT/cdms/pull/230)
+ * [#297: Docstanya](https://github.com/CDAT/cdms/pull/297)
+ * [#298: Docstanya](https://github.com/CDAT/cdms/pull/298)
+ * [#301: V3.1.0 1](https://github.com/CDAT/cdms/pull/301)
+ * [#302: upload 3.7](https://github.com/CDAT/cdms/pull/302)
+ * [#303: recompile liners on mac](https://github.com/CDAT/cdms/pull/303)
+
+## Known Bugs
+
+### Other
+
+b" * [b'ESMF conservative blending when you have missing values'](b'https://github.com/CDAT/cdms/issues/231')"
+b" * [b'netcdf string variables unable to be read'](b'https://github.com/CDAT/cdms/issues/78')"
+b' * [b"cdms2 seg faults when using unknown \'+rw\' mode for opening a file"](b\'https://github.com/CDAT/cdms/issues/77\')'
+
+ 
+# cdtime
+ 
+## Closed Issues
+
+### bug
+
+ * ****: [On mac, py27, cdat8 and nightly fail when installed from cdat channels](https://github.com/CDAT/cdtime/issues/27)
+ * ****: [mac nightlies seem broken](https://github.com/CDAT/cdtime/issues/26)
+ * ****: [time comparisons](https://github.com/CDAT/cdtime/issues/18)
+
+### enhancement
+
+ * ****: [cdtime nightly not generated.](https://github.com/CDAT/cdtime/issues/12)
+
+## Merged Pull Requests
+
+ * [#13: Issue 10 exception](https://github.com/CDAT/cdtime/pull/13)
+ * [#14: change conda_upload.sh to use variant in conda build](https://github.com/CDAT/cdtime/pull/14)
+ * [#15: update conda-upload to use conda-build 3.2.2](https://github.com/CDAT/cdtime/pull/15)
+ * [#36: V3.1.0 1](https://github.com/CDAT/cdtime/pull/36)
+ * [#37: V3.1.2](https://github.com/CDAT/cdtime/pull/37)
+
+## Known Bugs
+
+No known issues!
+
+
 <a name="8.0"></a>
 
 # Releases Notes from Github Repos for: 8.0

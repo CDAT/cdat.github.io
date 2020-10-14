@@ -4,6 +4,12 @@ layout: default
 ---
 
 # Release Announcements
+- 8.2.1
+  - [Announcement](https://github.com/CDAT/cdat/releases/tag/v8.2.1)
+  - [Changelog](/changelog.html#8.2.1)
+- 8.1
+  - [Announcement](https://github.com/CDAT/cdat/releases/tag/v8.1)
+  - [Changelog](/changelog.html#8.1)
 - 8.0
   - [Announcement](https://github.com/cdat/cdat/releases/tag/v8.0)
   - [Changelog](/changelog.html#8.0)
