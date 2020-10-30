@@ -33,22 +33,17 @@ We also recommend using the interactive python console for figuring out how to u
 To run the interactive console, use the `ipython` command, which should give you something like this:
 
 ~~~
-Python 2.7.14 | packaged by conda-forge | (default, Dec 25 2017, 01:18:54) 
-Type "copyright", "credits" or "license" for more information.
+Python 3.7.8 | packaged by conda-forge | (default, Jul 31 2020, 02:37:09) 
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.17.0 -- An enhanced Interactive Python. Type '?' for help.
 
-IPython 5.5.0 -- An enhanced Interactive Python.
-?         -> Introduction and overview of IPython's features.
-%quickref -> Quick reference.
-help      -> Python's own help system.
-object?   -> Details about 'object', use 'object??' for extra details.
-
-In [1]: 
+In [1]:
 ~~~
 
 To learn more about `ipython`, you can read [this tutorial](http://ipython.org/ipython-doc/2/interactive/tutorial.html).
 
 
-You can just type `import vcs, cdms2` to load the main two modules of UV-CDAT (to learn more about them, you can check out the [VCS Manual](http://uvcdat.llnl.gov/documentation/vcs/vcs.html) and the [CDMS Manual](http://cdms.readthedocs.io/en/cdmsdocsmerge/)), then hit enter.
+You can just type `import vcs, cdms2` to load the main two modules of UV-CDAT (to learn more about them, you can check out the [VCS Manual](https://cdat-vcs.readthedocs.io/en/latest/) and the [CDMS Manual](http://cdms.readthedocs.io/en/cdmsdocsmerge/)), then hit enter.
 
 Here's a very simple example that walks you through the most basic steps:
 
