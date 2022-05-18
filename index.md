@@ -13,9 +13,6 @@ jumbo_text: CDAT is a powerful and complete front-end to a rich set of visual-da
   If you are interested in an alternative solution, please check out the [xarray](https://docs.xarray.dev/en/stable/index.html) and [xCDAT - Xarray Extended With Climate Data Analysis Tools](https://github.com/xCDAT/xcdat) projects.
 </div>
 
-| :warning: WARNING: Maintenance-only mode until around the end of 2023.          |
-| :------------------------------------------------------------------------------ |
-
 <h2 id="new">Welcome to CDAT!</h2>
 
 New here? Don't worry! We'll help you get started. If you're interested in what you can do with CDAT, you can take a look at our [gallery]. If you're interested in anything you see there, you can look into getting our application [installed][install]. Once CDAT has been installed, check out our [Getting Started][getting_started] guide.
