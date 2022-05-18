@@ -68,8 +68,8 @@ CDAT is licensed under the [BSD-3][bsd3] license.
   <img src="/images/nasa.svg" class="thumbnail" />
 </div>
 
-[xarray]: https://github.com/pydata/xarray
-[xcdat]: https://github.com/xCDAT/xcdat
+[xarray-gh]: https://github.com/pydata/xarray
+[xcdat-gh]: https://github.com/xCDAT/xcdat
 [gallery]: /gallery.html
 [install]: https://github.com/CDAT/cdat/wiki/install
 [getting_started]: /getting_started.html
