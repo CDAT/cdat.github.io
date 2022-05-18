@@ -10,7 +10,7 @@ jumbo_text: CDAT is a powerful and complete front-end to a rich set of visual-da
 </div>
 
 <div class="alert alert-info">
-  If you are interested in an alternative solution, please check out the [xarray](https://docs.xarray.dev/en/stable/index.html) and [xCDAT - Xarray Extended With Climate Data Analysis Tools](https://github.com/xCDAT/xcdat) projects.|
+  If you are interested in an alternative solution, please check out the [xarray](https://docs.xarray.dev/en/stable/index.html) and [xCDAT - Xarray Extended With Climate Data Analysis Tools](https://github.com/xCDAT/xcdat) projects.
 </div>
 
 | :warning: WARNING: Maintenance-only mode until around the end of 2023.          |
