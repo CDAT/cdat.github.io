@@ -9,8 +9,8 @@ jumbo_text: CDAT is a powerful and complete front-end to a rich set of visual-da
   The CDAT library is now in maintenance-only mode, with plans for deprecation and cease of support around the end of calendar year 2023. Until this time, the dependencies for specific CDAT packages (`cdms2`, `cdat_info`, `cdutil`, `cdtime`, `genutil`, `libcdms`) will be monitored to ensure they build and install in Conda environments. We currently support Python versions 3.7, 3.8, 3.9, and 3.10. Unfortunately, feature requests and bug fixes will no longer be addressed.
 </div>
 
-<div class="alert alert-info">
-  If you are interested in an alternative solution, please check out the [xarray](https://docs.xarray.dev/en/stable/index.html) and [xCDAT - Xarray Extended With Climate Data Analysis Tools](https://github.com/xCDAT/xcdat) projects.
+<div class="alert alert-dark">
+  If you are interested in an alternative solution, please check out the [xarray][xarray-gh] and [xCDAT - Xarray Extended With Climate Data Analysis Tools][xcdat-gh] projects.
 </div>
 
 <h2 id="new">Welcome to CDAT!</h2>
@@ -68,6 +68,8 @@ CDAT is licensed under the [BSD-3][bsd3] license.
   <img src="/images/nasa.svg" class="thumbnail" />
 </div>
 
+[xarray]: https://github.com/pydata/xarray
+[xcdat]: https://github.com/xCDAT/xcdat
 [gallery]: /gallery.html
 [install]: https://github.com/CDAT/cdat/wiki/install
 [getting_started]: /getting_started.html
