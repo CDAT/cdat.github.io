@@ -1,17 +1,22 @@
 ---
 layout: jumbotron
 jumbo_title: Community Data Analysis Tools
-jumbo subtitle: 
+jumbo subtitle:
 jumbo_text: CDAT is a powerful and complete front-end to a rich set of visual-data exploration and analysis capabilities well suited for data analysis problems.
 ---
 
-<div class="alert alert-warning">
-  The CDAT library is now in maintenance-only mode, with plans for deprecation and cease of support around the end of calendar year 2023. Until this time, the dependencies for specific CDAT packages (`cdms2`, `cdat_info`, `cdutil`, `cdtime`, `genutil`, `libcdms`) will be monitored to ensure they build and install in Conda environments. We currently support Python versions 3.7, 3.8, 3.9, and 3.10. Unfortunately, feature requests and bug fixes will no longer be addressed.
-</div>
+<div class="container">
+  <div class="alert alert-warning">
+    <p>
+      <strong>Warning</strong> The CDAT library is now in maintenance-only mode, with plans for deprecation and cease of support around the end of calendar year 2023. Until this time, the dependencies for specific CDAT packages (`cdms2`, `cdat_info`, `cdutil`, `cdtime`, `genutil`, `libcdms`) will be monitored to ensure they build and install in Conda environments. We currently support Python versions 3.7, 3.8, 3.9, and 3.10. Unfortunately, feature requests and bug fixes will no longer be addressed.
+      </p>
+  </div>
 
-<div class="alert alert-dark">
-  If you are interested in an alternative solution, please check out the [xarray][xarray-gh] and [xCDAT - Xarray Extended With Climate Data Analysis Tools][xcdat-gh] projects.
-</div>
+  <div class="alert alert-success">
+    <p>
+      If you are interested in an alternative solution, please check out the <a href="https://github.com/pydata/xarray">xarray</a> and <a href="https://github.com/xCDAT/xcdat">xCDAT - Xarray Extended With Climate Data Analysis Tools</a> projects.
+    </p>
+  </div>
 
 <h2 id="new">Welcome to CDAT!</h2>
 
@@ -59,7 +64,6 @@ mechanisms to support data analysis.
 
 CDAT is licensed under the [BSD-3][bsd3] license.
 
-
 <h3>U.S. Sponsors</h3>
 <div class="sponsor_image">
   <img src="/images/doe.svg" class="thumbnail" />
@@ -68,8 +72,6 @@ CDAT is licensed under the [BSD-3][bsd3] license.
   <img src="/images/nasa.svg" class="thumbnail" />
 </div>
 
-[xarray-gh]: https://github.com/pydata/xarray
-[xcdat-gh]: https://github.com/xCDAT/xcdat
 [gallery]: /gallery.html
 [install]: https://github.com/CDAT/cdat/wiki/install
 [getting_started]: /getting_started.html
